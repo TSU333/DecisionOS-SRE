@@ -2,6 +2,7 @@ from pathlib import Path
 import random
 import time
 import copy
+import math
 import numpy as np
 import torch
 from transformers import AutoTokenizer
@@ -11,8 +12,11 @@ from .serializer import Serializer, collate
 from .model import build_model, labels, supervised_loss
 
 def config_binding(config,checkpoint_hash,split_hash,tokenizer_hash):
+    pipeline={"serializer":config.get("serializer_version",SERIALIZER),"max_length":config["max_length"],"ontology":FAULTS}
+    for key in ("pooling","numeric_fusion","numeric_metrics"):
+        if key in config: pipeline[key]=config[key]
     return {"checkpoint_sha256":checkpoint_hash,"split_hash":split_hash,
-            "pipeline_hash":digest({"serializer":SERIALIZER,"max_length":config["max_length"],"ontology":FAULTS}),
+            "pipeline_hash":digest(pipeline),
             "tokenizer_sha256":tokenizer_hash,"model_revision":MODEL_REV}
 
 def predict(model,tokenizer,serializer,examples,device,split):
@@ -44,6 +48,7 @@ def predict(model,tokenizer,serializer,examples,device,split):
 def train(config,mode):
     if mode not in ["frozen","sft"]:
         raise ValueError("mode must be frozen or sft")
+    source_state=code_state()
     seed_all(config["seed"])
     torch.set_num_threads(config["cpu_threads"])
     device=config["train_device"]
@@ -54,8 +59,8 @@ def train(config,mode):
     if (out/"checkpoint.pt").exists():
         raise FileExistsError("Checkpoint exists. Choose a fresh artifact_root; never silently overwrite a evaluated model.")
     tokenizer=AutoTokenizer.from_pretrained(config["backbone_dir"],local_files_only=True)
-    serializer=Serializer(tokenizer,config["max_length"])
-    model=build_model(config["backbone_dir"],head_size=config["head_size"]).to(device)
+    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [])
+    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=len(config.get("numeric_metrics",[]))*6 if config.get("numeric_fusion",False) else 0).to(device)
     if mode=="frozen":
         for p in model.backbone.parameters():
             p.requires_grad=False
@@ -63,8 +68,30 @@ def train(config,mode):
         model.backbone.gradient_checkpointing_enable(gradient_checkpointing_kwargs={"use_reentrant":False})
     trainset=load_split(config["data_dir"],"train")
     valset=load_split(config["data_dir"],"model_validation")
-    optimizer=torch.optim.AdamW([p for p in model.parameters() if p.requires_grad],
-              lr=config["learning_rate_"+mode],weight_decay=config["weight_decay"])
+    diagnostic=config.get("diagnostic_overfit_per_class",0)
+    if diagnostic:
+        # Diagnostic only: fit a tiny stratified TRAIN subset, never holdout labels.
+        selected=[]
+        for fault in FAULTS:
+            selected.extend([e for e in trainset if e.targets.fault_type.value==fault][:diagnostic])
+        trainset=selected
+        valset=selected
+    groups=[]
+    for name,params,lr in [
+        ("backbone",model.backbone.parameters(),config.get("backbone_learning_rate",config["learning_rate_"+mode])),
+        ("heads",[p for name,p in model.named_parameters() if not name.startswith("backbone.")],config.get("head_learning_rate",config["learning_rate_"+mode]))]:
+        params=[p for p in params if p.requires_grad]
+        if params: groups.append({"params":params,"lr":lr,"name":name})
+    optimizer=torch.optim.AdamW(groups,weight_decay=config["weight_decay"])
+    updates_per_epoch=math.ceil(math.ceil(len(trainset)/config["batch_size"])/config["gradient_accumulation"])
+    scheduled_steps=min(config["max_steps"],updates_per_epoch*config["epochs"])
+    warmup_steps=int(scheduled_steps*config.get("warmup_fraction",0))
+    scheduler=None
+    if config.get("schedule")=="linear":
+        def scale(step):
+            if warmup_steps and step<warmup_steps: return (step+1)/warmup_steps
+            return max(0.0,(scheduled_steps-step)/max(1,scheduled_steps-warmup_steps))
+        scheduler=torch.optim.lr_scheduler.LambdaLR(optimizer,scale)
     rng=random.Random(config["seed"])
     history=[]; best=float("inf"); stale=0; step=0; total=0; augmentation_log=[]
     start=time.perf_counter()
@@ -77,7 +104,7 @@ def train(config,mode):
         optimizer.zero_grad(set_to_none=True)
         for offset in range(0,len(order),config["batch_size"]):
             original=order[offset:offset+config["batch_size"]]
-            examples=[augment(e,rng,config["seed"]) for e in original]
+            examples=[augment(e,rng,config["seed"],config.get("augmentation")) for e in original]
             augmentation_log.extend({"incident_id":e.opaque_incident_id,"epoch":epoch,**e.augmentation_metadata} for e in examples)
             encoded=[serializer(e.input) for e in examples]
             batch=collate(encoded,tokenizer.pad_token_id,device)
@@ -98,15 +125,17 @@ def train(config,mode):
             if (batch_index+1)%config["gradient_accumulation"]==0 or last:
                 torch.nn.utils.clip_grad_norm_(model.parameters(),1.)
                 optimizer.step(); optimizer.zero_grad(set_to_none=True); step+=1
+                if scheduler is not None: scheduler.step()
                 if step%5==0:
                     print(mode,"epoch",epoch+1,"step",step,"loss",round(float(np.mean(losses[-10:])),4),flush=True)
             if step>=config["max_steps"]:
                 break
         val=predict(model,tokenizer,serializer,valset,device,"model_validation")
-        from .calibration import probabilities
-        val_loss=float(np.mean([sum(-np.log(max(probabilities(r[h+"_logits"])[r[h+"_target"]],1e-300))
-                   for h in ["root","fault"] if r[h+"_target"] is not None and r[h+"_target"]>=0) for r in val]))
-        history.append({"epoch":epoch+1,"train_loss":float(np.mean(losses)),"validation_loss":val_loss,"optimizer_steps":step})
+        details=prediction_summary(val)
+        val_loss=details["sum_nll"]
+        history.append({"epoch":epoch+1,"train_loss":float(np.mean(losses)),"validation_loss":val_loss,
+                        "optimizer_steps":step,"validation":details,
+                        "learning_rates":{g["name"]:g["lr"] for g in optimizer.param_groups}})
         print(mode,"validation",history[-1],flush=True)
         if val_loss<best:
             best=val_loss; stale=0
@@ -124,11 +153,12 @@ def train(config,mode):
       "parameter_count":sum(p.numel() for p in model.parameters()),
       "trainable_parameters":sum(p.numel() for p in model.parameters() if p.requires_grad),
       "history":history,"elapsed_seconds":time.perf_counter()-start,"environment":environment(),
-      "selection":"minimum model_validation sum task NLL; no test access",
+      "selection":"diagnostic TRAIN subset fit; not eligible for model selection" if diagnostic else "minimum model_validation sum task NLL; no test access",
+      "diagnostic_only":bool(diagnostic),"scheduled_optimizer_steps":scheduled_steps,
       "binding":config_binding(config,file_hash(out/"checkpoint.pt"),split["split_hash"],tokenizer_hash),
       "supported_applications":sorted({e.input.application for e in trainset}),
       "prepared_data_sha256":file_hash(Path(config["data_dir"])/"examples.json"),
-      "code_state":code_state(),
+      "code_state":source_state,
       "train_run_ids":[e.original_run_id for e in trainset],
       "validation_run_ids":[e.original_run_id for e in valset],"ontology":FAULTS}
     save(out/"metadata.json",metadata)
@@ -150,11 +180,11 @@ def load_checkpoint(artifact_dir,device="cpu"):
     if expected!=metadata["binding"] or metadata["ontology"]!=FAULTS:
         raise ValueError("pipeline/ontology version mismatch")
     torch.set_num_threads(cfg["cpu_threads"])
-    model=build_model(folder/"backbone_config",False,cfg["head_size"])
+    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=len(cfg.get("numeric_metrics",[]))*6 if cfg.get("numeric_fusion",False) else 0)
     model.load_state_dict(torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True),strict=True)
     model.to(device).eval()
     tok=AutoTokenizer.from_pretrained(folder/"tokenizer",local_files_only=True)
-    return model,tok,Serializer(tok,cfg["max_length"]),metadata
+    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else []),metadata
 
 def baseline(data_dir):
     from collections import Counter
@@ -189,3 +219,27 @@ def code_state():
     status=porcelain.status(repo)
     return {"revision":revision,"dirty":bool(status.staged.get("add") or status.staged.get("modify") or status.staged.get("delete") or status.unstaged or status.untracked),
             "source_hashes":{str(p):file_hash(p) for p in sorted(Path("src").rglob("*.py"))}}
+
+
+def prediction_summary(rows):
+    """Separate head diagnostics; missing/absent candidate targets are not CE labels."""
+    from .calibration import probabilities
+    from sklearn.metrics import f1_score
+    result={}
+    joint=[]
+    for head in ("root","fault"):
+        valid=[r for r in rows if r[head+"_target"] is not None and r[head+"_target"]>=0]
+        y=[r[head+"_target"] for r in valid]
+        pred=[int(np.argmax(r[head+"_logits"])) for r in valid]
+        nll=[-np.log(max(probabilities(r[head+"_logits"])[r[head+"_target"]],1e-300)) for r in valid]
+        result[head]={"n":len(y),"accuracy":float(np.mean(np.array(y)==pred)) if y else None,
+                      "nll":float(np.mean(nll)) if y else None}
+        if head=="fault":
+            result[head]["macro_f1"]=float(f1_score(y,pred,labels=list(range(len(FAULTS))),average="macro",zero_division=0)) if y else None
+            result[head]["prediction_counts"]={f:pred.count(i) for i,f in enumerate(FAULTS)}
+    for r in rows:
+        if r["root_target"] is not None and r["fault_target"] is not None:
+            joint.append(int(np.argmax(r["root_logits"]))==r["root_target"] and int(np.argmax(r["fault_logits"]))==r["fault_target"])
+    result["joint_accuracy"]=float(np.mean(joint)) if joint else None
+    result["sum_nll"]=sum(result[h]["nll"] or 0 for h in ("root","fault"))
+    return result

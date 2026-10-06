@@ -52,7 +52,14 @@ try:
  checks["ready"]=code
  body=examples[0].input.model_dump()
  code,result=request("/v1/decide",body)
- assert code==200 and result["routing"]["destination"]=="REVIEW"
+ assert code==200 and result["routing"]["destination"] in {"REVIEW","ACCEPT_DIAGNOSIS"}
+ from decisionos_sre.calibration import probabilities
+ from decisionos_sre.policy import route
+ cal=read(folder/"calibrator.json");pol=read(folder/"policy.json")
+ expected=route(probabilities(rows[0]["root_logits"],cal["root"]["temperature"]),
+                probabilities(rows[0]["fault_logits"],cal["fault"]["temperature"]),
+                rows[0]["evidence_usable"],cal,pol,meta["binding"])
+ assert result["routing"]==expected
  assert result["execute_remediation"] is False
  checks["decide"]=code
  checks["decision"]=result
@@ -62,7 +69,7 @@ try:
  code,single=request("/v1/decide",singleton)
  assert code==200 and "SINGLE_CANDIDATE" in single["routing"]["reason_codes"]
  checks["single_candidate"]=single["routing"]
- oversized=dict(body,candidates=[{"candidate_id":str(i),"display_name":"long service name "*15} for i in range(200)])
+ oversized=dict(body,candidates=[{"candidate_id":str(i),"display_name":"long service name "*15} for i in range(1000)])
  code,over=request("/v1/decide",oversized)
  assert code==200 and over["root_cause"] is None and over["routing"]["destination"]=="REVIEW"
  checks["candidate_overflow"]=over["routing"]

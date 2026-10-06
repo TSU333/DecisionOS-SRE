@@ -1,0 +1,26 @@
+{
+  "budget": {
+    "n": 65,
+    "min_tokens": 1679,
+    "max_tokens": 2048,
+    "mean_tokens": 1940.4923076923078,
+    "truncated_n": 38,
+    "mean_retention": 0.9621472363190041
+  },
+  "canonical": {
+    "n": 65,
+    "min_tokens": 854,
+    "max_tokens": 1335,
+    "mean_tokens": 1200.0307692307692,
+    "truncated_n": 0,
+    "mean_retention": 1.0
+  },
+  "hybrid": {
+    "n": 65,
+    "min_tokens": 854,
+    "max_tokens": 1335,
+    "mean_tokens": 1200.0307692307692,
+    "truncated_n": 0,
+    "mean_retention": 1.0
+  }
+}

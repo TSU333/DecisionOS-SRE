@@ -1,0 +1,12 @@
+{
+  "schema_gold_causal_split_tests": 16,
+  "old_artifacts_preserved": true,
+  "checkpoint_reload": 0.0,
+  "http_api": "experiment_completed",
+  "calibration_bound_to_selected_checkpoint": true,
+  "gate_bound_to_selected_checkpoint": true,
+  "new_unseen_confirmatory_test": "not_run",
+  "scope": "mvp",
+  "status": "experiment_completed",
+  "quality_claim": "exploratory improvement on reused regression cases; no generalization or risk guarantee"
+}

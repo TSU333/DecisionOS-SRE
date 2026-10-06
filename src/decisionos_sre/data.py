@@ -199,16 +199,20 @@ def load_split(data_dir, split):
     return [TrainingExample.model_validate(e) for e in read(Path(data_dir)/"examples.json")
             if splits["assignments"][e["opaque_incident_id"]]==split]
 
-def augment(example, rng, seed):
+def augment(example, rng, seed, options=None):
     if example.source_metadata.get("split") != "train":
         raise ValueError("Training augmentation restricted to train")
     ex=example.model_copy(deep=True)
-    rng.shuffle(ex.input.candidates)
-    if rng.random()<.1:
+    options=options or {}
+    shuffle=options.get("candidate_shuffle",True)
+    evidence_dropout=options.get("evidence_dropout",.1)
+    metric_dropout=options.get("metric_dropout",.1)
+    if shuffle: rng.shuffle(ex.input.candidates)
+    if rng.random()<evidence_dropout:
         ex.input.evidence.metrics=[]
     else:
-        ex.input.evidence.metrics=[m for m in ex.input.evidence.metrics if rng.random()>.1]
+        ex.input.evidence.metrics=[m for m in ex.input.evidence.metrics if rng.random()>metric_dropout]
     ex.input.modality_availability.metrics=bool(ex.input.evidence.metrics)
     ex.augmentation_metadata={"seed":seed,"parent_run":example.original_run_id,
-                              "candidate_shuffle":True,"metric_dropout":.1,"evidence_dropout":.1}
+                              "candidate_shuffle":shuffle,"metric_dropout":metric_dropout,"evidence_dropout":evidence_dropout}
     return ex

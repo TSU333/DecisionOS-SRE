@@ -1,0 +1,1 @@
+{'root': {'n': 15, 'accuracy': 0.6666666666666666, 'nll': 2.869945236388865}, 'fault': {'n': 15, 'accuracy': 1.0, 'nll': 0.03863697506323768, 'macro_f1': 1.0, 'prediction_counts': {'cpu_stress': 3, 'memory_stress': 3, 'disk_io_stress': 3, 'network_delay': 3, 'network_packet_loss': 3}}, 'joint_accuracy': 0.6666666666666666, 'sum_nll': 2.9085822114521025}

@@ -1,6 +1,18 @@
 # DecisionOS-SRE
 研究型结构化诊断 MVP。共享 ModernBERT encoder 同时输出动态候选根因与五类故障预测；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行任何运维操作。
 
+最新训练结果见 `docs/retraining_results.md` 与 `outputs/retrain/execution_report.md`；选中模型为 `artifacts/retrain/canonical/sft`，机器入口为 `outputs/latest_model.json`。原始第一轮结果仍保留。
+
+本轮在复用的 15 条回归案例上，根因 86.7%、故障分类 80.0%、联合 66.7%；候选倒序与一致服务重命名保持结果，CPU 端到端 P95 825.9 ms。冻结数值融合对照联合为 80.0%，轻量数值故障分类为 100.0%，详细比较及选择规则见新报告。原测试已被查看，不是新的确认性留出集；当前全部 REVIEW。
+
+运行新版：
+```powershell
+$env:PYTHONPATH='src'
+.\work\.venv\Scripts\python.exe -m decisionos_sre serve --artifact artifacts/retrain/canonical/sft --port 8000
+```
+
+复现选中方案：`.\scripts\reproduce_retraining.ps1 -Config configs/retrain_canonical.json`；脚本自动创建新输出目录，执行 SFT、CPU 校准/门控/回归、benchmark 和真实 API 检查。依赖、数据及初始 backbone 复用原安装步骤。
+
 当前范围固定为 `execution_scope: mvp`。实际状态与结果见 `docs/experiment_results.md` 及 `outputs/status.json`。没有实测的项目不代表完成。
 
 ## 本地环境

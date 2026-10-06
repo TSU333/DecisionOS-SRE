@@ -8,3 +8,6 @@ MVP 当前验收状态以 outputs/status.json 和 experiment_results 为准。�
 4. research：外部 LLM-only/cascade 必须实际执行、保存解析/重试/成本。没有凭据或预算时仍为 not_run。
 5. deployment：用已验收 checkpoint 导出 ONNX、验证可变候选/长度、再做硬件支持的 INT8，最终 artifact 独立重校准。large 必须实际训练才比较。
 6. 部署安全动作不在本项目范围。ACCEPT_DIAGNOSIS 只接受诊断，不授权重启/回滚/扩缩容。
+
+
+第二轮已完成独立学习率、训练预算、身份规范化、均值池化、数值融合与轻量数值分类对照。下一步优先获取新的独立确认性案例，并扩大 calibration/gate 样本；在新协议开始前确定概率损失与联合准确率的模型选择优先级。不要继续对已查看的回归集合反复调参后称作未见测试。

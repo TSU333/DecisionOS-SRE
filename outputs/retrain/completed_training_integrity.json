@@ -1,0 +1,30 @@
+{
+  "budget": {
+    "checkpoint_hash_matches": true,
+    "source_hashes_match": true,
+    "train_validation_disjoint": true,
+    "train_n": 50,
+    "validation_n": 15
+  },
+  "canonical": {
+    "checkpoint_hash_matches": true,
+    "source_hashes_match": true,
+    "train_validation_disjoint": true,
+    "train_n": 50,
+    "validation_n": 15
+  },
+  "hybrid": {
+    "checkpoint_hash_matches": true,
+    "source_hashes_match": true,
+    "train_validation_disjoint": true,
+    "train_n": 50,
+    "validation_n": 15
+  },
+  "hybrid_frozen": {
+    "checkpoint_hash_matches": true,
+    "source_hashes_match": true,
+    "train_validation_disjoint": true,
+    "train_n": 50,
+    "validation_n": 15
+  }
+}

@@ -1,0 +1,4147 @@
+{
+  "status": "experiment_completed",
+  "execution_scope": "mvp",
+  "selection": {
+    "status": "frozen_before_regression",
+    "timestamp_utc": "2026-10-06T13:17:31.291494+00:00",
+    "criterion": "minimum model_validation sum of per-head NLL",
+    "selected": {
+      "artifact": "artifacts/retrain/canonical/sft",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 0.9333333333333333,
+          "nll": 0.26439184134737587
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.8,
+          "nll": 0.35801870244626083,
+          "macro_f1": 0.798095238095238,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 3,
+            "disk_io_stress": 3,
+            "network_delay": 2,
+            "network_packet_loss": 4
+          }
+        },
+        "joint_accuracy": 0.8,
+        "sum_nll": 0.6224105437936367
+      },
+      "binding": {
+        "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "7f1eb9a291b72679428561b51699cd7910eb9ec354f7dea21d02959fbb066a8e",
+      "steps": 312,
+      "best_epoch": 24
+    },
+    "candidates": [
+      {
+        "artifact": "artifacts/sft",
+        "validation": {
+          "root": {
+            "n": 15,
+            "accuracy": 0.6666666666666666,
+            "nll": 1.3744744839173633
+          },
+          "fault": {
+            "n": 15,
+            "accuracy": 0.2,
+            "nll": 1.6015423170701149,
+            "macro_f1": 0.1,
+            "prediction_counts": {
+              "cpu_stress": 0,
+              "memory_stress": 0,
+              "disk_io_stress": 9,
+              "network_delay": 0,
+              "network_packet_loss": 6
+            }
+          },
+          "joint_accuracy": 0.2,
+          "sum_nll": 2.976016800987478
+        },
+        "binding": {
+          "checkpoint_sha256": "65133849b239ac59571ed5010f72329a5e96c872b3e726e7dc54bf7720d0e95f",
+          "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+          "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+          "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+        },
+        "config_sha256": "f176570d7e9041b37bd81fb9291102127d2de4442c999848de299d538026f47a",
+        "steps": 26,
+        "best_epoch": 2
+      },
+      {
+        "artifact": "artifacts/retrain/hybrid_frozen/frozen",
+        "validation": {
+          "root": {
+            "n": 15,
+            "accuracy": 0.9333333333333333,
+            "nll": 0.21068074711929144
+          },
+          "fault": {
+            "n": 15,
+            "accuracy": 0.9333333333333333,
+            "nll": 0.48715340283375236,
+            "macro_f1": 0.9314285714285715,
+            "prediction_counts": {
+              "cpu_stress": 3,
+              "memory_stress": 3,
+              "disk_io_stress": 4,
+              "network_delay": 3,
+              "network_packet_loss": 2
+            }
+          },
+          "joint_accuracy": 0.9333333333333333,
+          "sum_nll": 0.6978341499530438
+        },
+        "binding": {
+          "checkpoint_sha256": "594b78a226433346fe498c6c34f3285753bcde10da54f42dcb81e82655d0ddb2",
+          "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+          "pipeline_hash": "2dbf7b54a1dd4cd14e33e648d6cc33b3bb347abc53f3654dffc1f40090de6836",
+          "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+        },
+        "config_sha256": "7889c8db82c54f9decd444102eae7cb01e0566f52a2c49ea682355f5eeec2d79",
+        "steps": 312,
+        "best_epoch": 22
+      },
+      {
+        "artifact": "artifacts/retrain/budget/sft",
+        "validation": {
+          "root": {
+            "n": 15,
+            "accuracy": 1.0,
+            "nll": 0.014283380328784772
+          },
+          "fault": {
+            "n": 15,
+            "accuracy": 0.4,
+            "nll": 0.9394448595571198,
+            "macro_f1": 0.2333333333333333,
+            "prediction_counts": {
+              "cpu_stress": 6,
+              "memory_stress": 0,
+              "disk_io_stress": 9,
+              "network_delay": 0,
+              "network_packet_loss": 0
+            }
+          },
+          "joint_accuracy": 0.4,
+          "sum_nll": 0.9537282398859045
+        },
+        "binding": {
+          "checkpoint_sha256": "49a985545180381aa72035a47ec65719e2747b02e00fbe8067689d752d4b5f1f",
+          "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+          "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+          "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+        },
+        "config_sha256": "2e3d8feb786a4a32cdb64ee70efb9c54b1250bca3feee1e0070e1f26dbf39bcc",
+        "steps": 247,
+        "best_epoch": 13
+      },
+      {
+        "artifact": "artifacts/retrain/canonical/sft",
+        "validation": {
+          "root": {
+            "n": 15,
+            "accuracy": 0.9333333333333333,
+            "nll": 0.26439184134737587
+          },
+          "fault": {
+            "n": 15,
+            "accuracy": 0.8,
+            "nll": 0.35801870244626083,
+            "macro_f1": 0.798095238095238,
+            "prediction_counts": {
+              "cpu_stress": 3,
+              "memory_stress": 3,
+              "disk_io_stress": 3,
+              "network_delay": 2,
+              "network_packet_loss": 4
+            }
+          },
+          "joint_accuracy": 0.8,
+          "sum_nll": 0.6224105437936367
+        },
+        "binding": {
+          "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+          "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+          "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+          "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+        },
+        "config_sha256": "7f1eb9a291b72679428561b51699cd7910eb9ec354f7dea21d02959fbb066a8e",
+        "steps": 312,
+        "best_epoch": 24
+      },
+      {
+        "artifact": "artifacts/retrain/hybrid/sft",
+        "validation": {
+          "root": {
+            "n": 15,
+            "accuracy": 0.8666666666666667,
+            "nll": 0.3674912751636072
+          },
+          "fault": {
+            "n": 15,
+            "accuracy": 0.8666666666666667,
+            "nll": 0.35742365515191266,
+            "macro_f1": 0.8666666666666666,
+            "prediction_counts": {
+              "cpu_stress": 3,
+              "memory_stress": 3,
+              "disk_io_stress": 3,
+              "network_delay": 3,
+              "network_packet_loss": 3
+            }
+          },
+          "joint_accuracy": 0.8,
+          "sum_nll": 0.7249149303155198
+        },
+        "binding": {
+          "checkpoint_sha256": "3ce418a21a27998e6925e592121effc07807649a06f6dbffd2c54ed10c005ad4",
+          "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+          "pipeline_hash": "2dbf7b54a1dd4cd14e33e648d6cc33b3bb347abc53f3654dffc1f40090de6836",
+          "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+          "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+        },
+        "config_sha256": "1aa7f879f8f0455cedd167f2a6809028ef3bf1f26370b81bc53381c0ed42362e",
+        "steps": 312,
+        "best_epoch": 24
+      }
+    ],
+    "test_role": "previously inspected regression set; exploratory, not new confirmatory evidence",
+    "no_more_tuning_after_this_file": true,
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30
+  },
+  "paired_comparison": {
+    "root": {
+      "n_run_groups": 15,
+      "old_correct": 10,
+      "new_correct": 13,
+      "fixed": 4,
+      "regressed": 1,
+      "new_accuracy_wilson95": [
+        0.6211801716767764,
+        0.9626387408969346
+      ],
+      "paired_accuracy_delta": 0.2,
+      "paired_bootstrap_delta_95": [
+        -0.06666666666666667,
+        0.4666666666666667
+      ],
+      "interval_scope": "descriptive regression sample only; adaptations were motivated by previously inspected test results"
+    },
+    "fault": {
+      "n_run_groups": 15,
+      "old_correct": 3,
+      "new_correct": 12,
+      "fixed": 9,
+      "regressed": 0,
+      "new_accuracy_wilson95": [
+        0.5481455128483065,
+        0.9295245065301844
+      ],
+      "paired_accuracy_delta": 0.6,
+      "paired_bootstrap_delta_95": [
+        0.3333333333333333,
+        0.8666666666666667
+      ],
+      "interval_scope": "descriptive regression sample only; adaptations were motivated by previously inspected test results"
+    },
+    "joint": {
+      "n_run_groups": 15,
+      "old_correct": 3,
+      "new_correct": 10,
+      "fixed": 7,
+      "regressed": 0,
+      "new_accuracy_wilson95": [
+        0.41713547738519774,
+        0.8482367556028526
+      ],
+      "paired_accuracy_delta": 0.4666666666666667,
+      "paired_bootstrap_delta_95": [
+        0.2,
+        0.7333333333333333
+      ],
+      "interval_scope": "descriptive regression sample only; adaptations were motivated by previously inspected test results"
+    }
+  },
+  "old_metrics": {
+    "runs": 15,
+    "observations": 15,
+    "missing_root": 0,
+    "candidate_misses": 0,
+    "missing_fault": 0,
+    "root": {
+      "n": 15,
+      "acc_at_1": 0.6666666666666666,
+      "mrr": 0.7777777777777778,
+      "recall_at_3": 0.8666666666666667,
+      "candidate_coverage": 1.0
+    },
+    "fault": {
+      "n": 15,
+      "accuracy": 0.2,
+      "macro_f1": 0.1,
+      "per_class": {
+        "cpu_stress": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "memory_stress": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "disk_io_stress": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5,
+          "support": 3
+        },
+        "network_delay": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        },
+        "network_packet_loss": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 3
+        }
+      },
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ]
+      ]
+    },
+    "groups": {
+      "application": {
+        "Online Boutique": {
+          "n": 15,
+          "acc_at_1": 0.6666666666666666,
+          "mrr": 0.7777777777777778,
+          "recall_at_3": 0.8666666666666667,
+          "candidate_coverage": 1.0
+        }
+      },
+      "candidate_count": {
+        "13": {
+          "n": 9,
+          "acc_at_1": 0.6666666666666666,
+          "mrr": 0.7685185185185186,
+          "recall_at_3": 0.8888888888888888,
+          "candidate_coverage": 1.0
+        },
+        "14": {
+          "n": 6,
+          "acc_at_1": 0.6666666666666666,
+          "mrr": 0.7916666666666666,
+          "recall_at_3": 0.8333333333333334,
+          "candidate_coverage": 1.0
+        }
+      }
+    },
+    "joint_accuracy": 0.2,
+    "joint_n": 15,
+    "joint_error_wilson_95": [
+      0.5481455128483065,
+      0.9295245065301844
+    ],
+    "probability": {
+      "root": {
+        "raw": {
+          "n": 15,
+          "nll": 1.406793055649923,
+          "ece": 0.372771201455887,
+          "brier": 0.6756184459703892,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 9,
+              "accuracy": 0.5555555555555556,
+              "confidence": 0.24947337262599373
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 4,
+              "accuracy": 1.0,
+              "confidence": 0.33414120562652394
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 2,
+              "accuracy": 0.5,
+              "confidence": 0.4133034010108284
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            }
+          ],
+          "condition": "gold covered by candidates"
+        },
+        "prob": {
+          "n": 15,
+          "nll": 1.1123776424359368,
+          "ece": 0.23315501854523055,
+          "brier": 0.5356898022090076,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 5,
+              "accuracy": 0.4,
+              "confidence": 0.33401744642992587
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 2,
+              "accuracy": 0.5,
+              "confidence": 0.4833387123571865
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 3,
+              "accuracy": 1.0,
+              "confidence": 0.5526020487266893
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 4,
+              "accuracy": 1.0,
+              "confidence": 0.7569812706884471
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 1,
+              "accuracy": 0.0,
+              "confidence": 0.819821163976317
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            }
+          ],
+          "condition": "gold covered by candidates"
+        }
+      },
+      "fault": {
+        "raw": {
+          "n": 15,
+          "nll": 1.60577468896323,
+          "ece": 0.05101373016261568,
+          "brier": 0.8001496636486303,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 15,
+              "accuracy": 0.2,
+              "confidence": 0.2510137301626157
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            }
+          ],
+          "condition": "known gold fault label"
+        },
+        "prob": {
+          "n": 15,
+          "nll": 1.6084977643288276,
+          "ece": 0.0024198043337601838,
+          "brier": 0.7996275387637526,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 15,
+              "accuracy": 0.2,
+              "confidence": 0.2024198043337602
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            }
+          ],
+          "condition": "known gold fault label"
+        }
+      }
+    },
+    "selective": {
+      "overall_n": 15,
+      "joint_gold_n": 15,
+      "accepted_total": 0,
+      "accepted_joint_gold_n": 0,
+      "errors": 0,
+      "coverage": 0.0,
+      "selective_risk": null,
+      "selective_accuracy": null,
+      "risk_wilson_95": null
+    },
+    "risk_coverage": [
+      {
+        "threshold": 0.20403514946863,
+        "coverage": 0.06666666666666667,
+        "risk": 1.0,
+        "n": 1
+      },
+      {
+        "threshold": 0.2026531911141906,
+        "coverage": 0.13333333333333333,
+        "risk": 1.0,
+        "n": 2
+      },
+      {
+        "threshold": 0.20252852609285513,
+        "coverage": 0.2,
+        "risk": 1.0,
+        "n": 3
+      },
+      {
+        "threshold": 0.20252839754770782,
+        "coverage": 0.26666666666666666,
+        "risk": 1.0,
+        "n": 4
+      },
+      {
+        "threshold": 0.20241364937709042,
+        "coverage": 0.3333333333333333,
+        "risk": 1.0,
+        "n": 5
+      },
+      {
+        "threshold": 0.20241052041553464,
+        "coverage": 0.4,
+        "risk": 0.8333333333333334,
+        "n": 6
+      },
+      {
+        "threshold": 0.20238743460930922,
+        "coverage": 0.4666666666666667,
+        "risk": 0.8571428571428571,
+        "n": 7
+      },
+      {
+        "threshold": 0.2023501295315604,
+        "coverage": 0.5333333333333333,
+        "risk": 0.75,
+        "n": 8
+      },
+      {
+        "threshold": 0.20233925943285377,
+        "coverage": 0.6,
+        "risk": 0.6666666666666666,
+        "n": 9
+      },
+      {
+        "threshold": 0.20229095953127457,
+        "coverage": 0.6666666666666666,
+        "risk": 0.7,
+        "n": 10
+      },
+      {
+        "threshold": 0.20224744997813435,
+        "coverage": 0.7333333333333333,
+        "risk": 0.7272727272727273,
+        "n": 11
+      },
+      {
+        "threshold": 0.2021688765584498,
+        "coverage": 0.8,
+        "risk": 0.75,
+        "n": 12
+      },
+      {
+        "threshold": 0.20216808104984346,
+        "coverage": 0.8666666666666667,
+        "risk": 0.7692307692307693,
+        "n": 13
+      },
+      {
+        "threshold": 0.20194977657213964,
+        "coverage": 0.9333333333333333,
+        "risk": 0.7857142857142857,
+        "n": 14
+      },
+      {
+        "threshold": 0.20182566372682958,
+        "coverage": 1.0,
+        "risk": 0.8,
+        "n": 15
+      }
+    ],
+    "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+  },
+  "new_metrics": {
+    "runs": 15,
+    "observations": 15,
+    "missing_root": 0,
+    "candidate_misses": 0,
+    "missing_fault": 0,
+    "root": {
+      "n": 15,
+      "acc_at_1": 0.8666666666666667,
+      "mrr": 0.9022222222222223,
+      "recall_at_3": 0.9333333333333333,
+      "candidate_coverage": 1.0
+    },
+    "fault": {
+      "n": 15,
+      "accuracy": 0.8,
+      "macro_f1": 0.7942857142857143,
+      "per_class": {
+        "cpu_stress": {
+          "precision": 0.5,
+          "recall": 0.6666666666666666,
+          "f1": 0.5714285714285714,
+          "support": 3
+        },
+        "memory_stress": {
+          "precision": 0.5,
+          "recall": 0.3333333333333333,
+          "f1": 0.4,
+          "support": 3
+        },
+        "disk_io_stress": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "network_delay": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        },
+        "network_packet_loss": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "support": 3
+        }
+      },
+      "confusion_matrix": [
+        [
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3
+        ]
+      ]
+    },
+    "groups": {
+      "application": {
+        "Online Boutique": {
+          "n": 15,
+          "acc_at_1": 0.8666666666666667,
+          "mrr": 0.9022222222222223,
+          "recall_at_3": 0.9333333333333333,
+          "candidate_coverage": 1.0
+        }
+      },
+      "candidate_count": {
+        "13": {
+          "n": 9,
+          "acc_at_1": 0.7777777777777778,
+          "mrr": 0.837037037037037,
+          "recall_at_3": 0.8888888888888888,
+          "candidate_coverage": 1.0
+        },
+        "14": {
+          "n": 6,
+          "acc_at_1": 1.0,
+          "mrr": 1.0,
+          "recall_at_3": 1.0,
+          "candidate_coverage": 1.0
+        }
+      }
+    },
+    "joint_accuracy": 0.6666666666666666,
+    "joint_n": 15,
+    "joint_error_wilson_95": [
+      0.1517632443971473,
+      0.5828645226148023
+    ],
+    "probability": {
+      "root": {
+        "raw": {
+          "n": 15,
+          "nll": 0.9430473495265694,
+          "ece": 0.11642197064994309,
+          "brier": 0.2561173067843128,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 15,
+              "accuracy": 0.8666666666666667,
+              "confidence": 0.9830886373166098
+            }
+          ],
+          "condition": "gold covered by candidates"
+        },
+        "prob": {
+          "n": 15,
+          "nll": 0.6931866347303103,
+          "ece": 0.11141257311417307,
+          "brier": 0.23658972878987833,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 1,
+              "accuracy": 1.0,
+              "confidence": 0.7914463868168136
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 6,
+              "accuracy": 0.6666666666666666,
+              "confidence": 0.8550451429570486
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 8,
+              "accuracy": 1.0,
+              "confidence": 0.9584544842766103
+            }
+          ],
+          "condition": "gold covered by candidates"
+        }
+      },
+      "fault": {
+        "raw": {
+          "n": 15,
+          "nll": 0.3919340509828046,
+          "ece": 0.2744811724099058,
+          "brier": 0.24300340875469387,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 1,
+              "accuracy": 1.0,
+              "confidence": 0.4671954885441674
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 2,
+              "accuracy": 0.0,
+              "confidence": 0.5749737535106784
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 2,
+              "accuracy": 1.0,
+              "confidence": 0.6294735645123494
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 1,
+              "accuracy": 0.0,
+              "confidence": 0.7013961933617107
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 5,
+              "accuracy": 1.0,
+              "confidence": 0.8360130336724282
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 4,
+              "accuracy": 1.0,
+              "confidence": 0.9569795820758683
+            }
+          ],
+          "condition": "known gold fault label"
+        },
+        "prob": {
+          "n": 15,
+          "nll": 0.4706453252945243,
+          "ece": 0.21720555995015103,
+          "brier": 0.26988782920014653,
+          "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+          "ece_binning": "10 equal width bins; final bin includes 1",
+          "reliability": [
+            {
+              "lo": 0.0,
+              "hi": 0.1,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.1,
+              "hi": 0.2,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.2,
+              "hi": 0.3,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.3,
+              "hi": 0.4,
+              "n": 0,
+              "accuracy": null,
+              "confidence": null
+            },
+            {
+              "lo": 0.4,
+              "hi": 0.5,
+              "n": 1,
+              "accuracy": 1.0,
+              "confidence": 0.42154392506293975
+            },
+            {
+              "lo": 0.5,
+              "hi": 0.6,
+              "n": 5,
+              "accuracy": 0.4,
+              "confidence": 0.5569561153368203
+            },
+            {
+              "lo": 0.6,
+              "hi": 0.7,
+              "n": 2,
+              "accuracy": 1.0,
+              "confidence": 0.6948380029388228
+            },
+            {
+              "lo": 0.7,
+              "hi": 0.8,
+              "n": 3,
+              "accuracy": 1.0,
+              "confidence": 0.7452350112869802
+            },
+            {
+              "lo": 0.8,
+              "hi": 0.9,
+              "n": 2,
+              "accuracy": 1.0,
+              "confidence": 0.829466034476452
+            },
+            {
+              "lo": 0.9,
+              "hi": 1.0,
+              "n": 2,
+              "accuracy": 1.0,
+              "confidence": 0.910420071838703
+            }
+          ],
+          "condition": "known gold fault label"
+        }
+      }
+    },
+    "selective": {
+      "overall_n": 15,
+      "joint_gold_n": 15,
+      "accepted_total": 0,
+      "accepted_joint_gold_n": 0,
+      "errors": 0,
+      "coverage": 0.0,
+      "selective_risk": null,
+      "selective_accuracy": null,
+      "risk_wilson_95": null
+    },
+    "risk_coverage": [
+      {
+        "threshold": 0.8838777790334034,
+        "coverage": 0.06666666666666667,
+        "risk": 0.0,
+        "n": 1
+      },
+      {
+        "threshold": 0.8531865454185551,
+        "coverage": 0.13333333333333333,
+        "risk": 0.0,
+        "n": 2
+      },
+      {
+        "threshold": 0.8473600018282063,
+        "coverage": 0.2,
+        "risk": 0.0,
+        "n": 3
+      },
+      {
+        "threshold": 0.8115720671246976,
+        "coverage": 0.26666666666666666,
+        "risk": 0.25,
+        "n": 4
+      },
+      {
+        "threshold": 0.7807939135379931,
+        "coverage": 0.3333333333333333,
+        "risk": 0.2,
+        "n": 5
+      },
+      {
+        "threshold": 0.7287457601058961,
+        "coverage": 0.4,
+        "risk": 0.16666666666666666,
+        "n": 6
+      },
+      {
+        "threshold": 0.7261653602170512,
+        "coverage": 0.4666666666666667,
+        "risk": 0.14285714285714285,
+        "n": 7
+      },
+      {
+        "threshold": 0.6998655560117472,
+        "coverage": 0.5333333333333333,
+        "risk": 0.125,
+        "n": 8
+      },
+      {
+        "threshold": 0.6898104498658986,
+        "coverage": 0.6,
+        "risk": 0.2222222222222222,
+        "n": 9
+      },
+      {
+        "threshold": 0.5883294718034435,
+        "coverage": 0.6666666666666666,
+        "risk": 0.3,
+        "n": 10
+      },
+      {
+        "threshold": 0.5762975968972069,
+        "coverage": 0.7333333333333333,
+        "risk": 0.2727272727272727,
+        "n": 11
+      },
+      {
+        "threshold": 0.5501658147329372,
+        "coverage": 0.8,
+        "risk": 0.3333333333333333,
+        "n": 12
+      },
+      {
+        "threshold": 0.5475999656244751,
+        "coverage": 0.8666666666666667,
+        "risk": 0.3076923076923077,
+        "n": 13
+      },
+      {
+        "threshold": 0.5223877276260389,
+        "coverage": 0.9333333333333333,
+        "risk": 0.35714285714285715,
+        "n": 14
+      },
+      {
+        "threshold": 0.42154392506293975,
+        "coverage": 1.0,
+        "risk": 0.3333333333333333,
+        "n": 15
+      }
+    ],
+    "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+  },
+  "ablations": {
+    "mask_all_metrics": {
+      "runs": 15,
+      "observations": 15,
+      "missing_root": 0,
+      "candidate_misses": 0,
+      "missing_fault": 0,
+      "root": {
+        "n": 15,
+        "acc_at_1": 0.06666666666666667,
+        "mrr": 0.3040947940947941,
+        "recall_at_3": 0.3333333333333333,
+        "candidate_coverage": 1.0
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.2,
+        "macro_f1": 0.06666666666666667,
+        "per_class": {
+          "cpu_stress": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          "memory_stress": {
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.3333333333333333,
+            "support": 3
+          },
+          "disk_io_stress": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          "network_delay": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          "network_packet_loss": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      "groups": {
+        "application": {
+          "Online Boutique": {
+            "n": 15,
+            "acc_at_1": 0.06666666666666667,
+            "mrr": 0.3040947940947941,
+            "recall_at_3": 0.3333333333333333,
+            "candidate_coverage": 1.0
+          }
+        },
+        "candidate_count": {
+          "13": {
+            "n": 9,
+            "acc_at_1": 0.1111111111111111,
+            "mrr": 0.31339031339031337,
+            "recall_at_3": 0.3333333333333333,
+            "candidate_coverage": 1.0
+          },
+          "14": {
+            "n": 6,
+            "acc_at_1": 0.0,
+            "mrr": 0.29015151515151516,
+            "recall_at_3": 0.3333333333333333,
+            "candidate_coverage": 1.0
+          }
+        }
+      },
+      "joint_accuracy": 0.0,
+      "joint_n": 15,
+      "joint_error_wilson_95": [
+        0.7961166989641515,
+        1.0
+      ],
+      "probability": {
+        "root": {
+          "raw": {
+            "n": 15,
+            "nll": 6.202931827196659,
+            "ece": 0.9149579834772618,
+            "brier": 1.828132602262425,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 15,
+                "accuracy": 0.06666666666666667,
+                "confidence": 0.9816246501439284
+              }
+            ],
+            "condition": "gold covered by candidates"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 4.098938239312931,
+            "ece": 0.8000444116481921,
+            "brier": 1.6073767934582923,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 15,
+                "accuracy": 0.06666666666666667,
+                "confidence": 0.8667110783148587
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              }
+            ],
+            "condition": "gold covered by candidates"
+          }
+        },
+        "fault": {
+          "raw": {
+            "n": 15,
+            "nll": 1.8699533045775245,
+            "ece": 0.1696255037090788,
+            "brier": 0.8809680011277038,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 15,
+                "accuracy": 0.2,
+                "confidence": 0.3696255037090788
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              }
+            ],
+            "condition": "known gold fault label"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 1.724418906083076,
+            "ece": 0.11768240615358666,
+            "brier": 0.8390348279309564,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 15,
+                "accuracy": 0.2,
+                "confidence": 0.31768240615358667
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              }
+            ],
+            "condition": "known gold fault label"
+          }
+        }
+      },
+      "selective": {
+        "overall_n": 15,
+        "joint_gold_n": 15,
+        "accepted_total": 0,
+        "accepted_joint_gold_n": 0,
+        "errors": 0,
+        "coverage": 0.0,
+        "selective_risk": null,
+        "selective_accuracy": null,
+        "risk_wilson_95": null
+      },
+      "risk_coverage": [
+        {
+          "threshold": 0.31968923824066986,
+          "coverage": 0.4,
+          "risk": 1.0,
+          "n": 6
+        },
+        {
+          "threshold": 0.31634451809553127,
+          "coverage": 1.0,
+          "risk": 1.0,
+          "n": 15
+        }
+      ],
+      "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+    },
+    "reverse_candidates": {
+      "runs": 15,
+      "observations": 15,
+      "missing_root": 0,
+      "candidate_misses": 0,
+      "missing_fault": 0,
+      "root": {
+        "n": 15,
+        "acc_at_1": 0.8666666666666667,
+        "mrr": 0.9022222222222223,
+        "recall_at_3": 0.9333333333333333,
+        "candidate_coverage": 1.0
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.8,
+        "macro_f1": 0.7942857142857143,
+        "per_class": {
+          "cpu_stress": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714,
+            "support": 3
+          },
+          "memory_stress": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4,
+            "support": 3
+          },
+          "disk_io_stress": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "network_delay": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "network_packet_loss": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "groups": {
+        "application": {
+          "Online Boutique": {
+            "n": 15,
+            "acc_at_1": 0.8666666666666667,
+            "mrr": 0.9022222222222223,
+            "recall_at_3": 0.9333333333333333,
+            "candidate_coverage": 1.0
+          }
+        },
+        "candidate_count": {
+          "13": {
+            "n": 9,
+            "acc_at_1": 0.7777777777777778,
+            "mrr": 0.837037037037037,
+            "recall_at_3": 0.8888888888888888,
+            "candidate_coverage": 1.0
+          },
+          "14": {
+            "n": 6,
+            "acc_at_1": 1.0,
+            "mrr": 1.0,
+            "recall_at_3": 1.0,
+            "candidate_coverage": 1.0
+          }
+        }
+      },
+      "joint_accuracy": 0.6666666666666666,
+      "joint_n": 15,
+      "joint_error_wilson_95": [
+        0.1517632443971473,
+        0.5828645226148023
+      ],
+      "probability": {
+        "root": {
+          "raw": {
+            "n": 15,
+            "nll": 0.9430473495265694,
+            "ece": 0.11642197064994309,
+            "brier": 0.2561173067843128,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 15,
+                "accuracy": 0.8666666666666667,
+                "confidence": 0.9830886373166098
+              }
+            ],
+            "condition": "gold covered by candidates"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 0.6931866347303103,
+            "ece": 0.11141257311417307,
+            "brier": 0.23658972878987833,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.7914463868168136
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 6,
+                "accuracy": 0.6666666666666666,
+                "confidence": 0.8550451429570486
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 8,
+                "accuracy": 1.0,
+                "confidence": 0.9584544842766103
+              }
+            ],
+            "condition": "gold covered by candidates"
+          }
+        },
+        "fault": {
+          "raw": {
+            "n": 15,
+            "nll": 0.3919340509828046,
+            "ece": 0.2744811724099058,
+            "brier": 0.24300340875469387,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.4671954885441674
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 2,
+                "accuracy": 0.0,
+                "confidence": 0.5749737535106784
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.6294735645123494
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 1,
+                "accuracy": 0.0,
+                "confidence": 0.7013961933617107
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 5,
+                "accuracy": 1.0,
+                "confidence": 0.8360130336724282
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 4,
+                "accuracy": 1.0,
+                "confidence": 0.9569795820758683
+              }
+            ],
+            "condition": "known gold fault label"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 0.4706453252945243,
+            "ece": 0.21720555995015103,
+            "brier": 0.26988782920014653,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.42154392506293975
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 5,
+                "accuracy": 0.4,
+                "confidence": 0.5569561153368203
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.6948380029388228
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 3,
+                "accuracy": 1.0,
+                "confidence": 0.7452350112869802
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.829466034476452
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.910420071838703
+              }
+            ],
+            "condition": "known gold fault label"
+          }
+        }
+      },
+      "selective": {
+        "overall_n": 15,
+        "joint_gold_n": 15,
+        "accepted_total": 0,
+        "accepted_joint_gold_n": 0,
+        "errors": 0,
+        "coverage": 0.0,
+        "selective_risk": null,
+        "selective_accuracy": null,
+        "risk_wilson_95": null
+      },
+      "risk_coverage": [
+        {
+          "threshold": 0.8838777790334034,
+          "coverage": 0.06666666666666667,
+          "risk": 0.0,
+          "n": 1
+        },
+        {
+          "threshold": 0.8531865454185551,
+          "coverage": 0.13333333333333333,
+          "risk": 0.0,
+          "n": 2
+        },
+        {
+          "threshold": 0.8473600018282063,
+          "coverage": 0.2,
+          "risk": 0.0,
+          "n": 3
+        },
+        {
+          "threshold": 0.8115720671246976,
+          "coverage": 0.26666666666666666,
+          "risk": 0.25,
+          "n": 4
+        },
+        {
+          "threshold": 0.7807939135379931,
+          "coverage": 0.3333333333333333,
+          "risk": 0.2,
+          "n": 5
+        },
+        {
+          "threshold": 0.7287457601058961,
+          "coverage": 0.4,
+          "risk": 0.16666666666666666,
+          "n": 6
+        },
+        {
+          "threshold": 0.7261653602170512,
+          "coverage": 0.4666666666666667,
+          "risk": 0.14285714285714285,
+          "n": 7
+        },
+        {
+          "threshold": 0.6998655560117472,
+          "coverage": 0.5333333333333333,
+          "risk": 0.125,
+          "n": 8
+        },
+        {
+          "threshold": 0.6898104498658986,
+          "coverage": 0.6,
+          "risk": 0.2222222222222222,
+          "n": 9
+        },
+        {
+          "threshold": 0.5883294718034435,
+          "coverage": 0.6666666666666666,
+          "risk": 0.3,
+          "n": 10
+        },
+        {
+          "threshold": 0.5762975968972069,
+          "coverage": 0.7333333333333333,
+          "risk": 0.2727272727272727,
+          "n": 11
+        },
+        {
+          "threshold": 0.5501658147329372,
+          "coverage": 0.8,
+          "risk": 0.3333333333333333,
+          "n": 12
+        },
+        {
+          "threshold": 0.5475999656244751,
+          "coverage": 0.8666666666666667,
+          "risk": 0.3076923076923077,
+          "n": 13
+        },
+        {
+          "threshold": 0.5223877276260389,
+          "coverage": 0.9333333333333333,
+          "risk": 0.35714285714285715,
+          "n": 14
+        },
+        {
+          "threshold": 0.42154392506293975,
+          "coverage": 1.0,
+          "risk": 0.3333333333333333,
+          "n": 15
+        }
+      ],
+      "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+    },
+    "consistent_service_rename": {
+      "runs": 15,
+      "observations": 15,
+      "missing_root": 0,
+      "candidate_misses": 0,
+      "missing_fault": 0,
+      "root": {
+        "n": 15,
+        "acc_at_1": 0.8666666666666667,
+        "mrr": 0.9022222222222223,
+        "recall_at_3": 0.9333333333333333,
+        "candidate_coverage": 1.0
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.8,
+        "macro_f1": 0.7942857142857143,
+        "per_class": {
+          "cpu_stress": {
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714,
+            "support": 3
+          },
+          "memory_stress": {
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4,
+            "support": 3
+          },
+          "disk_io_stress": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "network_delay": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          },
+          "network_packet_loss": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 3
+          }
+        },
+        "confusion_matrix": [
+          [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3
+          ]
+        ]
+      },
+      "groups": {
+        "application": {
+          "Online Boutique": {
+            "n": 15,
+            "acc_at_1": 0.8666666666666667,
+            "mrr": 0.9022222222222223,
+            "recall_at_3": 0.9333333333333333,
+            "candidate_coverage": 1.0
+          }
+        },
+        "candidate_count": {
+          "13": {
+            "n": 9,
+            "acc_at_1": 0.7777777777777778,
+            "mrr": 0.837037037037037,
+            "recall_at_3": 0.8888888888888888,
+            "candidate_coverage": 1.0
+          },
+          "14": {
+            "n": 6,
+            "acc_at_1": 1.0,
+            "mrr": 1.0,
+            "recall_at_3": 1.0,
+            "candidate_coverage": 1.0
+          }
+        }
+      },
+      "joint_accuracy": 0.6666666666666666,
+      "joint_n": 15,
+      "joint_error_wilson_95": [
+        0.1517632443971473,
+        0.5828645226148023
+      ],
+      "probability": {
+        "root": {
+          "raw": {
+            "n": 15,
+            "nll": 0.9430473495265694,
+            "ece": 0.11642197064994309,
+            "brier": 0.2561173067843128,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 15,
+                "accuracy": 0.8666666666666667,
+                "confidence": 0.9830886373166098
+              }
+            ],
+            "condition": "gold covered by candidates"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 0.6931866347303103,
+            "ece": 0.11141257311417307,
+            "brier": 0.23658972878987833,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.7914463868168136
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 6,
+                "accuracy": 0.6666666666666666,
+                "confidence": 0.8550451429570486
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 8,
+                "accuracy": 1.0,
+                "confidence": 0.9584544842766103
+              }
+            ],
+            "condition": "gold covered by candidates"
+          }
+        },
+        "fault": {
+          "raw": {
+            "n": 15,
+            "nll": 0.3919340509828046,
+            "ece": 0.2744811724099058,
+            "brier": 0.24300340875469387,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.4671954885441674
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 2,
+                "accuracy": 0.0,
+                "confidence": 0.5749737535106784
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.6294735645123494
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 1,
+                "accuracy": 0.0,
+                "confidence": 0.7013961933617107
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 5,
+                "accuracy": 1.0,
+                "confidence": 0.8360130336724282
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 4,
+                "accuracy": 1.0,
+                "confidence": 0.9569795820758683
+              }
+            ],
+            "condition": "known gold fault label"
+          },
+          "prob": {
+            "n": 15,
+            "nll": 0.4706453252945243,
+            "ece": 0.21720555995015103,
+            "brier": 0.26988782920014653,
+            "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+            "ece_binning": "10 equal width bins; final bin includes 1",
+            "reliability": [
+              {
+                "lo": 0.0,
+                "hi": 0.1,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.1,
+                "hi": 0.2,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.2,
+                "hi": 0.3,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.3,
+                "hi": 0.4,
+                "n": 0,
+                "accuracy": null,
+                "confidence": null
+              },
+              {
+                "lo": 0.4,
+                "hi": 0.5,
+                "n": 1,
+                "accuracy": 1.0,
+                "confidence": 0.42154392506293975
+              },
+              {
+                "lo": 0.5,
+                "hi": 0.6,
+                "n": 5,
+                "accuracy": 0.4,
+                "confidence": 0.5569561153368203
+              },
+              {
+                "lo": 0.6,
+                "hi": 0.7,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.6948380029388228
+              },
+              {
+                "lo": 0.7,
+                "hi": 0.8,
+                "n": 3,
+                "accuracy": 1.0,
+                "confidence": 0.7452350112869802
+              },
+              {
+                "lo": 0.8,
+                "hi": 0.9,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.829466034476452
+              },
+              {
+                "lo": 0.9,
+                "hi": 1.0,
+                "n": 2,
+                "accuracy": 1.0,
+                "confidence": 0.910420071838703
+              }
+            ],
+            "condition": "known gold fault label"
+          }
+        }
+      },
+      "selective": {
+        "overall_n": 15,
+        "joint_gold_n": 15,
+        "accepted_total": 0,
+        "accepted_joint_gold_n": 0,
+        "errors": 0,
+        "coverage": 0.0,
+        "selective_risk": null,
+        "selective_accuracy": null,
+        "risk_wilson_95": null
+      },
+      "risk_coverage": [
+        {
+          "threshold": 0.8838777790334034,
+          "coverage": 0.06666666666666667,
+          "risk": 0.0,
+          "n": 1
+        },
+        {
+          "threshold": 0.8531865454185551,
+          "coverage": 0.13333333333333333,
+          "risk": 0.0,
+          "n": 2
+        },
+        {
+          "threshold": 0.8473600018282063,
+          "coverage": 0.2,
+          "risk": 0.0,
+          "n": 3
+        },
+        {
+          "threshold": 0.8115720671246976,
+          "coverage": 0.26666666666666666,
+          "risk": 0.25,
+          "n": 4
+        },
+        {
+          "threshold": 0.7807939135379931,
+          "coverage": 0.3333333333333333,
+          "risk": 0.2,
+          "n": 5
+        },
+        {
+          "threshold": 0.7287457601058961,
+          "coverage": 0.4,
+          "risk": 0.16666666666666666,
+          "n": 6
+        },
+        {
+          "threshold": 0.7261653602170512,
+          "coverage": 0.4666666666666667,
+          "risk": 0.14285714285714285,
+          "n": 7
+        },
+        {
+          "threshold": 0.6998655560117472,
+          "coverage": 0.5333333333333333,
+          "risk": 0.125,
+          "n": 8
+        },
+        {
+          "threshold": 0.6898104498658986,
+          "coverage": 0.6,
+          "risk": 0.2222222222222222,
+          "n": 9
+        },
+        {
+          "threshold": 0.5883294718034435,
+          "coverage": 0.6666666666666666,
+          "risk": 0.3,
+          "n": 10
+        },
+        {
+          "threshold": 0.5762975968972069,
+          "coverage": 0.7333333333333333,
+          "risk": 0.2727272727272727,
+          "n": 11
+        },
+        {
+          "threshold": 0.5501658147329372,
+          "coverage": 0.8,
+          "risk": 0.3333333333333333,
+          "n": 12
+        },
+        {
+          "threshold": 0.5475999656244751,
+          "coverage": 0.8666666666666667,
+          "risk": 0.3076923076923077,
+          "n": 13
+        },
+        {
+          "threshold": 0.5223877276260389,
+          "coverage": 0.9333333333333333,
+          "risk": 0.35714285714285715,
+          "n": 14
+        },
+        {
+          "threshold": 0.42154392506293975,
+          "coverage": 1.0,
+          "risk": 0.3333333333333333,
+          "n": 15
+        }
+      ],
+      "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+    }
+  },
+  "benchmark": {
+    "device": "cpu",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "threads": 8,
+    "batch_size": 1,
+    "warmup_per_incident": 3,
+    "repetitions_per_incident": 12,
+    "cold_model_load_ms": 5061.163898557425,
+    "core": {
+      "p50_ms": 696.6249011456966,
+      "p95_ms": 823.8744521513581,
+      "throughput_per_second": 1.3884374541110385
+    },
+    "end_to_end": {
+      "p50_ms": 683.5433002561331,
+      "p95_ms": 825.9269492700696,
+      "throughput_per_second": 1.3934425649565318
+    },
+    "peak_process_ram_bytes": 1952468992,
+    "peak_ram_scope": "Windows process lifetime peak working set",
+    "checkpoint_bytes": 597314269,
+    "measurements": [
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 0,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 680.5777996778488,
+        "end_to_end_ms": 636.9994021952152,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 1,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 634.6675008535385,
+        "end_to_end_ms": 662.5258028507233,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 2,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 724.1479009389877,
+        "end_to_end_ms": 656.3147008419037,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 3,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 698.3426995575428,
+        "end_to_end_ms": 649.8920023441315,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 4,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 692.6096975803375,
+        "end_to_end_ms": 683.7585009634495,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 5,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 652.0695015788078,
+        "end_to_end_ms": 691.1993026733398,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 6,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 653.067097067833,
+        "end_to_end_ms": 671.2822988629341,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 7,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 657.5617007911205,
+        "end_to_end_ms": 700.8021995425224,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 8,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 711.8073999881744,
+        "end_to_end_ms": 682.6926991343498,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 9,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 683.9220002293587,
+        "end_to_end_ms": 675.3431968390942,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 10,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 660.3999026119709,
+        "end_to_end_ms": 668.477900326252,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 11,
+        "tokens": 1098,
+        "candidates": 14,
+        "core_ms": 687.0786026120186,
+        "end_to_end_ms": 673.8095991313457,
+        "rss_bytes": 1661931520
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 0,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 826.2830004096031,
+        "end_to_end_ms": 823.9197991788387,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 1,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 820.3383013606071,
+        "end_to_end_ms": 831.9483995437622,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 2,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 797.9744970798492,
+        "end_to_end_ms": 769.6190029382706,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 3,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 787.3837985098362,
+        "end_to_end_ms": 836.3764025270939,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 4,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 802.1909967064857,
+        "end_to_end_ms": 807.3761984705925,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 5,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 794.2957989871502,
+        "end_to_end_ms": 808.4734007716179,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 6,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 790.5523031949997,
+        "end_to_end_ms": 822.9768984019756,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 7,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 791.2415005266666,
+        "end_to_end_ms": 811.6951994597912,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 8,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 823.0716027319431,
+        "end_to_end_ms": 801.6146011650562,
+        "rss_bytes": 1662406656
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 9,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 802.8419986367226,
+        "end_to_end_ms": 818.5447975993156,
+        "rss_bytes": 1662410752
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 10,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 831.7250981926918,
+        "end_to_end_ms": 781.9880992174149,
+        "rss_bytes": 1662410752
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 11,
+        "tokens": 1288,
+        "candidates": 13,
+        "core_ms": 810.1092986762524,
+        "end_to_end_ms": 784.2817008495331,
+        "rss_bytes": 1662418944
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 0,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 670.7249991595745,
+        "end_to_end_ms": 671.0678972303867,
+        "rss_bytes": 1662517248
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 1,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 661.5603007376194,
+        "end_to_end_ms": 671.016801148653,
+        "rss_bytes": 1662517248
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 2,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 655.5436998605728,
+        "end_to_end_ms": 677.7458973228931,
+        "rss_bytes": 1662517248
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 3,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 655.5823013186455,
+        "end_to_end_ms": 644.2928984761238,
+        "rss_bytes": 1662521344
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 4,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 694.9071027338505,
+        "end_to_end_ms": 659.3651995062828,
+        "rss_bytes": 1662521344
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 5,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 669.4144010543823,
+        "end_to_end_ms": 650.0205993652344,
+        "rss_bytes": 1662525440
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 6,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 662.5128984451294,
+        "end_to_end_ms": 663.6354997754097,
+        "rss_bytes": 1662459904
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 7,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 648.6812978982925,
+        "end_to_end_ms": 680.8842979371548,
+        "rss_bytes": 1662459904
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 8,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 669.7575002908707,
+        "end_to_end_ms": 683.3280995488167,
+        "rss_bytes": 1662459904
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 9,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 709.9042981863022,
+        "end_to_end_ms": 695.3707002103329,
+        "rss_bytes": 1662459904
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 10,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 714.2555005848408,
+        "end_to_end_ms": 702.4191990494728,
+        "rss_bytes": 1662464000
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 11,
+        "tokens": 1084,
+        "candidates": 14,
+        "core_ms": 701.3232968747616,
+        "end_to_end_ms": 684.2359974980354,
+        "rss_bytes": 1662464000
+      }
+    ],
+    "scaling_probes": [
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 512,
+        "tokens": 501,
+        "candidate_count": 2,
+        "core_ms": [
+          260.21090149879456,
+          256.18860125541687,
+          259.61659848690033
+        ]
+      },
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 1024,
+        "tokens": 1022,
+        "candidate_count": 7,
+        "core_ms": [
+          616.0681992769241,
+          607.5360998511314,
+          609.2642024159431
+        ]
+      },
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 2048,
+        "tokens": 1098,
+        "candidate_count": 14,
+        "core_ms": [
+          687.0405003428459,
+          737.1218986809254,
+          685.9599985182285
+        ]
+      }
+    ],
+    "environment": {
+      "torch": "2.7.1+cu128",
+      "transformers": "4.51.3",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "20.0.0",
+      "pydantic": "2.11.5",
+      "fastapi": "0.115.12",
+      "scipy": "1.15.3"
+    }
+  },
+  "integration": {
+    "status": "experiment_completed",
+    "reload_max_abs_logit_diff": 0.0,
+    "http": {
+      "health": 200,
+      "ready": 200,
+      "decide": 200,
+      "decision": {
+        "root_cause": {
+          "selected": "adservice",
+          "probabilities": {
+            "adservice": 0.9633187986057056,
+            "shippingservice": 0.012589460046338607,
+            "redis": 0.007649393675090483,
+            "checkoutservice": 0.004642327477682588,
+            "paymentservice": 0.0018241959723115327,
+            "main": 0.0013953836924723384,
+            "recommendationservice": 0.0005721306248683895,
+            "productcatalogservice": 0.000633887297932499,
+            "frontend": 0.0005586559260565237,
+            "emailservice": 0.0006659232221458439,
+            "currencyservice": 0.0011616381960122418,
+            "cartservice": 0.0012054322760143249,
+            "frontend-external": 0.0016538063223630565,
+            "PassthroughCluster": 0.002128966665005983
+          },
+          "confidence": 0.9633187986057056,
+          "calibration_status": "fitted"
+        },
+        "fault_type": {
+          "selected": "memory_stress",
+          "probabilities": {
+            "cpu_stress": 0.2992620897981689,
+            "memory_stress": 0.5883294718034435,
+            "disk_io_stress": 0.09392508792658387,
+            "network_delay": 0.003844356640653057,
+            "network_packet_loss": 0.014638993831150787
+          },
+          "confidence": 0.5883294718034435,
+          "calibration_status": "fitted"
+        },
+        "routing": {
+          "destination": "REVIEW",
+          "routing_score": 0.5883294718034435,
+          "reason_codes": [
+            "NO_FEASIBLE_THRESHOLD"
+          ]
+        },
+        "versions": {
+          "model": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+          "serializer": "metrics-canonical-v2",
+          "ontology": "e465bdcb3f6073a4e39311081b7e125f850e341ca339d1e1fae986d8a07806ae",
+          "calibration": "ffc12bc343e86832257aa133716f0cf0896fcd8b3ccf493dc58bc8d601d0f511",
+          "policy": "4632dd06316f420f7f801f4318f2cb3182191edb91d9e14c8ffcc84bfe90e3fe"
+        },
+        "evidence_status": {
+          "serializer_version": "metrics-canonical-v2",
+          "tokens": 1098,
+          "candidate_count": 14,
+          "usable_metrics_retained": 49,
+          "metrics_total": 49,
+          "metrics_retained": 49,
+          "retained_fraction": 1.0,
+          "retained_metric_keys": [
+            "adservice/cpu",
+            "adservice/mem",
+            "shippingservice/mem",
+            "redis/mem",
+            "checkoutservice/cpu",
+            "paymentservice/latency",
+            "main/cpu",
+            "recommendationservice/cpu",
+            "paymentservice/mem",
+            "recommendationservice/mem",
+            "shippingservice/cpu",
+            "productcatalogservice/latency",
+            "frontend/latency",
+            "paymentservice/cpu",
+            "redis/cpu",
+            "checkoutservice/mem",
+            "productcatalogservice/mem",
+            "emailservice/cpu",
+            "productcatalogservice/cpu",
+            "currencyservice/cpu",
+            "recommendationservice/latency",
+            "checkoutservice/latency",
+            "frontend/mem",
+            "currencyservice/latency",
+            "recommendationservice/load",
+            "cartservice/cpu",
+            "shippingservice/load",
+            "frontend/cpu",
+            "adservice/latency",
+            "paymentservice/load",
+            "productcatalogservice/load",
+            "cartservice/latency",
+            "main/mem",
+            "checkoutservice/load",
+            "cartservice/load",
+            "cartservice/mem",
+            "currencyservice/load",
+            "shippingservice/latency",
+            "emailservice/load",
+            "frontend-external/load",
+            "frontend/load",
+            "adservice/load",
+            "currencyservice/mem",
+            "emailservice/mem",
+            "emailservice/latency",
+            "frontend/error",
+            "frontend-external/error",
+            "PassthroughCluster/error",
+            "PassthroughCluster/load"
+          ],
+          "truncated": false,
+          "missing_modalities": [
+            "logs",
+            "traces",
+            "topology",
+            "deployment_context"
+          ],
+          "token_budgets": {
+            "max": 2048,
+            "candidate_reservation": true,
+            "logs": 0,
+            "traces": 0
+          },
+          "absolute_timestamps_serialized": false,
+          "service_names_serialized": false,
+          "candidate_order": "observable metric signature",
+          "numeric_metrics": [],
+          "numeric_evidence_scope": "retained metrics only",
+          "descriptions_serialized": false
+        },
+        "timings_ms": {
+          "serialization_tokenization": 6.8554021418094635,
+          "model": 673.6894994974136,
+          "end_to_end": 680.9496991336346
+        },
+        "execute_remediation": false
+      },
+      "reject_gold": 422,
+      "single_candidate": {
+        "destination": "REVIEW",
+        "routing_score": 0.5957337493610367,
+        "reason_codes": [
+          "SINGLE_CANDIDATE",
+          "NO_FEASIBLE_THRESHOLD"
+        ]
+      },
+      "candidate_overflow": {
+        "destination": "REVIEW",
+        "routing_score": null,
+        "reason_codes": [
+          "CANDIDATES_EXCEED_TOKEN_BUDGET"
+        ]
+      },
+      "unvalidated_application": {
+        "destination": "REVIEW",
+        "routing_score": 0.5856155760662882,
+        "reason_codes": [
+          "NO_FEASIBLE_THRESHOLD",
+          "UNVALIDATED_APPLICATION"
+        ]
+      },
+      "empty_candidates": 422
+    }
+  },
+  "calibrator": {
+    "binding": {
+      "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+      "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+      "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "fit_run_ids": [
+      "1acf973eeb55223dd1401bcb",
+      "2c11d2bd3b8dd0106a410acd",
+      "340b38e18c78d735f3eaa79f",
+      "383d01dff1a7c11c357a8b7d",
+      "3bae0f8e18b4275a25ef1c13",
+      "5fa77e02707286538d2c02d4",
+      "621e32d6eaef77f65256d94d",
+      "83e5854748d14cd269313c11",
+      "8462c8793839ce57cd54cdb4",
+      "862ffe41b95016e9f8a64dc0",
+      "997d073d1980404816611789",
+      "c4a0b355e9f41a7292554ccc",
+      "cbf9a571afab324819a511c5",
+      "d2eb8b65188068d01dd78619",
+      "e53d3ed33e4c2cc632a2c669"
+    ],
+    "root": {
+      "temperature": 1.5633438622885754,
+      "status": "fitted",
+      "n": 15,
+      "nll_before": 0.7273803437560555,
+      "nll_after": 0.6220916850507674,
+      "log_temperature_bounds": [
+        -3,
+        3
+      ]
+    },
+    "fault": {
+      "temperature": 1.5140754923064,
+      "status": "fitted",
+      "n": 15,
+      "nll_before": 0.7720586312007902,
+      "nll_after": 0.7131821697115096,
+      "log_temperature_bounds": [
+        -3,
+        3
+      ]
+    },
+    "id": "ffc12bc343e86832257aa133716f0cf0896fcd8b3ccf493dc58bc8d601d0f511"
+  },
+  "policy": {
+    "binding": {
+      "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+      "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+      "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "calibrator_id": "ffc12bc343e86832257aa133716f0cf0896fcd8b3ccf493dc58bc8d601d0f511",
+    "threshold": null,
+    "status": "no_feasible_threshold",
+    "selection": null,
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30,
+    "fit_run_ids": [
+      "0bede9ee50d30983f526b09e",
+      "1c70ba7e5947bcc6fc984531",
+      "34a5fc24ee7a702e021b8e7d",
+      "39ea50da29d99b7ebb8fced3",
+      "44f4dacd9be40391fda5407b",
+      "48cb2b26d8eaf0c61555034e",
+      "4ce07f0e823ce9cc532283ca",
+      "4ef636dbea013586152ef795",
+      "5907a888e41810a59c6c56fa",
+      "5e9e51602d294dabc8575abc",
+      "6d10e109856ee5251d5d231f",
+      "6d52ba233f1eae620f7dd40f",
+      "6e019d2b5ef661fad5fc2522",
+      "74692e033da8462ad910c85a",
+      "74e2a260f2013101199b3f80",
+      "7b5dd20595266d6cd4bf490b",
+      "8820db229b57b86ffa1b9a5a",
+      "8f5e25c7853f01dac914f5d1",
+      "962a2f1ec62f8b62b24b27cf",
+      "9877487869f2836a221a4fc9",
+      "9982feb4578e4f43b1aabebb",
+      "af063e5188c6b2fd0b0530e1",
+      "b8816a5993f6e17b0b0f247a",
+      "c804332a86f2b75587d636b4",
+      "e1f7e6a831358708f745c734",
+      "e753d2a4d93efc42214d6ea6",
+      "efd454dfde62e0ef1f2ded12",
+      "f6d0f453c7fde9ce2fa77f9d",
+      "fc850df56c3937cc5b7e0b2e",
+      "ffdc51b0aa4071303a8330c2"
+    ],
+    "search": "all observed routing scores; maximum feasible empirical coverage",
+    "guarantee": "none; post-selection interval descriptive only",
+    "id": "4632dd06316f420f7f801f4318f2cb3182191edb91d9e14c8ffcc84bfe90e3fe"
+  },
+  "numeric_control": {
+    "root": {
+      "n": 15,
+      "accuracy": 0.6666666666666666,
+      "nll": 2.869945236388865
+    },
+    "fault": {
+      "n": 15,
+      "accuracy": 1.0,
+      "nll": 0.03863697506323768,
+      "macro_f1": 1.0,
+      "prediction_counts": {
+        "cpu_stress": 3,
+        "memory_stress": 3,
+        "disk_io_stress": 3,
+        "network_delay": 3,
+        "network_packet_loss": 3
+      }
+    },
+    "joint_accuracy": 0.6666666666666666,
+    "sum_nll": 2.9085822114521025
+  },
+  "representation_audit": {
+    "budget": {
+      "n": 65,
+      "min_tokens": 1679,
+      "max_tokens": 2048,
+      "mean_tokens": 1940.4923076923078,
+      "truncated_n": 38,
+      "mean_retention": 0.9621472363190041
+    },
+    "canonical": {
+      "n": 65,
+      "min_tokens": 854,
+      "max_tokens": 1335,
+      "mean_tokens": 1200.0307692307692,
+      "truncated_n": 0,
+      "mean_retention": 1.0
+    },
+    "hybrid": {
+      "n": 65,
+      "min_tokens": 854,
+      "max_tokens": 1335,
+      "mean_tokens": 1200.0307692307692,
+      "truncated_n": 0,
+      "mean_retention": 1.0
+    }
+  },
+  "old_benchmark": {
+    "device": "cpu",
+    "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "logical_cpus": 32,
+    "threads": 8,
+    "batch_size": 1,
+    "warmup_per_incident": 3,
+    "repetitions_per_incident": 12,
+    "cold_model_load_ms": 5242.067698389292,
+    "core": {
+      "p50_ms": 1185.1190999150276,
+      "p95_ms": 1396.0255738347769,
+      "throughput_per_second": 0.8135914482368685
+    },
+    "end_to_end": {
+      "p50_ms": 1194.7510987520218,
+      "p95_ms": 1389.1369737684727,
+      "throughput_per_second": 0.8075050361177168
+    },
+    "peak_process_ram_bytes": 1950760960,
+    "peak_ram_scope": "Windows process lifetime peak working set",
+    "checkpoint_bytes": 597314269,
+    "measurements": [
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 0,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1122.0891997218132,
+        "end_to_end_ms": 1190.4100999236107,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 1,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1171.2510995566845,
+        "end_to_end_ms": 1173.8494001328945,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 2,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1113.1168007850647,
+        "end_to_end_ms": 1148.7304978072643,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 3,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1123.7013973295689,
+        "end_to_end_ms": 1142.5941996276379,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 4,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1096.8266986310482,
+        "end_to_end_ms": 1087.4110981822014,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 5,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1173.1245033442974,
+        "end_to_end_ms": 1161.9578003883362,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 6,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1180.5769987404346,
+        "end_to_end_ms": 1188.7583024799824,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 7,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1157.6004028320312,
+        "end_to_end_ms": 1230.5836975574493,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 8,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1176.3966009020805,
+        "end_to_end_ms": 1152.953002601862,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 9,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1111.5059033036232,
+        "end_to_end_ms": 1150.1016020774841,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 10,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1141.644399613142,
+        "end_to_end_ms": 1175.0098019838333,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "21fe50b25236688ea0b6594e",
+        "iteration": 11,
+        "tokens": 1827,
+        "candidates": 14,
+        "core_ms": 1177.2021986544132,
+        "end_to_end_ms": 1177.131600677967,
+        "rss_bytes": 1660219392
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 0,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1292.4314998090267,
+        "end_to_end_ms": 1318.8044019043446,
+        "rss_bytes": 1660628992
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 1,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1289.9352014064789,
+        "end_to_end_ms": 1380.7395994663239,
+        "rss_bytes": 1660628992
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 2,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1359.3023978173733,
+        "end_to_end_ms": 1314.733598381281,
+        "rss_bytes": 1660628992
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 3,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1322.8843994438648,
+        "end_to_end_ms": 1409.0436026453972,
+        "rss_bytes": 1660628992
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 4,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1390.9373991191387,
+        "end_to_end_ms": 1400.2594016492367,
+        "rss_bytes": 1660628992
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 5,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1383.2328021526337,
+        "end_to_end_ms": 1333.2583010196686,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 6,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1355.7889014482498,
+        "end_to_end_ms": 1385.429497808218,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 7,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1361.4493012428284,
+        "end_to_end_ms": 1361.9415014982224,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 8,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1334.621500223875,
+        "end_to_end_ms": 1354.901198297739,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 9,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1529.9277007579803,
+        "end_to_end_ms": 1364.9256005883217,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 10,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1368.6140030622482,
+        "end_to_end_ms": 1361.1091002821922,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "4a40a5b9c9edacbf102d3de3",
+        "iteration": 11,
+        "tokens": 2031,
+        "candidates": 13,
+        "core_ms": 1411.2900979816914,
+        "end_to_end_ms": 1383.001398295164,
+        "rss_bytes": 1660563456
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 0,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1126.7680004239082,
+        "end_to_end_ms": 1171.8778014183044,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 1,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1178.5228997468948,
+        "end_to_end_ms": 1199.092097580433,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 2,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1188.2238984107971,
+        "end_to_end_ms": 1211.7165997624397,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 3,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1153.6479964852333,
+        "end_to_end_ms": 1150.0039994716644,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 4,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1215.8420011401176,
+        "end_to_end_ms": 1167.6365993916988,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 5,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1130.4107010364532,
+        "end_to_end_ms": 1154.2642004787922,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 6,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1195.7312002778053,
+        "end_to_end_ms": 1152.3989997804165,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 7,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1195.373896509409,
+        "end_to_end_ms": 1200.6176970899105,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 8,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1135.9011009335518,
+        "end_to_end_ms": 1170.550599694252,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 9,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1185.233499854803,
+        "end_to_end_ms": 1269.4430984556675,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 10,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1212.141402065754,
+        "end_to_end_ms": 1174.8518012464046,
+        "rss_bytes": 1660878848
+      },
+      {
+        "incident_id": "c4dfa4744b8839cd3ce67a49",
+        "iteration": 11,
+        "tokens": 1823,
+        "candidates": 14,
+        "core_ms": 1185.0046999752522,
+        "end_to_end_ms": 1211.6735018789768,
+        "rss_bytes": 1660878848
+      }
+    ],
+    "scaling_probes": [
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 512,
+        "tokens": 496,
+        "candidate_count": 2,
+        "core_ms": [
+          252.21619755029678,
+          227.27980092167854,
+          267.93400198221207
+        ]
+      },
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 1024,
+        "tokens": 1024,
+        "candidate_count": 7,
+        "core_ms": [
+          563.3900985121727,
+          599.9355986714363,
+          564.0782006084919
+        ]
+      },
+      {
+        "synthetic_performance_probe": true,
+        "max_tokens": 2048,
+        "tokens": 1827,
+        "candidate_count": 14,
+        "core_ms": [
+          1202.9291987419128,
+          1151.1763967573643,
+          1274.9087996780872
+        ]
+      }
+    ],
+    "environment": {
+      "torch": "2.7.1+cu128",
+      "transformers": "4.51.3",
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "pyarrow": "20.0.0",
+      "pydantic": "2.11.5",
+      "fastapi": "0.115.12",
+      "scipy": "1.15.3"
+    }
+  },
+  "limitations": [
+    "50 train / 15 validation / 15 calibration / 30 gate / 15 reused regression cases",
+    "controlled injected faults, one application, metrics-only, oracle onset",
+    "test already inspected before this iteration; no claim of new unseen generalization",
+    "no formal future risk guarantee and no remediation"
+  ],
+  "not_run": [
+    "new independent confirmatory holdout",
+    "multi-seed stability",
+    "cross-system evaluation",
+    "KD",
+    "LLM cascade",
+    "ONNX",
+    "INT8"
+  ],
+  "experiment_inventory": [
+    {
+      "artifact": "artifacts\\sft",
+      "training": "experiment_completed",
+      "validation": "experiment_completed",
+      "calibration": "experiment_completed",
+      "gate_selection": "experiment_completed",
+      "regression": "experiment_completed",
+      "cpu_benchmark": "experiment_completed",
+      "http_reload": "experiment_completed"
+    },
+    {
+      "artifact": "artifacts\\retrain\\hybrid_frozen\\frozen",
+      "training": "experiment_completed",
+      "validation": "experiment_completed",
+      "calibration": "experiment_completed",
+      "gate_selection": "experiment_completed",
+      "regression": "experiment_completed",
+      "cpu_benchmark": "not_run",
+      "http_reload": "experiment_completed"
+    },
+    {
+      "artifact": "artifacts\\retrain\\budget\\sft",
+      "training": "experiment_completed",
+      "validation": "experiment_completed",
+      "calibration": "not_run",
+      "gate_selection": "not_run",
+      "regression": "not_run",
+      "cpu_benchmark": "not_run",
+      "http_reload": "not_run"
+    },
+    {
+      "artifact": "artifacts\\retrain\\canonical\\sft",
+      "training": "experiment_completed",
+      "validation": "experiment_completed",
+      "calibration": "experiment_completed",
+      "gate_selection": "experiment_completed",
+      "regression": "experiment_completed",
+      "cpu_benchmark": "experiment_completed",
+      "http_reload": "experiment_completed"
+    },
+    {
+      "artifact": "artifacts\\retrain\\hybrid\\sft",
+      "training": "experiment_completed",
+      "validation": "experiment_completed",
+      "calibration": "not_run",
+      "gate_selection": "not_run",
+      "regression": "not_run",
+      "cpu_benchmark": "not_run",
+      "http_reload": "not_run"
+    }
+  ]
+}

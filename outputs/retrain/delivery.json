@@ -1,0 +1,7 @@
+{
+  "canonical_repository": "D:\\CODEX\\DecisionOS-SRE",
+  "report": "D:\\CODEX\\DecisionOS-SRE\\outputs\\retrain\\execution_report.md",
+  "current_workspace_copy": "blocked",
+  "target": "E:\\CODEX\\2026-10-06\\decisionos-sre-prompt-execution-scope-mvp\\outputs\\retrain",
+  "reason": "Windows New-Item IOException: A device which does not exist was specified (persistent E drive write problem). All artifacts are preserved on D."
+}

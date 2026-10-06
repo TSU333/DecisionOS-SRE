@@ -1,0 +1,221 @@
+{
+  "status": "frozen_before_regression",
+  "timestamp_utc": "2026-10-06T13:17:31.291494+00:00",
+  "criterion": "minimum model_validation sum of per-head NLL",
+  "selected": {
+    "artifact": "artifacts/retrain/canonical/sft",
+    "validation": {
+      "root": {
+        "n": 15,
+        "accuracy": 0.9333333333333333,
+        "nll": 0.26439184134737587
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.8,
+        "nll": 0.35801870244626083,
+        "macro_f1": 0.798095238095238,
+        "prediction_counts": {
+          "cpu_stress": 3,
+          "memory_stress": 3,
+          "disk_io_stress": 3,
+          "network_delay": 2,
+          "network_packet_loss": 4
+        }
+      },
+      "joint_accuracy": 0.8,
+      "sum_nll": 0.6224105437936367
+    },
+    "binding": {
+      "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+      "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+      "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "config_sha256": "7f1eb9a291b72679428561b51699cd7910eb9ec354f7dea21d02959fbb066a8e",
+    "steps": 312,
+    "best_epoch": 24
+  },
+  "candidates": [
+    {
+      "artifact": "artifacts/sft",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 0.6666666666666666,
+          "nll": 1.3744744839173633
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.2,
+          "nll": 1.6015423170701149,
+          "macro_f1": 0.1,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 0,
+            "disk_io_stress": 9,
+            "network_delay": 0,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.2,
+        "sum_nll": 2.976016800987478
+      },
+      "binding": {
+        "checkpoint_sha256": "65133849b239ac59571ed5010f72329a5e96c872b3e726e7dc54bf7720d0e95f",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "f176570d7e9041b37bd81fb9291102127d2de4442c999848de299d538026f47a",
+      "steps": 26,
+      "best_epoch": 2
+    },
+    {
+      "artifact": "artifacts/retrain/hybrid_frozen/frozen",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 0.9333333333333333,
+          "nll": 0.21068074711929144
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.9333333333333333,
+          "nll": 0.48715340283375236,
+          "macro_f1": 0.9314285714285715,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 3,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 2
+          }
+        },
+        "joint_accuracy": 0.9333333333333333,
+        "sum_nll": 0.6978341499530438
+      },
+      "binding": {
+        "checkpoint_sha256": "594b78a226433346fe498c6c34f3285753bcde10da54f42dcb81e82655d0ddb2",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "2dbf7b54a1dd4cd14e33e648d6cc33b3bb347abc53f3654dffc1f40090de6836",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "7889c8db82c54f9decd444102eae7cb01e0566f52a2c49ea682355f5eeec2d79",
+      "steps": 312,
+      "best_epoch": 22
+    },
+    {
+      "artifact": "artifacts/retrain/budget/sft",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 1.0,
+          "nll": 0.014283380328784772
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.4,
+          "nll": 0.9394448595571198,
+          "macro_f1": 0.2333333333333333,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 0,
+            "disk_io_stress": 9,
+            "network_delay": 0,
+            "network_packet_loss": 0
+          }
+        },
+        "joint_accuracy": 0.4,
+        "sum_nll": 0.9537282398859045
+      },
+      "binding": {
+        "checkpoint_sha256": "49a985545180381aa72035a47ec65719e2747b02e00fbe8067689d752d4b5f1f",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "2e3d8feb786a4a32cdb64ee70efb9c54b1250bca3feee1e0070e1f26dbf39bcc",
+      "steps": 247,
+      "best_epoch": 13
+    },
+    {
+      "artifact": "artifacts/retrain/canonical/sft",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 0.9333333333333333,
+          "nll": 0.26439184134737587
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.8,
+          "nll": 0.35801870244626083,
+          "macro_f1": 0.798095238095238,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 3,
+            "disk_io_stress": 3,
+            "network_delay": 2,
+            "network_packet_loss": 4
+          }
+        },
+        "joint_accuracy": 0.8,
+        "sum_nll": 0.6224105437936367
+      },
+      "binding": {
+        "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "7f1eb9a291b72679428561b51699cd7910eb9ec354f7dea21d02959fbb066a8e",
+      "steps": 312,
+      "best_epoch": 24
+    },
+    {
+      "artifact": "artifacts/retrain/hybrid/sft",
+      "validation": {
+        "root": {
+          "n": 15,
+          "accuracy": 0.8666666666666667,
+          "nll": 0.3674912751636072
+        },
+        "fault": {
+          "n": 15,
+          "accuracy": 0.8666666666666667,
+          "nll": 0.35742365515191266,
+          "macro_f1": 0.8666666666666666,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 3,
+            "disk_io_stress": 3,
+            "network_delay": 3,
+            "network_packet_loss": 3
+          }
+        },
+        "joint_accuracy": 0.8,
+        "sum_nll": 0.7249149303155198
+      },
+      "binding": {
+        "checkpoint_sha256": "3ce418a21a27998e6925e592121effc07807649a06f6dbffd2c54ed10c005ad4",
+        "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+        "pipeline_hash": "2dbf7b54a1dd4cd14e33e648d6cc33b3bb347abc53f3654dffc1f40090de6836",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "1aa7f879f8f0455cedd167f2a6809028ef3bf1f26370b81bc53381c0ed42362e",
+      "steps": 312,
+      "best_epoch": 24
+    }
+  ],
+  "test_role": "previously inspected regression set; exploratory, not new confirmatory evidence",
+  "no_more_tuning_after_this_file": true,
+  "target_joint_risk": 0.05,
+  "min_accepted_runs": 30
+}

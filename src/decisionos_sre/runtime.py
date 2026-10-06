@@ -36,7 +36,7 @@ class Engine:
     def _decide(self,incident):
         start=time.perf_counter()
         incident=IncidentInput.model_validate(incident)
-        versions={"model":self.binding["checkpoint_sha256"],"serializer":SERIALIZER,
+        versions={"model":self.binding["checkpoint_sha256"],"serializer":self.serializer.version,
                   "ontology":digest(FAULTS),"calibration":self.calibrator["id"] if self.calibrator else None,
                   "policy":self.policy["id"] if self.policy else None}
         try:

@@ -1,0 +1,28 @@
+{
+  "execution_scope": "mvp",
+  "selection_split": "model_validation",
+  "original_test_role": "previously inspected regression set, not a new confirmatory test",
+  "old_artifacts_immutable": [
+    "artifacts/frozen",
+    "artifacts/sft"
+  ],
+  "stage_1": [
+    "10 TRAIN case overfit diagnostic",
+    "separate learning rates, larger step budget"
+  ],
+  "stage_2": "if indicated by validation diagnostics, compact identity-independent evidence representation",
+  "target_joint_risk": 0.05,
+  "min_accepted_runs": 30,
+  "no_synthetic_independent_runs": true,
+  "declared_trials": [
+    "budget SFT",
+    "canonical mean SFT",
+    "hybrid numerical residual SFT",
+    "hybrid frozen encoder"
+  ],
+  "max_optimizer_steps_per_main_trial": 312,
+  "early_stopping_patience": 6,
+  "selection_criterion": "minimum model_validation sum head NLL; old SFT eligible as fallback",
+  "diagnostic_status": "completed: train-only, not a candidate; selected root 10/10 and fault 7/10",
+  "numeric_control_role": "TRAIN-fitted ExtraTrees; all causal summaries; not identical-input comparison to truncated v1"
+}

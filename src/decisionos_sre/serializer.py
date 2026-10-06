@@ -11,15 +11,23 @@ class Encoded:
     candidate_ids: list[str]
     spans: list[tuple[int,int]]
     report: dict
+    candidate_numeric: list | None = None
+    incident_numeric: list | None = None
 
 class Serializer:
-    def __init__(self, tokenizer, max_length=2048):
+    def __init__(self, tokenizer, max_length=2048, version=SERIALIZER, numeric_metrics=()):
         self.tokenizer=tokenizer
         self.max_length=max_length
-        self.version=SERIALIZER
+        self.version=version
+        self.numeric_metrics=list(numeric_metrics)
+        if version not in (SERIALIZER,"metrics-canonical-v2"): raise ValueError("unsupported serializer version")
+        if self.numeric_metrics and version != "metrics-canonical-v2": raise ValueError("numeric features require v2")
 
     def __call__(self, incident):
         incident=IncidentInput.model_validate(incident)
+        if self.version=="metrics-canonical-v2":
+            from .representation import canonical_encode
+            return canonical_encode(self,incident)
         tok=self.tokenizer
         enc=lambda text: tok.encode(text,add_special_tokens=False)
         ids=[tok.cls_token_id]+enc("application: "+incident.application+"\n")
@@ -70,5 +78,11 @@ def collate(encoded, pad_token_id, device="cpu"):
         attention[i,:len(x.input_ids)]=1
         spans[i,:len(x.spans)]=torch.tensor(x.spans)
         mask[i,:len(x.spans)]=True
-    return {name:t.to(device) for name,t in
-            dict(input_ids=ids,attention_mask=attention,spans=spans,candidate_mask=mask).items()}
+    tensors=dict(input_ids=ids,attention_mask=attention,spans=spans,candidate_mask=mask)
+    if any(x.candidate_numeric is not None for x in encoded):
+        if not all(x.candidate_numeric is not None for x in encoded): raise ValueError("mixed numeric feature schemas")
+        dim=len(encoded[0].candidate_numeric[0])
+        numbers=torch.zeros((len(encoded),k,dim),dtype=torch.float32)
+        for i,x in enumerate(encoded): numbers[i,:len(x.spans)]=torch.tensor(x.candidate_numeric)
+        tensors.update(candidate_numeric=numbers,incident_numeric=torch.tensor([x.incident_numeric for x in encoded],dtype=torch.float32))
+    return {name:t.to(device) for name,t in tensors.items()}
