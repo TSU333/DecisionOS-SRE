@@ -1,3 +1,5 @@
+> 第三轮最新记录见 [round3_results.md](round3_results.md)；以下保留初始阶段历史记录。
+
 > 本文件保留第一轮历史结果。第二轮真实重训与回归对比见 `retraining_results.md`。
 
 # DecisionOS-SRE MVP 实际执行报告

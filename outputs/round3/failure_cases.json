@@ -1,0 +1,92 @@
+[
+  {
+    "run_id": "5edcafb57f99d79d2ee7d28d",
+    "root_gold": "checkoutservice",
+    "root_pred": "paymentservice",
+    "fault_gold": "network_delay",
+    "fault_pred": "network_delay",
+    "root_correct": false,
+    "fault_correct": true,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "5e32212427a2c11858169a1d",
+    "root_gold": "checkoutservice",
+    "root_pred": "checkoutservice",
+    "fault_gold": "network_packet_loss",
+    "fault_pred": "network_delay",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "36c5f09960143aaf4d2ea4d7",
+    "root_gold": "currencyservice",
+    "root_pred": "currencyservice",
+    "fault_gold": "disk_io_stress",
+    "fault_pred": "memory_stress",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "9d82c8b8d583c89e35470808",
+    "root_gold": "currencyservice",
+    "root_pred": "recommendationservice",
+    "fault_gold": "network_packet_loss",
+    "fault_pred": "network_packet_loss",
+    "root_correct": false,
+    "fault_correct": true,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "4a02e503ec61ac851da05f55",
+    "root_gold": "currencyservice",
+    "root_pred": "currencyservice",
+    "fault_gold": "memory_stress",
+    "fault_pred": "cpu_stress",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "c89e1cd0cb846af202640a40",
+    "root_gold": "emailservice",
+    "root_pred": "emailservice",
+    "fault_gold": "network_packet_loss",
+    "fault_pred": "memory_stress",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "119ae31af074a86d82098bed",
+    "root_gold": "productcatalogservice",
+    "root_pred": "recommendationservice",
+    "fault_gold": "disk_io_stress",
+    "fault_pred": "cpu_stress",
+    "root_correct": false,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "600fe120a642ee3205886d12",
+    "root_gold": "recommendationservice",
+    "root_pred": "recommendationservice",
+    "fault_gold": "cpu_stress",
+    "fault_pred": "network_delay",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  },
+  {
+    "run_id": "a83caa602745ace294bda03d",
+    "root_gold": "recommendationservice",
+    "root_pred": "recommendationservice",
+    "fault_gold": "network_packet_loss",
+    "fault_pred": "network_delay",
+    "root_correct": true,
+    "fault_correct": false,
+    "retained_fraction": 1.0
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "selected_artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round3\\weighted_0.1\\frozen",
+  "binding": {
+    "checkpoint_sha256": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
+    "split_hash": "2800c93a16a064c993737a8b796eda5f46df5c75eec6486932f0fa088e89bce5",
+    "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "files": {
+    "api-server.log": "9501d1dd93d8bb968fefef530d75de93b9b78246a1fd30b6b06b0f10db4286f5",
+    "augmentations.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "backbone_config\\config.json": "446caae8da868d00584d1825c1a88b094b7423b5ffb206689c7297c30bf3f67e",
+    "benchmark.json": "467cf973520fb0d4dd0c3992143ad6e973d30e9025ba9b02d59436ef954b43c1",
+    "best_heads.pt": "ba9b911dd4ca413bc7132b6e6d2088224d7eccdf084e31db2202e124b0f11876",
+    "calibration_logits.json": "85eca3d0e4e9dd8ff7548403ae1723263ba5632338bfb76c10ce3371d87fbda9",
+    "calibrator.json": "fd87d19570c0c64019ceee3b7186ab6e40ec3c6781463c2cc917f761cdb40f9f",
+    "checkpoint.pt": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
+    "consistent_service_rename\\diagnostics.png": "3a92f209b6496ae4d38c46481dc22ba0f87c1fafb2cafa05f0908ec87413a7dd",
+    "consistent_service_rename\\metrics.json": "de31d5be950802f4f096e0d3a4a6939d82f46b2f2be17a140c45d14fb550c172",
+    "consistent_service_rename\\predictions.json": "33c2d1423f303a114e37fab154ec1614fc86ae1d9f4d02610d5eeb633a0beb59",
+    "gate_predictions.json": "cf9582a5a14d69cdeb163b35165ab72ccbc82f9179421318bbbe603bc41f14cc",
+    "integration.json": "7c757e16867d4f09e454a53a5e6ece4b068aea80cb63e616b9334512f2358778",
+    "mask_all_metrics\\diagnostics.png": "2df459c622aab9831c2d39d76893a20e4310920dbb1193785c653b4a6a4bdba7",
+    "mask_all_metrics\\metrics.json": "aec3e18539837aa6a0a266c9368075d1f9717e7196b80a59392604e60e1c3cd0",
+    "mask_all_metrics\\predictions.json": "3c81aef54bc524d218e415378db7e3af24121e48116c1d91e182b28e4e072192",
+    "metadata.json": "90f49e985fc7cebcc59b9a7cbf825b8c27012936c8a4b6f15b79e66aa3e885cd",
+    "policy.json": "d0bc0caf119f9b76fead46f6f2d2667afce03b9787b9ed88a30e0bdd4c1daaeb",
+    "reload_reference.json": "80f86e84ae45e7fdbdc61279851cc955e284fa85d04799f9703a96cc1e87b159",
+    "resolved_config.json": "deddcbab105b9acfaf2631daf1ab4c88e3c14d48927c6266b613aa58d7256db4",
+    "reverse_candidates\\diagnostics.png": "3a92f209b6496ae4d38c46481dc22ba0f87c1fafb2cafa05f0908ec87413a7dd",
+    "reverse_candidates\\metrics.json": "de31d5be950802f4f096e0d3a4a6939d82f46b2f2be17a140c45d14fb550c172",
+    "reverse_candidates\\predictions.json": "be16cf2d86f3ad769905b170f3f320463d3035822027fecb29a346ab4a87fd9d",
+    "selected_validation_logits.json": "5786ac0f19338d2923231d28861226694c502d5750bed1706f27689338d18b18",
+    "split_manifest.json": "4a1d2f2ee06edd5692ae776f04f82ce69670a726d38fabfcfcc4d98cce9881f0",
+    "test\\diagnostics.png": "3a92f209b6496ae4d38c46481dc22ba0f87c1fafb2cafa05f0908ec87413a7dd",
+    "test\\metrics.json": "de31d5be950802f4f096e0d3a4a6939d82f46b2f2be17a140c45d14fb550c172",
+    "test\\predictions.json": "47fedc94fa2bfe51f6e7feb299ac9ff68495f8b5ccac9af4f8caeb1f78a31e5a",
+    "test_freeze.json": "79651246394d721f2fdc7b570c85389965490c8d4952bc2cb126d441a0a28b96",
+    "tokenizer\\special_tokens_map.json": "e386620cb5e9f6570fe98481fde86167b4236cdebdcc42308652574122561619",
+    "tokenizer\\tokenizer.json": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "tokenizer\\tokenizer_config.json": "973134a8b0937f6a3a3567a5cc5cbd05a95974af1f8d2173c43dd09cf2f0e4bb"
+  },
+  "dataset_integrity": {
+    "manifest_sha256": "0a70058ae81578f412b9f66f0c43de80ae18ffdaa20766186ec25a115bbca930",
+    "splits_sha256": "4a1d2f2ee06edd5692ae776f04f82ce69670a726d38fabfcfcc4d98cce9881f0",
+    "examples_sha256": "e06c207621a49e32717ff8837e8089d1ea6cb0acb73009f636c1657dd8d8ce4c"
+  }
+}

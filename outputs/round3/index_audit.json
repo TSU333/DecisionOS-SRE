@@ -1,0 +1,15 @@
+{
+  "revision": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/",
+  "eligible_new_runs": 75,
+  "dataset": "RE2-OB",
+  "modalities_used": [
+    "metrics"
+  ],
+  "excluded_socket": 15,
+  "not_used": [
+    "RE3 faults with incompatible ontology",
+    "other applications",
+    "logs",
+    "traces"
+  ]
+}

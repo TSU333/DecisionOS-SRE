@@ -1,0 +1,3073 @@
+[
+  {
+    "incident_id": "b9b1841de08e5a310d7a19f8",
+    "run_id": "b9b1841de08e5a310d7a19f8",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -0.8047898924565466,
+      -27.631021115928547,
+      -0.0390873887080468,
+      -4.3666430005905355,
+      -27.631021115928547,
+      -3.486064901567989,
+      -27.631021115928547,
+      -4.713737135665763,
+      -5.944944531473089,
+      -5.783825182329737,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -0.20729754286413168,
+      -3.6888794541139363,
+      -2.532697313624349,
+      -4.930592586422719,
+      -2.5828870581482044
+    ],
+    "root_target": 2,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "checkoutservice",
+        "raw_value": "checkoutservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_cpu_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_cpu_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.30486265346586305,
+      6.817419754474732e-13,
+      0.6556085330553184,
+      0.008653884112832976,
+      6.817419754474732e-13,
+      0.02087571140771393,
+      6.817419754474732e-13,
+      0.006116035640501114,
+      0.0017855146976005203,
+      0.0020976676167614506,
+      6.817419754474732e-13,
+      6.817419754474732e-13
+    ],
+    "root_prob": [
+      0.30486265346586305,
+      6.817419754474732e-13,
+      0.6556085330553184,
+      0.008653884112832976,
+      6.817419754474732e-13,
+      0.02087571140771393,
+      6.817419754474732e-13,
+      0.006116035640501114,
+      0.0017855146976005203,
+      0.0020976676167614506,
+      6.817419754474732e-13,
+      6.817419754474732e-13
+    ],
+    "root_pred": 2,
+    "root_correct": true,
+    "fault_raw": [
+      0.8127777777777778,
+      0.025,
+      0.07944444444444443,
+      0.007222222222222224,
+      0.07555555555555553
+    ],
+    "fault_prob": [
+      0.8127777777777778,
+      0.025,
+      0.07944444444444443,
+      0.007222222222222224,
+      0.07555555555555553
+    ],
+    "fault_pred": 0,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6556085330553184,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6556085330553184,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "5edcafb57f99d79d2ee7d28d",
+    "run_id": "5edcafb57f99d79d2ee7d28d",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -1.1447860383091784,
+      -5.790793851645831,
+      -0.35909957213186344,
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.8236465251282242,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -4.223193563227402
+    ],
+    "fault_logits": [
+      -3.506557897319982,
+      -4.128246113897782,
+      -4.199705077879927,
+      -0.29960471740868694,
+      -1.6206112130322257
+    ],
+    "root_target": 2,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "checkoutservice",
+        "raw_value": "checkoutservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_delay_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_delay_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.21606472618168435,
+      0.0020741889456510555,
+      0.4740270972340088,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.29788798727750543,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.00994600035639868
+    ],
+    "root_prob": [
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.21606472618168435,
+      0.0020741889456510555,
+      0.4740270972340088,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.29788798727750543,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      6.788254731221644e-13,
+      0.00994600035639868
+    ],
+    "root_pred": 4,
+    "root_correct": false,
+    "fault_raw": [
+      0.029999999999999995,
+      0.016111111111111114,
+      0.014999999999999998,
+      0.7411111111111112,
+      0.19777777777777777
+    ],
+    "fault_prob": [
+      0.029999999999999995,
+      0.016111111111111114,
+      0.014999999999999998,
+      0.7411111111111112,
+      0.19777777777777777
+    ],
+    "fault_pred": 3,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.4740270972340088,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.4740270972340088,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "24387285acf41cf89445b591",
+    "run_id": "24387285acf41cf89445b591",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.03271178354009261,
+      -5.790793851645831,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -3.3684075588391647,
+      -3.2188758248682006,
+      -0.09920665008344792,
+      -27.631021115928547,
+      -3.912023005428146
+    ],
+    "root_target": 2,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "checkoutservice",
+        "raw_value": "checkoutservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_disk_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_disk_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      0.9968527752707396,
+      0.003147224719990445,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12
+    ],
+    "root_prob": [
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      0.9968527752707396,
+      0.003147224719990445,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12,
+      1.0300008174514205e-12
+    ],
+    "root_pred": 2,
+    "root_correct": true,
+    "fault_raw": [
+      0.03444444444440999,
+      0.039999999999960005,
+      0.90555555555465,
+      9.999999999989991e-13,
+      0.01999999999998
+    ],
+    "fault_prob": [
+      0.03444444444440999,
+      0.039999999999960005,
+      0.90555555555465,
+      9.999999999989991e-13,
+      0.01999999999998
+    ],
+    "fault_pred": 2,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.90555555555465,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.90555555555465,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "5e32212427a2c11858169a1d",
+    "run_id": "5e32212427a2c11858169a1d",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.7928188899769629,
+      -5.790793851645831,
+      -27.631021115928547,
+      -5.790793851645831,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -2.1249039157565934,
+      -3.9691814192680948,
+      -3.9401938823948424,
+      -0.943034056849666,
+      -0.7923538306433935
+    ],
+    "root_target": 2,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "checkoutservice",
+        "raw_value": "checkoutservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_loss_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_loss_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      0.9866766965070918,
+      0.006661651736643289,
+      2.180176931992348e-12,
+      0.006661651736643289,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12
+    ],
+    "root_prob": [
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      0.9866766965070918,
+      0.006661651736643289,
+      2.180176931992348e-12,
+      0.006661651736643289,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12,
+      2.180176931992348e-12
+    ],
+    "root_pred": 2,
+    "root_correct": true,
+    "fault_raw": [
+      0.11944444444444442,
+      0.018888888888888886,
+      0.019444444444444445,
+      0.3894444444444445,
+      0.4527777777777778
+    ],
+    "fault_prob": [
+      0.11944444444444442,
+      0.018888888888888886,
+      0.019444444444444445,
+      0.3894444444444445,
+      0.4527777777777778
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.4527777777777778,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.4527777777777778,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "c2471bfe4cabeb3b9e376c4c",
+    "run_id": "c2471bfe4cabeb3b9e376c4c",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -5.864405668989077,
+      -27.631021115928547,
+      -0.07695065757645622,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.2037797238419574,
+      -4.796321822230318,
+      -27.631021115928547,
+      -27.631021115928547,
+      -5.090678001769792
+    ],
+    "fault_logits": [
+      -3.4011973816621555,
+      -0.09859334126324222,
+      -2.8608129556546205,
+      -5.703782474656201,
+      -27.631021115928547
+    ],
+    "root_target": 2,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "checkoutservice",
+        "raw_value": "checkoutservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_checkoutservice_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.0028854640213308792,
+      1.0164702802415602e-12,
+      0.9411859582186729,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      0.041277257046835006,
+      0.008396118981482481,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      0.0062552017245634485
+    ],
+    "root_prob": [
+      0.0028854640213308792,
+      1.0164702802415602e-12,
+      0.9411859582186729,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      0.041277257046835006,
+      0.008396118981482481,
+      1.0164702802415602e-12,
+      1.0164702802415602e-12,
+      0.0062552017245634485
+    ],
+    "root_pred": 2,
+    "root_correct": true,
+    "fault_raw": [
+      0.03333333333329999,
+      0.906111111110205,
+      0.057222222222164984,
+      0.0033333333333300003,
+      9.999999999990026e-13
+    ],
+    "fault_prob": [
+      0.03333333333329999,
+      0.906111111110205,
+      0.057222222222164984,
+      0.0033333333333300003,
+      9.999999999990026e-13
+    ],
+    "fault_pred": 1,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.906111111110205,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.906111111110205,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "20ab37ccb42291037032aaf1",
+    "run_id": "20ab37ccb42291037032aaf1",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -5.783825182329737,
+      -4.401009085586171,
+      -0.8046968474441545,
+      -27.631021115928547,
+      -3.5050406747853913,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -1.2170205197184119,
+      -3.064725145040942,
+      -3.4524906760497056,
+      -1.612219555395977,
+      -0.8530551425169995
+    ],
+    "root_target": 3,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "currencyservice",
+        "raw_value": "currencyservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_cpu_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_cpu_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      2.0299996823301602e-12,
+      0.0062461528687081744,
+      0.024897859351656216,
+      0.9078635283253308,
+      2.0299996823301602e-12,
+      0.060992459438064764,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12
+    ],
+    "root_prob": [
+      2.0299996823301602e-12,
+      0.0062461528687081744,
+      0.024897859351656216,
+      0.9078635283253308,
+      2.0299996823301602e-12,
+      0.060992459438064764,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12,
+      2.0299996823301602e-12
+    ],
+    "root_pred": 3,
+    "root_correct": true,
+    "fault_raw": [
+      0.29611111111111094,
+      0.04666666666666668,
+      0.031666666666666676,
+      0.19944444444444442,
+      0.4261111111111112
+    ],
+    "fault_prob": [
+      0.29611111111111094,
+      0.04666666666666668,
+      0.031666666666666676,
+      0.19944444444444442,
+      0.4261111111111112
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.4261111111111112,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.4261111111111112,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "1e09481338c69541448d5d0b",
+    "run_id": "1e09481338c69541448d5d0b",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -1.4197385269092049,
+      -0.16985290186136628,
+      -27.631021115928547,
+      -3.590350630394972,
+      -27.631021115928547,
+      -27.631021115928547,
+      -5.783825182329737,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -3.9401938823948424,
+      -4.499809670330265,
+      -4.31748811353631,
+      -0.40379982878910314,
+      -1.2436380607183672
+    ],
+    "root_target": 3,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "currencyservice",
+        "raw_value": "currencyservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_delay_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_delay_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      0.21660128432982684,
+      0.7559263033584543,
+      8.958713239143983e-13,
+      0.024715885154045956,
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      0.0027565271505058386,
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      8.958713239143983e-13
+    ],
+    "root_prob": [
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      0.21660128432982684,
+      0.7559263033584543,
+      8.958713239143983e-13,
+      0.024715885154045956,
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      0.0027565271505058386,
+      8.958713239143983e-13,
+      8.958713239143983e-13,
+      8.958713239143983e-13
+    ],
+    "root_pred": 3,
+    "root_correct": true,
+    "fault_raw": [
+      0.019444444444444445,
+      0.011111111111111112,
+      0.013333333333333338,
+      0.6677777777777777,
+      0.28833333333333333
+    ],
+    "fault_prob": [
+      0.019444444444444445,
+      0.011111111111111112,
+      0.013333333333333338,
+      0.6677777777777777,
+      0.28833333333333333
+    ],
+    "fault_pred": 3,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6677777777777777,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6677777777777777,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "36c5f09960143aaf4d2ea4d7",
+    "run_id": "36c5f09960143aaf4d2ea4d7",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.8530744818972621,
+      -1.3868145901912055,
+      -27.631021115928547,
+      -3.0951438060602228,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -4.163337433709052,
+      -0.6614332050704174,
+      -1.5606477482646683,
+      -3.1780538303479458,
+      -1.5293952047605643
+    ],
+    "root_target": 3,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "currencyservice",
+        "raw_value": "currencyservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_disk_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_disk_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      0.590790961964502,
+      0.34644433081190773,
+      1.3864984324522776e-12,
+      0.06276470721111167,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12
+    ],
+    "root_prob": [
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      0.590790961964502,
+      0.34644433081190773,
+      1.3864984324522776e-12,
+      0.06276470721111167,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12,
+      1.3864984324522776e-12
+    ],
+    "root_pred": 2,
+    "root_correct": false,
+    "fault_raw": [
+      0.015555555555555557,
+      0.5161111111111112,
+      0.21,
+      0.041666666666666664,
+      0.2166666666666666
+    ],
+    "fault_prob": [
+      0.015555555555555557,
+      0.5161111111111112,
+      0.21,
+      0.041666666666666664,
+      0.2166666666666666
+    ],
+    "fault_pred": 1,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.5161111111111112,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.5161111111111112,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "9d82c8b8d583c89e35470808",
+    "run_id": "9d82c8b8d583c89e35470808",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -5.703782474656201,
+      -1.5491108848634705,
+      -2.524883210132713,
+      -27.631021115928547,
+      -2.21838182005907,
+      -27.631021115928547,
+      -27.631021115928547,
+      -2.4052599805927457,
+      -3.241957259927382,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -2.0661963149298153,
+      -3.041194647630748,
+      -3.2614354392869966,
+      -2.097379242366503,
+      -0.40880400937367944
+    ],
+    "root_target": 3,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "currencyservice",
+        "raw_value": "currencyservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_loss_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_loss_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.872827116682632e-12,
+      0.006242757055608779,
+      0.39785734461931416,
+      0.14995289105844686,
+      1.872827116682632e-12,
+      0.20373549822507497,
+      1.872827116682632e-12,
+      1.872827116682632e-12,
+      0.16900772343857975,
+      0.07320378559173843,
+      1.872827116682632e-12,
+      1.872827116682632e-12
+    ],
+    "root_prob": [
+      1.872827116682632e-12,
+      0.006242757055608779,
+      0.39785734461931416,
+      0.14995289105844686,
+      1.872827116682632e-12,
+      0.20373549822507497,
+      1.872827116682632e-12,
+      1.872827116682632e-12,
+      0.16900772343857975,
+      0.07320378559173843,
+      1.872827116682632e-12,
+      1.872827116682632e-12
+    ],
+    "root_pred": 2,
+    "root_correct": false,
+    "fault_raw": [
+      0.12666666666666668,
+      0.04777777777777779,
+      0.03833333333333334,
+      0.1227777777777778,
+      0.6644444444444443
+    ],
+    "fault_prob": [
+      0.12666666666666668,
+      0.04777777777777779,
+      0.03833333333333334,
+      0.1227777777777778,
+      0.6644444444444443
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.39785734461931416,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.39785734461931416,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "4a02e503ec61ac851da05f55",
+    "run_id": "4a02e503ec61ac851da05f55",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -3.010772590173595,
+      -1.6474652745973513,
+      -0.09484012343367407,
+      -27.631021115928547,
+      -2.821120279939935,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.161272353385942,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -2.900422093749666,
+      -1.6262450307504812,
+      -0.4436863209283621,
+      -3.6888794541139363,
+      -2.5051093571055194
+    ],
+    "root_target": 3,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "currencyservice",
+        "raw_value": "currencyservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_currencyservice_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      7.979443267492023e-13,
+      0.03930163962976213,
+      0.15363406207663471,
+      0.7257449943012029,
+      7.979443267492023e-13,
+      0.04750897065468499,
+      7.979443267492023e-13,
+      7.979443267492023e-13,
+      7.979443267492023e-13,
+      0.03381033333212968,
+      7.979443267492023e-13,
+      7.979443267492023e-13
+    ],
+    "root_prob": [
+      7.979443267492023e-13,
+      0.03930163962976213,
+      0.15363406207663471,
+      0.7257449943012029,
+      7.979443267492023e-13,
+      0.04750897065468499,
+      7.979443267492023e-13,
+      7.979443267492023e-13,
+      7.979443267492023e-13,
+      0.03381033333212968,
+      7.979443267492023e-13,
+      7.979443267492023e-13
+    ],
+    "root_pred": 3,
+    "root_correct": true,
+    "fault_raw": [
+      0.055,
+      0.1966666666666667,
+      0.6416666666666666,
+      0.025,
+      0.08166666666666669
+    ],
+    "fault_prob": [
+      0.055,
+      0.1966666666666667,
+      0.6416666666666666,
+      0.025,
+      0.08166666666666669
+    ],
+    "fault_pred": 2,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.6416666666666666,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6416666666666666,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "5ddde828f40eca37a8fcb216",
+    "run_id": "5ddde828f40eca37a8fcb216",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.9920657131016823,
+      -27.631021115928547,
+      -0.018881908430767147,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -5.944944531473089,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -0.4673405118262518,
+      -4.605170185988091,
+      -3.3211546739886186,
+      -2.414137578899793,
+      -1.4364187483024593
+    ],
+    "root_target": 4,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "emailservice",
+        "raw_value": "emailservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_cpu_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_cpu_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      0.0184177810518846,
+      9.976298069770846e-13,
+      0.9789693789684825,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      0.0026128399706542645,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      9.976298069770846e-13
+    ],
+    "root_prob": [
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      0.0184177810518846,
+      9.976298069770846e-13,
+      0.9789693789684825,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      0.0026128399706542645,
+      9.976298069770846e-13,
+      9.976298069770846e-13,
+      9.976298069770846e-13
+    ],
+    "root_pred": 4,
+    "root_correct": true,
+    "fault_raw": [
+      0.6266666666666667,
+      0.010000000000000004,
+      0.03611111111111112,
+      0.08944444444444444,
+      0.23777777777777778
+    ],
+    "fault_prob": [
+      0.6266666666666667,
+      0.010000000000000004,
+      0.03611111111111112,
+      0.08944444444444444,
+      0.23777777777777778
+    ],
+    "fault_pred": 0,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6266666666666667,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6266666666666667,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "f72f83445af4315cacabd01e",
+    "run_id": "f72f83445af4315cacabd01e",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.8652172948383368,
+      -27.631021115928547,
+      -0.29438100294438885,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -2.120263536200091,
+      -4.31748811353631,
+      -3.470190253149107,
+      -1.0434929894470302,
+      -0.7270487322356266
+    ],
+    "root_target": 4,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "emailservice",
+        "raw_value": "emailservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_delay_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_delay_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      0.02736254521465444,
+      1.3055666108918106e-12,
+      0.9726374547722899,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12
+    ],
+    "root_prob": [
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      0.02736254521465444,
+      1.3055666108918106e-12,
+      0.9726374547722899,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12,
+      1.3055666108918106e-12
+    ],
+    "root_pred": 4,
+    "root_correct": true,
+    "fault_raw": [
+      0.12000000000000001,
+      0.013333333333333338,
+      0.031111111111111103,
+      0.3522222222222222,
+      0.4833333333333333
+    ],
+    "fault_prob": [
+      0.12000000000000001,
+      0.013333333333333338,
+      0.031111111111111103,
+      0.3522222222222222,
+      0.4833333333333333
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.4833333333333333,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.4833333333333333,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "e3d5bb422657cf4bede301cf",
+    "run_id": "e3d5bb422657cf4bede301cf",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -4.1930120197333425,
+      -27.631021115928547,
+      -0.019069562720350805,
+      -4.713383770628324,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -2.8511510447428834,
+      -3.101092789211817,
+      -0.1638269741577901,
+      -3.624340932976365,
+      -3.8319802977546096
+    ],
+    "root_target": 4,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "emailservice",
+        "raw_value": "emailservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_disk_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_disk_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      0.01502282120491016,
+      9.948405552311655e-13,
+      0.9760491225212412,
+      0.00892805626489506,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13
+    ],
+    "root_prob": [
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      0.01502282120491016,
+      9.948405552311655e-13,
+      0.9760491225212412,
+      0.00892805626489506,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13,
+      9.948405552311655e-13
+    ],
+    "root_pred": 4,
+    "root_correct": true,
+    "fault_raw": [
+      0.057777777777777775,
+      0.045000000000000005,
+      0.8488888888888889,
+      0.026666666666666665,
+      0.021666666666666667
+    ],
+    "fault_prob": [
+      0.057777777777777775,
+      0.045000000000000005,
+      0.8488888888888889,
+      0.026666666666666665,
+      0.021666666666666667
+    ],
+    "fault_pred": 2,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.8488888888888889,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.8488888888888889,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "c89e1cd0cb846af202640a40",
+    "run_id": "c89e1cd0cb846af202640a40",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.5044798463469102,
+      -27.631021115928547,
+      -0.08509007455930888,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -0.7247525199752765,
+      -3.076701336087658,
+      -2.8511510447428834,
+      -3.3366588605245844,
+      -0.977870670971981
+    ],
+    "root_target": 4,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "emailservice",
+        "raw_value": "emailservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_loss_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_loss_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      0.031694951164154536,
+      1.0543051942251971e-12,
+      0.9683050488253024,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12
+    ],
+    "root_prob": [
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      0.031694951164154536,
+      1.0543051942251971e-12,
+      0.9683050488253024,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12,
+      1.0543051942251971e-12
+    ],
+    "root_pred": 4,
+    "root_correct": true,
+    "fault_raw": [
+      0.48444444444444446,
+      0.04611111111111112,
+      0.057777777777777775,
+      0.03555555555555555,
+      0.3761111111111111
+    ],
+    "fault_prob": [
+      0.48444444444444446,
+      0.04611111111111112,
+      0.057777777777777775,
+      0.03555555555555555,
+      0.3761111111111111
+    ],
+    "fault_pred": 0,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.48444444444444446,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.48444444444444446,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "2f58e82aece32c8ba7dc4432",
+    "run_id": "2f58e82aece32c8ba7dc4432",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -1.1675745878700086,
+      -5.032614200815031,
+      -0.042109441901924435,
+      -3.8481826187485932,
+      -27.631021115928547,
+      -2.4284209215801305,
+      -5.944944531473089,
+      -4.394559050820689,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -1.9902104079518934,
+      -0.6625102110980553,
+      -1.9542783987258296,
+      -1.7719568419318752,
+      -3.321154673988619
+    ],
+    "root_target": 4,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "emailservice",
+        "raw_value": "emailservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_emailservice_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      7.138446694495462e-13,
+      7.138446694495462e-13,
+      0.22209179802315918,
+      0.00465550871380138,
+      0.6844091744172651,
+      0.015218058321251091,
+      7.138446694495462e-13,
+      0.06294393863560103,
+      0.001869593181891665,
+      0.008811928703461418,
+      7.138446694495462e-13,
+      7.138446694495462e-13
+    ],
+    "root_prob": [
+      7.138446694495462e-13,
+      7.138446694495462e-13,
+      0.22209179802315918,
+      0.00465550871380138,
+      0.6844091744172651,
+      0.015218058321251091,
+      7.138446694495462e-13,
+      0.06294393863560103,
+      0.001869593181891665,
+      0.008811928703461418,
+      7.138446694495462e-13,
+      7.138446694495462e-13
+    ],
+    "root_pred": 4,
+    "root_correct": true,
+    "fault_raw": [
+      0.13666666666666666,
+      0.5155555555555555,
+      0.14166666666666672,
+      0.17,
+      0.03611111111111111
+    ],
+    "fault_prob": [
+      0.13666666666666666,
+      0.5155555555555555,
+      0.14166666666666672,
+      0.17,
+      0.03611111111111111
+    ],
+    "fault_pred": 1,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.5155555555555555,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.5155555555555555,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "fbf324cd8cd7947c5e62b399",
+    "run_id": "fbf324cd8cd7947c5e62b399",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -5.790793851645831,
+      -4.394578195255881,
+      -27.631021115928547,
+      -4.046447196449318,
+      -27.631021115928547,
+      -27.631021115928547,
+      0.0,
+      -2.4573783834420797,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -0.2025242641114738,
+      -5.0106352940962555,
+      -2.6915208991509996,
+      -3.1780538303479458,
+      -2.699751398287515
+    ],
+    "root_target": 8,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "productcatalogservice",
+        "raw_value": "productcatalogservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_cpu_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_cpu_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      8.940199698208371e-13,
+      8.940199698208371e-13,
+      0.002731727685563661,
+      0.011035859412412028,
+      8.940199698208371e-13,
+      0.015631387562453688,
+      8.940199698208371e-13,
+      8.940199698208371e-13,
+      0.894019969820835,
+      0.0765810555124775,
+      8.940199698208371e-13,
+      8.940199698208371e-13
+    ],
+    "root_prob": [
+      8.940199698208371e-13,
+      8.940199698208371e-13,
+      0.002731727685563661,
+      0.011035859412412028,
+      8.940199698208371e-13,
+      0.015631387562453688,
+      8.940199698208371e-13,
+      8.940199698208371e-13,
+      0.894019969820835,
+      0.0765810555124775,
+      8.940199698208371e-13,
+      8.940199698208371e-13
+    ],
+    "root_pred": 8,
+    "root_correct": true,
+    "fault_raw": [
+      0.8166666666666667,
+      0.006666666666666668,
+      0.06777777777777777,
+      0.041666666666666644,
+      0.06722222222222222
+    ],
+    "fault_prob": [
+      0.8166666666666667,
+      0.006666666666666668,
+      0.06777777777777777,
+      0.041666666666666644,
+      0.06722222222222222
+    ],
+    "fault_pred": 0,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.8166666666666667,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.8166666666666667,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "beb6f24a17ed130af9f2874d",
+    "run_id": "beb6f24a17ed130af9f2874d",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -1.8751344229545341,
+      -27.631021115928547,
+      -27.631021115928547,
+      -4.411134405237852,
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.08121812363600152,
+      -1.6234640884077318,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -4.029806041084529,
+      -3.6669005473951612,
+      -4.787491742782046,
+      -0.4979459609023294,
+      -1.0771770079480443
+    ],
+    "root_target": 8,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "productcatalogservice",
+        "raw_value": "productcatalogservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_delay_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_delay_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.11935582127094466,
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.009450892146626824,
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.7176811758843807,
+      0.15351211069182055,
+      7.784023495775593e-13,
+      7.784023495775593e-13
+    ],
+    "root_prob": [
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.11935582127094466,
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.009450892146626824,
+      7.784023495775593e-13,
+      7.784023495775593e-13,
+      0.7176811758843807,
+      0.15351211069182055,
+      7.784023495775593e-13,
+      7.784023495775593e-13
+    ],
+    "root_pred": 8,
+    "root_correct": true,
+    "fault_raw": [
+      0.01777777777777778,
+      0.02555555555555555,
+      0.008333333333333335,
+      0.6077777777777778,
+      0.3405555555555556
+    ],
+    "fault_prob": [
+      0.01777777777777778,
+      0.02555555555555555,
+      0.008333333333333335,
+      0.6077777777777778,
+      0.3405555555555556
+    ],
+    "fault_pred": 3,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6077777777777778,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6077777777777778,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "119ae31af074a86d82098bed",
+    "run_id": "119ae31af074a86d82098bed",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -5.857933154483459,
+      -27.631021115928547,
+      -3.6246976963607147,
+      -5.171258488429132,
+      -27.631021115928547,
+      -4.725551264042534,
+      -27.631021115928547,
+      -3.661715525173114,
+      -0.011038966680440876,
+      -1.8945432978493173,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -3.4524906760497056,
+      -0.5857886622394461,
+      -0.90799192905946,
+      -5.703782474656201,
+      -5.298317366548036
+    ],
+    "root_target": 8,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "productcatalogservice",
+        "raw_value": "productcatalogservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_disk_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_disk_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.002362925839471427,
+      8.270240438149999e-13,
+      0.022046107854501007,
+      0.004695362313272252,
+      8.270240438149999e-13,
+      0.007332250568914278,
+      8.270240438149999e-13,
+      0.021244929241479506,
+      0.8179447581165955,
+      0.12437366606163087,
+      8.270240438149999e-13,
+      8.270240438149999e-13
+    ],
+    "root_prob": [
+      0.002362925839471427,
+      8.270240438149999e-13,
+      0.022046107854501007,
+      0.004695362313272252,
+      8.270240438149999e-13,
+      0.007332250568914278,
+      8.270240438149999e-13,
+      0.021244929241479506,
+      0.8179447581165955,
+      0.12437366606163087,
+      8.270240438149999e-13,
+      8.270240438149999e-13
+    ],
+    "root_pred": 8,
+    "root_correct": true,
+    "fault_raw": [
+      0.031666666666666676,
+      0.5566666666666666,
+      0.4033333333333334,
+      0.003333333333333334,
+      0.005000000000000002
+    ],
+    "fault_prob": [
+      0.031666666666666676,
+      0.5566666666666666,
+      0.4033333333333334,
+      0.003333333333333334,
+      0.005000000000000002
+    ],
+    "fault_pred": 1,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.5566666666666666,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.5566666666666666,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "717663bf496f698ebfe3c3b7",
+    "run_id": "717663bf496f698ebfe3c3b7",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -3.390409234122948,
+      -3.2848022610691405,
+      -2.452825877694218,
+      -4.660068711860602,
+      -27.631021115928547,
+      -2.403563586609271,
+      -27.631021115928547,
+      -5.790793851645831,
+      -0.2843784417633208,
+      -1.6777159299485502,
+      -27.631021115928547,
+      -3.387287135130827
+    ],
+    "fault_logits": [
+      -2.962942450731,
+      -2.995732273553991,
+      -3.9691814192680948,
+      -1.6347557204183902,
+      -0.37914779979079133
+    ],
+    "root_target": 8,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "productcatalogservice",
+        "raw_value": "productcatalogservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_loss_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_loss_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.027323312835964866,
+      0.030366719664878042,
+      0.06977833984807431,
+      0.007675863613546723,
+      8.109038761038094e-13,
+      0.07330185645151949,
+      8.109038761038094e-13,
+      0.0024777618436505216,
+      0.6101904247529173,
+      0.15147696875786468,
+      8.109038761038094e-13,
+      0.027408752229151408
+    ],
+    "root_prob": [
+      0.027323312835964866,
+      0.030366719664878042,
+      0.06977833984807431,
+      0.007675863613546723,
+      8.109038761038094e-13,
+      0.07330185645151949,
+      8.109038761038094e-13,
+      0.0024777618436505216,
+      0.6101904247529173,
+      0.15147696875786468,
+      8.109038761038094e-13,
+      0.027408752229151408
+    ],
+    "root_pred": 8,
+    "root_correct": true,
+    "fault_raw": [
+      0.05166666666666667,
+      0.05000000000000003,
+      0.018888888888888886,
+      0.19500000000000003,
+      0.6844444444444443
+    ],
+    "fault_prob": [
+      0.05166666666666667,
+      0.05000000000000003,
+      0.018888888888888886,
+      0.19500000000000003,
+      0.6844444444444443
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6101904247529173,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6101904247529173,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "b17767fc1316ed5cfe2fb885",
+    "run_id": "b17767fc1316ed5cfe2fb885",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -3.71466426457039,
+      -5.053194908515052,
+      -1.450773523198258,
+      -2.858453568451512,
+      -27.631021115928547,
+      -4.209726636340946,
+      -27.631021115928547,
+      -27.631021115928547,
+      -0.0038750195674949655,
+      -1.3204702364066834,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -3.884624031240032,
+      -0.25060039754724905,
+      -1.69644928942373,
+      -5.0106352940962555,
+      -4.499809670330265
+    ],
+    "root_target": 8,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "productcatalogservice",
+        "raw_value": "productcatalogservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_productcatalogservice_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.015222586621321182,
+      0.003991829483120141,
+      0.14644808956206332,
+      0.03583736208830887,
+      6.248080930101098e-13,
+      0.009278667193205681,
+      6.248080930101098e-13,
+      6.248080930101098e-13,
+      0.6223916343597925,
+      0.16682983068906426,
+      6.248080930101098e-13,
+      6.248080930101098e-13
+    ],
+    "root_prob": [
+      0.015222586621321182,
+      0.003991829483120141,
+      0.14644808956206332,
+      0.03583736208830887,
+      6.248080930101098e-13,
+      0.009278667193205681,
+      6.248080930101098e-13,
+      6.248080930101098e-13,
+      0.6223916343597925,
+      0.16682983068906426,
+      6.248080930101098e-13,
+      6.248080930101098e-13
+    ],
+    "root_pred": 8,
+    "root_correct": true,
+    "fault_raw": [
+      0.02055555555555555,
+      0.7783333333333333,
+      0.18333333333333338,
+      0.006666666666666668,
+      0.011111111111111112
+    ],
+    "fault_prob": [
+      0.02055555555555555,
+      0.7783333333333333,
+      0.18333333333333338,
+      0.006666666666666668,
+      0.011111111111111112
+    ],
+    "fault_pred": 1,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.6223916343597925,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.6223916343597925,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "600fe120a642ee3205886d12",
+    "run_id": "600fe120a642ee3205886d12",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -5.944944531473089,
+      -0.028390681341688345,
+      -27.631021115928547,
+      -4.685212893661628
+    ],
+    "fault_logits": [
+      -0.2217556260393617,
+      -5.097646671085886,
+      -3.0647251450409425,
+      -2.995732273553991,
+      -2.342250349386477
+    ],
+    "root_target": 9,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "recommendationservice",
+        "raw_value": "recommendationservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_cpu_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_cpu_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      0.0026620169276730357,
+      0.9879557695558562,
+      1.0164064632933418e-12,
+      0.009382213507323142
+    ],
+    "root_prob": [
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      1.0164064632933418e-12,
+      0.0026620169276730357,
+      0.9879557695558562,
+      1.0164064632933418e-12,
+      0.009382213507323142
+    ],
+    "root_pred": 9,
+    "root_correct": true,
+    "fault_raw": [
+      0.8011111111111111,
+      0.0061111111111111106,
+      0.04666666666666666,
+      0.05000000000000001,
+      0.09611111111111112
+    ],
+    "fault_prob": [
+      0.8011111111111111,
+      0.0061111111111111106,
+      0.04666666666666666,
+      0.05000000000000001,
+      0.09611111111111112
+    ],
+    "fault_pred": 0,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.8011111111111111,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.8011111111111111,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "532310c5ef1a2f9a4f7708bb",
+    "run_id": "532310c5ef1a2f9a4f7708bb",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -2.232792147026318,
+      -5.790793851645831,
+      -5.7482342372270345,
+      -2.525926779089941,
+      -27.631021115928547,
+      -2.427497446198402,
+      -3.0681688602493775,
+      -0.19756846279547757,
+      -27.631021115928547,
+      -5.097646671085886
+    ],
+    "fault_logits": [
+      -2.5902671654458267,
+      -27.631021115928547,
+      -4.360047727955107,
+      -0.115909791274703,
+      -3.8319802977546096
+    ],
+    "root_target": 9,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "recommendationservice",
+        "raw_value": "recommendationservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_delay_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_delay_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      8.657593030823888e-13,
+      8.657593030823888e-13,
+      0.09283416987597408,
+      0.002645375648307296,
+      0.002760391980842398,
+      0.06924702264355868,
+      8.657593030823888e-13,
+      0.07640968710615202,
+      0.040263206774513664,
+      0.7105493946705743,
+      8.657593030823888e-13,
+      0.005290751296614593
+    ],
+    "root_prob": [
+      8.657593030823888e-13,
+      8.657593030823888e-13,
+      0.09283416987597408,
+      0.002645375648307296,
+      0.002760391980842398,
+      0.06924702264355868,
+      8.657593030823888e-13,
+      0.07640968710615202,
+      0.040263206774513664,
+      0.7105493946705743,
+      8.657593030823888e-13,
+      0.005290751296614593
+    ],
+    "root_pred": 9,
+    "root_correct": true,
+    "fault_raw": [
+      0.07499999999992499,
+      9.999999999989991e-13,
+      0.012777777777764995,
+      0.890555555554665,
+      0.021666666666645
+    ],
+    "fault_prob": [
+      0.07499999999992499,
+      9.999999999989991e-13,
+      0.012777777777764995,
+      0.890555555554665,
+      0.021666666666645
+    ],
+    "fault_pred": 3,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.7105493946705743,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.7105493946705743,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "bb95fcd81e7ed274b5bd621d",
+    "run_id": "bb95fcd81e7ed274b5bd621d",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.7142285703119384,
+      -5.864405668989077,
+      -27.631021115928547,
+      -4.415549326712525,
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.743501978091374,
+      -0.021725377606435493,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -3.6453943421741974,
+      -2.1156445903437966,
+      -0.17435338714477766,
+      -5.298317366548036,
+      -4.787491742782046
+    ],
+    "root_target": 9,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "recommendationservice",
+        "raw_value": "recommendationservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_disk_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_disk_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      9.601712888412282e-13,
+      9.601712888412282e-13,
+      0.0234034424340574,
+      0.002725647529613806,
+      9.601712888412282e-13,
+      0.011606466128850013,
+      9.601712888412282e-13,
+      9.601712888412282e-13,
+      0.02272827436904682,
+      0.9395361695317108,
+      9.601712888412282e-13,
+      9.601712888412282e-13
+    ],
+    "root_prob": [
+      9.601712888412282e-13,
+      9.601712888412282e-13,
+      0.0234034424340574,
+      0.002725647529613806,
+      9.601712888412282e-13,
+      0.011606466128850013,
+      9.601712888412282e-13,
+      9.601712888412282e-13,
+      0.02272827436904682,
+      0.9395361695317108,
+      9.601712888412282e-13,
+      9.601712888412282e-13
+    ],
+    "root_pred": 9,
+    "root_correct": true,
+    "fault_raw": [
+      0.026111111111111113,
+      0.12055555555555554,
+      0.8400000000000001,
+      0.005000000000000002,
+      0.008333333333333335
+    ],
+    "fault_prob": [
+      0.026111111111111113,
+      0.12055555555555554,
+      0.8400000000000001,
+      0.005000000000000002,
+      0.008333333333333335
+    ],
+    "fault_pred": 2,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.8400000000000001,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.8400000000000001,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "a83caa602745ace294bda03d",
+    "run_id": "a83caa602745ace294bda03d",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -1.7918706418889394,
+      -3.1213811515889613,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -2.1116236420703935,
+      -27.631021115928547,
+      -2.8283132660894554,
+      -2.5902326263780338,
+      -0.7315170813316744,
+      -27.631021115928547,
+      -5.090678001769792
+    ],
+    "fault_logits": [
+      -2.0883701724241375,
+      -3.2188758248682006,
+      -4.499809670330265,
+      -0.7526613080923529,
+      -1.0387722883120922
+    ],
+    "root_target": 9,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "recommendationservice",
+        "raw_value": "recommendationservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_loss_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_loss_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      0.17482413884332734,
+      0.0462596475581244,
+      1.0490614535305595e-12,
+      1.0490614535305595e-12,
+      1.0490614535305595e-12,
+      0.12697974017797342,
+      1.0490614535305595e-12,
+      0.062012620672040865,
+      0.07868232658207253,
+      0.5047857633702589,
+      1.0490614535305595e-12,
+      0.0064557627909572965
+    ],
+    "root_prob": [
+      0.17482413884332734,
+      0.0462596475581244,
+      1.0490614535305595e-12,
+      1.0490614535305595e-12,
+      1.0490614535305595e-12,
+      0.12697974017797342,
+      1.0490614535305595e-12,
+      0.062012620672040865,
+      0.07868232658207253,
+      0.5047857633702589,
+      1.0490614535305595e-12,
+      0.0064557627909572965
+    ],
+    "root_pred": 9,
+    "root_correct": true,
+    "fault_raw": [
+      0.12388888888888887,
+      0.04000000000000001,
+      0.011111111111111112,
+      0.4711111111111111,
+      0.3538888888888891
+    ],
+    "fault_prob": [
+      0.12388888888888887,
+      0.04000000000000001,
+      0.011111111111111112,
+      0.4711111111111111,
+      0.3538888888888891
+    ],
+    "fault_pred": 3,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.4711111111111111,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.4711111111111111,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  },
+  {
+    "incident_id": "e7077f3da7cfd32cc7f93b1a",
+    "run_id": "e7077f3da7cfd32cc7f93b1a",
+    "split": "test",
+    "application": "Online Boutique",
+    "cohort": "RE2",
+    "candidate_ids": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "frontend-external",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "redis",
+      "shippingservice"
+    ],
+    "root_logits": [
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -27.631021115928547,
+      -3.3051780178961887,
+      -27.631021115928547,
+      -4.382026634673881,
+      -4.751403572511227,
+      -0.04302795149623527,
+      -27.631021115928547,
+      -27.631021115928547
+    ],
+    "fault_logits": [
+      -4.276666119016055,
+      -0.1411796134627795,
+      -2.5538995212749516,
+      -3.2614354392869966,
+      -6.396929655216146
+    ],
+    "root_target": 9,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "recommendationservice",
+        "raw_value": "recommendationservice",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ob_recommendationservice_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": true,
+    "root_raw": [
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      0.03612490933464961,
+      9.845263421059567e-13,
+      0.012306579276324453,
+      0.008505874836963767,
+      0.943062636544186,
+      9.845263421059567e-13,
+      9.845263421059567e-13
+    ],
+    "root_prob": [
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      9.845263421059567e-13,
+      0.03612490933464961,
+      9.845263421059567e-13,
+      0.012306579276324453,
+      0.008505874836963767,
+      0.943062636544186,
+      9.845263421059567e-13,
+      9.845263421059567e-13
+    ],
+    "root_pred": 9,
+    "root_correct": true,
+    "fault_raw": [
+      0.013888888888888888,
+      0.8683333333333333,
+      0.07777777777777779,
+      0.03833333333333334,
+      0.0016666666666666668
+    ],
+    "fault_prob": [
+      0.013888888888888888,
+      0.8683333333333333,
+      0.07777777777777779,
+      0.03833333333333334,
+      0.0016666666666666668
+    ],
+    "fault_pred": 1,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.8683333333333333,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.8683333333333333,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    }
+  }
+]

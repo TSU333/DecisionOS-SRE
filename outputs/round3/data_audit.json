@@ -1,0 +1,38 @@
+{
+  "source": "https://huggingface.co/datasets/phamquiluan/RCAEval/resolve/afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/",
+  "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "license": "MIT",
+  "index_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+  "subset": [
+    "RE1-OB",
+    "RE2-OB five shared faults"
+  ],
+  "collection": "controlled fault injection",
+  "runs": 200,
+  "unique_telemetry_groups": 200,
+  "derived_windows": 200,
+  "augmentations": 0,
+  "mapping": {
+    "cpu": "cpu_stress",
+    "mem": "memory_stress",
+    "disk": "disk_io_stress",
+    "delay": "network_delay",
+    "loss": "network_packet_loss"
+  },
+  "mapping_version": "rcaeval-re1-v1",
+  "new_cases": 75,
+  "excluded_socket": 15,
+  "unknown_faults": 0,
+  "candidate_misses": 0,
+  "modalities_used": [
+    "metrics"
+  ],
+  "limitations": [
+    "same application, distinct benchmark suite and new telemetry schemas; not a cross-system claim",
+    "collection lineage beyond case metadata unavailable; grouping does not prove statistical independence",
+    "logs/traces are present for RE2 but intentionally excluded to keep metrics-only MVP",
+    "oracle injection onset; no fault detection evaluation",
+    "source units unspecified, no conversion"
+  ],
+  "manifest_hash": "a61ac44994e87c443a44f9b310c69743c1512fd42661c74dc29bb2b71263cf43"
+}

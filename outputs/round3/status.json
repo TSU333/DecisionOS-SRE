@@ -1,0 +1,44 @@
+{
+  "execution_scope": "mvp",
+  "mvp_definition_of_done": "passed_for_documented_small_scale_protocol",
+  "quality_target_status": "not_met",
+  "automatic_acceptance_status": "not_met_no_feasible_threshold",
+  "tests": {
+    "passed": 24,
+    "failed": 0,
+    "junit": "outputs/round3/test-results.xml"
+  },
+  "real_http_and_reload": "experiment_completed",
+  "checks": {
+    "public_data_adapter_and_manifest": "passed",
+    "evidence_gold_and_paths_isolated": "passed",
+    "run_group_split_and_parent_lineage": "passed",
+    "candidate_mask_span_id_alignment": "passed",
+    "one_shared_encoder_call_per_incident": "passed",
+    "missing_label_loss_and_finiteness": "passed",
+    "baseline_frozen_sft_real_execution": "passed",
+    "real_training_and_fresh_holdout_evaluation": "passed",
+    "checkpoint_reload_reproduction": "passed",
+    "separate_temperature_calibration_and_binding": "passed",
+    "separate_gate_selection_and_zero_coverage_fallback": "passed",
+    "hand_computable_metrics_edge_cases": "passed",
+    "cpu_measurement_http_api_machine_results_reproduction": "passed",
+    "implementation_experiment_and_not_run_distinguished": "passed"
+  },
+  "not_run": [
+    "production_incidents",
+    "new_application_generalization",
+    "independent_repeated_training_for_selected_config",
+    "KD",
+    "external_LLM",
+    "ONNX",
+    "INT8"
+  ],
+  "known_limitations": [
+    "small validation/calibration/test",
+    "unknown raw collection lineage",
+    "controlled injection with oracle onset",
+    "metrics-only causal summaries",
+    "no safe automatic acceptance threshold demonstrated"
+  ]
+}

@@ -13,7 +13,7 @@ from .model import build_model, labels, supervised_loss
 
 def config_binding(config,checkpoint_hash,split_hash,tokenizer_hash):
     pipeline={"serializer":config.get("serializer_version",SERIALIZER),"max_length":config["max_length"],"ontology":FAULTS}
-    for key in ("pooling","numeric_fusion","numeric_metrics"):
+    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight"):
         if key in config: pipeline[key]=config[key]
     return {"checkpoint_sha256":checkpoint_hash,"split_hash":split_hash,
             "pipeline_hash":digest(pipeline),
@@ -36,7 +36,7 @@ def predict(model,tokenizer,serializer,examples,device,split):
             rid=ex.targets.root_cause.value
             fid=ex.targets.fault_type.value
             rows.append({"incident_id":ex.opaque_incident_id,"run_id":ex.original_run_id,"split":split,
-              "application":ex.input.application,"candidate_ids":encoded.candidate_ids,
+              "application":ex.input.application,"cohort":ex.source_metadata.get("dataset_suite","RE1"),"candidate_ids":encoded.candidate_ids,
               "root_logits":roots[0,:len(encoded.candidate_ids)].float().cpu().tolist(),
               "fault_logits":faults[0].float().cpu().tolist(),
               "root_target":encoded.candidate_ids.index(rid) if rid in encoded.candidate_ids else (-1 if rid is not None else None),
@@ -46,6 +46,10 @@ def predict(model,tokenizer,serializer,examples,device,split):
     return rows
 
 def train(config,mode):
+    if config.get("cache_frozen_features"):
+        if mode!="frozen": raise ValueError("Feature caching requires frozen mode")
+        from .cached_training import train_cached
+        return train_cached(config)
     if mode not in ["frozen","sft"]:
         raise ValueError("mode must be frozen or sft")
     source_state=code_state()
@@ -60,7 +64,7 @@ def train(config,mode):
         raise FileExistsError("Checkpoint exists. Choose a fresh artifact_root; never silently overwrite a evaluated model.")
     tokenizer=AutoTokenizer.from_pretrained(config["backbone_dir"],local_files_only=True)
     serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [])
-    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=len(config.get("numeric_metrics",[]))*6 if config.get("numeric_fusion",False) else 0).to(device)
+    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=len(config.get("numeric_metrics",[]))*6 if config.get("numeric_fusion",False) else 0,root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.)).to(device)
     if mode=="frozen":
         for p in model.backbone.parameters():
             p.requires_grad=False
@@ -76,6 +80,7 @@ def train(config,mode):
             selected.extend([e for e in trainset if e.targets.fault_type.value==fault][:diagnostic])
         trainset=selected
         valset=selected
+    initialization=initialize_from_artifact(model,config,trainset,valset)
     groups=[]
     for name,params,lr in [
         ("backbone",model.backbone.parameters(),config.get("backbone_learning_rate",config["learning_rate_"+mode])),
@@ -93,7 +98,7 @@ def train(config,mode):
             return max(0.0,(scheduled_steps-step)/max(1,scheduled_steps-warmup_steps))
         scheduler=torch.optim.lr_scheduler.LambdaLR(optimizer,scale)
     rng=random.Random(config["seed"])
-    history=[]; best=float("inf"); stale=0; step=0; total=0; augmentation_log=[]
+    history=[]; best=None; stale=0; step=0; total=0; augmentation_log=[]
     start=time.perf_counter()
     for epoch in range(config["epochs"]):
         model.train()
@@ -130,15 +135,16 @@ def train(config,mode):
                     print(mode,"epoch",epoch+1,"step",step,"loss",round(float(np.mean(losses[-10:])),4),flush=True)
             if step>=config["max_steps"]:
                 break
-        val=predict(model,tokenizer,serializer,valset,device,"model_validation")
+        val=predict(model,tokenizer,serializer,valset,device,"train_diagnostic" if diagnostic else "model_validation")
         details=prediction_summary(val)
         val_loss=details["sum_nll"]
         history.append({"epoch":epoch+1,"train_loss":float(np.mean(losses)),"validation_loss":val_loss,
                         "optimizer_steps":step,"validation":details,
                         "learning_rates":{g["name"]:g["lr"] for g in optimizer.param_groups}})
         print(mode,"validation",history[-1],flush=True)
-        if val_loss<best:
-            best=val_loss; stale=0
+        rank=selection_key(details,config)
+        if best is None or rank<best:
+            best=rank; stale=0
             torch.save(model.state_dict(),out/"checkpoint.pt")
             save(out/"selected_validation_logits.json",val)
         else:
@@ -153,7 +159,8 @@ def train(config,mode):
       "parameter_count":sum(p.numel() for p in model.parameters()),
       "trainable_parameters":sum(p.numel() for p in model.parameters() if p.requires_grad),
       "history":history,"elapsed_seconds":time.perf_counter()-start,"environment":environment(),
-      "selection":"diagnostic TRAIN subset fit; not eligible for model selection" if diagnostic else "minimum model_validation sum task NLL; no test access",
+      "selection":"diagnostic TRAIN subset fit; not eligible for model selection" if diagnostic else config.get("selection_metric","sum_nll"),
+      "initialization":initialization,
       "diagnostic_only":bool(diagnostic),"scheduled_optimizer_steps":scheduled_steps,
       "binding":config_binding(config,file_hash(out/"checkpoint.pt"),split["split_hash"],tokenizer_hash),
       "supported_applications":sorted({e.input.application for e in trainset}),
@@ -180,7 +187,7 @@ def load_checkpoint(artifact_dir,device="cpu"):
     if expected!=metadata["binding"] or metadata["ontology"]!=FAULTS:
         raise ValueError("pipeline/ontology version mismatch")
     torch.set_num_threads(cfg["cpu_threads"])
-    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=len(cfg.get("numeric_metrics",[]))*6 if cfg.get("numeric_fusion",False) else 0)
+    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=len(cfg.get("numeric_metrics",[]))*6 if cfg.get("numeric_fusion",False) else 0,root_conditioned_fault=cfg.get("root_conditioned_fault",False),text_logit_weight=cfg.get("text_logit_weight",1.))
     model.load_state_dict(torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True),strict=True)
     model.to(device).eval()
     tok=AutoTokenizer.from_pretrained(folder/"tokenizer",local_files_only=True)
@@ -242,4 +249,40 @@ def prediction_summary(rows):
             joint.append(int(np.argmax(r["root_logits"]))==r["root_target"] and int(np.argmax(r["fault_logits"]))==r["fault_target"])
     result["joint_accuracy"]=float(np.mean(joint)) if joint else None
     result["sum_nll"]=sum(result[h]["nll"] or 0 for h in ("root","fault"))
+    cohorts=sorted({r.get("cohort","RE1") for r in rows})
+    per_cohort={}
+    for cohort in cohorts:
+        subset=[r for r in rows if r.get("cohort","RE1")==cohort and r["root_target"] is not None and r["fault_target"] is not None]
+        correct=[int(np.argmax(r["root_logits"]))==r["root_target"] and int(np.argmax(r["fault_logits"]))==r["fault_target"] for r in subset]
+        per_cohort[cohort]={"n":len(correct),"joint_accuracy":float(np.mean(correct)) if correct else None}
+    result["cohorts"]=per_cohort
+    values=[v["joint_accuracy"] for v in per_cohort.values() if v["joint_accuracy"] is not None]
+    result["cohort_macro_joint"]=float(np.mean(values)) if values else None
     return result
+
+
+def selection_key(summary,config):
+    criterion=config.get("selection_metric","sum_nll")
+    if criterion=="sum_nll":return (summary["sum_nll"],)
+    if criterion=="cohort_macro_joint":
+        return (-summary["cohort_macro_joint"],-summary["joint_accuracy"],summary["sum_nll"])
+    raise ValueError("Unknown selection criterion")
+
+
+def initialize_from_artifact(model,config,trainset,valset):
+    path=config.get("initialization_artifact")
+    if not path:return {"kind":"pinned_pretrained_backbone"}
+    folder=Path(path);meta=read(folder/"metadata.json")
+    if meta.get("diagnostic_only"):raise ValueError("Cannot promote a diagnostic checkpoint")
+    if not set(meta["train_run_ids"]).issubset({e.original_run_id for e in trainset}):
+        raise ValueError("Parent training examples are not confined to the new train split")
+    if not set(meta["validation_run_ids"]).issubset({e.original_run_id for e in valset}):
+        raise ValueError("Parent validation examples must remain validation")
+    if file_hash(folder/"checkpoint.pt")!=meta["binding"]["checkpoint_sha256"]:raise ValueError("Parent checksum mismatch")
+    for field,default in [("pooling","cls"),("serializer_version",SERIALIZER),("head_size",128)]:
+        if meta["config"].get(field,default)!=config.get(field,default):raise ValueError("Incompatible parent "+field)
+    state=torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True)
+    missing,unexpected=model.load_state_dict(state,strict=False)
+    if unexpected or any(not n.startswith(("numeric_root.","numeric_fault.","numeric_local_fault.")) for n in missing):
+        raise ValueError("Unexpected parent architecture mismatch")
+    return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing}

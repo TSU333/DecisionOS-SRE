@@ -1,0 +1,1 @@
+PASS artifacts\round3\weighted_0.1\frozen reload delta 0.0 HTTP checks ['health', 'ready', 'decide', 'decision', 'reject_gold', 'single_candidate', 'candidate_overflow', 'unvalidated_application', 'empty_candidates']

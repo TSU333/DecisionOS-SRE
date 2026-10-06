@@ -1,3 +1,5 @@
+> 第三轮最新记录见 [round3_data_audit.md](round3_data_audit.md)；以下保留初始阶段历史记录。
+
 # 数据审计：RCAEval RE1-OB
 
 状态：数据审计已完成，独立于模型训练状态。

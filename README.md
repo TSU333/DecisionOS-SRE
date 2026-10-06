@@ -1,19 +1,22 @@
 # DecisionOS-SRE
-研究型结构化诊断 MVP。共享 ModernBERT encoder 同时输出动态候选根因与五类故障预测；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行任何运维操作。
 
-最新训练结果见 `docs/retraining_results.md` 与 `outputs/retrain/execution_report.md`；选中模型为 `artifacts/retrain/canonical/sft`，机器入口为 `outputs/latest_model.json`。原始第一轮结果仍保留。
+研究型结构化诊断 MVP。共享 ModernBERT encoder 同时输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行运维操作。
 
-本轮在复用的 15 条回归案例上，根因 86.7%、故障分类 80.0%、联合 66.7%；候选倒序与一致服务重命名保持结果，CPU 端到端 P95 825.9 ms。冻结数值融合对照联合为 80.0%，轻量数值故障分类为 100.0%，详细比较及选择规则见新报告。原测试已被查看，不是新的确认性留出集；当前全部 REVIEW。
+最新第三轮结果见 `docs/round3_results.md`，机器报告 `outputs/round3/results.json`，验收状态 `outputs/round3/status.json`；选中模型 `artifacts/round3/weighted_0.1/frozen`，统一入口 `outputs/latest_model.json`。历史权重和结果保留。
 
-运行新版：
+数据由 125 扩充到 200 条，完成 7 组训练、3580 次更新。在同样的 25 条新 RE2-OB 留出案例上，根因 72% → 88%、故障分类 20% → 72%、联合正确 16% → 64%。暂定的 90% / 90% / 85% 质量目标尚未达到；全部 REVIEW，未找到符合原文要求的接受门槛。旧 15 条回归集为 86.7% / 100% / 86.7%，不能与新留出结果混作同一数据集。
+
+24 项测试和真实 HTTP / CPU 重载检查通过，重载 logits 最大差 0；CPU 单请求端到端 P95 945.0 ms（本轮指定样本）。MVP 工程验收通过不代表质量或自动接受目标达标。数据、边界和选择规则见 `docs/round3_data_audit.md`、`docs/round3_protocol.md`。新测试已打开，后续训练需要新的独立确认集。
+
 ```powershell
+Set-Location D:/CODEX/DecisionOS-SRE
 $env:PYTHONPATH='src'
-.\work\.venv\Scripts\python.exe -m decisionos_sre serve --artifact artifacts/retrain/canonical/sft --port 8000
+./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round3/weighted_0.1/frozen --port 8000
 ```
 
-复现选中方案：`.\scripts\reproduce_retraining.ps1 -Config configs/retrain_canonical.json`；脚本自动创建新输出目录，执行 SFT、CPU 校准/门控/回归、benchmark 和真实 API 检查。依赖、数据及初始 backbone 复用原安装步骤。
+复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round3_weighted_0.1.json -Mode frozen`。依赖现有固定数据和上轮 canonical 初始化权重，自动创建新输出目录，包含训练、CPU 校准/门控/评估、benchmark 与真实 API 检查。重跑测试称为复现，不能重新称为未见测试。
 
-当前范围固定为 `execution_scope: mvp`。实际状态与结果见 `docs/experiment_results.md` 及 `outputs/status.json`。没有实测的项目不代表完成。
+范围保持 `execution_scope: mvp`。初始安装与基础 CLI 说明保留如下；第一轮与第二轮历史结果见 `docs/experiment_results.md`、`docs/retraining_results.md`。
 
 ## 本地环境
 本次工作目录为 D:\CODEX\DecisionOS-SRE。原 E 盘工作目录读操作可用，但写操作实际返回 WinError 433；用户已授权使用 D 盘指定目录。保留此事实以免误认为所有命令仍在原目录执行。
@@ -28,7 +31,7 @@ Set-Location D:\CODEX\DecisionOS-SRE
 
 完整环境锁定见 `requirements-lock.txt`（生成后）；顶层经过选择的版本在 pyproject.toml。PyTorch CUDA 轮子来自官方 cu128 索引。若没有 CUDA，请显式修改训练设备并评估计算预算，不会自动启动长时间 CPU 训练。
 
-## 数据与实验
+## 初始数据与实验（历史配置）
 官方 RCAEval RE1-OB，固定 revision，125 个受控故障注入案例，metrics-only；不是线上生产事故，也不是多模态实验。下载与模型路径均不进入 Git。125 个观测组划分为 50 train / 15 model_validation / 15 calibration / 30 gate_selection / 15 test。这些 holdout 很小，结果仅为流程可行性与探索性质量评估。
 
 标签来自官方索引中的注入元数据；候选来自遥测列，而非正确答案。时间窗口使用已知注入起点 `oracle_onset=true`，不测试故障检测。详见 data_audit 与 evaluation_protocol。

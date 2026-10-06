@@ -1,0 +1,95 @@
+{
+  "all": {
+    "root": {
+      "n": 55,
+      "accuracy": 0.8727272727272727,
+      "nll": 0.5729289807666894
+    },
+    "fault": {
+      "n": 55,
+      "accuracy": 0.8545454545454545,
+      "nll": 0.5516030701723923,
+      "macro_f1": 0.852017316017316,
+      "prediction_counts": {
+        "cpu_stress": 11,
+        "memory_stress": 10,
+        "disk_io_stress": 11,
+        "network_delay": 14,
+        "network_packet_loss": 9
+      }
+    },
+    "joint_accuracy": 0.7636363636363637,
+    "sum_nll": 1.1245320509390817,
+    "cohorts": {
+      "RE1": {
+        "n": 30,
+        "joint_accuracy": 0.9333333333333333
+      },
+      "RE2": {
+        "n": 25,
+        "joint_accuracy": 0.56
+      }
+    },
+    "cohort_macro_joint": 0.7466666666666667
+  },
+  "cohorts": {
+    "RE1": {
+      "root": {
+        "n": 30,
+        "accuracy": 0.9666666666666667,
+        "nll": 0.20204637338736003
+      },
+      "fault": {
+        "n": 30,
+        "accuracy": 0.9666666666666667,
+        "nll": 0.08898762151032268,
+        "macro_f1": 0.9664335664335665,
+        "prediction_counts": {
+          "cpu_stress": 6,
+          "memory_stress": 6,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 5
+        }
+      },
+      "joint_accuracy": 0.9333333333333333,
+      "sum_nll": 0.2910339948976827,
+      "cohorts": {
+        "RE1": {
+          "n": 30,
+          "joint_accuracy": 0.9333333333333333
+        }
+      },
+      "cohort_macro_joint": 0.9333333333333333
+    },
+    "RE2": {
+      "root": {
+        "n": 25,
+        "accuracy": 0.76,
+        "nll": 1.0179881096218848
+      },
+      "fault": {
+        "n": 25,
+        "accuracy": 0.72,
+        "nll": 1.1067416085668755,
+        "macro_f1": 0.7088888888888889,
+        "prediction_counts": {
+          "cpu_stress": 5,
+          "memory_stress": 4,
+          "disk_io_stress": 5,
+          "network_delay": 7,
+          "network_packet_loss": 4
+        }
+      },
+      "joint_accuracy": 0.56,
+      "sum_nll": 2.1247297181887603,
+      "cohorts": {
+        "RE2": {
+          "n": 25,
+          "joint_accuracy": 0.56
+        }
+      },
+      "cohort_macro_joint": 0.56
+    }
+  }
+}

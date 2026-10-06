@@ -5,7 +5,7 @@ from transformers import AutoModel, AutoConfig, AutoTokenizer
 from .common import FAULTS
 
 class DecisionModel(nn.Module):
-    def __init__(self, backbone, fault_count=len(FAULTS), head_size=128, pooling="cls", numeric_dim=0):
+    def __init__(self, backbone, fault_count=len(FAULTS), head_size=128, pooling="cls", numeric_dim=0, root_conditioned_fault=False, text_logit_weight=1.):
         super().__init__()
         self.backbone=backbone
         d=backbone.config.hidden_size
@@ -14,12 +14,24 @@ class DecisionModel(nn.Module):
         self.encoder_calls=0
         if pooling not in ("cls","mean"): raise ValueError("unknown pooling")
         self.pooling=pooling
+        if not 0.<text_logit_weight<=1.:raise ValueError("Text logit weight must be in (0,1]")
+        self.text_logit_weight=text_logit_weight
         self.numeric_dim=numeric_dim
+        self.root_conditioned_fault=root_conditioned_fault
+        if root_conditioned_fault and not numeric_dim:raise ValueError("Root-conditioned fault requires numeric fusion")
         if numeric_dim:
             self.numeric_root=nn.Sequential(nn.Linear(numeric_dim,64),nn.GELU(),nn.Linear(64,1))
             self.numeric_fault=nn.Sequential(nn.Linear(numeric_dim*3,128),nn.GELU(),nn.Linear(128,fault_count))
+            if root_conditioned_fault:
+                self.numeric_local_fault=nn.Sequential(nn.Linear(numeric_dim,128),nn.GELU(),nn.Linear(128,fault_count))
+                nn.init.zeros_(self.numeric_local_fault[-1].weight)
+                nn.init.zeros_(self.numeric_local_fault[-1].bias)
 
     def forward(self,input_ids,attention_mask,spans,candidate_mask,candidate_numeric=None,incident_numeric=None):
+        incident,candidate=self.encode_representations(input_ids,attention_mask,spans,candidate_mask)
+        return self.score_representations(incident,candidate,candidate_mask,candidate_numeric,incident_numeric)
+
+    def encode_representations(self,input_ids,attention_mask,spans,candidate_mask):
         if not candidate_mask.any(dim=1).all():
             raise ValueError("empty candidates in batch")
         lengths=attention_mask.sum(-1)[:,None]
@@ -35,17 +47,26 @@ class DecisionModel(nn.Module):
         if ((spanmask.sum(-1)==0)&candidate_mask).any():
             raise ValueError("invalid candidate span")
         candidate=torch.einsum("bkl,bld->bkd",spanmask.to(h.dtype),h)/spanmask.sum(-1).clamp_min(1)[:,:,None]
+        return incident,candidate
+
+    def score_representations(self,incident,candidate,candidate_mask,candidate_numeric=None,incident_numeric=None):
         shared=incident[:,None,:].expand_as(candidate)
         logits=self.scorer(torch.cat([shared,candidate,shared*candidate],dim=-1)).squeeze(-1)
-        fault_logits=self.fault_head(incident)
+        logits=logits*self.text_logit_weight
+        fault_logits=self.fault_head(incident)*self.text_logit_weight
         if self.numeric_dim:
             if candidate_numeric is None or incident_numeric is None: raise ValueError("numeric features required")
-            logits=logits+self.numeric_root(candidate_numeric.to(h.dtype)).squeeze(-1)
-            fault_logits=fault_logits+self.numeric_fault(incident_numeric.to(h.dtype))
+            logits=logits+self.numeric_root(candidate_numeric.to(incident.dtype)).squeeze(-1)
+            fault_logits=fault_logits+self.numeric_fault(incident_numeric.to(incident.dtype))
         logits=logits.masked_fill(~candidate_mask,float("-inf"))
+        if self.root_conditioned_fault:
+            # Predicted roots only; detach avoids the fault loss changing root routing.
+            weights=torch.softmax(logits.float(),dim=-1).detach().to(incident.dtype)
+            local=self.numeric_local_fault(candidate_numeric.to(incident.dtype))
+            fault_logits=fault_logits+(local*weights[:,:,None]).sum(1)
         return logits,fault_logits
 
-def build_model(backbone_path, pretrained=True, head_size=128, pooling="cls", numeric_dim=0):
+def build_model(backbone_path, pretrained=True, head_size=128, pooling="cls", numeric_dim=0, root_conditioned_fault=False, text_logit_weight=1.):
     conf=AutoConfig.from_pretrained(backbone_path,local_files_only=True)
     conf.reference_compile=False
     conf._attn_implementation="sdpa"
@@ -53,7 +74,7 @@ def build_model(backbone_path, pretrained=True, head_size=128, pooling="cls", nu
         backbone=AutoModel.from_pretrained(backbone_path,config=conf,local_files_only=True)
     else:
         backbone=AutoModel.from_config(conf)
-    return DecisionModel(backbone,head_size=head_size,pooling=pooling,numeric_dim=numeric_dim)
+    return DecisionModel(backbone,head_size=head_size,pooling=pooling,numeric_dim=numeric_dim,root_conditioned_fault=root_conditioned_fault,text_logit_weight=text_logit_weight)
 
 def labels(examples, encoded, device="cpu"):
     roots=[]

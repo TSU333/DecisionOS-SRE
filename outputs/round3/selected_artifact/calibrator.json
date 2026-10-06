@@ -1,0 +1,54 @@
+{
+  "binding": {
+    "checkpoint_sha256": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
+    "split_hash": "2800c93a16a064c993737a8b796eda5f46df5c75eec6486932f0fa088e89bce5",
+    "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "fit_run_ids": [
+    "1acf973eeb55223dd1401bcb",
+    "2c11d2bd3b8dd0106a410acd",
+    "340b38e18c78d735f3eaa79f",
+    "383d01dff1a7c11c357a8b7d",
+    "3bae0f8e18b4275a25ef1c13",
+    "5fa77e02707286538d2c02d4",
+    "621e32d6eaef77f65256d94d",
+    "6ebe12cfee90cb9811edf56a",
+    "83e5854748d14cd269313c11",
+    "8462c8793839ce57cd54cdb4",
+    "862ffe41b95016e9f8a64dc0",
+    "997d073d1980404816611789",
+    "c218b6d37345bca2bd28b89b",
+    "c264dcd5d425d190bad6859c",
+    "c4a0b355e9f41a7292554ccc",
+    "cbf9a571afab324819a511c5",
+    "cd53d41710affaee66337a56",
+    "d2eb8b65188068d01dd78619",
+    "e53d3ed33e4c2cc632a2c669",
+    "e868d5254597f5ce9c695770"
+  ],
+  "root": {
+    "temperature": 3.5217603938450788,
+    "status": "fitted",
+    "n": 20,
+    "nll_before": 1.4873373901236762,
+    "nll_after": 0.6704188448292994,
+    "log_temperature_bounds": [
+      -3,
+      3
+    ]
+  },
+  "fault": {
+    "temperature": 1.5852386701876215,
+    "status": "fitted",
+    "n": 20,
+    "nll_before": 0.48400297737643233,
+    "nll_after": 0.4172450968789391,
+    "log_temperature_bounds": [
+      -3,
+      3
+    ]
+  },
+  "id": "f2b1298631f8dc5bc34fd62a8fc30e18be4c6d3b5d53a3b2c0aa56a1c2d5952b"
+}

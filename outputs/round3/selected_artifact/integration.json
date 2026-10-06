@@ -1,0 +1,202 @@
+{
+  "status": "experiment_completed",
+  "reload_max_abs_logit_diff": 0.0,
+  "http": {
+    "health": 200,
+    "ready": 200,
+    "decide": 200,
+    "decision": {
+      "root_cause": {
+        "selected": "checkoutservice",
+        "probabilities": {
+          "checkoutservice": 0.8095047836563641,
+          "adservice": 0.06457358416657766,
+          "currencyservice": 0.08989218300580192,
+          "frontend": 0.008875797976237722,
+          "redis": 0.01737452466337724,
+          "paymentservice": 0.0015251736431238696,
+          "recommendationservice": 0.0013173224815954956,
+          "cartservice": 0.0015743337181935923,
+          "shippingservice": 0.001255891289846613,
+          "frontend-external": 0.0008703412360314219,
+          "productcatalogservice": 0.0018535218780640734,
+          "emailservice": 0.0013825422847861763
+        },
+        "confidence": 0.8095047836563641,
+        "calibration_status": "fitted"
+      },
+      "fault_type": {
+        "selected": "cpu_stress",
+        "probabilities": {
+          "cpu_stress": 0.918600701155629,
+          "memory_stress": 0.050463378170252975,
+          "disk_io_stress": 0.017192938125937345,
+          "network_delay": 0.001321133486309701,
+          "network_packet_loss": 0.012421849061871094
+        },
+        "confidence": 0.918600701155629,
+        "calibration_status": "fitted"
+      },
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.8095047836563641,
+        "reason_codes": [
+          "NO_FEASIBLE_THRESHOLD"
+        ]
+      },
+      "versions": {
+        "model": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
+        "serializer": "metrics-canonical-v2",
+        "ontology": "e465bdcb3f6073a4e39311081b7e125f850e341ca339d1e1fae986d8a07806ae",
+        "calibration": "f2b1298631f8dc5bc34fd62a8fc30e18be4c6d3b5d53a3b2c0aa56a1c2d5952b",
+        "policy": "d1ec7a2d5e4aca7a35e24f0937de349ac0744b102f58cdb5087dcf48ff5145b7"
+      },
+      "evidence_status": {
+        "serializer_version": "metrics-canonical-v2",
+        "tokens": 1496,
+        "candidate_count": 12,
+        "usable_metrics_retained": 74,
+        "metrics_total": 74,
+        "metrics_retained": 74,
+        "retained_fraction": 1.0,
+        "retained_metric_keys": [
+          "checkoutservice/cpu",
+          "checkoutservice/mem",
+          "checkoutservice/socket",
+          "checkoutservice/latency-90",
+          "checkoutservice/latency-50",
+          "adservice/mem",
+          "adservice/cpu",
+          "currencyservice/latency-50",
+          "frontend/latency-90",
+          "redis/diskio",
+          "frontend/latency-50",
+          "paymentservice/latency-90",
+          "recommendationservice/latency-90",
+          "paymentservice/latency-50",
+          "paymentservice/cpu",
+          "frontend/mem",
+          "recommendationservice/latency-50",
+          "cartservice/latency-90",
+          "adservice/workload",
+          "recommendationservice/cpu",
+          "cartservice/latency-50",
+          "cartservice/cpu",
+          "currencyservice/workload",
+          "adservice/latency-90",
+          "shippingservice/mem",
+          "adservice/diskio",
+          "currencyservice/mem",
+          "shippingservice/workload",
+          "shippingservice/cpu",
+          "paymentservice/workload",
+          "currencyservice/cpu",
+          "adservice/latency-50",
+          "frontend/workload",
+          "checkoutservice/workload",
+          "redis/mem",
+          "frontend-external/workload",
+          "productcatalogservice/latency-50",
+          "emailservice/latency-90",
+          "emailservice/latency-50",
+          "shippingservice/latency-90",
+          "frontend-external/error",
+          "emailservice/workload",
+          "recommendationservice/workload",
+          "paymentservice/mem",
+          "emailservice/cpu",
+          "redis/cpu",
+          "shippingservice/latency-50",
+          "productcatalogservice/latency-90",
+          "cartservice/mem",
+          "currencyservice/latency-90",
+          "productcatalogservice/workload",
+          "cartservice/workload",
+          "frontend/cpu",
+          "recommendationservice/mem",
+          "productcatalogservice/cpu",
+          "emailservice/mem",
+          "productcatalogservice/mem",
+          "checkoutservice/diskio",
+          "adservice/socket",
+          "currencyservice/diskio",
+          "currencyservice/socket",
+          "frontend/error",
+          "frontend/socket",
+          "redis/socket",
+          "paymentservice/socket",
+          "recommendationservice/diskio",
+          "recommendationservice/socket",
+          "cartservice/socket",
+          "shippingservice/socket",
+          "productcatalogservice/diskio",
+          "productcatalogservice/error",
+          "productcatalogservice/socket",
+          "emailservice/diskio",
+          "emailservice/socket"
+        ],
+        "truncated": false,
+        "missing_modalities": [
+          "logs",
+          "traces",
+          "topology",
+          "deployment_context"
+        ],
+        "token_budgets": {
+          "max": 2048,
+          "candidate_reservation": true,
+          "logs": 0,
+          "traces": 0
+        },
+        "absolute_timestamps_serialized": false,
+        "service_names_serialized": false,
+        "candidate_order": "observable metric signature",
+        "numeric_metrics": [
+          "cpu",
+          "diskio",
+          "error",
+          "latency",
+          "latency-50",
+          "latency-90",
+          "load",
+          "mem",
+          "socket",
+          "workload"
+        ],
+        "numeric_evidence_scope": "retained metrics only",
+        "descriptions_serialized": false
+      },
+      "timings_ms": {
+        "serialization_tokenization": 9.880401194095612,
+        "model": 872.5154995918274,
+        "end_to_end": 882.7903009951115
+      },
+      "execute_remediation": false
+    },
+    "reject_gold": 422,
+    "single_candidate": {
+      "destination": "REVIEW",
+      "routing_score": 0.8010090112559985,
+      "reason_codes": [
+        "SINGLE_CANDIDATE",
+        "NO_FEASIBLE_THRESHOLD"
+      ]
+    },
+    "candidate_overflow": {
+      "destination": "REVIEW",
+      "routing_score": null,
+      "reason_codes": [
+        "CANDIDATES_EXCEED_TOKEN_BUDGET"
+      ]
+    },
+    "unvalidated_application": {
+      "destination": "REVIEW",
+      "routing_score": 0.7753367147689879,
+      "reason_codes": [
+        "NO_FEASIBLE_THRESHOLD",
+        "UNVALIDATED_APPLICATION"
+      ]
+    },
+    "empty_candidates": 422
+  }
+}

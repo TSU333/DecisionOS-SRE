@@ -1,0 +1,49 @@
+{
+  "scope": "mvp",
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_status": "working assumption pending optional user clarification",
+  "heldout_test_n": 25,
+  "test_dataset": "RE2-OB five shared faults",
+  "test_rule": "evaluate exactly after configuration/checkpoint freeze; never train until test target is reached",
+  "selection_rule": "maximize average joint accuracy of RE1 and RE2 validation cohorts; tie-break aggregate joint then sum NLL",
+  "validation_cohorts": {
+    "RE1": 15,
+    "RE2": 5
+  },
+  "candidate_trials": [
+    "cached warm-start hybrid: seed42 lr1e-3",
+    "cached warm-start hybrid: seed43 lr3e-4",
+    "fine-tune best cached checkpoint with low backbone LR"
+  ],
+  "gate_risk": 0.05,
+  "gate_min_runs": 30,
+  "max_main_sft_updates": 680,
+  "old_artifacts": "preserved",
+  "adaptive_extension_before_test": {
+    "reason": "TRAIN-fitted numerical control validation root 100%, fault 95%; initial neural validation fault 75-80%. Test still unopened.",
+    "experiment": "add trainable candidate-local fault residual weighted by predicted root distribution (detached); shared encoder remains one call",
+    "trials": [
+      "cached root-conditioned residual, seed42 lr1e-3",
+      "cached root-conditioned residual, seed43 lr3e-4"
+    ],
+    "max_updates_each": 1000,
+    "selection_rule_unchanged": true,
+    "no_test_access": true
+  },
+  "final_validation_extension": {
+    "reason": "No gain from low-LR backbone tuning or candidate-local residual; test remains sealed. Check if inherited text logits dominate new numeric signal.",
+    "trials": [
+      "frozen canonical warm-start, text logit weight 0.1",
+      "frozen canonical warm-start, text logit weight 0.3"
+    ],
+    "head_lr": 0.001,
+    "max_steps_each": 1500,
+    "early_stopping_epochs": 60,
+    "selection_rule_unchanged": true,
+    "no_further_tuning_after_test": true
+  }
+}

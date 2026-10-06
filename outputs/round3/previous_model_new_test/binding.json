@@ -1,0 +1,13 @@
+{
+  "artifact": "artifacts\\retrain\\canonical\\sft",
+  "binding": {
+    "checkpoint_sha256": "491cbb6a89622307620866d1091339e0551bdf61b7378a0d0ae6781299f3c261",
+    "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+    "pipeline_hash": "77865318675aff5a8d97b2e7c1fd7549016e7f65cde0e3ff61f27505c783ff80",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "calibrator_sha256": "3262dcaf87c58b6b031b457c5bb1e863a155b3464cdd34bea65ae36a694e1154",
+  "policy_sha256": "fcc8b823ddf7485c345e58994d7aabc4032699448fd3dd3d9480820e384711c2",
+  "role": "unchanged prior model on identical new held-out examples after current selection freeze"
+}

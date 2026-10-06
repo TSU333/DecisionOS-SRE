@@ -1,3 +1,5 @@
+> 第三轮最新记录见 [round3_protocol.md](round3_protocol.md)；以下保留初始阶段历史记录。
+
 # 冻结评测协议 v1
 
 固定 seed=42。RE1-OB 的 run 在确定性摘要和训练增强之前划分。按 fault 分层，对 exact telemetry、共享基线和近似窗口指纹相同者 union 分组。各组只属于一个 split。只有 train 可以做候选打乱、10% 指标 masking 和 10% 全 evidence dropout。增强元数据记录 parent run 与 seed。
