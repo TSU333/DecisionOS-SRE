@@ -188,3 +188,34 @@ def test_real_manifest_integration_if_present():
             text="".join(chr(t-3) for t in tokens if t>2)
             assert ex.source_metadata["case"] not in text
             assert ex.opaque_incident_id not in text
+
+def test_adapter_future_rows_do_not_affect_summary(tmp_path):
+    import pandas as pd
+    from decisionos_sre.data import prepare
+    from decisionos_sre.common import save
+    case="fixture_db_cpu_1"; (tmp_path/case).mkdir()
+    frame=pd.DataFrame({"time":[90,99,100,160,161],"db_cpu":[1.,3.,4.,6.,1e12]})
+    frame.to_parquet(tmp_path/case/"metrics.parquet")
+    entry={"case":case,"opaque_incident_id":"o","group_id":"g","onset":100,"decision_time":160,
+           "application":"fixture","candidate_ids":["db"],"root_raw":"db","fault_raw":"cpu","sha256":"fixture"}
+    save(tmp_path/"manifest.json",{"manifest_hash":"fixture","entries":[entry]})
+    save(tmp_path/"splits.json",{"manifest_hash":"fixture","assignments":{"o":"train"}})
+    result=prepare(tmp_path)[0]
+    m=result["input"]["evidence"]["metrics"][0]
+    assert m["baseline_mean"]==2.
+    assert m["observed_mean"]==5.
+    frame.loc[4,"db_cpu"]=-1e12
+    frame.to_parquet(tmp_path/case/"metrics.parquet")
+    assert prepare(tmp_path)[0]["input"]==result["input"]
+
+def test_missing_observations_and_artifact_integrity(tmp_path):
+    from decisionos_sre.runtime import Engine
+    from decisionos_sre.common import save
+    x=incident(); x.evidence.metrics[0].observed_mean=None
+    x.evidence.metrics[0].observed_samples=0
+    assert Serializer(Tokenizer())(x).report["usable_metrics_retained"]==0
+    data={"temperature":1.}; data["id"]=digest(data)
+    save(tmp_path/"cal.json",data)
+    assert Engine._optional(tmp_path/"cal.json")==data
+    data["temperature"]=2.; save(tmp_path/"cal.json",data)
+    with pytest.raises(ValueError): Engine._optional(tmp_path/"cal.json")

@@ -126,6 +126,7 @@ def train(config,mode):
       "history":history,"elapsed_seconds":time.perf_counter()-start,"environment":environment(),
       "selection":"minimum model_validation sum task NLL; no test access",
       "binding":config_binding(config,file_hash(out/"checkpoint.pt"),split["split_hash"],tokenizer_hash),
+      "supported_applications":sorted({e.input.application for e in trainset}),
       "prepared_data_sha256":file_hash(Path(config["data_dir"])/"examples.json"),
       "code_state":code_state(),
       "train_run_ids":[e.original_run_id for e in trainset],

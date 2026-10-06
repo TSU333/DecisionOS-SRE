@@ -1,0 +1,40 @@
+{
+  "frozen": {
+    "binding": {
+      "checkpoint_sha256": "0f1b6a871b0e9e032d0e79b2f6f8835d8dd9c1cf2f0b52d266fc2ab948fa4678",
+      "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+      "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "supported_applications": [
+      "Online Boutique"
+    ],
+    "files": {
+      "metadata.json": "fcbb3703da072ebc6352836eab8b8a1e071f4ddbfd55b89c160c001b456d5a59",
+      "calibrator.json": "8fe7a3493058e860f081187e428d83091181fdba762fb1c2c529984c104e1e41",
+      "policy.json": "68697b3a01a141c44cbee11636ddb2cbb542c1f615465eff606db6cd7feb3da5",
+      "test_freeze.json": "1ff3c1b3b11a948b18adb8b5c9600eef626504f6cfa950622e5adec28f02bfc6",
+      "integration.json": "caa333164ceaf84796ab39b7076974b33cac213f3629698cb207bdf64f2ab9b3"
+    }
+  },
+  "sft": {
+    "binding": {
+      "checkpoint_sha256": "65133849b239ac59571ed5010f72329a5e96c872b3e726e7dc54bf7720d0e95f",
+      "split_hash": "d4791bbc59b082fe290348de7c8372c31bee693e3eb6d53ed0985d722a963b64",
+      "pipeline_hash": "443549d7ea40b7c14d1e9e935ffc0ec9384bf58642a4214911f197d7f3a7a79c",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "supported_applications": [
+      "Online Boutique"
+    ],
+    "files": {
+      "metadata.json": "c958d96b54624306c8f4900da9f1122be934e2393cdb51dcea9d2e5b03453281",
+      "calibrator.json": "0821999b5b049ea4a71467138ffb85330da70235cd20d7850f6ce45c04c7bf1f",
+      "policy.json": "21e8d8f450cf14f67ca00d3cf8c1e382e65b198261d61cb940d717d473de884f",
+      "test_freeze.json": "d7c7663ede14fcec61066e46f38c4f4355a6bb7bb8f6b085212831820187bce5",
+      "integration.json": "2f141fc9fed3a00caae55b3f2645edefa0229dcfce1dec6225a94805524d986b"
+    }
+  }
+}

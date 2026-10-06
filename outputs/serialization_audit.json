@@ -1,0 +1,9 @@
+{
+  "cases": 125,
+  "tokens_min": 1679,
+  "tokens_max": 2048,
+  "metrics_retention_mean": 0.9618621553884711,
+  "truncated_cases": 74,
+  "candidate_misses": 0,
+  "modality": "metrics-only"
+}

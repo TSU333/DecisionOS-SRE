@@ -69,6 +69,9 @@ class Engine:
                            "confidence":p[choice],"calibration_status":status}
         routing=route(probs["root"],probs["fault"],enc.report["usable_metrics_retained"]>0,
                       self.calibrator,self.policy,self.binding)
+        if incident.application not in self.metadata["supported_applications"]:
+            routing["destination"]="REVIEW"
+            routing["reason_codes"]=[x for x in routing["reason_codes"] if x!="THRESHOLD_PASSED"]+["UNVALIDATED_APPLICATION"]
         return DecisionResponse(root_cause=results["root"],fault_type=results["fault"],routing=routing,
            versions=versions,evidence_status=enc.report,
            timings_ms={"serialization_tokenization":serial_ms,"model":core_ms,

@@ -1,0 +1,32 @@
+{
+    "gpu":  "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 572.16",
+    "cpu":  {
+                "Name":  "AMD Ryzen 9 7945HX with Radeon Graphics        ",
+                "NumberOfCores":  16,
+                "NumberOfLogicalProcessors":  32
+            },
+    "memory":  {
+                   "TotalVisibleMemorySize":  16450076,
+                   "FreePhysicalMemory":  3876188
+               },
+    "disks":  [
+                  {
+                      "DeviceID":  "C:",
+                      "FileSystem":  "NTFS",
+                      "Size":  214749409280,
+                      "FreeSpace":  962965504
+                  },
+                  {
+                      "DeviceID":  "D:",
+                      "FileSystem":  "NTFS",
+                      "Size":  807072165888,
+                      "FreeSpace":  144883376128
+                  },
+                  {
+                      "DeviceID":  "E:",
+                      "FileSystem":  "NTFS",
+                      "Size":  1000186310656,
+                      "FreeSpace":  211997904896
+                  }
+              ]
+}
