@@ -1,0 +1,168 @@
+{
+  "all": {
+    "root": {
+      "n": 85,
+      "accuracy": 0.9529411764705882,
+      "nll": 0.25080876957002857
+    },
+    "fault": {
+      "n": 85,
+      "accuracy": 0.8705882352941177,
+      "nll": 0.4960840750544889,
+      "macro_f1": 0.8714453357100416,
+      "prediction_counts": {
+        "cpu_stress": 15,
+        "memory_stress": 17,
+        "disk_io_stress": 18,
+        "network_delay": 19,
+        "network_packet_loss": 16
+      }
+    },
+    "joint_accuracy": 0.8235294117647058,
+    "sum_nll": 0.7468928446245175,
+    "cohorts": {
+      "RE1-OB": {
+        "n": 30,
+        "joint_accuracy": 0.9666666666666667
+      },
+      "RE1-SS": {
+        "n": 15,
+        "joint_accuracy": 0.8
+      },
+      "RE2-OB": {
+        "n": 25,
+        "joint_accuracy": 0.68
+      },
+      "RE2-SS": {
+        "n": 15,
+        "joint_accuracy": 0.8
+      }
+    },
+    "cohort_macro_joint": 0.8116666666666668
+  },
+  "by_cohort": {
+    "RE1-OB": {
+      "root": {
+        "n": 30,
+        "accuracy": 0.9666666666666667,
+        "nll": 0.10374627036030616
+      },
+      "fault": {
+        "n": 30,
+        "accuracy": 1.0,
+        "nll": 0.044363712907351464,
+        "macro_f1": 1.0,
+        "prediction_counts": {
+          "cpu_stress": 6,
+          "memory_stress": 6,
+          "disk_io_stress": 6,
+          "network_delay": 6,
+          "network_packet_loss": 6
+        }
+      },
+      "joint_accuracy": 0.9666666666666667,
+      "sum_nll": 0.14810998326765762,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 30,
+          "joint_accuracy": 0.9666666666666667
+        }
+      },
+      "cohort_macro_joint": 0.9666666666666667
+    },
+    "RE1-SS": {
+      "root": {
+        "n": 15,
+        "accuracy": 1.0,
+        "nll": 0.00357670776423276
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.8,
+        "nll": 0.457822622986339,
+        "macro_f1": 0.8033333333333333,
+        "prediction_counts": {
+          "cpu_stress": 2,
+          "memory_stress": 3,
+          "disk_io_stress": 3,
+          "network_delay": 2,
+          "network_packet_loss": 5
+        }
+      },
+      "joint_accuracy": 0.8,
+      "sum_nll": 0.46139933075057177,
+      "cohorts": {
+        "RE1-SS": {
+          "n": 15,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8
+    },
+    "RE2-OB": {
+      "root": {
+        "n": 25,
+        "accuracy": 0.88,
+        "nll": 0.7259626571041136
+      },
+      "fault": {
+        "n": 25,
+        "accuracy": 0.8,
+        "nll": 0.8771072762636752,
+        "macro_f1": 0.7954545454545454,
+        "prediction_counts": {
+          "cpu_stress": 5,
+          "memory_stress": 4,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 3
+        }
+      },
+      "joint_accuracy": 0.68,
+      "sum_nll": 1.603069933367789,
+      "cohorts": {
+        "RE2-OB": {
+          "n": 25,
+          "joint_accuracy": 0.68
+        }
+      },
+      "cohort_macro_joint": 0.68
+    },
+    "RE2-SS": {
+      "root": {
+        "n": 15,
+        "accuracy": 1.0,
+        "nll": 0.0002426839051274515
+      },
+      "fault": {
+        "n": 15,
+        "accuracy": 0.8,
+        "nll": 0.8027475827349366,
+        "macro_f1": 0.7961904761904762,
+        "prediction_counts": {
+          "cpu_stress": 2,
+          "memory_stress": 4,
+          "disk_io_stress": 3,
+          "network_delay": 4,
+          "network_packet_loss": 2
+        }
+      },
+      "joint_accuracy": 0.8,
+      "sum_nll": 0.8029902666400641,
+      "cohorts": {
+        "RE2-SS": {
+          "n": 15,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8
+    }
+  },
+  "best_observed_risk_with_at_least_30": {
+    "threshold": 0.8925613008334226,
+    "n": 36,
+    "errors": 2,
+    "risk": 0.05555555555555555
+  },
+  "note": "Diagnostic after frozen policy selection; no policy change; empirical/post-selection, not a guarantee"
+}

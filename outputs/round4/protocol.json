@@ -1,0 +1,59 @@
+{
+  "execution_scope": "mvp",
+  "data": "RCAEval RE1/RE2 Online Boutique + Sock Shop five existing fault types; metrics only",
+  "new_cases": 200,
+  "new_training_cases": 100,
+  "fresh_test": {
+    "application": "Sock Shop",
+    "n": 30,
+    "role": "within-trained-application exploratory holdout, not unseen-application generalization"
+  },
+  "old_test_roles": {
+    "RE1-OB": 15,
+    "RE2-OB": 25,
+    "role": "previously opened regression only"
+  },
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_provenance": "same assistant working targets as previous round; fresh Sock Shop evidence cannot reconfirm original Online Boutique generalization target",
+  "selection": "eligibility old OB validation joint>=0.85; then maximum four-cohort mean validation joint, ties total joint then sum NLL",
+  "cohorts": [
+    "RE1-OB",
+    "RE2-OB",
+    "RE1-SS",
+    "RE2-SS"
+  ],
+  "candidate_trials": [
+    {
+      "name": "uniform",
+      "sampling": "shuffle",
+      "seed": 42,
+      "lr": 0.0003,
+      "max_updates": 2000
+    },
+    {
+      "name": "balanced",
+      "sampling": "cohort_balanced",
+      "seed": 42,
+      "lr": 0.0003,
+      "max_updates": 2000
+    },
+    {
+      "name": "balanced_seed43",
+      "sampling": "cohort_balanced",
+      "seed": 43,
+      "lr": 0.001,
+      "max_updates": 2000
+    }
+  ],
+  "no_test_access_until_freeze": true,
+  "gate_risk": 0.05,
+  "gate_min_accepted": 30,
+  "source_rejection": "TORAI matched all 75 existing supported RE2 cases on overlapping timestamps, not independent new data",
+  "rationale": "same label ontology and adapter; add training diversity while preserving previous partitions; no KD/LLM/new modalities/quantization",
+  "old_validation_floor_rationale": "allow at most one additional joint error out of 20 compared with previous 18/20 validation; floor is a retention constraint, not a quality target",
+  "parent_checkpoint_sha256": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e"
+}

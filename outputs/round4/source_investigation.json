@@ -1,0 +1,11 @@
+{
+  "repository": "https://api.github.com/repos/phamquiluan/RCAEval",
+  "revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+  "relevant_paths": [
+    "RCAEval/e2e/torai.py",
+    "docs/TORAI.md",
+    "docs/torai-paper.pdf",
+    "requirements_torai.lock",
+    "script/link-torai.sh"
+  ]
+}

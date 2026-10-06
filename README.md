@@ -1,22 +1,22 @@
 # DecisionOS-SRE
 
-研究型结构化诊断 MVP。共享 ModernBERT encoder 同时输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行运维操作。
+研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行运维操作。
 
-最新第三轮结果见 `docs/round3_results.md`，机器报告 `outputs/round3/results.json`，验收状态 `outputs/round3/status.json`；选中模型 `artifacts/round3/weighted_0.1/frozen`，统一入口 `outputs/latest_model.json`。历史权重和结果保留。
+最新第四轮结果见 `docs/round4_results.md`，机器报告 `outputs/round4/results.json`，验收 `outputs/round4/status.json`。选中模型 `artifacts/round4/balanced_seed43/frozen`，统一入口 `outputs/latest_model.json`。原权重和各轮结果保留。
 
-数据由 125 扩充到 200 条，完成 7 组训练、3580 次更新。在同样的 25 条新 RE2-OB 留出案例上，根因 72% → 88%、故障分类 20% → 72%、联合正确 16% → 64%。暂定的 90% / 90% / 85% 质量目标尚未达到；全部 REVIEW，未找到符合原文要求的接受门槛。旧 15 条回归集为 86.7% / 100% / 86.7%，不能与新留出结果混作同一数据集。
+数据增至 400 条，本轮完成 3 组训练、4816 次更新。新 Sock Shop 30 条留出案例：根因 96.7%、故障分类 90%、联合 86.7%，达到该样本上暂定的 90% / 90% / 85% 指标。模型训练包含 Sock Shop，不能称为未知应用泛化。
 
-24 项测试和真实 HTTP / CPU 重载检查通过，重载 logits 最大差 0；CPU 单请求端到端 P95 945.0 ms（本轮指定样本）。MVP 工程验收通过不代表质量或自动接受目标达标。数据、边界和选择规则见 `docs/round3_data_audit.md`、`docs/round3_protocol.md`。新测试已打开，后续训练需要新的独立确认集。
+原 Online Boutique RE2 的 25 条历史回归：根因 88% → 96%、故障 72% → 80%、联合 64% → 76%，仍未完全达标；缺新的独立 OB 留出，不能用新 SS 分数替代其泛化证明。85 条门控样本最好的合格规模区间仍错 2/36=5.56%，高于 5%，因此仍全部 REVIEW。28 项测试、真实 HTTP 和 CPU 重载通过，重载 logits 最大差 0；本轮 CPU 端到端 P95 858.8 ms。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE
 $env:PYTHONPATH='src'
-./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round3/weighted_0.1/frozen --port 8000
+./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round4/balanced_seed43/frozen --port 8000
 ```
 
-复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round3_weighted_0.1.json -Mode frozen`。依赖现有固定数据和上轮 canonical 初始化权重，自动创建新输出目录，包含训练、CPU 校准/门控/评估、benchmark 与真实 API 检查。重跑测试称为复现，不能重新称为未见测试。
+复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round4_balanced_seed43.json -Mode frozen`。需要保留固定数据和第三轮初始化权重；脚本自动创建新的输出目录，执行训练、校准、门控、测试复现、CPU benchmark 与真实 HTTP 检查。重跑已打开的测试只能称为复现。
 
-范围保持 `execution_scope: mvp`。初始安装与基础 CLI 说明保留如下；第一轮与第二轮历史结果见 `docs/experiment_results.md`、`docs/retraining_results.md`。
+本轮数据重叠审计、分割、训练预算和选择规则见 `docs/round4_protocol.md`。execution_scope 保持 mvp。MVP 工程验收、新数据样本质量、原应用目标和自动接受能力分别报告。历史记录见各轮 results 文档，初始安装说明保留如下。
 
 ## 本地环境
 本次工作目录为 D:\CODEX\DecisionOS-SRE。原 E 盘工作目录读操作可用，但写操作实际返回 WinError 433；用户已授权使用 D 盘指定目录。保留此事实以免误认为所有命令仍在原目录执行。

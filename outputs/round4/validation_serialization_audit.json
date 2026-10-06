@@ -1,0 +1,6 @@
+{
+  "validation_n": 40,
+  "min_retained_fraction": 1.0,
+  "min_tokens": 1057,
+  "max_tokens": 1641
+}

@@ -1,0 +1,690 @@
+{
+  "compared_supported_fault_cases": 75,
+  "matched_existing_cases": 73,
+  "conclusion": "73 identical supported cases and 2 same-onset cases with altered coverage; all rejected conservatively as independent new data",
+  "rows": [
+    {
+      "torai_path": "torai-OB/productcatalogservice_cpu/1/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_cpu_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_cpu/3/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_cpu_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_cpu/2/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_cpu_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_cpu/1/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_cpu_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_cpu/3/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_cpu_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_cpu/2/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_cpu_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "calibration"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_loss/1/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_loss_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_loss/3/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_loss_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_loss/2/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_loss_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_delay/1/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_delay_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_delay/3/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_delay_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_delay/2/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_delay_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_disk/1/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_disk_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_disk/3/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_disk_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_disk/2/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_disk_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_cpu/1/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_cpu_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_cpu/3/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_cpu_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_cpu/2/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_cpu_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_mem/1/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_mem_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "calibration"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_mem/3/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_mem_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_mem/2/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_mem_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": false,
+      "same_values_csv_tolerance": false,
+      "existing_split": "test",
+      "torai_rows": 1262,
+      "original_rows": 1004,
+      "common_time_rows": 1004,
+      "same_values_common_timestamps": true
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_loss/1/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_loss_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_loss/3/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_loss_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_loss/2/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_loss_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_disk/1/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_disk_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "model_validation"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_disk/3/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_disk_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_disk/2/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_disk_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_cpu/1/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_cpu_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_cpu/3/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_cpu_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "model_validation"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_cpu/2/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_cpu_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_disk/1/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_disk_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_disk/3/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_disk_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_disk/2/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_disk_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_delay/1/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_delay_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_delay/3/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_delay_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "calibration"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_delay/2/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_delay_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_delay/1/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_delay_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "model_validation"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_delay/3/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_delay_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_delay/2/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_delay_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_cpu/1/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_cpu_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_cpu/3/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_cpu_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_cpu/2/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_cpu_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": false,
+      "same_values_csv_tolerance": false,
+      "existing_split": "gate_selection",
+      "torai_rows": 1186,
+      "original_rows": 930,
+      "common_time_rows": 930,
+      "same_values_common_timestamps": true
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_mem/1/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_mem_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_mem/3/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_mem_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_mem/2/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_mem_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_mem/1/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_mem_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_mem/3/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_mem_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "model_validation"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_mem/2/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_mem_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_disk/1/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_disk_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_disk/3/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_disk_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "calibration"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_disk/2/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_disk_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_mem/1/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_mem_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_mem/3/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_mem_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_mem/2/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_mem_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_loss/1/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_loss_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_loss/3/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_loss_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/recommendationservice_loss/2/simple_metrics.csv",
+      "existing_case": "re2ob_recommendationservice_loss_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "calibration"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_delay/1/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_delay_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_delay/3/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_delay_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_delay/2/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_delay_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_mem/1/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_mem_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_mem/3/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_mem_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/currencyservice_mem/2/simple_metrics.csv",
+      "existing_case": "re2ob_currencyservice_mem_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_disk/1/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_disk_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_disk/3/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_disk_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/productcatalogservice_disk/2/simple_metrics.csv",
+      "existing_case": "re2ob_productcatalogservice_disk_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_loss/1/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_loss_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_loss/3/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_loss_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/checkoutservice_loss/2/simple_metrics.csv",
+      "existing_case": "re2ob_checkoutservice_loss_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_delay/1/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_delay_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "train"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_delay/3/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_delay_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_delay/2/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_delay_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_loss/1/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_loss_1",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "model_validation"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_loss/3/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_loss_3",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "test"
+    },
+    {
+      "torai_path": "torai-OB/emailservice_loss/2/simple_metrics.csv",
+      "existing_case": "re2ob_emailservice_loss_2",
+      "same_onset": true,
+      "same_columns": true,
+      "same_shape": true,
+      "same_values_csv_tolerance": true,
+      "existing_split": "gate_selection"
+    }
+  ]
+}

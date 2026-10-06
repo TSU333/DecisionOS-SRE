@@ -104,7 +104,7 @@ def train(config,mode):
         model.train()
         if mode=="frozen":
             model.backbone.eval()
-        order=list(trainset); rng.shuffle(order)
+        order=[trainset[i] for i in training_order(trainset,rng,config)]
         losses=[]
         optimizer.zero_grad(set_to_none=True)
         for offset in range(0,len(order),config["batch_size"]):
@@ -266,6 +266,11 @@ def selection_key(summary,config):
     if criterion=="sum_nll":return (summary["sum_nll"],)
     if criterion=="cohort_macro_joint":
         return (-summary["cohort_macro_joint"],-summary["joint_accuracy"],summary["sum_nll"])
+    if criterion=="cohort_guarded_joint":
+        groups=[summary["cohorts"][c] for c in config["preserve_validation_cohorts"]]
+        n=sum(c["n"] for c in groups)
+        preserved=sum(c["n"]*c["joint_accuracy"] for c in groups)/n if n else 0.
+        return (int(preserved+1e-12<config["preserve_joint_floor"]),-summary["cohort_macro_joint"],-summary["joint_accuracy"],summary["sum_nll"])
     raise ValueError("Unknown selection criterion")
 
 
@@ -281,8 +286,23 @@ def initialize_from_artifact(model,config,trainset,valset):
     if file_hash(folder/"checkpoint.pt")!=meta["binding"]["checkpoint_sha256"]:raise ValueError("Parent checksum mismatch")
     for field,default in [("pooling","cls"),("serializer_version",SERIALIZER),("head_size",128)]:
         if meta["config"].get(field,default)!=config.get(field,default):raise ValueError("Incompatible parent "+field)
+    if meta["config"].get("numeric_fusion") and meta["config"].get("numeric_metrics",[])!=config.get("numeric_metrics",[]):
+        raise ValueError("Parent numeric metric vocabulary/order mismatch")
     state=torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True)
     missing,unexpected=model.load_state_dict(state,strict=False)
     if unexpected or any(not n.startswith(("numeric_root.","numeric_fault.","numeric_local_fault.")) for n in missing):
         raise ValueError("Unexpected parent architecture mismatch")
     return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing}
+
+
+def training_order(examples,rng,config):
+    """Resample TRAIN only; balanced draws never count as new independent cases."""
+    from collections import Counter
+    strategy=config.get("sampling_strategy","shuffle")
+    if strategy=="shuffle":
+        order=list(range(len(examples)));rng.shuffle(order);return order
+    if strategy=="cohort_balanced":
+        cohorts=[e.source_metadata.get("dataset_suite","unknown") for e in examples]
+        counts=Counter(cohorts)
+        return rng.choices(range(len(examples)),weights=[1/counts[c] for c in cohorts],k=len(examples))
+    raise ValueError("Unknown training sampling strategy")

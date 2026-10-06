@@ -1,0 +1,41 @@
+{
+  "artifacts\\round4\\uniform\\frozen": {
+    "strategy": "shuffle",
+    "unique_training_cases": 165,
+    "total_training_draws": 30009,
+    "selected_checkpoint_draws": 23595,
+    "cohort_draw_counts": {
+      "RE2-OB": 2728,
+      "RE1-SS": 13642,
+      "RE1-OB": 9094,
+      "RE2-SS": 4545
+    },
+    "only_training_ids": true
+  },
+  "artifacts\\round4\\balanced\\frozen": {
+    "strategy": "cohort_balanced",
+    "unique_training_cases": 165,
+    "total_training_draws": 21780,
+    "selected_checkpoint_draws": 11880,
+    "cohort_draw_counts": {
+      "RE1-SS": 5446,
+      "RE1-OB": 5449,
+      "RE2-OB": 5389,
+      "RE2-SS": 5496
+    },
+    "only_training_ids": true
+  },
+  "artifacts\\round4\\balanced_seed43\\frozen": {
+    "strategy": "cohort_balanced",
+    "unique_training_cases": 165,
+    "total_training_draws": 20460,
+    "selected_checkpoint_draws": 10560,
+    "cohort_draw_counts": {
+      "RE1-OB": 5113,
+      "RE1-SS": 5173,
+      "RE2-OB": 5041,
+      "RE2-SS": 5133
+    },
+    "only_training_ids": true
+  }
+}

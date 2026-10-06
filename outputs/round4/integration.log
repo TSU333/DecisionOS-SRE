@@ -1,0 +1,1 @@
+PASS artifacts\round4\balanced_seed43\frozen reload delta 0.0 HTTP checks ['health', 'ready', 'decide', 'decision', 'reject_gold', 'single_candidate', 'candidate_overflow', 'unvalidated_application', 'empty_candidates']

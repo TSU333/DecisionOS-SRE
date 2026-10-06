@@ -1,0 +1,50 @@
+{
+  "artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round4\\balanced_seed43\\frozen",
+  "binding": {
+    "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+    "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+    "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "files": {
+    "api-server.log": "c1faf110b6c1cea7ec98e87fdc812c124f3886a02eb43d6224b0a32191fc6aae",
+    "augmentations.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "backbone_config\\config.json": "446caae8da868d00584d1825c1a88b094b7423b5ffb206689c7297c30bf3f67e",
+    "benchmark.json": "962ac21cad3fbffd1b2da026ed046158f812cd382b955c01f39e01048ff2bcfa",
+    "best_heads.pt": "c4fe5f46da8574f259fad59dcf6b05a658e014edebe614419b3dd00f3854ec79",
+    "calibration_logits.json": "a5110691fdf46eb53fad50aeb26e908b9c56ed3720456e043c9eca74e3eacd2c",
+    "calibrator.json": "019048cb37d8f5d5892fcf40b1ee73550ade4c665c26830d4357c4d7a260e361",
+    "checkpoint.pt": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+    "consistent_service_rename\\diagnostics.png": "7254686cc8b516c776a7891cb57e03085ba5f01c75b91f6b4c72ea1eb308842c",
+    "consistent_service_rename\\metrics.json": "5b18034bf73bfccfc00ed942a7cfedb8898e3b8889a717c98c1d6686f0338ea7",
+    "consistent_service_rename\\predictions.json": "3728be1501c8b943be893e10598d3fb24a6e672eceac615f0ec6e374031f5c26",
+    "gate_predictions.json": "f11902fe97987e29ada6f054bea793fb48e6e089c97c1032ce86c060ebb6d1a0",
+    "integration.json": "25c47734209a75a402ebe8ec8b516fe61251017378168ec78e21fef48541c05f",
+    "mask_all_metrics\\diagnostics.png": "affa716c67d4200546f7ca6445b4e13812e463f5c2ca70e247d09e16b17794ed",
+    "mask_all_metrics\\metrics.json": "61a454d0d7802346e7289ae444f2ea26471cc06d3bc3e6a9c7130b3f5d818f61",
+    "mask_all_metrics\\predictions.json": "de63e32b0a75694915954764b9ffa7f9d36a38313d04ccee20a4705beadb4123",
+    "metadata.json": "904374a5bd020cb8934435d03db519504e17daf1e48c66de51ab9140140dc747",
+    "policy.json": "04ea1df0ae9069b81233254e2ee1d525c2e5546b08b49d6696221f5d027789a1",
+    "reload_reference.json": "3ac3ad4d5bc03cc40b50ace61d11a4bf1b7c29f632261c5b7f0c142085d3d99d",
+    "resolved_config.json": "52cccf5e672803e8afc4d70943f90a2483ecd514e9d21f4fec78fdce9e5ae90f",
+    "reverse_candidates\\diagnostics.png": "7254686cc8b516c776a7891cb57e03085ba5f01c75b91f6b4c72ea1eb308842c",
+    "reverse_candidates\\metrics.json": "5b18034bf73bfccfc00ed942a7cfedb8898e3b8889a717c98c1d6686f0338ea7",
+    "reverse_candidates\\predictions.json": "7b501e354f342d6039f20aa4b030dc82f34353711d270eb756d8be9363854098",
+    "selected_validation_logits.json": "785f9045583e2721fef1b320fe0c015eff9d4bf8ebc75b337ff0ae2568a51997",
+    "split_manifest.json": "642d905b5ca4735e6529df4fcadf5272a371408055a1cd7fef0ef1fe5cfaaec3",
+    "test\\diagnostics.png": "7254686cc8b516c776a7891cb57e03085ba5f01c75b91f6b4c72ea1eb308842c",
+    "test\\metrics.json": "5b18034bf73bfccfc00ed942a7cfedb8898e3b8889a717c98c1d6686f0338ea7",
+    "test\\predictions.json": "280ceecd268446a3635e1ae8a5c1258286ffb42aeaebd26da546eaeabb2018ef",
+    "test_freeze.json": "afd4137dd7d1c42d6fcec49fe255aa396c5afd4bca8f849b0eb2d4eeae7a5507",
+    "tokenizer\\special_tokens_map.json": "e386620cb5e9f6570fe98481fde86167b4236cdebdcc42308652574122561619",
+    "tokenizer\\tokenizer.json": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "tokenizer\\tokenizer_config.json": "973134a8b0937f6a3a3567a5cc5cbd05a95974af1f8d2173c43dd09cf2f0e4bb",
+    "training_draws.json": "e6c3f9f1d2353a84eaf914b8d3785298d0285048638abe9dd26f2dea4163242b"
+  },
+  "dataset_integrity": {
+    "manifest_sha256": "eb8a7e49dc5676aa50925b2e1ee38b372deb7c63f8f495142515980882c4969a",
+    "splits_sha256": "642d905b5ca4735e6529df4fcadf5272a371408055a1cd7fef0ef1fe5cfaaec3",
+    "examples_sha256": "8a77697d50a603d5c7439d4c0d958998b20623759a8f99b3faf851312c7c361b"
+  }
+}

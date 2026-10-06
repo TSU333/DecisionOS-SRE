@@ -8,7 +8,7 @@ from .common import read,save,file_hash,seed_all,environment,MODEL_NAME,MODEL_RE
 from .data import load_split
 from .serializer import Serializer,collate
 from .model import build_model,labels,supervised_loss
-from .training import predict,prediction_summary,selection_key,initialize_from_artifact,config_binding,code_state
+from .training import predict,prediction_summary,selection_key,initialize_from_artifact,config_binding,code_state,training_order
 
 def feature_batch(items):
     max_k=max(x['candidate'].shape[1] for x in items)
@@ -56,10 +56,13 @@ def train_cached(config):
     heads=[p for p in model.parameters() if p.requires_grad]
     optimizer=torch.optim.AdamW(heads,lr=config['head_learning_rate'],weight_decay=config['weight_decay'])
     rng=random.Random(config['seed']);history=[];best=None;best_heads=None;best_rows=None;stale=0;steps=0
+    sampling_log=[]
     for epoch in range(config['epochs']):
-        order=list(range(len(trainset)));rng.shuffle(order);losses=[]
+        order=training_order(trainset,rng,config);losses=[]
+        used=[]
         for offset in range(0,len(order),config['batch_size']):
             indices=order[offset:offset+config['batch_size']]
+            used.extend(indices)
             batch=feature_batch([cache[i] for i in indices])
             optimizer.zero_grad(set_to_none=True)
             roots,faults=model.score_representations(**batch)
@@ -67,6 +70,7 @@ def train_cached(config):
             if not torch.isfinite(loss):raise RuntimeError('nonfinite loss')
             loss.backward();torch.nn.utils.clip_grad_norm_(heads,1.);optimizer.step();steps+=1;losses.append(float(loss.detach()))
             if steps>=config['max_steps']:break
+        sampling_log.append({'epoch':epoch+1,'run_ids':[trainset[i].original_run_id for i in used]})
         rows=[]
         with torch.no_grad():
             for i in range(len(trainset),len(cache)):
@@ -104,4 +108,5 @@ def train_cached(config):
         'dtype':'float32','augmentation':'none; fixed canonical input','train_and_validation_separate':True}}
     save(out/'metadata.json',metadata);save(out/'resolved_config.json',config);save(out/'split_manifest.json',split)
     save(out/'augmentations.json',[])
+    save(out/'training_draws.json',{'strategy':config.get('sampling_strategy','shuffle'),'independent_train_cases':len(trainset),'draws':sampling_log,'note':'Repeated TRAIN draws are not independent new cases'})
     return metadata

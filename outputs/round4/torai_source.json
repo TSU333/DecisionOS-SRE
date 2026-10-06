@@ -1,0 +1,93 @@
+{
+  "files": [
+    {
+      "id": 63402423,
+      "name": "torai-data.zip",
+      "size": 91262227,
+      "is_link_only": false,
+      "download_url": "https://ndownloader.figshare.com/files/63402423",
+      "supplied_md5": "c92a42bedf7cac33764d0e7fb42544c5",
+      "computed_md5": "c92a42bedf7cac33764d0e7fb42544c5",
+      "mimetype": "application/zip"
+    }
+  ],
+  "folder_structure": {},
+  "authors": [
+    {
+      "id": 22987951,
+      "full_name": "Luan Pham",
+      "first_name": "Luan",
+      "last_name": "Pham",
+      "is_active": true,
+      "url_name": "Luan_Pham",
+      "orcid_id": ""
+    }
+  ],
+  "custom_fields": [],
+  "figshare_url": "https://figshare.com/articles/dataset/Datasets_for_TORAI_Multi-Source_Root_Cause_Analysis_for_Blind_Spots_in_Microservice_Service_Call_Graph_/31925976",
+  "download_disabled": false,
+  "description": "<p dir=\"ltr\">Artifacts for the paper titled \"TORAI: Multi-Source Root Cause Analysis for Blind Spots in Microservice Service Call Graph.\"</p><p dir=\"ltr\">This artifact repository contains 1 compressed file with 3 datasets for Online Boutique, Sock Shop, and Train Ticket, respectively. Each folder contains multi-modal telemetry data collected from the corresponding microservice benchmark system. </p><p dir=\"ltr\">The code to reproduce the experimental results in the paper is available at https://github.com/phamquiluan/RCAEval.</p><p><br></p>",
+  "funding": null,
+  "funding_list": [],
+  "version": 1,
+  "status": "public",
+  "size": 91262227,
+  "created_date": "2026-04-02T09:23:27Z",
+  "modified_date": "2026-04-02T09:23:28Z",
+  "is_public": true,
+  "is_confidential": false,
+  "is_metadata_record": false,
+  "confidential_reason": "",
+  "metadata_reason": "",
+  "license": {
+    "value": 1,
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "tags": [
+    "root cause analysis (RCA) method"
+  ],
+  "keywords": [
+    "root cause analysis (RCA) method"
+  ],
+  "categories": [
+    {
+      "id": 29005,
+      "title": "Distributed computing and systems software not elsewhere classified",
+      "parent_id": 28966,
+      "path": "/28798/28966/29005",
+      "source_id": "460699",
+      "taxonomy_id": 100
+    }
+  ],
+  "references": [],
+  "has_linked_file": false,
+  "citation": "Pham, Luan (2026). Datasets for \"TORAI: Multi-Source Root Cause Analysis for Blind Spots in Microservice Service Call Graph\". figshare. Dataset. https://doi.org/10.6084/m9.figshare.31925976.v1",
+  "related_materials": [],
+  "is_embargoed": false,
+  "embargo_date": null,
+  "embargo_type": null,
+  "embargo_title": "",
+  "embargo_reason": "",
+  "embargo_options": [],
+  "id": 31925976,
+  "title": "Datasets for \"TORAI: Multi-Source Root Cause Analysis for Blind Spots in Microservice Service Call Graph\"",
+  "doi": "10.6084/m9.figshare.31925976.v1",
+  "handle": "",
+  "url": "https://api.figshare.com/v2/articles/31925976",
+  "published_date": "2026-04-02T09:23:27Z",
+  "thumb": "",
+  "defined_type": 3,
+  "defined_type_name": "dataset",
+  "group_id": null,
+  "url_private_api": "https://api.figshare.com/v2/account/articles/31925976",
+  "url_public_api": "https://api.figshare.com/v2/articles/31925976",
+  "url_private_html": "https://figshare.com/account/articles/31925976",
+  "url_public_html": "https://figshare.com/articles/dataset/Datasets_for_TORAI_Multi-Source_Root_Cause_Analysis_for_Blind_Spots_in_Microservice_Service_Call_Graph_/31925976",
+  "timeline": {
+    "posted": "2026-04-02T09:23:27",
+    "firstOnline": "2026-04-02"
+  },
+  "resource_title": null,
+  "resource_doi": null
+}

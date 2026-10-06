@@ -1,3 +1,5 @@
+> 第四轮最新记录见 [round4_protocol.md](round4_protocol.md)；旧阶段记录保留如下。
+
 > 第三轮最新记录见 [round3_protocol.md](round3_protocol.md)；以下保留初始阶段历史记录。
 
 # 冻结评测协议 v1

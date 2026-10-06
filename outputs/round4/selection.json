@@ -1,0 +1,278 @@
+{
+  "status": "frozen_before_new_sock_shop_test",
+  "timestamp_utc": "2026-10-06T15:25:17.427353+00:00",
+  "protocol_sha256": "a5d4382685b069ef2ff050d8a4dc90ac1311dce4401cef9ccd0465745907a792",
+  "criterion": "eligibility old OB validation joint>=0.85; then maximum four-cohort mean validation joint, ties total joint then sum NLL",
+  "selected": {
+    "artifact": "artifacts\\round4\\balanced_seed43\\frozen",
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 0.001092321035403402
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.925,
+        "nll": 0.31575269095900754,
+        "macro_f1": 0.9241083099906628,
+        "prediction_counts": {
+          "cpu_stress": 7,
+          "memory_stress": 8,
+          "disk_io_stress": 9,
+          "network_delay": 6,
+          "network_packet_loss": 10
+        }
+      },
+      "joint_accuracy": 0.925,
+      "sum_nll": 0.31684501199441095,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 0.8
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        }
+      },
+      "cohort_macro_joint": 0.9
+    },
+    "rank": [
+      0,
+      -0.9,
+      -0.925,
+      0.31684501199441095
+    ],
+    "eligible_for_promotion": true,
+    "binding": {
+      "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+      "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+      "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "config_sha256": "52cccf5e672803e8afc4d70943f90a2483ecd514e9d21f4fec78fdce9e5ae90f",
+    "steps": 1364,
+    "best_epoch": 64,
+    "best_steps": 704,
+    "seconds": 54.06684760004282
+  },
+  "candidates": [
+    {
+      "artifact": "artifacts\\round4\\uniform\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0025186993939008647
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.875,
+          "nll": 0.32416509655547915,
+          "macro_f1": 0.8724416433239963,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 9,
+            "disk_io_stress": 7,
+            "network_delay": 6,
+            "network_packet_loss": 10
+          }
+        },
+        "joint_accuracy": 0.875,
+        "sum_nll": 0.32668379594938,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8500000000000001
+      },
+      "rank": [
+        0,
+        -0.8500000000000001,
+        -0.875,
+        0.32668379594938
+      ],
+      "eligible_for_promotion": true,
+      "binding": {
+        "checkpoint_sha256": "599954d9b61485db20d5255eeadf7030aa794440603bcc241483b3c19521b551",
+        "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+        "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "97e6c089b7b445425726c81cf275cca5ae39f4cac983d97b4f57cbf7013e31c4",
+      "steps": 2000,
+      "best_epoch": 143,
+      "best_steps": 1573,
+      "seconds": 56.40457400307059
+    },
+    {
+      "artifact": "artifacts\\round4\\balanced\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.005524629087551422
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.336417690623112,
+          "macro_f1": 0.9249019607843139,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 8,
+            "disk_io_stress": 8,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.3419423197106634,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.3419423197106634
+      ],
+      "eligible_for_promotion": true,
+      "binding": {
+        "checkpoint_sha256": "001d3e871ec3ca59204f43e89aaf4ed37d07403fa88b33e201c2787a991ba175",
+        "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+        "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "e9359d086b9f2d4ce66d7ebae3d20f95e5214933b43a5e102b45346400aa9fae",
+      "steps": 1452,
+      "best_epoch": 72,
+      "best_steps": 792,
+      "seconds": 52.50813649967313
+    },
+    {
+      "artifact": "artifacts\\round4\\balanced_seed43\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.001092321035403402
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.31575269095900754,
+          "macro_f1": 0.9241083099906628,
+          "prediction_counts": {
+            "cpu_stress": 7,
+            "memory_stress": 8,
+            "disk_io_stress": 9,
+            "network_delay": 6,
+            "network_packet_loss": 10
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.31684501199441095,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          }
+        },
+        "cohort_macro_joint": 0.9
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.31684501199441095
+      ],
+      "eligible_for_promotion": true,
+      "binding": {
+        "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+        "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+        "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "52cccf5e672803e8afc4d70943f90a2483ecd514e9d21f4fec78fdce9e5ae90f",
+      "steps": 1364,
+      "best_epoch": 64,
+      "best_steps": 704,
+      "seconds": 54.06684760004282
+    }
+  ],
+  "fresh_test": {
+    "application": "Sock Shop",
+    "n": 30,
+    "role": "within-trained-application exploratory holdout, not unseen-application generalization"
+  },
+  "old_test_roles": {
+    "RE1-OB": 15,
+    "RE2-OB": 25,
+    "role": "previously opened regression only"
+  },
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "no_more_tuning_after_freeze": true,
+  "target_joint_risk": 0.05,
+  "min_accepted_runs": 30
+}

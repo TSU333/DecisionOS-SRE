@@ -1,22 +1,22 @@
 {
-  "artifact": "artifacts\\round4\\balanced_seed43\\frozen",
-  "absolute_artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round4\\balanced_seed43\\frozen",
+  "artifact": "artifacts\\round3\\weighted_0.1\\frozen",
+  "absolute_artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round3\\weighted_0.1\\frozen",
   "binding": {
-    "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
-    "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+    "checkpoint_sha256": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
+    "split_hash": "2800c93a16a064c993737a8b796eda5f46df5c75eec6486932f0fa088e89bce5",
     "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
     "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
     "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
   },
-  "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+  "checkpoint_sha256": "c1588a4dcb764fd3db3504b53c654f5ff515e498a4290dd52d19cc92f1159e4e",
   "config": {
     "execution_scope": "mvp",
-    "seed": 43,
-    "data_dir": "data/round4",
+    "seed": 42,
+    "data_dir": "data/round3",
     "backbone_dir": "artifacts/backbone",
-    "artifact_root": "artifacts/round4/balanced_seed43",
+    "artifact_root": "artifacts/round3/weighted_0.1",
     "max_length": 2048,
-    "epochs": 240,
+    "epochs": 300,
     "batch_size": 16,
     "gradient_accumulation": 1,
     "learning_rate_sft": 2e-05,
@@ -32,7 +32,7 @@
     "cpu_threads": 8,
     "gradient_checkpointing": true,
     "early_stopping_patience": 60,
-    "max_steps": 2000,
+    "max_steps": 1500,
     "calibration_min_samples": 10,
     "target_joint_risk": 0.05,
     "min_accepted_runs": 30,
@@ -65,23 +65,16 @@
       "socket",
       "workload"
     ],
-    "initialization_artifact": "artifacts/round3/weighted_0.1/frozen",
-    "selection_metric": "cohort_guarded_joint",
+    "initialization_artifact": "artifacts/retrain/canonical/sft",
+    "selection_metric": "cohort_macro_joint",
     "cache_frozen_features": true,
     "text_logit_weight": 0.1,
-    "root_conditioned_fault": true,
-    "sampling_strategy": "cohort_balanced",
-    "preserve_validation_cohorts": [
-      "RE1-OB",
-      "RE2-OB"
-    ],
-    "preserve_joint_floor": 0.85
+    "root_conditioned_fault": true
   },
-  "selected_by": "frozen four-cohort validation joint score with old OB retention floor; no test selection",
-  "report": "D:\\CODEX\\DecisionOS-SRE\\docs\\round4_results.md",
+  "selected_by": "pre-frozen cohort-balanced model_validation joint accuracy; ties joint then NLL",
+  "report": "D:\\CODEX\\DecisionOS-SRE\\docs\\round3_results.md",
   "routing": "REVIEW: no feasible threshold",
-  "quality_target_status": "partially_met_new_sock_shop_only",
-  "original_ob_fresh_target_status": "not_reconfirmed_no_new_independent_OB_cases",
-  "test_role": "30 new Sock Shop heldouts now opened; historical OB sets are regression only",
-  "previous_pointer": "outputs\\round4\\previous_latest_model.json"
+  "quality_target_status": "not_met",
+  "test_role": "new RE2 25-case holdout; now opened, no longer available for future model tuning confirmation",
+  "previous_pointer": "outputs\\round3\\previous_latest_model.json"
 }
