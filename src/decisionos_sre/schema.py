@@ -16,6 +16,14 @@ class TemporalSummary(Strict):
     trend_z: float = Field(ge=-100, le=100)
     late_shift_z: float = Field(ge=-100, le=100)
 
+class DynamicsSummary(Strict):
+    q10_z_log: float = Field(ge=-3, le=3)
+    q90_z_log: float = Field(ge=-3, le=3)
+    roughness_log: float = Field(ge=0, le=3)
+    max_jump_log: float = Field(ge=0, le=3)
+    lag1_correlation: float = Field(ge=-1, le=1)
+    excursion_fraction: float = Field(ge=0, le=1)
+
 class Metric(Strict):
     service: str = Field(min_length=1)
     name: str = Field(min_length=1)
@@ -28,6 +36,7 @@ class Metric(Strict):
     observed_samples: int = Field(ge=0)
     observed_until: float
     temporal: TemporalSummary | None = None
+    dynamics: DynamicsSummary | None = None
 
 class SpanSummary(Strict):
     baseline_count: int = Field(ge=0)

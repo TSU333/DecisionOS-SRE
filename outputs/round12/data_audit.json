@@ -1,0 +1,5328 @@
+{
+  "version": "temporal-dynamics-v1",
+  "original_cases": 400,
+  "new_independent_cases": 0,
+  "allowed_train_cases": 165,
+  "eligible_train_cases": 164,
+  "training_view_count": 0,
+  "excluded_unusable_train": [
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "cohort": "RE1-OB",
+      "reason": "no retained usable temporal evidence"
+    }
+  ],
+  "original_split_counts": {
+    "regression_re1_ob": 15,
+    "gate_selection": 85,
+    "calibration": 40,
+    "model_validation": 40,
+    "train": 165,
+    "regression_re2_ob": 25,
+    "regression_ss": 30
+  },
+  "original_files": {
+    "manifest.json": "eb8a7e49dc5676aa50925b2e1ee38b372deb7c63f8f495142515980882c4969a",
+    "splits.json": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+    "examples.json": "d1830c26f1583413178e064a1a7d021531d445b8098ac14e2b70018cb1d41422"
+  },
+  "current_files": {
+    "manifest.json": "eb8a7e49dc5676aa50925b2e1ee38b372deb7c63f8f495142515980882c4969a",
+    "splits.json": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+    "examples.json": "0328d6544cc21d4705e1782c3f5b758fef0320263a000b560d1895b6f70db7cd"
+  },
+  "raw_files": [
+    {
+      "run_id": "21fe50b25236688ea0b6594e",
+      "path": "data\\round4\\re1ob_adservice_cpu_1\\metrics.parquet",
+      "sha256": "464dcc215afe145d37f8b107ea291df7ffc0691756d375c54ddc1c09d0a2ac74"
+    },
+    {
+      "run_id": "efd454dfde62e0ef1f2ded12",
+      "path": "data\\round4\\re1ob_adservice_cpu_2\\metrics.parquet",
+      "sha256": "efc09980ca1386b6ace770364272201ef8eb055444f804cca9f0be8c15199483"
+    },
+    {
+      "run_id": "83e5854748d14cd269313c11",
+      "path": "data\\round4\\re1ob_adservice_cpu_3\\metrics.parquet",
+      "sha256": "5dad8369e838c7fdce505f443f1dd61fbe679748efa4be625dbeed6b8189feb5"
+    },
+    {
+      "run_id": "7b17f011d5e858439a3dce7c",
+      "path": "data\\round4\\re1ob_adservice_cpu_4\\metrics.parquet",
+      "sha256": "ff0563caad1bcb902a1f68bef4b9ca4134aa031e526c57045b222e9c255e337c"
+    },
+    {
+      "run_id": "4ce07f0e823ce9cc532283ca",
+      "path": "data\\round4\\re1ob_adservice_cpu_5\\metrics.parquet",
+      "sha256": "3239c865f33c82fd6fa5a051b41a0e9e3cfd94a2b26ec65ed92f455be58ee43c"
+    },
+    {
+      "run_id": "6d52ba233f1eae620f7dd40f",
+      "path": "data\\round4\\re1ob_adservice_delay_1\\metrics.parquet",
+      "sha256": "9b7ec68509171e914417748fb1adea118233867c3bf8d7ee3716df3e85417dc9"
+    },
+    {
+      "run_id": "dc2c47bc653c42019122e026",
+      "path": "data\\round4\\re1ob_adservice_delay_2\\metrics.parquet",
+      "sha256": "9c0ff87ccb446145ab51d412f6c2f13a0b1c138dd5a3d2ffc8c30009ef34bd17"
+    },
+    {
+      "run_id": "ae7a55546bd239158a1c0f87",
+      "path": "data\\round4\\re1ob_adservice_delay_3\\metrics.parquet",
+      "sha256": "e4e3ed01541519948b7d573519c029a8ecd93df65a8d59d36cd756411fc6a915"
+    },
+    {
+      "run_id": "44b2ee08820479f9f251c02f",
+      "path": "data\\round4\\re1ob_adservice_delay_4\\metrics.parquet",
+      "sha256": "d5bc6e2d75b0b1207808079a2eae21f6549f791d66cc3cd8e7fba7b2e6f87d62"
+    },
+    {
+      "run_id": "b8ed69ed6d8af385e112b117",
+      "path": "data\\round4\\re1ob_adservice_delay_5\\metrics.parquet",
+      "sha256": "503ab2682c963d72b28ec91d0cd1d4beea3d7482c2db653c148fdacd5f957e54"
+    },
+    {
+      "run_id": "dc72fd144dc07825b95e9f8f",
+      "path": "data\\round4\\re1ob_adservice_disk_1\\metrics.parquet",
+      "sha256": "bc8d8a4885f9f93b1d62dbba603aadedb7f6f7491c81be894a400ad5f493aa08"
+    },
+    {
+      "run_id": "d0e4cdd03f963268b0b837e4",
+      "path": "data\\round4\\re1ob_adservice_disk_2\\metrics.parquet",
+      "sha256": "46008cc31424c8be776ab96d1dbb246ac0108706b9f8d44b5bbaef8a7f12d9f3"
+    },
+    {
+      "run_id": "1e42937d14ae06533a9dc011",
+      "path": "data\\round4\\re1ob_adservice_disk_3\\metrics.parquet",
+      "sha256": "cd188bdb55ac86184e7514f9274de9afda43184bc8466741f5af99581b8d4268"
+    },
+    {
+      "run_id": "4a40a5b9c9edacbf102d3de3",
+      "path": "data\\round4\\re1ob_adservice_disk_4\\metrics.parquet",
+      "sha256": "25ae965c50699f3ec357ff2a8241e8324c53e4defeb601badaaba05190b02f82"
+    },
+    {
+      "run_id": "4b9bcfee80f9d6dd0a45ba4e",
+      "path": "data\\round4\\re1ob_adservice_disk_5\\metrics.parquet",
+      "sha256": "499033c0c7085faceb3f8231a89a7884702fa4e1bc4905d736f76eaeec3cd346"
+    },
+    {
+      "run_id": "c804332a86f2b75587d636b4",
+      "path": "data\\round4\\re1ob_adservice_loss_1\\metrics.parquet",
+      "sha256": "39260e7e7d4c17e421d970c002875a4a0a34a0b3cfcf2d7a7f16ef7b4695944e"
+    },
+    {
+      "run_id": "a5b9b34d974ceb23210c41e4",
+      "path": "data\\round4\\re1ob_adservice_loss_2\\metrics.parquet",
+      "sha256": "c188a0b7ba892564bb2727bb8c97f1d67ef8053707c6696a277c52f2058197ad"
+    },
+    {
+      "run_id": "317d870b6bfdb9bc4fd3e2fa",
+      "path": "data\\round4\\re1ob_adservice_loss_3\\metrics.parquet",
+      "sha256": "64f4e2d71d1843f9d9a1a746403745b45f6c7d84830d7fb85179708a41147af2"
+    },
+    {
+      "run_id": "c4a0b355e9f41a7292554ccc",
+      "path": "data\\round4\\re1ob_adservice_loss_4\\metrics.parquet",
+      "sha256": "14e1b9d3dfa4f7fb2ac79a15a3ce0fabbb0ef2209851545774903eafdd866f15"
+    },
+    {
+      "run_id": "bbbfd5c80988068515990283",
+      "path": "data\\round4\\re1ob_adservice_loss_5\\metrics.parquet",
+      "sha256": "136a40cb8dad8f22a701ce3ed8aaa0f0528cb2a2acdaa452c59feb1e894b9170"
+    },
+    {
+      "run_id": "0f21a2ab0af4e53a4f5773e4",
+      "path": "data\\round4\\re1ob_adservice_mem_1\\metrics.parquet",
+      "sha256": "b04456039f127327a014ab4c4a68f137da1d7fb788818dd2a3e2ac2b5835d6e3"
+    },
+    {
+      "run_id": "962a2f1ec62f8b62b24b27cf",
+      "path": "data\\round4\\re1ob_adservice_mem_2\\metrics.parquet",
+      "sha256": "cb79d54dc6adf973935739d23d1ddacc4bf0083104ee9460db71fabe05cbd55e"
+    },
+    {
+      "run_id": "c4dfa4744b8839cd3ce67a49",
+      "path": "data\\round4\\re1ob_adservice_mem_3\\metrics.parquet",
+      "sha256": "a3f60b4fe36f07f8aed80d116f4415288d5cd811fbb965f5527fba04baba35f7"
+    },
+    {
+      "run_id": "2c11d2bd3b8dd0106a410acd",
+      "path": "data\\round4\\re1ob_adservice_mem_4\\metrics.parquet",
+      "sha256": "f5214933fd8f225d1b76c61d72c7eb39dfac4e9984a30faffb3d49c09d66c6a2"
+    },
+    {
+      "run_id": "5fa77e02707286538d2c02d4",
+      "path": "data\\round4\\re1ob_adservice_mem_5\\metrics.parquet",
+      "sha256": "f886beecb01e7ee25036d372716a53f26b4c9718a020e014e48822dd14593390"
+    },
+    {
+      "run_id": "7b597dce8e17e7578f1d572b",
+      "path": "data\\round4\\re1ob_cartservice_cpu_1\\metrics.parquet",
+      "sha256": "0f4df7e0eca4c9db7fcbdf2dab29065e14c3ed770c6a70d4a70b8784eb0c0199"
+    },
+    {
+      "run_id": "52461e0c6bed588e5d3558e8",
+      "path": "data\\round4\\re1ob_cartservice_cpu_2\\metrics.parquet",
+      "sha256": "796a22185159f8cb8b34279f77cd293546ed71a081825a0724976dc2aa7af8f9"
+    },
+    {
+      "run_id": "6d10e109856ee5251d5d231f",
+      "path": "data\\round4\\re1ob_cartservice_cpu_3\\metrics.parquet",
+      "sha256": "1907ceaf88b12c22a5130d8e8943e65849acc412ab5b9456456163be9f381810"
+    },
+    {
+      "run_id": "4b6cd49950d26020a44cbfba",
+      "path": "data\\round4\\re1ob_cartservice_cpu_4\\metrics.parquet",
+      "sha256": "195aa8d4300385d185ac7e9838adfc55e004fa957c142cba680577d817cf192d"
+    },
+    {
+      "run_id": "704205d07bf129586fc039df",
+      "path": "data\\round4\\re1ob_cartservice_cpu_5\\metrics.parquet",
+      "sha256": "48e1c8e4bb4f0fb99a2b2198649d59b32f508d555e6d830725611f17300b116f"
+    },
+    {
+      "run_id": "74692e033da8462ad910c85a",
+      "path": "data\\round4\\re1ob_cartservice_delay_1\\metrics.parquet",
+      "sha256": "4eda964565765755f8ada1d14d19206261f09967607985495bb76d5b0cdf4c7f"
+    },
+    {
+      "run_id": "db1da670631ff8674a667193",
+      "path": "data\\round4\\re1ob_cartservice_delay_2\\metrics.parquet",
+      "sha256": "858c545214246e2650526d6927f08b1f9a561cabd27eda124cf16a74088f37e7"
+    },
+    {
+      "run_id": "82cdb6657e41396f4e6d7532",
+      "path": "data\\round4\\re1ob_cartservice_delay_3\\metrics.parquet",
+      "sha256": "3b77132f8644f961db3abb4ef1cb48e7c749b0aec5a66e79ab70dc82bf074011"
+    },
+    {
+      "run_id": "73c9f93dd8e1e00153f844fa",
+      "path": "data\\round4\\re1ob_cartservice_delay_4\\metrics.parquet",
+      "sha256": "4a8d6cd0ce3082411ff40820daf4db90d87a58f42840278afea132ce2b48a909"
+    },
+    {
+      "run_id": "bfd14b9d5c95fe2941976f07",
+      "path": "data\\round4\\re1ob_cartservice_delay_5\\metrics.parquet",
+      "sha256": "4fe511016dca569961255782e2f0f958cde5c62a84d7d373ed9785400cf19174"
+    },
+    {
+      "run_id": "621e32d6eaef77f65256d94d",
+      "path": "data\\round4\\re1ob_cartservice_disk_1\\metrics.parquet",
+      "sha256": "b8f5e6fd3159fe0676c746242c36253e006d704f0860ffa28eab2b3b7a5b24cf"
+    },
+    {
+      "run_id": "0bede9ee50d30983f526b09e",
+      "path": "data\\round4\\re1ob_cartservice_disk_2\\metrics.parquet",
+      "sha256": "c548957af33a664aa2b22f11a3d550e332028788aa5a0368b700ecb73e23442b"
+    },
+    {
+      "run_id": "383d01dff1a7c11c357a8b7d",
+      "path": "data\\round4\\re1ob_cartservice_disk_3\\metrics.parquet",
+      "sha256": "051a03b20f1cd5a05b145db5ae12452304e119f421da7a1ee5ba69e708ef98a3"
+    },
+    {
+      "run_id": "39ea50da29d99b7ebb8fced3",
+      "path": "data\\round4\\re1ob_cartservice_disk_4\\metrics.parquet",
+      "sha256": "2c3652ca7cd10c3f966b34f775a62020cca673829e8b420ced0c32e40f49bbc4"
+    },
+    {
+      "run_id": "054a3237ad43dc034b43f328",
+      "path": "data\\round4\\re1ob_cartservice_disk_5\\metrics.parquet",
+      "sha256": "90fb46db02599b9ef8b5cb2cde686c24cc4b95b59db127f81b68b31343bfa548"
+    },
+    {
+      "run_id": "9c52537556ba84c8736f430b",
+      "path": "data\\round4\\re1ob_cartservice_loss_1\\metrics.parquet",
+      "sha256": "3d088f01dddf26ef0890c53237f9ded4cf122ef43d9d34f046fc56665c790e50"
+    },
+    {
+      "run_id": "44f4dacd9be40391fda5407b",
+      "path": "data\\round4\\re1ob_cartservice_loss_2\\metrics.parquet",
+      "sha256": "6bf618231f849e6aa5fb112c5822e46767e51ea1f9aa1c92c5d6a894dd7f7175"
+    },
+    {
+      "run_id": "ac186cd4f7d3d915a519a8dd",
+      "path": "data\\round4\\re1ob_cartservice_loss_3\\metrics.parquet",
+      "sha256": "532523470c984978dd446bb302aaecf87c4e372ebff4f946c018efbfeed6c20c"
+    },
+    {
+      "run_id": "7b5dd20595266d6cd4bf490b",
+      "path": "data\\round4\\re1ob_cartservice_loss_4\\metrics.parquet",
+      "sha256": "8a021be0c6eacbeae92554be1a9f593d9beb1e178193a65b8e0cf08911e0f4b1"
+    },
+    {
+      "run_id": "9cb104e6dfecdb5c1e324b91",
+      "path": "data\\round4\\re1ob_cartservice_loss_5\\metrics.parquet",
+      "sha256": "26f24940da755b40cd9ef623b04d5bd37476f765a39be1ac6ce7125a97379534"
+    },
+    {
+      "run_id": "34a5fc24ee7a702e021b8e7d",
+      "path": "data\\round4\\re1ob_cartservice_mem_1\\metrics.parquet",
+      "sha256": "6a301f24faf9144dec6df0a9530a14ecc15814851d6463955050c70628c34a60"
+    },
+    {
+      "run_id": "5b264db6fc27feb0e1c32027",
+      "path": "data\\round4\\re1ob_cartservice_mem_2\\metrics.parquet",
+      "sha256": "2d66b27ca40e6c32c1b8debdde04ab58283ef43b173ae5c304180f1de6e14e92"
+    },
+    {
+      "run_id": "340b38e18c78d735f3eaa79f",
+      "path": "data\\round4\\re1ob_cartservice_mem_3\\metrics.parquet",
+      "sha256": "14733813d79c891dc45749dfa151c133a4e281c10d6d1b67eb7e77255c1b1606"
+    },
+    {
+      "run_id": "e753d2a4d93efc42214d6ea6",
+      "path": "data\\round4\\re1ob_cartservice_mem_4\\metrics.parquet",
+      "sha256": "33a89afd0b213e14530bb423304ada0f7b5e08d302da0f349ba70566026a5e3f"
+    },
+    {
+      "run_id": "888735b551ad1c03171876a7",
+      "path": "data\\round4\\re1ob_cartservice_mem_5\\metrics.parquet",
+      "sha256": "a74214aee3bce46e1e3621a2cbaf6a8ba90f1e89936d4e26cc12b25e8c4d8e9b"
+    },
+    {
+      "run_id": "c6d2864520ee3d766412a162",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_1\\metrics.parquet",
+      "sha256": "4590756f037b2ca254b8beb42247883c99712e83fd736d075ace7369bee1f692"
+    },
+    {
+      "run_id": "fc850df56c3937cc5b7e0b2e",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_2\\metrics.parquet",
+      "sha256": "91f2117fae29c11799dd54eaaf0651cb94bb205b1f07b44b173caff65dadab4c"
+    },
+    {
+      "run_id": "9edddbbf48a94d96d896e929",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_3\\metrics.parquet",
+      "sha256": "ae46f67b57db52816c11dbc32e67672ecf4aac3c73361122e1cd00af379f9639"
+    },
+    {
+      "run_id": "ab5967d895935ed7e41a1b72",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_4\\metrics.parquet",
+      "sha256": "db2e52b3b5c623521274ee9e7c251f72090cafd9250dbac735f1f18f6efcf962"
+    },
+    {
+      "run_id": "6e019d2b5ef661fad5fc2522",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_5\\metrics.parquet",
+      "sha256": "1216b2bca16c483357de8a6b7ecc5620f9163dba47a6b923d2d7c119f47c5dc0"
+    },
+    {
+      "run_id": "f6d0f453c7fde9ce2fa77f9d",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_1\\metrics.parquet",
+      "sha256": "34468b036d03d3ec62c13fc30264fb5bcb1a907ce797d9835738e1dc3d8408c9"
+    },
+    {
+      "run_id": "08d2b6d03169b7532ddd788f",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_2\\metrics.parquet",
+      "sha256": "e8095cf6554119f9d24d7182e966d15652f366979fc0e2c564863587c38921cb"
+    },
+    {
+      "run_id": "9877487869f2836a221a4fc9",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_3\\metrics.parquet",
+      "sha256": "ef04a54394b25dbc4cdc4a4485e2f573b9d95be4c4d1548c45ad713b6dff2886"
+    },
+    {
+      "run_id": "90e2d3f7583aa10000ff52e8",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_4\\metrics.parquet",
+      "sha256": "bcd00df894d98f821ef7a7af8ffce0dc5503eba66e00d823fe4cceab4af2e826"
+    },
+    {
+      "run_id": "7357791b73affa177ad3cda5",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_5\\metrics.parquet",
+      "sha256": "562021323a0a5e92bd79e879db51692e8739cdb494eb45f35f7aa3f7d9f5b467"
+    },
+    {
+      "run_id": "a74cd18c019269df584f6a35",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_1\\metrics.parquet",
+      "sha256": "b90f0771881ff4e7b8e0b58ce8c94da87875553dd8eca308280a14cc4d0e71da"
+    },
+    {
+      "run_id": "c0929a471848e113cee6f164",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_2\\metrics.parquet",
+      "sha256": "3b199068a745615cb689279b6c70e69a0acb4abd8b25a6ca38690631fc023619"
+    },
+    {
+      "run_id": "4ef636dbea013586152ef795",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_3\\metrics.parquet",
+      "sha256": "51ecd227bdafe961c473278d6ca228c3e18f3902d90403a4981e11570d189468"
+    },
+    {
+      "run_id": "cd41a7743aad542bc9248791",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_4\\metrics.parquet",
+      "sha256": "9a022cda5f27877e889e77dd8dcb96fd497bddc764b082324e6ff03570e4c0d1"
+    },
+    {
+      "run_id": "d8448a5bc5754b32d1502bdf",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_5\\metrics.parquet",
+      "sha256": "167885c1a7b4b3b5c9b349f398be61cb7e4c747ca18085318909122a6b1616e5"
+    },
+    {
+      "run_id": "cf85df46f1fa9667bf0b8727",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_1\\metrics.parquet",
+      "sha256": "0e3b5611a589a6d321852a6f5f7bb7e55f5318a9b52f203d1d26948f90590559"
+    },
+    {
+      "run_id": "e1f7e6a831358708f745c734",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_2\\metrics.parquet",
+      "sha256": "c9004d22be63d0ab8beefed33fc6a682a86818c5afae429d7769176c3c6da5c4"
+    },
+    {
+      "run_id": "ffdc51b0aa4071303a8330c2",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_3\\metrics.parquet",
+      "sha256": "a685b9d747869623caf3f5419e5fbe56c05f44f09a2cca3411cc6d9bda8658ff"
+    },
+    {
+      "run_id": "862ffe41b95016e9f8a64dc0",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_4\\metrics.parquet",
+      "sha256": "c1af3c207e5164de117241b66eca4aa62c939edc1cef30573fd29454e2c5db83"
+    },
+    {
+      "run_id": "9b91e2cea498a63f467530a5",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_5\\metrics.parquet",
+      "sha256": "e9698994042bb54ed6eed0d83edddd96411203be8e61bc13b61f7eee8eb3be05"
+    },
+    {
+      "run_id": "adc5a196741fb7e650f144b5",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_1\\metrics.parquet",
+      "sha256": "76ba03d717dc63c2c5233eadccc9bae5f41e54eadd137329ea26865f8ded2dee"
+    },
+    {
+      "run_id": "c9a4b1a068a4e0053e08adad",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_2\\metrics.parquet",
+      "sha256": "74e206f7508fd643173906dd602e3b7a9a9ca734706cbb2c92bc89a640805a48"
+    },
+    {
+      "run_id": "d358fe8d043b84d6bf650ef9",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_3\\metrics.parquet",
+      "sha256": "3ee96fae21cda1f6439574daac7743e2e5ceb249d214a3cf824db69a4698494e"
+    },
+    {
+      "run_id": "3c98e50e1f9c1a5872c6923b",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_4\\metrics.parquet",
+      "sha256": "0ad054d95ff908d52daf36f23239e3b4b9d10e147f6cf464633865400d295159"
+    },
+    {
+      "run_id": "095c72f94f03034c83400f6a",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_5\\metrics.parquet",
+      "sha256": "c2e5f859fc5907bcee6c9f6db23bf91fd029b6900373a778a77671976e227219"
+    },
+    {
+      "run_id": "750b31e440a14921840f1ddb",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_1\\metrics.parquet",
+      "sha256": "8e9005e50adbf3509d39ddac02b9c09d6f2f167c67ba9fd1d2d4f74dc08e1f19"
+    },
+    {
+      "run_id": "5014289367470c829f351d53",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_2\\metrics.parquet",
+      "sha256": "175f0af6df109004ab25f19ab45246372beff7ef7be1dacb38e98282a099e319"
+    },
+    {
+      "run_id": "bc5c94d0081228277f96ea06",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_3\\metrics.parquet",
+      "sha256": "044226a3a2119727e429709d0907470e92dc6682b9696b7e1395389a7a7cf910"
+    },
+    {
+      "run_id": "44c3349657d7d186ed5fffba",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_4\\metrics.parquet",
+      "sha256": "9f72b763eb8ab84cb5158d24e833721bb28b0b9a10888c8ea46fa54fa7d8c8ea"
+    },
+    {
+      "run_id": "48cb2b26d8eaf0c61555034e",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_5\\metrics.parquet",
+      "sha256": "c68b17fcf9dd5cdadd7de3db40caa6013553ac514f02d0f89f1463feaef47848"
+    },
+    {
+      "run_id": "3798247404bbcd5190dfe271",
+      "path": "data\\round4\\re1ob_currencyservice_delay_1\\metrics.parquet",
+      "sha256": "54ef9d93e5572122254bd8e6aa402e0abdf7ad0193d41b834d98e33d554b6721"
+    },
+    {
+      "run_id": "5e9e51602d294dabc8575abc",
+      "path": "data\\round4\\re1ob_currencyservice_delay_2\\metrics.parquet",
+      "sha256": "4db9b62a7112215b238f1447f6ad84a16134cc9c66643505d54fdff039c35b3d"
+    },
+    {
+      "run_id": "997d073d1980404816611789",
+      "path": "data\\round4\\re1ob_currencyservice_delay_3\\metrics.parquet",
+      "sha256": "74ac11b7929d5787a75c77b44943b97b7c72486a2faaad9a5e8f346092bb220b"
+    },
+    {
+      "run_id": "fc0701e8f3a251090bb14ead",
+      "path": "data\\round4\\re1ob_currencyservice_delay_4\\metrics.parquet",
+      "sha256": "7e910560b619e8aa087c4c0ec8a94ceb51206c3a3d6ed4c76e2ca9a70a49b1f6"
+    },
+    {
+      "run_id": "cacce74855793701f46d534f",
+      "path": "data\\round4\\re1ob_currencyservice_delay_5\\metrics.parquet",
+      "sha256": "1680bb0531139aeb4b46de3c7dd7e832bc05f092bb5f4dc4e96dcd55772354be"
+    },
+    {
+      "run_id": "3daf57158daef7d598616b38",
+      "path": "data\\round4\\re1ob_currencyservice_disk_1\\metrics.parquet",
+      "sha256": "0e83cb2f5e440695660fd5107fe7e96174fa098d834faa8cc3c4ae17aba37af3"
+    },
+    {
+      "run_id": "713bc20c73338c51cd9f91da",
+      "path": "data\\round4\\re1ob_currencyservice_disk_2\\metrics.parquet",
+      "sha256": "b1b170ef48acefe0c6e8938391043fc1dfcd74364d9d3fb59a6d8f43d70c252b"
+    },
+    {
+      "run_id": "837a7d33e27e295b322e8ec5",
+      "path": "data\\round4\\re1ob_currencyservice_disk_3\\metrics.parquet",
+      "sha256": "b1a15ae063e5295b6c8129f1155c4403b49d31537fb34b729d3b2fea84153f43"
+    },
+    {
+      "run_id": "1c70ba7e5947bcc6fc984531",
+      "path": "data\\round4\\re1ob_currencyservice_disk_4\\metrics.parquet",
+      "sha256": "8aea783bfa2d7b7c7f06f002dfad457cd345d1f97cc41c157deba6b2949fb1e9"
+    },
+    {
+      "run_id": "6907562bccdbf715db018a13",
+      "path": "data\\round4\\re1ob_currencyservice_disk_5\\metrics.parquet",
+      "sha256": "02190301c0c4204c987fe2d0caa6155118520901dedee165555fe72f844ebd99"
+    },
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "path": "data\\round4\\re1ob_currencyservice_loss_1\\metrics.parquet",
+      "sha256": "53475c09707471cf8f977f0dd7affb81322de115d7a087f197d8b7f63a87e585"
+    },
+    {
+      "run_id": "751ead6e979a349b71ffcc5f",
+      "path": "data\\round4\\re1ob_currencyservice_loss_2\\metrics.parquet",
+      "sha256": "78f860399e949f9d6f8055d85d9a43e706f29247f64d7019623a978f3b037d37"
+    },
+    {
+      "run_id": "696b6ca4c2d057fcf67fc899",
+      "path": "data\\round4\\re1ob_currencyservice_loss_3\\metrics.parquet",
+      "sha256": "4aa63d42cb3158df67e70b7d1e1d7dcec7fd3b20cf5c13123a8b439a82dcbeaa"
+    },
+    {
+      "run_id": "f12983285c6b56a90e382aa2",
+      "path": "data\\round4\\re1ob_currencyservice_loss_4\\metrics.parquet",
+      "sha256": "7ca79cde22061035f96decaebf2150992a5da9fb8d506e6e199b928f662b0939"
+    },
+    {
+      "run_id": "fbb8036409fe47798d1d1c1c",
+      "path": "data\\round4\\re1ob_currencyservice_loss_5\\metrics.parquet",
+      "sha256": "7be584abd3ae42993e24272cefb2efef697095f5407152d354413803d1cb87e1"
+    },
+    {
+      "run_id": "d9b0c8241840f916331fed0f",
+      "path": "data\\round4\\re1ob_currencyservice_mem_1\\metrics.parquet",
+      "sha256": "362d2363706a63b15f573d258c5a7187ec3cec9aa389d859e85e9aa4697b79b6"
+    },
+    {
+      "run_id": "441f4848151f6bfe4959a490",
+      "path": "data\\round4\\re1ob_currencyservice_mem_2\\metrics.parquet",
+      "sha256": "479b808f8941c3f4871b759fb93c7f89397b089de52852e96bae5246d40f1fa7"
+    },
+    {
+      "run_id": "7d3387e69ad8093361c728bc",
+      "path": "data\\round4\\re1ob_currencyservice_mem_3\\metrics.parquet",
+      "sha256": "a7b1a6648eed92934cc9e3dd266c4c5866027dcb654c573786d9fac5a69a418f"
+    },
+    {
+      "run_id": "9982feb4578e4f43b1aabebb",
+      "path": "data\\round4\\re1ob_currencyservice_mem_4\\metrics.parquet",
+      "sha256": "0a12cabef973e94dffd49db7c2c0b69e048566d0ee7dbd82fe54b25ea2f8dd9a"
+    },
+    {
+      "run_id": "8820db229b57b86ffa1b9a5a",
+      "path": "data\\round4\\re1ob_currencyservice_mem_5\\metrics.parquet",
+      "sha256": "d8d2668ea0584e4957c3167888084dd811a8492b6ac2d1990066db8caaef0af8"
+    },
+    {
+      "run_id": "8462c8793839ce57cd54cdb4",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_1\\metrics.parquet",
+      "sha256": "ed6d4733ce0cce697b747316cf01448ca78f62c152f469f6c580b907b39eca84"
+    },
+    {
+      "run_id": "8e904a43f2986e996bdbffbe",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_2\\metrics.parquet",
+      "sha256": "920ddec1219d9bf714d9e11f6f91b21c20086badfba1ff4a419abe2deff5ed90"
+    },
+    {
+      "run_id": "e53d3ed33e4c2cc632a2c669",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_3\\metrics.parquet",
+      "sha256": "b05a5a4d5e05ba6ba77836f242e0f5f794048e346c9bd4a69b9e716fef2423aa"
+    },
+    {
+      "run_id": "a71272acd2fe0997acb7c8b7",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_4\\metrics.parquet",
+      "sha256": "06cfd022a225cc5aeab386aa20e515ca53cf3660bef857418748088ce0dc73eb"
+    },
+    {
+      "run_id": "a802765698d3e965d8775d9d",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_5\\metrics.parquet",
+      "sha256": "8a3d170d74790b39c6852303404efc94e1fa9a8ca544d1ffc2881998c0e978c2"
+    },
+    {
+      "run_id": "d2eb8b65188068d01dd78619",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_1\\metrics.parquet",
+      "sha256": "b0e8338ea673322e2df39ebb3f59046d78f2125a07eb99cd4d3bd631be90d56f"
+    },
+    {
+      "run_id": "e907a8050f83593bb0d5e8f7",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_2\\metrics.parquet",
+      "sha256": "780cd0022945aefdb5950df6e0ff004f80e432deb59105f33bd33ccab9f24046"
+    },
+    {
+      "run_id": "6f1365a589564793eedd5271",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_3\\metrics.parquet",
+      "sha256": "d9d9246da6db675cfacb03c95ba4d0a8d3bdda2c6ce992b52574a98ecbc0819a"
+    },
+    {
+      "run_id": "5907a888e41810a59c6c56fa",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_4\\metrics.parquet",
+      "sha256": "bb308d7d1c8ebf3d46db8b1518d71e0c45423cbfd62585ec15f62fdf68d92776"
+    },
+    {
+      "run_id": "1acf973eeb55223dd1401bcb",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_5\\metrics.parquet",
+      "sha256": "913b1c90812985a4b8471643cb7a5633f2b3940371e5c4a8416b002e10e4f12f"
+    },
+    {
+      "run_id": "b8816a5993f6e17b0b0f247a",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_1\\metrics.parquet",
+      "sha256": "8e65741bd52529afae3a48848270eccbb8720594ae9851d483019d6b77f57e3e"
+    },
+    {
+      "run_id": "39e972166970bbbce4d3ae66",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_2\\metrics.parquet",
+      "sha256": "4f84a20d1c8da861f00b42ffd96227b6009d9a185f3a8a6187f69efed1421933"
+    },
+    {
+      "run_id": "6f79c6a4f64bceb5504945d9",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_3\\metrics.parquet",
+      "sha256": "77772e950138221f6c863a3856b38817b302b70216929d330810fff3fc8a88f7"
+    },
+    {
+      "run_id": "3bae0f8e18b4275a25ef1c13",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_4\\metrics.parquet",
+      "sha256": "4b1824e847ff23b04962df6ba9f70599dbb5fe79adb66d747e4f3873f9c09f9b"
+    },
+    {
+      "run_id": "af063e5188c6b2fd0b0530e1",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_5\\metrics.parquet",
+      "sha256": "894261da6353d20f6ed121157109404eb676a380f7d594a13bb385c4629ccb58"
+    },
+    {
+      "run_id": "95323f829eb2cdc0a7a9c694",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_1\\metrics.parquet",
+      "sha256": "708a65736c3009876959a8ad84693f779f1affab628da331200509a651739a70"
+    },
+    {
+      "run_id": "cbf9a571afab324819a511c5",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_2\\metrics.parquet",
+      "sha256": "946cf0df2a223fee988d2c55279f286b1637bcda06c8ab01331efaaea30a9e22"
+    },
+    {
+      "run_id": "b352ccc9ecac53f4d79c1861",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_3\\metrics.parquet",
+      "sha256": "55d763b3a3488f1fc701855228942b0a757e47e63ec9d8abf5da893772b04577"
+    },
+    {
+      "run_id": "8f5e25c7853f01dac914f5d1",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_4\\metrics.parquet",
+      "sha256": "1b1eaab126c2b9601173e08cfc433c83a169aa2f6fcdef76f2e9620d92db3772"
+    },
+    {
+      "run_id": "e4782bdfc154e740505466ef",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_5\\metrics.parquet",
+      "sha256": "4fedaab0681614bf2987ed073b930f725238a3fcc8cad2105c1f4a5437a89a19"
+    },
+    {
+      "run_id": "74e2a260f2013101199b3f80",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_1\\metrics.parquet",
+      "sha256": "ab530af072b08cdc4a55b01236ccb9c40e016799ba0ee6558e3dbf07b8e53936"
+    },
+    {
+      "run_id": "cbc247593db62bbaff1e94c7",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_2\\metrics.parquet",
+      "sha256": "3c1d480c2eed493d2089de99e1845390a79be1d0b086e9cc35057ebca8739415"
+    },
+    {
+      "run_id": "64af67464eab2734e054fd73",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_3\\metrics.parquet",
+      "sha256": "53e1d8c99c1bd3c880081449b4f38cbd5b069919f2c061dbdf5b8568fec6a92a"
+    },
+    {
+      "run_id": "a5a8aaad73b0dc500441ac0b",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_4\\metrics.parquet",
+      "sha256": "ed26ae33f22e086147966237a7c678a93a9d76a4aba84b214fe99bcd5d92f710"
+    },
+    {
+      "run_id": "d895a0f5958d554ff40177bf",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_5\\metrics.parquet",
+      "sha256": "6fd0c0909bdc611f739fd53308b660a517d65a46dba3d9db99f36faeb4eae3f2"
+    },
+    {
+      "run_id": "9ab31bb621d3e0d8f2897404",
+      "path": "data\\round4\\re2ob_checkoutservice_cpu_1\\metrics.parquet",
+      "sha256": "f46b3d354b234e37c424f54a005329b61aac83d15dcdd46b5642e55f390ab25a"
+    },
+    {
+      "run_id": "e2eeb171fbb7c286d627e338",
+      "path": "data\\round4\\re2ob_checkoutservice_cpu_2\\metrics.parquet",
+      "sha256": "11f2df96b6b2b60a9600bacd8d3163b2f31a614aa756c19adfc51a41bcbebfc7"
+    },
+    {
+      "run_id": "b9b1841de08e5a310d7a19f8",
+      "path": "data\\round4\\re2ob_checkoutservice_cpu_3\\metrics.parquet",
+      "sha256": "ad82f59a98501f4f634fe30bed508cabb0f4a809993c165fb5aa2f340c64b692"
+    },
+    {
+      "run_id": "fa27e0d1876a557015bc4348",
+      "path": "data\\round4\\re2ob_checkoutservice_delay_1\\metrics.parquet",
+      "sha256": "3a428e2e4792c6ceecd1e47c770477887b7c14c175347ac52b28011595d23088"
+    },
+    {
+      "run_id": "5edcafb57f99d79d2ee7d28d",
+      "path": "data\\round4\\re2ob_checkoutservice_delay_2\\metrics.parquet",
+      "sha256": "6c7d7e5038844fc6e3e66ae2561d57ba1bbb8c9950b8017433bfa5791daa269a"
+    },
+    {
+      "run_id": "cd53d41710affaee66337a56",
+      "path": "data\\round4\\re2ob_checkoutservice_delay_3\\metrics.parquet",
+      "sha256": "7fc076f546364b1f5c99701eb4c40756ebcedc3e841b5750f7bf8f9d4bf15a0a"
+    },
+    {
+      "run_id": "9a525222a48b89519effc22b",
+      "path": "data\\round4\\re2ob_checkoutservice_disk_1\\metrics.parquet",
+      "sha256": "df715e01d9bdf3e6d89b1381737fc87766c806134672632adbd9ee4c27262a48"
+    },
+    {
+      "run_id": "8000fa55d1c1ac841e8f6b2d",
+      "path": "data\\round4\\re2ob_checkoutservice_disk_2\\metrics.parquet",
+      "sha256": "59b36387c7a66818e5545a7fab07060841a8d76e9cc93177906ff959c7a27220"
+    },
+    {
+      "run_id": "24387285acf41cf89445b591",
+      "path": "data\\round4\\re2ob_checkoutservice_disk_3\\metrics.parquet",
+      "sha256": "5563e35b896144b6d5fc700a1048913857c136a0fae0558dbac6db11879be782"
+    },
+    {
+      "run_id": "0a6f2329dca752051eced5b8",
+      "path": "data\\round4\\re2ob_checkoutservice_loss_1\\metrics.parquet",
+      "sha256": "e9b26768fc98a5dfa694527a71e131450848e6c736f73c162ee17f9bf14a337b"
+    },
+    {
+      "run_id": "5e32212427a2c11858169a1d",
+      "path": "data\\round4\\re2ob_checkoutservice_loss_2\\metrics.parquet",
+      "sha256": "73b48c73e9f51abfc33bcdaec00f105573cb4aa29e0a6e5bf4636581938bce2c"
+    },
+    {
+      "run_id": "b39b6119a08d7b7c23e385d8",
+      "path": "data\\round4\\re2ob_checkoutservice_loss_3\\metrics.parquet",
+      "sha256": "5ab4187e2220146eeb971899b0f7634bc465a884fd30ef4a477cbcc0c5866ce3"
+    },
+    {
+      "run_id": "6ebe12cfee90cb9811edf56a",
+      "path": "data\\round4\\re2ob_checkoutservice_mem_1\\metrics.parquet",
+      "sha256": "761de264537cd3134834cca7cf90d230683a60d58ca0a0a35e538096e701383e"
+    },
+    {
+      "run_id": "c2471bfe4cabeb3b9e376c4c",
+      "path": "data\\round4\\re2ob_checkoutservice_mem_2\\metrics.parquet",
+      "sha256": "056254dfdea1f1ec385e513331db82cb99fa8ce2a28a808d37776fc5d4bb951d"
+    },
+    {
+      "run_id": "c1a04d1ba7de8dbc2c58292e",
+      "path": "data\\round4\\re2ob_checkoutservice_mem_3\\metrics.parquet",
+      "sha256": "0b3078df04188dd7c2b752a9b936b7cbb95921fc14bc0b482b6033ac5d8c508a"
+    },
+    {
+      "run_id": "20ab37ccb42291037032aaf1",
+      "path": "data\\round4\\re2ob_currencyservice_cpu_1\\metrics.parquet",
+      "sha256": "ed8471d2f53c0c3f4095b25eff69d5c45762425afaa973d4dbdc04d7bc32c0f3"
+    },
+    {
+      "run_id": "e868d5254597f5ce9c695770",
+      "path": "data\\round4\\re2ob_currencyservice_cpu_2\\metrics.parquet",
+      "sha256": "c06a8807374665322abcd580ce8d62e7f97e5d22cf4586c3dc6b65e24cfdd1d2"
+    },
+    {
+      "run_id": "c12c7f6d92a32e1453508ebd",
+      "path": "data\\round4\\re2ob_currencyservice_cpu_3\\metrics.parquet",
+      "sha256": "7080eff2016aa46caf64474916b366736f5840716edff66fc4dc195578b5a89a"
+    },
+    {
+      "run_id": "5cfb4ad3e095988a686a326b",
+      "path": "data\\round4\\re2ob_currencyservice_delay_1\\metrics.parquet",
+      "sha256": "5a7291e34ce019824e0dafb6c3f2d29153b54563c65795444d9a329e745c4b25"
+    },
+    {
+      "run_id": "5d16ca1fb13294e3197a6482",
+      "path": "data\\round4\\re2ob_currencyservice_delay_2\\metrics.parquet",
+      "sha256": "d9e62c8b4929b1ad6d571e97d7c72be7b6d1c328e501e02b08f7d6c3e59f678e"
+    },
+    {
+      "run_id": "1e09481338c69541448d5d0b",
+      "path": "data\\round4\\re2ob_currencyservice_delay_3\\metrics.parquet",
+      "sha256": "12756074029a5e2361a67254fbf15b9c192e845fd9c77bc5961f7293b51f8feb"
+    },
+    {
+      "run_id": "36c5f09960143aaf4d2ea4d7",
+      "path": "data\\round4\\re2ob_currencyservice_disk_1\\metrics.parquet",
+      "sha256": "5e6a6def74364ab09d682777c6c09b29fbc2e2c1b6b8ee279958764d0b6a27bd"
+    },
+    {
+      "run_id": "6964ef02b6108a5f1eef252d",
+      "path": "data\\round4\\re2ob_currencyservice_disk_2\\metrics.parquet",
+      "sha256": "3d6da65da0438f2b0ffffcec73b2e1df489c693d48a9db6b0770e53f6d0464f4"
+    },
+    {
+      "run_id": "c218b6d37345bca2bd28b89b",
+      "path": "data\\round4\\re2ob_currencyservice_disk_3\\metrics.parquet",
+      "sha256": "b2c6882086e4a011e7e4450d027c158689ef6bf8811d5efe27e49ae3e343dd3d"
+    },
+    {
+      "run_id": "9d82c8b8d583c89e35470808",
+      "path": "data\\round4\\re2ob_currencyservice_loss_1\\metrics.parquet",
+      "sha256": "a31419d13452d1c969f8dd22ab82089fe77c8fa3ae2ca4aadeb17180849f17fc"
+    },
+    {
+      "run_id": "f8c60f1c81675f0c04f88051",
+      "path": "data\\round4\\re2ob_currencyservice_loss_2\\metrics.parquet",
+      "sha256": "a11e3af15c8c574809cb0bc40f5613ebc6865e658f64f217e2e8f763015e8664"
+    },
+    {
+      "run_id": "8cd77d967050f2250df08824",
+      "path": "data\\round4\\re2ob_currencyservice_loss_3\\metrics.parquet",
+      "sha256": "c4055cbedea6c9aeb164bba921b81023ba76f798ad90c672f0a5ed51550b8568"
+    },
+    {
+      "run_id": "5f40eb76c44aaf786a5aabe8",
+      "path": "data\\round4\\re2ob_currencyservice_mem_1\\metrics.parquet",
+      "sha256": "689b626fe46e2ee6bb430853dedcc410c839ae2a93833349be9ad96803fee6e0"
+    },
+    {
+      "run_id": "4a02e503ec61ac851da05f55",
+      "path": "data\\round4\\re2ob_currencyservice_mem_2\\metrics.parquet",
+      "sha256": "d0bb3a38d4fb930e63e3f862712d72a2a3f2ee82ab14c071d926f2c2e9de46fc"
+    },
+    {
+      "run_id": "4f3d5a725f5be826f6bb5fec",
+      "path": "data\\round4\\re2ob_currencyservice_mem_3\\metrics.parquet",
+      "sha256": "326f12119594afa643db66c9a1251935a07b9560cf40651fbc49d5ac450a4e82"
+    },
+    {
+      "run_id": "5ddde828f40eca37a8fcb216",
+      "path": "data\\round4\\re2ob_emailservice_cpu_1\\metrics.parquet",
+      "sha256": "52752452d9f2fdb69cec2b7575b617f84419131338fcb1c2e1829ef5c242e586"
+    },
+    {
+      "run_id": "d491eb0edbec6d8022166fb4",
+      "path": "data\\round4\\re2ob_emailservice_cpu_2\\metrics.parquet",
+      "sha256": "b59f3b7193915ec3a19c7714d80f6b2f4446b9b471f61c8abe7cd9e1c4173199"
+    },
+    {
+      "run_id": "09bc6ac33020a4b1581db2a1",
+      "path": "data\\round4\\re2ob_emailservice_cpu_3\\metrics.parquet",
+      "sha256": "c59c8e43619afe8b1a2783d580a4d19bbc604f4cdff64f4d87cb4911ce04b769"
+    },
+    {
+      "run_id": "2c88bcc3ecf60b86f27ae2c9",
+      "path": "data\\round4\\re2ob_emailservice_delay_1\\metrics.parquet",
+      "sha256": "888dae20bf94fe78534fe3e2bb821b898ab66f53e2c87101d21466c0fb88aea1"
+    },
+    {
+      "run_id": "f72f83445af4315cacabd01e",
+      "path": "data\\round4\\re2ob_emailservice_delay_2\\metrics.parquet",
+      "sha256": "217523780a38bd6afc28fad3362cbc15a6f1b97c4a1ca1400f442c25140236e0"
+    },
+    {
+      "run_id": "f225f4d50531fc76f99172c6",
+      "path": "data\\round4\\re2ob_emailservice_delay_3\\metrics.parquet",
+      "sha256": "7d96768d13a0700c2c4d80f9a3c693d408f423cc5923c5c90bcf2147c7a38136"
+    },
+    {
+      "run_id": "e3d5bb422657cf4bede301cf",
+      "path": "data\\round4\\re2ob_emailservice_disk_1\\metrics.parquet",
+      "sha256": "3510933da38ebb9940fa59bd53cbfad4f9f966b3b1402a9879f2d5a8a39d7f94"
+    },
+    {
+      "run_id": "70ee6c3740ce01315d36c2a7",
+      "path": "data\\round4\\re2ob_emailservice_disk_2\\metrics.parquet",
+      "sha256": "6bbf8a1452e7ed6cd3ef464ac0ae56861970267f1839a45968eb6bdc22b3c8ae"
+    },
+    {
+      "run_id": "a8445703f47594c89d2c8834",
+      "path": "data\\round4\\re2ob_emailservice_disk_3\\metrics.parquet",
+      "sha256": "5fe97059484d3c5162c15ff872cc97d13223ada6b82b43045537ebdd98aa2f23"
+    },
+    {
+      "run_id": "5b40fee898627996dc7b4f6e",
+      "path": "data\\round4\\re2ob_emailservice_loss_1\\metrics.parquet",
+      "sha256": "a7164fda5feb30ca9ff28990d9935052987b8d8bc192dadc58a297e48c66ffec"
+    },
+    {
+      "run_id": "d4593da6bda5bdf2d4b04d54",
+      "path": "data\\round4\\re2ob_emailservice_loss_2\\metrics.parquet",
+      "sha256": "8e80309f3055030f9ec4636b60e2fa44cb7fed23264e9ecb4d37ab8610318a5c"
+    },
+    {
+      "run_id": "c89e1cd0cb846af202640a40",
+      "path": "data\\round4\\re2ob_emailservice_loss_3\\metrics.parquet",
+      "sha256": "2f98ae267cb2a54954094104304ae62f07654fed1e890f3b2680ab97096f4340"
+    },
+    {
+      "run_id": "9dd37341cd35615e690c58ba",
+      "path": "data\\round4\\re2ob_emailservice_mem_1\\metrics.parquet",
+      "sha256": "8a97bd135d13810f3c798514e65540fa029942b315377f1f1ae08941d672d9f1"
+    },
+    {
+      "run_id": "2f58e82aece32c8ba7dc4432",
+      "path": "data\\round4\\re2ob_emailservice_mem_2\\metrics.parquet",
+      "sha256": "59aa24e82f58dfc77a025802305b5694313edc4fa8924b6001be34965a775f37"
+    },
+    {
+      "run_id": "b1fb4178a1269f250be24fb6",
+      "path": "data\\round4\\re2ob_emailservice_mem_3\\metrics.parquet",
+      "sha256": "a551edda9023b9020b83e42b6a6b3d65f64c98cd15c7732edfd2a766ecc99ddc"
+    },
+    {
+      "run_id": "199b6da3d2d45ff1db467417",
+      "path": "data\\round4\\re2ob_productcatalogservice_cpu_1\\metrics.parquet",
+      "sha256": "40a32cdc027251907770a69cfff1a1f7f0b93d9188148b837a3afa1ed425f2de"
+    },
+    {
+      "run_id": "fbf324cd8cd7947c5e62b399",
+      "path": "data\\round4\\re2ob_productcatalogservice_cpu_2\\metrics.parquet",
+      "sha256": "f4c6d5617b8895dcf131e444d960a7ffd0b3be48552ad49d3318330fe17be27d"
+    },
+    {
+      "run_id": "2d7a8a71d1965a501be03ce6",
+      "path": "data\\round4\\re2ob_productcatalogservice_cpu_3\\metrics.parquet",
+      "sha256": "8e4e586944eeb863c6e3d9440403eae4680c61efa6c0694849915236e91c5df1"
+    },
+    {
+      "run_id": "e15dcfd0d3769d59bcabad04",
+      "path": "data\\round4\\re2ob_productcatalogservice_delay_1\\metrics.parquet",
+      "sha256": "58640c77551e8eddb189f555457d597fefebd65ac28043d1f633891cd9f0178d"
+    },
+    {
+      "run_id": "beb6f24a17ed130af9f2874d",
+      "path": "data\\round4\\re2ob_productcatalogservice_delay_2\\metrics.parquet",
+      "sha256": "c37e0e13bcc77cf5dd89d3aceb197264d28454ec273aeb9e5746690a90d44553"
+    },
+    {
+      "run_id": "054e489835012f8438da7eae",
+      "path": "data\\round4\\re2ob_productcatalogservice_delay_3\\metrics.parquet",
+      "sha256": "3b5921d96ab975ca0ce6eca4eb7b7d576a86c9c794afa33ec946ef99848807b9"
+    },
+    {
+      "run_id": "b935a0f794749d2f63505fc3",
+      "path": "data\\round4\\re2ob_productcatalogservice_disk_1\\metrics.parquet",
+      "sha256": "749be516f2111b61533daf060379f66b8a1e8e9a2b262100cab1a772d2d169cd"
+    },
+    {
+      "run_id": "119ae31af074a86d82098bed",
+      "path": "data\\round4\\re2ob_productcatalogservice_disk_2\\metrics.parquet",
+      "sha256": "8d4b475d7a6938b19e95c5b3ca74f147a938eb5b45ce67fc37b93cbfa4244509"
+    },
+    {
+      "run_id": "16193a4d504a8a970a5dca9b",
+      "path": "data\\round4\\re2ob_productcatalogservice_disk_3\\metrics.parquet",
+      "sha256": "a5213638c132451d072e8a90cdd53846bb80ebbff9b40c5a6a17bbe8fcc59cd8"
+    },
+    {
+      "run_id": "f0fa3f97aaf3f59a53c593c1",
+      "path": "data\\round4\\re2ob_productcatalogservice_loss_1\\metrics.parquet",
+      "sha256": "53a3f66825f8e01efd8ca78931c5cc9e3d2e7c900845c885aa25d8b33c37bce4"
+    },
+    {
+      "run_id": "bedce39822f1c91c60948802",
+      "path": "data\\round4\\re2ob_productcatalogservice_loss_2\\metrics.parquet",
+      "sha256": "77e53bb71fe31b220a4a67cad933bc8103da6a0d2461bc8ba7ab670817e96581"
+    },
+    {
+      "run_id": "717663bf496f698ebfe3c3b7",
+      "path": "data\\round4\\re2ob_productcatalogservice_loss_3\\metrics.parquet",
+      "sha256": "7591c5247d44be365b178c0e2a6a450ccd2fa54e59298490fa72861321f53214"
+    },
+    {
+      "run_id": "1561133f8c7873d8c0a57968",
+      "path": "data\\round4\\re2ob_productcatalogservice_mem_1\\metrics.parquet",
+      "sha256": "ac6b3d751f45963eca95d66f771123cd10b862eabd4783d4138e467c72c1f267"
+    },
+    {
+      "run_id": "b17767fc1316ed5cfe2fb885",
+      "path": "data\\round4\\re2ob_productcatalogservice_mem_2\\metrics.parquet",
+      "sha256": "9996d312665780341f977b4e3cef2a13aff8473375a79aabeb693abc59bbca3d"
+    },
+    {
+      "run_id": "b0195c897181cadddfbfcbf3",
+      "path": "data\\round4\\re2ob_productcatalogservice_mem_3\\metrics.parquet",
+      "sha256": "5a7a21f08af00b9fbade3b6dc1a18045d804a8d438a6b1ce7975e90edad00674"
+    },
+    {
+      "run_id": "83497c625cc3222bc8a8a2b6",
+      "path": "data\\round4\\re2ob_recommendationservice_cpu_1\\metrics.parquet",
+      "sha256": "6695d4e58c7383a5a32f7a936f3700aa332501d4431c49003d111d3ef282b12f"
+    },
+    {
+      "run_id": "0eb0108d0cd4648716bd9d6f",
+      "path": "data\\round4\\re2ob_recommendationservice_cpu_2\\metrics.parquet",
+      "sha256": "7164e16e330f7afe979836e01ed7abf7d9c9c256caede854ac11500893b31df9"
+    },
+    {
+      "run_id": "600fe120a642ee3205886d12",
+      "path": "data\\round4\\re2ob_recommendationservice_cpu_3\\metrics.parquet",
+      "sha256": "1ca9985d028a24ca1dddd77d0aff71b04a59ae64b3d21332c1e5d399151984be"
+    },
+    {
+      "run_id": "532310c5ef1a2f9a4f7708bb",
+      "path": "data\\round4\\re2ob_recommendationservice_delay_1\\metrics.parquet",
+      "sha256": "ac702e590019b9015449286eb3123489c02ffd458009551f5cbeb51b2b6ec54f"
+    },
+    {
+      "run_id": "b9de3bf585ba61b4e1aa2c26",
+      "path": "data\\round4\\re2ob_recommendationservice_delay_2\\metrics.parquet",
+      "sha256": "f4203867be1a50f8647fe2fd7e362d0b4068066b12c62524063c62d6abc6058d"
+    },
+    {
+      "run_id": "552e3d6387f099690460ad95",
+      "path": "data\\round4\\re2ob_recommendationservice_delay_3\\metrics.parquet",
+      "sha256": "bdf571081a68868ffd9e2bad4be6ac96d0a49a931cda4ed2cf8ee246a9b246ea"
+    },
+    {
+      "run_id": "bb95fcd81e7ed274b5bd621d",
+      "path": "data\\round4\\re2ob_recommendationservice_disk_1\\metrics.parquet",
+      "sha256": "667c022923e804d160d01e04b70c18ae78f11ffd36f6b2b7886da80231784d79"
+    },
+    {
+      "run_id": "8ad019797e1898d727bdd311",
+      "path": "data\\round4\\re2ob_recommendationservice_disk_2\\metrics.parquet",
+      "sha256": "73bd5326950593f6b02153ef7b286018a91d2853747a5f78f7d6a912b7edb196"
+    },
+    {
+      "run_id": "b90067e0d40bd0639f79b32b",
+      "path": "data\\round4\\re2ob_recommendationservice_disk_3\\metrics.parquet",
+      "sha256": "2bb250b67c392a4335deea8168464124141e9070fe259ef48de0e4385fc78cc3"
+    },
+    {
+      "run_id": "e00a3678a1a1a5c714f5c8f4",
+      "path": "data\\round4\\re2ob_recommendationservice_loss_1\\metrics.parquet",
+      "sha256": "92c9622bb656a4ab9879d9ae3bcad6ef0c4764ce3eb8ae2ada9da740236fa0f0"
+    },
+    {
+      "run_id": "c264dcd5d425d190bad6859c",
+      "path": "data\\round4\\re2ob_recommendationservice_loss_2\\metrics.parquet",
+      "sha256": "ec8e5938b8c077d8085c094a8138a2fdf174138b5de2e5f5b5618b0d69b1ab2a"
+    },
+    {
+      "run_id": "a83caa602745ace294bda03d",
+      "path": "data\\round4\\re2ob_recommendationservice_loss_3\\metrics.parquet",
+      "sha256": "0d67d50f608a6b74bb323171b67b5c439e614ad26102c5c075d65c6e43c0eda8"
+    },
+    {
+      "run_id": "9cb313f397e19d48782c835a",
+      "path": "data\\round4\\re2ob_recommendationservice_mem_1\\metrics.parquet",
+      "sha256": "2d95b75fe4e5c726c74ba53199bcb8377fb0228fa2ed8067838c2a38b4463781"
+    },
+    {
+      "run_id": "e7077f3da7cfd32cc7f93b1a",
+      "path": "data\\round4\\re2ob_recommendationservice_mem_2\\metrics.parquet",
+      "sha256": "8cab3320fe89c122b22978739da0a2dfa805f6f473a697713234f32b152f7c97"
+    },
+    {
+      "run_id": "9d45f321aeda4d266eee8bd6",
+      "path": "data\\round4\\re2ob_recommendationservice_mem_3\\metrics.parquet",
+      "sha256": "cad61a8a5f39014c82dccd107bd0b131fc7fed24fd03a53870500dcd494f980b"
+    },
+    {
+      "run_id": "d8c04b6d0fb9cb0acac46bbf",
+      "path": "data\\round4\\re1ss_carts_cpu_1\\metrics.parquet",
+      "sha256": "25d22bb722e4a83d33d5e061012eeb5c3986bd3627c3fd5f2f41abce2a35df3d"
+    },
+    {
+      "run_id": "22eeb8727f7c631b00fcaceb",
+      "path": "data\\round4\\re1ss_carts_cpu_2\\metrics.parquet",
+      "sha256": "4d515069459c0bfd799e8b79e5f109aa6ded6cabf91f9c7d3200f4ba90097580"
+    },
+    {
+      "run_id": "285a01db656bb23fbc506e81",
+      "path": "data\\round4\\re1ss_carts_cpu_3\\metrics.parquet",
+      "sha256": "a2382fcb9c524f2203fcdcd099629cf2612dc9f7aebd472459e588d2a084127f"
+    },
+    {
+      "run_id": "9fcc9788e706ef6219da61c3",
+      "path": "data\\round4\\re1ss_carts_cpu_4\\metrics.parquet",
+      "sha256": "8c3071aa76c485aa573231c112b5b7eef8e241dc72e827612b0d4ee21ee36d06"
+    },
+    {
+      "run_id": "5f6d8f696564101ceed0a071",
+      "path": "data\\round4\\re1ss_carts_cpu_5\\metrics.parquet",
+      "sha256": "9f00c57e1b0196675d14a9294f31e86da639f69cdf177ad3d4ba437b236a4ff3"
+    },
+    {
+      "run_id": "0ffbbef975bd3d9591a7d9ad",
+      "path": "data\\round4\\re1ss_carts_delay_1\\metrics.parquet",
+      "sha256": "13fe8d47353843055a452ac69243df489fdad51dda471f44b6a44f0de42d94e8"
+    },
+    {
+      "run_id": "d6fd426b73f909dd3fafbb2e",
+      "path": "data\\round4\\re1ss_carts_delay_2\\metrics.parquet",
+      "sha256": "5bc4c19a385f8bbe00b30b4aa70c1ed5e3408ead100025fe822d0dc5a517b498"
+    },
+    {
+      "run_id": "7e671a0975fe9f3ebd2f9c5d",
+      "path": "data\\round4\\re1ss_carts_delay_3\\metrics.parquet",
+      "sha256": "bcd59322b90842d5aa1ebda393b065c35bbe4bf56ee880385cb0bf2053f8375d"
+    },
+    {
+      "run_id": "d70fdf1d616b080e8fd4bcf8",
+      "path": "data\\round4\\re1ss_carts_delay_4\\metrics.parquet",
+      "sha256": "016c94786c68dcdccdcf9ceaf7746080b4cf51e3f676c3b1619fec6fad0834ec"
+    },
+    {
+      "run_id": "481466ab0209e9ab62cd2f40",
+      "path": "data\\round4\\re1ss_carts_delay_5\\metrics.parquet",
+      "sha256": "4532a237a17e5c3bd1b4964fe1d1d490364e463423aa2a3d14646e6032738bf3"
+    },
+    {
+      "run_id": "dec4b345102add4b948a6e1a",
+      "path": "data\\round4\\re1ss_carts_disk_1\\metrics.parquet",
+      "sha256": "77e657a894cb8dfb91c3a31dbe8cc3e634cd2e7a4ce76ec2db1bf9cf54a67846"
+    },
+    {
+      "run_id": "0cc013bd863f69eafc69e4db",
+      "path": "data\\round4\\re1ss_carts_disk_2\\metrics.parquet",
+      "sha256": "7ea97d179d8e253adb261f72d14b4fdb877d1902fb6de75373ca74402d331d6b"
+    },
+    {
+      "run_id": "e4248dae99ca23e7e1277d6d",
+      "path": "data\\round4\\re1ss_carts_disk_3\\metrics.parquet",
+      "sha256": "6c3749ef7519aabdc7585d8c7d3d5fc2fc888394eed515e7163b9701bb41f62d"
+    },
+    {
+      "run_id": "4ae2ff5e1188c105df619abf",
+      "path": "data\\round4\\re1ss_carts_disk_4\\metrics.parquet",
+      "sha256": "766d1ab7340185a6f2b3bcee3fb1bed545e42f78bba8d181a8d380e99e48eff5"
+    },
+    {
+      "run_id": "37bdfeb08a21a03dfeeb24ab",
+      "path": "data\\round4\\re1ss_carts_disk_5\\metrics.parquet",
+      "sha256": "e13f563ca246d62193472d0b81b368cb2569e5647aba1006ee78d61eb2e6f558"
+    },
+    {
+      "run_id": "4325c98e93ccfa553bcecb1e",
+      "path": "data\\round4\\re1ss_carts_loss_1\\metrics.parquet",
+      "sha256": "63c633517ea3ba8a79189caf85a88cf8d1f68a2e451aecf2e03d212777d572e9"
+    },
+    {
+      "run_id": "dd2d08da92ad45aa52b2ffa7",
+      "path": "data\\round4\\re1ss_carts_loss_2\\metrics.parquet",
+      "sha256": "c92cce3686db798c4ba59967d032b8f9b835bd6920867d39cf9bcd0bc3969796"
+    },
+    {
+      "run_id": "d1b96290ca6c917b2bf8da0f",
+      "path": "data\\round4\\re1ss_carts_loss_3\\metrics.parquet",
+      "sha256": "08b30dd58346ff4637408b94c21c0b8b55e94b7e698a3c536dbd8d6ed7afa5ed"
+    },
+    {
+      "run_id": "f88d7548f13042a64d121b49",
+      "path": "data\\round4\\re1ss_carts_loss_4\\metrics.parquet",
+      "sha256": "ea684a0717db8a2c74779f70b41cba20278bd7b690f0f1d7d3d8d96b90bd8e72"
+    },
+    {
+      "run_id": "0976e20a0dddf9a8e7cd612d",
+      "path": "data\\round4\\re1ss_carts_loss_5\\metrics.parquet",
+      "sha256": "446bc70e3eace223cf9d01af66021e8b546718b56ff21b2d5e4d0d3976ceb678"
+    },
+    {
+      "run_id": "9191c2bc66a65b09cd7a74da",
+      "path": "data\\round4\\re1ss_carts_mem_1\\metrics.parquet",
+      "sha256": "a6b367ebf4089faef391e6955ae6be729643107cb143879942f7511d40a3b99b"
+    },
+    {
+      "run_id": "a3c6779fcb610fc20178c690",
+      "path": "data\\round4\\re1ss_carts_mem_2\\metrics.parquet",
+      "sha256": "ebaedb253348d99b660b1351f152fab2edebdfaba8fc2afe31d8d2a7cf2ad139"
+    },
+    {
+      "run_id": "85f6ca06dbae43edbee7fecc",
+      "path": "data\\round4\\re1ss_carts_mem_3\\metrics.parquet",
+      "sha256": "99f05477f14486d3834010b18b9766496c55e4f3283f8d929ec6985e44e7d243"
+    },
+    {
+      "run_id": "09dfeb592feec3d7be7d918c",
+      "path": "data\\round4\\re1ss_carts_mem_4\\metrics.parquet",
+      "sha256": "c2f953118874bf9c00c8c6675d0d95d6106d1ff832d47dc2120fc806d5a117d2"
+    },
+    {
+      "run_id": "95abf8ed22a09541ac9de284",
+      "path": "data\\round4\\re1ss_carts_mem_5\\metrics.parquet",
+      "sha256": "64981002f38d3571c0bcc93e4b79d2d14aecad2fdcb27996d684894a0b091979"
+    },
+    {
+      "run_id": "0f67d1a288812bec765d598f",
+      "path": "data\\round4\\re1ss_catalogue_cpu_1\\metrics.parquet",
+      "sha256": "8d88da4904e3305331182020c59a3591e6fad233f340b0cc09fdf79d1777afc0"
+    },
+    {
+      "run_id": "8903099dad6881f322724c14",
+      "path": "data\\round4\\re1ss_catalogue_cpu_2\\metrics.parquet",
+      "sha256": "a9cc042a7236e5ec303bf15b6441bdb71038fbdceaee15c05ed8ba9abc8c46b6"
+    },
+    {
+      "run_id": "5c3c768b5ec37f4ef81ea192",
+      "path": "data\\round4\\re1ss_catalogue_cpu_3\\metrics.parquet",
+      "sha256": "45f1d83adb3e08ea326750e2e2512b232c9c0ad730650b70af918f9f1b34e9e2"
+    },
+    {
+      "run_id": "8a97bb53b9f500cbf581cbe8",
+      "path": "data\\round4\\re1ss_catalogue_cpu_4\\metrics.parquet",
+      "sha256": "aa2caa538bb5995f84908fd26ae082c2ec90d650c5d3bf9742073847f3f01cf9"
+    },
+    {
+      "run_id": "bdc54e3265bafc2fd21bc918",
+      "path": "data\\round4\\re1ss_catalogue_cpu_5\\metrics.parquet",
+      "sha256": "a1b19c6f2bed5554948f9e1c7c8a5a3f87d83b81a4766a9a76c912f220216b2e"
+    },
+    {
+      "run_id": "2dd1f5e8158c0639dce9c690",
+      "path": "data\\round4\\re1ss_catalogue_delay_1\\metrics.parquet",
+      "sha256": "ad7b1af3630fe0ecec67874a30345451ceec6de1445eb3017f1c930b12706e0d"
+    },
+    {
+      "run_id": "7d33a32c132865ca19f74d1e",
+      "path": "data\\round4\\re1ss_catalogue_delay_2\\metrics.parquet",
+      "sha256": "5e7d6c72c65b64d6bd2e7247e0ab6aad1c83cbfa66091359ece33d9458e8f8a5"
+    },
+    {
+      "run_id": "ebdfe5827453bfee6fd3c71f",
+      "path": "data\\round4\\re1ss_catalogue_delay_3\\metrics.parquet",
+      "sha256": "0adfbd8b1dc5beb05457bad92dde293147fa1aee61525a7874758252bd69e753"
+    },
+    {
+      "run_id": "3498e07d2bc3952bdaf366d0",
+      "path": "data\\round4\\re1ss_catalogue_delay_4\\metrics.parquet",
+      "sha256": "fa5b9f3b58b7e8795f8472547208eca57e980c00b46eeaa4469877f1a5cd799a"
+    },
+    {
+      "run_id": "8d18946bedb3daceb4d5611a",
+      "path": "data\\round4\\re1ss_catalogue_delay_5\\metrics.parquet",
+      "sha256": "5ac319a45e3f23d9b3c386860db05c0d0ac13557640bf7b8f316681454327352"
+    },
+    {
+      "run_id": "23f5b4dedda1211f36fac0a3",
+      "path": "data\\round4\\re1ss_catalogue_disk_1\\metrics.parquet",
+      "sha256": "98c6be2169116a27c24894f6c74381f83ecedd6c13f5f39ea62f4bdbbaccc766"
+    },
+    {
+      "run_id": "2740141ceeaa6611f13470ce",
+      "path": "data\\round4\\re1ss_catalogue_disk_2\\metrics.parquet",
+      "sha256": "83704f478fb2a7a89132aed1b9da49c1a6e20c9674e13b0332d0df98442ad669"
+    },
+    {
+      "run_id": "4540d257d515f6b9456e35ab",
+      "path": "data\\round4\\re1ss_catalogue_disk_3\\metrics.parquet",
+      "sha256": "8e129a17eab3c3418e6dddf0014568b575b092267ab17098bd55ab4ef5b4bf6d"
+    },
+    {
+      "run_id": "2985fe600a7d0eb89cd57b0c",
+      "path": "data\\round4\\re1ss_catalogue_disk_4\\metrics.parquet",
+      "sha256": "5dcd5d5b9f0a4082ab10834195c420b2602c72d22a90ce26c2ad705131c1057c"
+    },
+    {
+      "run_id": "1804cd18e9a65e5ece5b6f58",
+      "path": "data\\round4\\re1ss_catalogue_disk_5\\metrics.parquet",
+      "sha256": "6bead67075a5e3fe2e3352f5502dad6b54b5419f6791ada39d92cadfbbb52147"
+    },
+    {
+      "run_id": "6a3d3281d689c236669309d6",
+      "path": "data\\round4\\re1ss_catalogue_loss_1\\metrics.parquet",
+      "sha256": "79309c213024dbe5d6225b31822b28a114c1e3534a0970ba49a9f2ab1c199619"
+    },
+    {
+      "run_id": "0eb39a19b0184370cb6cce2b",
+      "path": "data\\round4\\re1ss_catalogue_loss_2\\metrics.parquet",
+      "sha256": "cd7dbf7bb5fc6a15c7a8b5ed35c17ec3433961816c568ef925a77ea33401a7d1"
+    },
+    {
+      "run_id": "4331ee15b74a31c2bc2bd41a",
+      "path": "data\\round4\\re1ss_catalogue_loss_3\\metrics.parquet",
+      "sha256": "9ddbd5fcbaeca09ede0dcd43a4504f77ae2f386124608f992994f3f71c7a2277"
+    },
+    {
+      "run_id": "9a35cec6a698feaa00ed312b",
+      "path": "data\\round4\\re1ss_catalogue_loss_4\\metrics.parquet",
+      "sha256": "9fd16100d96003dccb6806a7a297608b3571c849d2e655ecf604a92e6dd34693"
+    },
+    {
+      "run_id": "fb28719ba9ad1e2b1241a9eb",
+      "path": "data\\round4\\re1ss_catalogue_loss_5\\metrics.parquet",
+      "sha256": "39c50c73c61c5b7dcecd2302502c97484a540e834437c6a1940ea39c195605b7"
+    },
+    {
+      "run_id": "256c5ce919142c9128df5cc8",
+      "path": "data\\round4\\re1ss_catalogue_mem_1\\metrics.parquet",
+      "sha256": "da1bc7e5111b140521081aead8a6817851c76ce4a60005beefca3f077b9ae819"
+    },
+    {
+      "run_id": "641561b193799b1a506c83a8",
+      "path": "data\\round4\\re1ss_catalogue_mem_2\\metrics.parquet",
+      "sha256": "0a92b6c9968987bb6f55e93f69540f5bece1773c4bb9d4cf8003f454814cc174"
+    },
+    {
+      "run_id": "e24b03174cb5bd07e33d7aa4",
+      "path": "data\\round4\\re1ss_catalogue_mem_3\\metrics.parquet",
+      "sha256": "3a2a6c802a5df1a1d60670c32f0a88f49d22bec29ed85d2bccab185b2d01595d"
+    },
+    {
+      "run_id": "a784c8ea79eb16c8d6326192",
+      "path": "data\\round4\\re1ss_catalogue_mem_4\\metrics.parquet",
+      "sha256": "b45638c9b0ab5fae306e27626a5a35b822fa25f144eab2931d86bf128b85c56c"
+    },
+    {
+      "run_id": "fe5de3ac56cdfa909c047364",
+      "path": "data\\round4\\re1ss_catalogue_mem_5\\metrics.parquet",
+      "sha256": "23bc41d0636be5001e9c12d4a55f687c2cf8e7b01f013469794def4695929cd0"
+    },
+    {
+      "run_id": "1ae8f343909a2c1abbdb740a",
+      "path": "data\\round4\\re1ss_orders_cpu_1\\metrics.parquet",
+      "sha256": "17d920fcc65555eec9b5dac9939768b8492d5818fecb359bbc31fcbd13fe0cf2"
+    },
+    {
+      "run_id": "d30d1c6f76b4afca53d8f569",
+      "path": "data\\round4\\re1ss_orders_cpu_2\\metrics.parquet",
+      "sha256": "4b5e803697b4d890730c93e43c771d3fdc0fe06cfc3fca332c90be9910b70623"
+    },
+    {
+      "run_id": "0fa68eca0ae629bd465e8285",
+      "path": "data\\round4\\re1ss_orders_cpu_3\\metrics.parquet",
+      "sha256": "d5f16faa0ebd836574be6c202df2e8b53191e7372192dca3d0a2b1f5b2b8df39"
+    },
+    {
+      "run_id": "7256356ffb86c4ae6f46bc2c",
+      "path": "data\\round4\\re1ss_orders_cpu_4\\metrics.parquet",
+      "sha256": "1ea298aed590c57e560c02ec7c09b91976195783929434e907c6f0b534f28ccb"
+    },
+    {
+      "run_id": "db08bd001dc297de305e5a13",
+      "path": "data\\round4\\re1ss_orders_cpu_5\\metrics.parquet",
+      "sha256": "2967e34ce7d9aa352391be9586bf527c430f5026ac83c3c31d13d2078b4b7c38"
+    },
+    {
+      "run_id": "3577255f3ddfe3acdec76240",
+      "path": "data\\round4\\re1ss_orders_delay_1\\metrics.parquet",
+      "sha256": "b34f06a7052c046048dcfa39015cee6e543939509987db0a54afb52b0b70726a"
+    },
+    {
+      "run_id": "0de55fe3adea637d81595c8c",
+      "path": "data\\round4\\re1ss_orders_delay_2\\metrics.parquet",
+      "sha256": "3b3e0e2304a74c3dd2533c4395c7623c7e2e6c5962bbec4aebd07156dd1fdd7f"
+    },
+    {
+      "run_id": "433315ec6255dd1746e42e15",
+      "path": "data\\round4\\re1ss_orders_delay_3\\metrics.parquet",
+      "sha256": "266807afcba8189481a1db80796f5b0229869cbb3cd16c20b8797ec6f754a26e"
+    },
+    {
+      "run_id": "21710f465c3f3221183a6e9c",
+      "path": "data\\round4\\re1ss_orders_delay_4\\metrics.parquet",
+      "sha256": "529f4e4c455a84cca43bee0b3ac22414f33609526760d2edd8809a029400adca"
+    },
+    {
+      "run_id": "81aa915a707edadcae52c7ae",
+      "path": "data\\round4\\re1ss_orders_delay_5\\metrics.parquet",
+      "sha256": "282fb01a0bd2dab12f585a4c78598d661cfc9746d4af620ad861f5344258d74e"
+    },
+    {
+      "run_id": "8f45e699d11b2d3a3c627a4c",
+      "path": "data\\round4\\re1ss_orders_disk_1\\metrics.parquet",
+      "sha256": "c8ab87520beb168529f52e7c556ce181eb9a0997739912532ef73e6416ef79e1"
+    },
+    {
+      "run_id": "e32fe84a490ed95926850f5a",
+      "path": "data\\round4\\re1ss_orders_disk_2\\metrics.parquet",
+      "sha256": "ff2b68b268cf1cd439b0661578fbfb1a79658ae6ef8a6c39be0ac16161c0999c"
+    },
+    {
+      "run_id": "99045ea8e64b3d7a6dec4a5a",
+      "path": "data\\round4\\re1ss_orders_disk_3\\metrics.parquet",
+      "sha256": "93e9037bd18ea92e15570128116e32bb9f4ffbe9bc7a783753d3cf883e78c3ef"
+    },
+    {
+      "run_id": "d41613df5cea1fd49c1e2d3d",
+      "path": "data\\round4\\re1ss_orders_disk_4\\metrics.parquet",
+      "sha256": "623c655ff181f8731b090cc115ab02ee5a116467b3c5b5e15e8c8ad9a04b24e7"
+    },
+    {
+      "run_id": "39cedb70fd22b80410295af2",
+      "path": "data\\round4\\re1ss_orders_disk_5\\metrics.parquet",
+      "sha256": "8dd88fd4e178e119e8c3e6645c019c4b1414307485ebc261d983e498fac7cabc"
+    },
+    {
+      "run_id": "ff7fd7371b2b687e1775bccb",
+      "path": "data\\round4\\re1ss_orders_loss_1\\metrics.parquet",
+      "sha256": "e0b5ff54c29997cfdd7936dc307494ee4f3e3d037b10913e85383da1376fa75b"
+    },
+    {
+      "run_id": "6f95ffe5aabd94895c7a7f4a",
+      "path": "data\\round4\\re1ss_orders_loss_2\\metrics.parquet",
+      "sha256": "a6a3a3d330c0b4bbe7e53f7baf1fdf73682959a11b30c784e6ffa0a686ea7c43"
+    },
+    {
+      "run_id": "a2e047d6447d73016c06b050",
+      "path": "data\\round4\\re1ss_orders_loss_3\\metrics.parquet",
+      "sha256": "961a5b19c8c5f5b33ac8614c017c1b273e4a8b563ec94f869441a11556cadfa5"
+    },
+    {
+      "run_id": "444588dd51068ddea6d798af",
+      "path": "data\\round4\\re1ss_orders_loss_4\\metrics.parquet",
+      "sha256": "50d512c21b4d242999aa6321d33b93f3836a2ad481b5da818a0a4144504a0f42"
+    },
+    {
+      "run_id": "312c4d1ffe844a1073cd3392",
+      "path": "data\\round4\\re1ss_orders_loss_5\\metrics.parquet",
+      "sha256": "62eaccf18d32921cd1b990b63eb0b6ecacb3bed1773f1fb71dac2a80770ed1c4"
+    },
+    {
+      "run_id": "b775bf10348599d6d15e85c7",
+      "path": "data\\round4\\re1ss_orders_mem_1\\metrics.parquet",
+      "sha256": "5ad026f3990a2375497bd36e31aa15b8ad0d31671f89b37c782f72cf98d34695"
+    },
+    {
+      "run_id": "93e23bba33e402fc04af51fa",
+      "path": "data\\round4\\re1ss_orders_mem_2\\metrics.parquet",
+      "sha256": "814a3ead7d8fb116190a42da37506c885c74f1565c71c766437d42ba467f1199"
+    },
+    {
+      "run_id": "6ea530ecc35d80e76014f4e3",
+      "path": "data\\round4\\re1ss_orders_mem_3\\metrics.parquet",
+      "sha256": "2a7c096d24fa0f9ccb4cd8ccb85e7871953fb3354a71f6513fe74a0c1bbf0681"
+    },
+    {
+      "run_id": "f3ecc579c50d9a6e27650d91",
+      "path": "data\\round4\\re1ss_orders_mem_4\\metrics.parquet",
+      "sha256": "e5dc06247a2bec1316997d8b590d0faf297ee955d918de9933c45cb19ff59726"
+    },
+    {
+      "run_id": "ed457761395f49c6a3e146df",
+      "path": "data\\round4\\re1ss_orders_mem_5\\metrics.parquet",
+      "sha256": "59a3f67fd799ec8012018b217f5e5a982638c257b6fe1869372401fd0d054127"
+    },
+    {
+      "run_id": "eb628868752fbdc887afc783",
+      "path": "data\\round4\\re1ss_payment_cpu_1\\metrics.parquet",
+      "sha256": "0e331003cace45d2737764434acff10789079f8842c0a8b966c2deceab2bf492"
+    },
+    {
+      "run_id": "a824e56bd1e0e1958cc22c45",
+      "path": "data\\round4\\re1ss_payment_cpu_2\\metrics.parquet",
+      "sha256": "6822ee30eb0f206f54f2a7e6c674ca9a916a6aba2343fe23aacaff64d4189402"
+    },
+    {
+      "run_id": "520606e2fb17e4a29cecc9b2",
+      "path": "data\\round4\\re1ss_payment_cpu_3\\metrics.parquet",
+      "sha256": "131b9212d0aaa329c22548b0245e37ab58cd63e69504dcc5d92c41d89133ac6f"
+    },
+    {
+      "run_id": "2e798afa02e34ddadad09a0b",
+      "path": "data\\round4\\re1ss_payment_cpu_4\\metrics.parquet",
+      "sha256": "69a71acb36eac277c1183e22021766bb0774f02cbf9632ab8669086bdb3ee5ab"
+    },
+    {
+      "run_id": "66da48b16d95024d5d8b5492",
+      "path": "data\\round4\\re1ss_payment_cpu_5\\metrics.parquet",
+      "sha256": "8bfe8f98bbc6f946a17d145e8d0eb8fc1a45f57011aac7d8128a5fcc93ca4120"
+    },
+    {
+      "run_id": "c89f041f5db53920dfd6a075",
+      "path": "data\\round4\\re1ss_payment_delay_1\\metrics.parquet",
+      "sha256": "bc7deaa9fe40364a12003e73535ee3f44c30d5b28fd041d660947418ef6b8594"
+    },
+    {
+      "run_id": "b830ddf61a5a36015a62c9d1",
+      "path": "data\\round4\\re1ss_payment_delay_2\\metrics.parquet",
+      "sha256": "8d43e2bd7ec74507f9939fe8ed794c2601a8a0c8b7b4344985ade718e0a411cf"
+    },
+    {
+      "run_id": "a1fbb7e8ac2e738646648e16",
+      "path": "data\\round4\\re1ss_payment_delay_3\\metrics.parquet",
+      "sha256": "ae98a3fa62b7011721007c53a93c220a52f7874074fdef4021aab028bf1669fd"
+    },
+    {
+      "run_id": "75f4fae8fd46fcf83c261bdb",
+      "path": "data\\round4\\re1ss_payment_delay_4\\metrics.parquet",
+      "sha256": "e2b8984b1527315add26c225f2d865d2a0687c463748227b0c06e5cd541bcdd9"
+    },
+    {
+      "run_id": "0484cb76295ff31953274f21",
+      "path": "data\\round4\\re1ss_payment_delay_5\\metrics.parquet",
+      "sha256": "5f9d6d47f60716c5b60e83b3e8b9605c7464f6e6c2a7996db7a1b16e24145d7d"
+    },
+    {
+      "run_id": "d42bcd0bf8967c3bb250d2cf",
+      "path": "data\\round4\\re1ss_payment_disk_1\\metrics.parquet",
+      "sha256": "b9c401abf2e520cc71dcdbc9304b560879e59436d8ec18974346c924de2d602e"
+    },
+    {
+      "run_id": "9437065abf0cd2b98a78924d",
+      "path": "data\\round4\\re1ss_payment_disk_2\\metrics.parquet",
+      "sha256": "c487de1113476bebc3b76cdb6c051b7d85819012131b5b0bac14c4e721d33f1e"
+    },
+    {
+      "run_id": "fe749b61a125058491b2fec2",
+      "path": "data\\round4\\re1ss_payment_disk_3\\metrics.parquet",
+      "sha256": "0b067f77c5667d2805b31844a070b580edcfda34b98926e33709843973a77af1"
+    },
+    {
+      "run_id": "ca2eb98fabec558e08d19646",
+      "path": "data\\round4\\re1ss_payment_disk_4\\metrics.parquet",
+      "sha256": "75ab44d683c97f297264b82bf0e95267d98c88239a5a41019b4bd243e7b26a5f"
+    },
+    {
+      "run_id": "09a2a5a9caa649559cf0a73a",
+      "path": "data\\round4\\re1ss_payment_disk_5\\metrics.parquet",
+      "sha256": "439e6b99149ba0b0f7e1130f38683d28407aaa69e9a9ca85325c7e69a54d7eed"
+    },
+    {
+      "run_id": "cf418fbdcc7f7b09faa136ea",
+      "path": "data\\round4\\re1ss_payment_loss_1\\metrics.parquet",
+      "sha256": "65637d4d087f7ae8835d869872a9cc583137498e7c19575f40c35c6733d66732"
+    },
+    {
+      "run_id": "ec3c54b355fe31b29f3747a8",
+      "path": "data\\round4\\re1ss_payment_loss_2\\metrics.parquet",
+      "sha256": "659ff273c591ff3ce6176d328bb899925a1e94cc58c1518f4fc9572020b0a24e"
+    },
+    {
+      "run_id": "d48d4110ecaaa0d851b34578",
+      "path": "data\\round4\\re1ss_payment_loss_3\\metrics.parquet",
+      "sha256": "77b11822590612ab1d98d9d1fe5473d599a1e6e8934d2b8daa86c78a34fe90c4"
+    },
+    {
+      "run_id": "6f7db898caca47ea10966fb8",
+      "path": "data\\round4\\re1ss_payment_loss_4\\metrics.parquet",
+      "sha256": "0b653ba0a02c44c3ffd85ba174f920ade046012ef463f13b5bcf49b55a5a5a2b"
+    },
+    {
+      "run_id": "502457b5c722f04f4309fcdc",
+      "path": "data\\round4\\re1ss_payment_loss_5\\metrics.parquet",
+      "sha256": "544ab56c0dc14439a13fc81d43bbd106085cf68725b0f41e1c4ed81eddd41dae"
+    },
+    {
+      "run_id": "06d5a4963a2284a923ec8fc1",
+      "path": "data\\round4\\re1ss_payment_mem_1\\metrics.parquet",
+      "sha256": "cfcf50e8f30f58c8101dee598be91a02cb34189bd27da12c050bbda70c3f62ea"
+    },
+    {
+      "run_id": "053e676f22a2b6c0c2a2bca6",
+      "path": "data\\round4\\re1ss_payment_mem_2\\metrics.parquet",
+      "sha256": "12ff650e0b9863a8cd0e4d08345e7854534a2ffbb79dacde45b604eda433c26d"
+    },
+    {
+      "run_id": "340d6a4449154f021778117b",
+      "path": "data\\round4\\re1ss_payment_mem_3\\metrics.parquet",
+      "sha256": "2635d3975c720e2dc2df8f0f0a135e7015b3dc963600fa23b36cf378dce88792"
+    },
+    {
+      "run_id": "74ccfcb0e3a0cfe2d9f0bf2b",
+      "path": "data\\round4\\re1ss_payment_mem_4\\metrics.parquet",
+      "sha256": "41829e62de9c124720fe0a3cc9bc7a8d204b24d292d9a1ace0db4e84753f0643"
+    },
+    {
+      "run_id": "49e4a73f4c64415fb6ae7437",
+      "path": "data\\round4\\re1ss_payment_mem_5\\metrics.parquet",
+      "sha256": "6cd48c50a35213558ddbbc52f53d52cd5f1805f8b94d3fd98addcf24fc3ce9f8"
+    },
+    {
+      "run_id": "8b7d52d0eebc91346bc7a392",
+      "path": "data\\round4\\re1ss_user_cpu_1\\metrics.parquet",
+      "sha256": "ec5c8cbf13e94d2b520170af7a0780569b24270b426396aa6f5d40ec6a0229d7"
+    },
+    {
+      "run_id": "1d2ae04edd168604f5b54d70",
+      "path": "data\\round4\\re1ss_user_cpu_2\\metrics.parquet",
+      "sha256": "8f5520ca0bcafb23904f99cd4a9a33b8ab29bbd816d393ab56cdeef2f8c33cbd"
+    },
+    {
+      "run_id": "f22985c64df56615009ae116",
+      "path": "data\\round4\\re1ss_user_cpu_3\\metrics.parquet",
+      "sha256": "c04ea3d2f8ce34538344634c4707f74c6ef5517f1bc46aa1719265c3851ef81c"
+    },
+    {
+      "run_id": "d253d3fc85b13976d86776b7",
+      "path": "data\\round4\\re1ss_user_cpu_4\\metrics.parquet",
+      "sha256": "4f21aaa0756982a250bdf5a86b389d4245992e1b179fbe7cba49c6f6793976be"
+    },
+    {
+      "run_id": "a78011b56ce028ccad350807",
+      "path": "data\\round4\\re1ss_user_cpu_5\\metrics.parquet",
+      "sha256": "49becb682be39dc97bac5d3751b047995a9ef7dbf9195942371a234c9b3c42fe"
+    },
+    {
+      "run_id": "ce5b63047d784972b0e60371",
+      "path": "data\\round4\\re1ss_user_delay_1\\metrics.parquet",
+      "sha256": "821733934074719a5b4fcbab41ad4319d57f290d2d4401d261466f835e64551f"
+    },
+    {
+      "run_id": "d9a93e0cb995a28449af4135",
+      "path": "data\\round4\\re1ss_user_delay_2\\metrics.parquet",
+      "sha256": "ba0ca063bfed362f8722cc03801739dfd61d8595932a02780c9ea283d6a74759"
+    },
+    {
+      "run_id": "2aa2a29c64c510b135d99021",
+      "path": "data\\round4\\re1ss_user_delay_3\\metrics.parquet",
+      "sha256": "aa639223d7e53fc741b54f42681fb650a88507f380497ba677aea316d8ceeb53"
+    },
+    {
+      "run_id": "1641bb262b9aaccc0a46526c",
+      "path": "data\\round4\\re1ss_user_delay_4\\metrics.parquet",
+      "sha256": "876170b061c6d21971e30137a78b2f84c8d9cf7863ff83e0024b9cebdc7194bf"
+    },
+    {
+      "run_id": "b843c5aa80aec2fceaef789b",
+      "path": "data\\round4\\re1ss_user_delay_5\\metrics.parquet",
+      "sha256": "bd9083c2d78f4a55b306ec70ddea5ef213a678b439de2fdc58cbb219276a1818"
+    },
+    {
+      "run_id": "3b5796d4ddc1852323ad9af2",
+      "path": "data\\round4\\re1ss_user_disk_1\\metrics.parquet",
+      "sha256": "94e9088a9848cbd9121fd9001f800a92aff1859110781cce46cb18bdcf277012"
+    },
+    {
+      "run_id": "38d0c513976090f4824c4944",
+      "path": "data\\round4\\re1ss_user_disk_2\\metrics.parquet",
+      "sha256": "ecf70c39b52e79b6ed5292f4ef7b247563e4d436b88d4e903499df2b6f0f479e"
+    },
+    {
+      "run_id": "6875f923883259e75ed7ea9c",
+      "path": "data\\round4\\re1ss_user_disk_3\\metrics.parquet",
+      "sha256": "792c41176353610ecc672116c9307f18c52821c6cc3412012b2348605bc5bf14"
+    },
+    {
+      "run_id": "6b4672426ecc8f5493c13f9a",
+      "path": "data\\round4\\re1ss_user_disk_4\\metrics.parquet",
+      "sha256": "dcd809b1203c20adccaf033854bd6cbacb8ff82a1b7dac38e6bd437374dc68e9"
+    },
+    {
+      "run_id": "c4ae44446f6917ebad40cf6b",
+      "path": "data\\round4\\re1ss_user_disk_5\\metrics.parquet",
+      "sha256": "01fc3115f5c36a044a57f3760f8f95594b6caa75e6cff463963ef10f7f66edf2"
+    },
+    {
+      "run_id": "71c012bd825041b62a9f3f4f",
+      "path": "data\\round4\\re1ss_user_loss_1\\metrics.parquet",
+      "sha256": "7096b8fbceb15b8f001af0673776924a168156a089db5c3007d926db452c9733"
+    },
+    {
+      "run_id": "7191621e1f005ee91f87fd89",
+      "path": "data\\round4\\re1ss_user_loss_2\\metrics.parquet",
+      "sha256": "0358fc8790d2052c40d59e09b60715798e1db94fac6a33db8f40948db85c2434"
+    },
+    {
+      "run_id": "1e22d53ed7f26d3176a19c0a",
+      "path": "data\\round4\\re1ss_user_loss_3\\metrics.parquet",
+      "sha256": "a9c7f34372a3470d3e6b9aaa0cc3579b51e7298aa2b2272555f56e75abda8229"
+    },
+    {
+      "run_id": "0aaa10081ee22dc8bdd56613",
+      "path": "data\\round4\\re1ss_user_loss_4\\metrics.parquet",
+      "sha256": "235522ed235fec486dc2f9cd80ecfa2e90848a7835fc0e6a45fa94a14a233f18"
+    },
+    {
+      "run_id": "4d4db035bcc802da2850d3c4",
+      "path": "data\\round4\\re1ss_user_loss_5\\metrics.parquet",
+      "sha256": "dba96ea0f1c7177e2e136ab6327daf04b762eb394d62b906d97fd555b67427b5"
+    },
+    {
+      "run_id": "0a6a87a5eb6245947b65400a",
+      "path": "data\\round4\\re1ss_user_mem_1\\metrics.parquet",
+      "sha256": "9f64528e70250d3be1c20aabae441ae937786de4cebcc5dee4b993790647995f"
+    },
+    {
+      "run_id": "f196499c0110ff93f3c89717",
+      "path": "data\\round4\\re1ss_user_mem_2\\metrics.parquet",
+      "sha256": "346d123e877a3018e80c79c800cc2ceb378152c8a41622b1851731cfa8969cf0"
+    },
+    {
+      "run_id": "6014bc12832bffbc01d82ea7",
+      "path": "data\\round4\\re1ss_user_mem_3\\metrics.parquet",
+      "sha256": "14bcb31d6c40093f038c5c4586383eb61a653b8dfaee0fdb79672ffead2aaf06"
+    },
+    {
+      "run_id": "3a7465e6a27308fa1ca61190",
+      "path": "data\\round4\\re1ss_user_mem_4\\metrics.parquet",
+      "sha256": "da057a82b8ce5c73437c9e07f21277e516cd0b3276fb592f5a9a462961ed497a"
+    },
+    {
+      "run_id": "d9feebb0d2e2c48c60b3b764",
+      "path": "data\\round4\\re1ss_user_mem_5\\metrics.parquet",
+      "sha256": "557fd2dbf7c305416de4c60250ae186ba56df5370f2a98779c2c5a9643600e53"
+    },
+    {
+      "run_id": "0ec1fd560716ff076c72a706",
+      "path": "data\\round4\\re2ss_carts_cpu_1\\metrics.parquet",
+      "sha256": "86600d6cb1d76a764602fcc1a5b9fb62e213fe33f01e5366f7cb4682470c9d8e"
+    },
+    {
+      "run_id": "04794061ffc3a4be04359733",
+      "path": "data\\round4\\re2ss_carts_cpu_2\\metrics.parquet",
+      "sha256": "f51a39a9925c881daf517b2100e5f3b3e6f44fb8174e16a8e784120557f3ae8a"
+    },
+    {
+      "run_id": "d86709911776e1dc30536d58",
+      "path": "data\\round4\\re2ss_carts_cpu_3\\metrics.parquet",
+      "sha256": "3213cef96225f4db4fd9d7cd701c0df5283c6f27800ee6fa9378c0667a27b950"
+    },
+    {
+      "run_id": "394b273941208e7ec35ce19a",
+      "path": "data\\round4\\re2ss_carts_delay_1\\metrics.parquet",
+      "sha256": "cdd740ff7715f0c77acdb7bd4e8045ebc04f26fa54857c0ac5d8baa68286712c"
+    },
+    {
+      "run_id": "ab1524814c5471db1b65ca61",
+      "path": "data\\round4\\re2ss_carts_delay_2\\metrics.parquet",
+      "sha256": "d007a519f3718df19951081ac7cb50983bc87a78085abf0a0c22aa9a73c89f20"
+    },
+    {
+      "run_id": "29c4a3778a6071b1a61342c6",
+      "path": "data\\round4\\re2ss_carts_delay_3\\metrics.parquet",
+      "sha256": "1818445052dbb850160e3abc8bb5f13f68cf9ecf8138cca37406550dfde5e2b2"
+    },
+    {
+      "run_id": "cce449fae641f00a789ec169",
+      "path": "data\\round4\\re2ss_carts_disk_1\\metrics.parquet",
+      "sha256": "2f98e3cbf7213ea0b0d5b6ca89df4b87b1408503b17e5cd62c4321af68bb8679"
+    },
+    {
+      "run_id": "5a229245ed1166f68a3a16b6",
+      "path": "data\\round4\\re2ss_carts_disk_2\\metrics.parquet",
+      "sha256": "50e99003ed635392934e9d688404165d60cd0bd09b478abafc1d11f8ff932e52"
+    },
+    {
+      "run_id": "512d86d809d22738fedfd759",
+      "path": "data\\round4\\re2ss_carts_disk_3\\metrics.parquet",
+      "sha256": "f2f78af0a44f2285b00ab79bb3635cf4cc3dc04b3f29c0c058846a8f541125a1"
+    },
+    {
+      "run_id": "40667899a724b4ef3b8e2e0a",
+      "path": "data\\round4\\re2ss_carts_loss_1\\metrics.parquet",
+      "sha256": "271524c44320a953384f0a538ef9b3df76e4d1860672b64cb229c9e72e4aa5bf"
+    },
+    {
+      "run_id": "f5164f95dcd79676050bc2f9",
+      "path": "data\\round4\\re2ss_carts_loss_2\\metrics.parquet",
+      "sha256": "24c0674b235d150ab5d5196a5fb8a2dd370daf022b2de989b831fe64fefae5e5"
+    },
+    {
+      "run_id": "f8f7e7d35c9ac4a4ce238fef",
+      "path": "data\\round4\\re2ss_carts_loss_3\\metrics.parquet",
+      "sha256": "1432013b8788c7f4430a4386bf0474580af2123943acc5a3e32afcea7e83e38c"
+    },
+    {
+      "run_id": "2c04cecc44ce6410eb0e209a",
+      "path": "data\\round4\\re2ss_carts_mem_1\\metrics.parquet",
+      "sha256": "a396c62384a6b2d9f6ce18e1856e0b96117b435d678ddcef4879dd6268e4a524"
+    },
+    {
+      "run_id": "db25fa8c137b9fc1db544ac0",
+      "path": "data\\round4\\re2ss_carts_mem_2\\metrics.parquet",
+      "sha256": "9533f1d3d66f1996a3c834eeec1805ce150b2d91ac7cb03e19b174c87bf078ef"
+    },
+    {
+      "run_id": "2c59c7378dc05991247e71c9",
+      "path": "data\\round4\\re2ss_carts_mem_3\\metrics.parquet",
+      "sha256": "6df58e29853b69a960c8c752f2b55fb089a3ec47430f7ac3018824be24e427a8"
+    },
+    {
+      "run_id": "f12b1443307a57694356be3a",
+      "path": "data\\round4\\re2ss_catalogue_cpu_1\\metrics.parquet",
+      "sha256": "7ffa0441bb55d710f1d18fd27486eb8f1b8202931b49c14a23de656fe6d6f45c"
+    },
+    {
+      "run_id": "efcd3c025d7e17a87fe83913",
+      "path": "data\\round4\\re2ss_catalogue_cpu_2\\metrics.parquet",
+      "sha256": "877e13f25a5f8b8bf0366ced3ac9af2f020e936b42103afe79a5accadeeec40a"
+    },
+    {
+      "run_id": "afd12b38882329aa71028f17",
+      "path": "data\\round4\\re2ss_catalogue_cpu_3\\metrics.parquet",
+      "sha256": "a4ee3d5b15eaae38be6d520995a521e5cbf6e5918f8c58aebdf2167a3b41a80a"
+    },
+    {
+      "run_id": "b630b221be84c52b0a4db3b6",
+      "path": "data\\round4\\re2ss_catalogue_delay_1\\metrics.parquet",
+      "sha256": "7ee964c5aef51816a519d3dc4a4b707d89a58ee21d1d88d649a608096852a66d"
+    },
+    {
+      "run_id": "38e7a34d72a664cef712feee",
+      "path": "data\\round4\\re2ss_catalogue_delay_2\\metrics.parquet",
+      "sha256": "fff7549271bfd2f7e694b161b92618c48d6c6b5039c62965233a212a7c6dd692"
+    },
+    {
+      "run_id": "1632d6c1276806617aab50a8",
+      "path": "data\\round4\\re2ss_catalogue_delay_3\\metrics.parquet",
+      "sha256": "d8a5b4fb19196da7ec02e533a4e8b84a857832185c6969057f3c67d042271ebe"
+    },
+    {
+      "run_id": "74277310a1de718d61bfb138",
+      "path": "data\\round4\\re2ss_catalogue_disk_1\\metrics.parquet",
+      "sha256": "710c4adb549be827bb7c6a98657b5fd91db2d5660647e9dc8f94c9027c8c6c92"
+    },
+    {
+      "run_id": "66f62812927a257a5a3c6d48",
+      "path": "data\\round4\\re2ss_catalogue_disk_2\\metrics.parquet",
+      "sha256": "f804248894f18fc8040cfed1712804a5c2091d1334bf378c0813d7cde1a4a703"
+    },
+    {
+      "run_id": "fd6c62eb30906322da5d24d2",
+      "path": "data\\round4\\re2ss_catalogue_disk_3\\metrics.parquet",
+      "sha256": "40ce4ce6534ed7cb062cba2cccfdf1b925a976694c61bdaf5a0dcc9d949cec38"
+    },
+    {
+      "run_id": "f1cc2a2484365469bae1cfd0",
+      "path": "data\\round4\\re2ss_catalogue_loss_1\\metrics.parquet",
+      "sha256": "8d94a9276ef819cb6b6c09fc7efad007ae44e1ca2c753d437b37a35cb5890948"
+    },
+    {
+      "run_id": "35df5ca7535b543b97e8d551",
+      "path": "data\\round4\\re2ss_catalogue_loss_2\\metrics.parquet",
+      "sha256": "a4769b56ad2ae0e8dd34eeedd9ff7439a21a82e5a745f7d1778e28edb9d4d711"
+    },
+    {
+      "run_id": "22753315242e76c8a27046fc",
+      "path": "data\\round4\\re2ss_catalogue_loss_3\\metrics.parquet",
+      "sha256": "e99ef22d087b8044f678a1ea1c3107d24b85f950738d3f8a095faf1898791d69"
+    },
+    {
+      "run_id": "a023e473997d8781c90c6fac",
+      "path": "data\\round4\\re2ss_catalogue_mem_1\\metrics.parquet",
+      "sha256": "13d067f4d128ac64a949744dc4f6363bf517651f91d7333d46132fc9f1ac7d5f"
+    },
+    {
+      "run_id": "311016e3b6a96bb88f9e444f",
+      "path": "data\\round4\\re2ss_catalogue_mem_2\\metrics.parquet",
+      "sha256": "46c4fe0fe75deb3d207dbd8da4a4d89b6b307762d60f8eb8d9d4e93a1acfb9e6"
+    },
+    {
+      "run_id": "bad32e97ffd5117780170961",
+      "path": "data\\round4\\re2ss_catalogue_mem_3\\metrics.parquet",
+      "sha256": "5e35e2c7650946ee28a798a3501fc7c3302edea541c5cd9f8bb2d6295f699cec"
+    },
+    {
+      "run_id": "79f7d2dd252e32c415a1e617",
+      "path": "data\\round4\\re2ss_orders_cpu_1\\metrics.parquet",
+      "sha256": "0b725ed140cd405b5b7c0b9a01d65271fd628b016d524905ffe108e54bfb01cb"
+    },
+    {
+      "run_id": "2a4346330b65263e6b6008b8",
+      "path": "data\\round4\\re2ss_orders_cpu_2\\metrics.parquet",
+      "sha256": "e994f36632845a3f4e277c92e22ff895dd2575656192d94807c1408b7d68e65a"
+    },
+    {
+      "run_id": "dc5bb2261d2f72a547a157c0",
+      "path": "data\\round4\\re2ss_orders_cpu_3\\metrics.parquet",
+      "sha256": "f86c9782e7efecc781ab42c1581bc6882588307c1afa9d96088801d7266f5d0e"
+    },
+    {
+      "run_id": "509b6b3697a2bfa9aefa62f1",
+      "path": "data\\round4\\re2ss_orders_delay_1\\metrics.parquet",
+      "sha256": "cd747527c03e6ed848513342deed517febcbe9b36c7153093fcb3835601b730f"
+    },
+    {
+      "run_id": "bddbd926c8715efdee0406c0",
+      "path": "data\\round4\\re2ss_orders_delay_2\\metrics.parquet",
+      "sha256": "15decea2a3b185311a64e73957fa9581bec019e5ee3e1cd7c02ecedcaa9fa73a"
+    },
+    {
+      "run_id": "8e68e71d76f74db1b8519a10",
+      "path": "data\\round4\\re2ss_orders_delay_3\\metrics.parquet",
+      "sha256": "0264e014c6f2e9716c2df98addf6ecae2ececb56f69f056bcee3bf1ee548d9a7"
+    },
+    {
+      "run_id": "fe5c9414a9e591d067260a48",
+      "path": "data\\round4\\re2ss_orders_disk_1\\metrics.parquet",
+      "sha256": "f2563901c968f33b7af328701c6bd4ca65a5ac9398862ea519836962bf9cd15a"
+    },
+    {
+      "run_id": "a287f0741ae95c96e3cfa3b0",
+      "path": "data\\round4\\re2ss_orders_disk_2\\metrics.parquet",
+      "sha256": "1ca2a9a4f1e9b296a242fb8db460a2bf59cd40a8e056f22b5c6de4ad5925e685"
+    },
+    {
+      "run_id": "cc1657b0fabc9cbec57422f4",
+      "path": "data\\round4\\re2ss_orders_disk_3\\metrics.parquet",
+      "sha256": "122d81fab7c73d863c9d1e84eb60c7c96d40ae3c4c8f96d9d01cdeed23706274"
+    },
+    {
+      "run_id": "be3a9fba9f56bce0df20b095",
+      "path": "data\\round4\\re2ss_orders_loss_1\\metrics.parquet",
+      "sha256": "fb61d06bd040deb2f9f610b62976cb2c069f5a038975a04b5e72b7ef93446c6c"
+    },
+    {
+      "run_id": "566e006edbeddc24c18b1cbd",
+      "path": "data\\round4\\re2ss_orders_loss_2\\metrics.parquet",
+      "sha256": "84c180302d1447d72f864f6ad6d60864a38cc7972e0d49c0fc48a9245bd8b2bc"
+    },
+    {
+      "run_id": "e2badd80e0bea7311b95e819",
+      "path": "data\\round4\\re2ss_orders_loss_3\\metrics.parquet",
+      "sha256": "bf7beefb45a4ddab130d260987bff0e75034e56a33c94930360e69f920cbf1e8"
+    },
+    {
+      "run_id": "493339e338e4be04df0aad72",
+      "path": "data\\round4\\re2ss_orders_mem_1\\metrics.parquet",
+      "sha256": "a659f2eaa202d5262e7f503864790019e192717b3e287458a2a273a21019faaf"
+    },
+    {
+      "run_id": "33e01584da099a39e96a08c6",
+      "path": "data\\round4\\re2ss_orders_mem_2\\metrics.parquet",
+      "sha256": "a890b52faaab6d71d9eb151ff18399c261feb3d45cf28f84e91f4cc4e0245775"
+    },
+    {
+      "run_id": "5410966c5a82406ccdafd74f",
+      "path": "data\\round4\\re2ss_orders_mem_3\\metrics.parquet",
+      "sha256": "00f1f5e4e40b6a0a4ef0079d3d481906a1f4e7371f9d8aa7e7ed901f62230b90"
+    },
+    {
+      "run_id": "fcc19dae1108f092045645cf",
+      "path": "data\\round4\\re2ss_payment_cpu_1\\metrics.parquet",
+      "sha256": "09bc7398424ff96cca4e7d57189558172d51bd7fce0cf55d9c313fed7cc8c0bb"
+    },
+    {
+      "run_id": "847abeb18daf570f76c2e10d",
+      "path": "data\\round4\\re2ss_payment_cpu_2\\metrics.parquet",
+      "sha256": "bf71efdef0418328922bee3d796321a24ef61928fd8a6bd21ff8b2eeb132646e"
+    },
+    {
+      "run_id": "635a445ca16e6d2996ca5751",
+      "path": "data\\round4\\re2ss_payment_cpu_3\\metrics.parquet",
+      "sha256": "eb516d43907dc7495d30959131d00e8e74f5abca7065d87feded3770e6251d1d"
+    },
+    {
+      "run_id": "89ce37ea30e112ffd9220b4a",
+      "path": "data\\round4\\re2ss_payment_delay_1\\metrics.parquet",
+      "sha256": "2d5fc2e2775df334161147578d7e3064d689f86c81625d31ae3510eabb141979"
+    },
+    {
+      "run_id": "d9f52ec3d989314c4531bfb6",
+      "path": "data\\round4\\re2ss_payment_delay_2\\metrics.parquet",
+      "sha256": "105dc1fde3cbd552613a6ad061ae80fe0917009df8ef8406025a0b9d64b3ea9f"
+    },
+    {
+      "run_id": "5d79d91c5419bb27ddab8be2",
+      "path": "data\\round4\\re2ss_payment_delay_3\\metrics.parquet",
+      "sha256": "aaeec67b570e73d4c596eb5b91f9d3795b9effcd8da25e78108d3c46de5cca3a"
+    },
+    {
+      "run_id": "b00ae6ce029b5c9f7b3ad3d0",
+      "path": "data\\round4\\re2ss_payment_disk_1\\metrics.parquet",
+      "sha256": "f3e71713372cbc44df404f030cd69d0de406b384e98e9cf5c78b086155b6f0a8"
+    },
+    {
+      "run_id": "97dba8bbae26d676a5f7b600",
+      "path": "data\\round4\\re2ss_payment_disk_2\\metrics.parquet",
+      "sha256": "bbcf79d5791d8efa3d999b04d2da236e81f1262e8f9ee4b57b403f3ff302bd30"
+    },
+    {
+      "run_id": "af7879268e82a17ebd9878d0",
+      "path": "data\\round4\\re2ss_payment_disk_3\\metrics.parquet",
+      "sha256": "cd6d4e303a07ee428c9444bc1ebbaf5f310cf6419fa1705a1ddd993aeb579ba9"
+    },
+    {
+      "run_id": "35b35bad541566de4ac685e8",
+      "path": "data\\round4\\re2ss_payment_loss_1\\metrics.parquet",
+      "sha256": "f15f66c05be157814c41df5fd994134a8bbc9f3f4d351f7e896d156306837d91"
+    },
+    {
+      "run_id": "ca61012a9214bd3744b38656",
+      "path": "data\\round4\\re2ss_payment_loss_2\\metrics.parquet",
+      "sha256": "8a6f0243d11a286f4085778dd81457118e5986a5c765b2ef9d99be7eefe828f9"
+    },
+    {
+      "run_id": "fd307a526b828e67053b1afa",
+      "path": "data\\round4\\re2ss_payment_loss_3\\metrics.parquet",
+      "sha256": "6e7a1b1e098389c5f6f0486207fd146cf7b5396639173c06aab5ea517f32900c"
+    },
+    {
+      "run_id": "a1e6d125fc5b5855369d37d2",
+      "path": "data\\round4\\re2ss_payment_mem_1\\metrics.parquet",
+      "sha256": "a0df03e26373d8c2c5a464625838c7fe64ee38187ae46f0f00e1163e6a62ccee"
+    },
+    {
+      "run_id": "adc8d57049637266dffb0cd3",
+      "path": "data\\round4\\re2ss_payment_mem_2\\metrics.parquet",
+      "sha256": "01616d020289fbd1c701e78c5b75d0629561150cca8992b7b3c00c8b54f3e635"
+    },
+    {
+      "run_id": "c62dd39def5831aef76a6f95",
+      "path": "data\\round4\\re2ss_payment_mem_3\\metrics.parquet",
+      "sha256": "8a06c595696dbc14dbf60e03f4f492f0feb1c3da2b180006fff7eb8345c8f007"
+    },
+    {
+      "run_id": "093e1d636fa40891747cc602",
+      "path": "data\\round4\\re2ss_user_cpu_1\\metrics.parquet",
+      "sha256": "7b471a0963add6fc8edea47ce7ea134c76177213a8868b15bdd3ac63d8ee8dd5"
+    },
+    {
+      "run_id": "d58c667bbfad5562a03362d8",
+      "path": "data\\round4\\re2ss_user_cpu_2\\metrics.parquet",
+      "sha256": "18353c97e431318615e3ec86b570900ddedad8ae68bacac12db7c9a61ab66dd0"
+    },
+    {
+      "run_id": "c105aaa3f08dac08ba1eb4da",
+      "path": "data\\round4\\re2ss_user_cpu_3\\metrics.parquet",
+      "sha256": "f295e917faff65e754fdf89c4c1d806506dcd9b74607a96b123b6c4f8fd08f64"
+    },
+    {
+      "run_id": "dcd0d07889b7c475cfd29f96",
+      "path": "data\\round4\\re2ss_user_delay_1\\metrics.parquet",
+      "sha256": "a8c9f53edfd045363303b886577fe60cfbabd930be7509e0151db333e45d1582"
+    },
+    {
+      "run_id": "585cec562cf346350a162d2f",
+      "path": "data\\round4\\re2ss_user_delay_2\\metrics.parquet",
+      "sha256": "86f7ccf530f373ed1a2526fbd539ec9a933f73a3ee5d1eca9f684254885e2a2c"
+    },
+    {
+      "run_id": "1bd8df50b9c37441bbcf6c13",
+      "path": "data\\round4\\re2ss_user_delay_3\\metrics.parquet",
+      "sha256": "3c736f744cf147b4b80a2533e53c8f8dbbbebbe13b4c328febeabca16abf5b1c"
+    },
+    {
+      "run_id": "996705074316baa041b54133",
+      "path": "data\\round4\\re2ss_user_disk_1\\metrics.parquet",
+      "sha256": "f803def38a9e1cdcd45f25cd1877c882eb9d9fc3b81db20dfcf5ed30f43055f0"
+    },
+    {
+      "run_id": "5772c699b14d7a59971b778a",
+      "path": "data\\round4\\re2ss_user_disk_2\\metrics.parquet",
+      "sha256": "d146edf638fd59f267c639773bc42c6da42fe9d4a6311135ef0e6ec9577ad721"
+    },
+    {
+      "run_id": "2e10f74aa073a9c93f3fdc87",
+      "path": "data\\round4\\re2ss_user_disk_3\\metrics.parquet",
+      "sha256": "8d767fad9f20f3777a942f43d7d8964592bf8b633227fd3e499e9b5b621537fc"
+    },
+    {
+      "run_id": "917c28ec9f12f4cea77c56af",
+      "path": "data\\round4\\re2ss_user_loss_1\\metrics.parquet",
+      "sha256": "529070cd91ec1436f37ecaf14568623f3b76fb269212be66505b2aeca3e1d5ee"
+    },
+    {
+      "run_id": "2d8143b7ac4d7a603471d493",
+      "path": "data\\round4\\re2ss_user_loss_2\\metrics.parquet",
+      "sha256": "2af61b6b443e2d7742ea3a9c3e6a9aeb425e4fa3f77d77af08fc91e2128bb9f6"
+    },
+    {
+      "run_id": "783ce9e34223447187b3619c",
+      "path": "data\\round4\\re2ss_user_loss_3\\metrics.parquet",
+      "sha256": "25e3b566da528b02b547a976621c2787b547c1966737560cad7495689b0a7cf3"
+    },
+    {
+      "run_id": "07919ab9f70e018b0668f337",
+      "path": "data\\round4\\re2ss_user_mem_1\\metrics.parquet",
+      "sha256": "9d3699ead96fc022eabcd23200566024a82aa4b76f642ab85bd4bf64c2fd3bc5"
+    },
+    {
+      "run_id": "553ed47c6af06d3fbefe3846",
+      "path": "data\\round4\\re2ss_user_mem_2\\metrics.parquet",
+      "sha256": "0bd0fa7744da49ca8bd86bd60ccc932b4af31440f69929aaabd35b39bd3ec020"
+    },
+    {
+      "run_id": "5dd1a7bd1947b9f178ec9148",
+      "path": "data\\round4\\re2ss_user_mem_3\\metrics.parquet",
+      "sha256": "80cce14280705307f891165e1082f60d1a0f4e8075ef59ee9101344e83d04d5b"
+    }
+  ],
+  "coverage_by_split": {
+    "regression_re1_ob": {
+      "metrics": 814,
+      "with_dynamics": 814
+    },
+    "gate_selection": {
+      "metrics": 5502,
+      "with_dynamics": 5479
+    },
+    "calibration": {
+      "metrics": 2556,
+      "with_dynamics": 2493
+    },
+    "model_validation": {
+      "metrics": 2538,
+      "with_dynamics": 2532
+    },
+    "train": {
+      "metrics": 10142,
+      "with_dynamics": 10065
+    },
+    "regression_re2_ob": {
+      "metrics": 1831,
+      "with_dynamics": 1825
+    },
+    "regression_ss": {
+      "metrics": 2024,
+      "with_dynamics": 2018
+    }
+  },
+  "records": [
+    {
+      "run_id": "21fe50b25236688ea0b6594e",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1098
+    },
+    {
+      "run_id": "efd454dfde62e0ef1f2ded12",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1077
+    },
+    {
+      "run_id": "83e5854748d14cd269313c11",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1091
+    },
+    {
+      "run_id": "7b17f011d5e858439a3dce7c",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1057
+    },
+    {
+      "run_id": "4ce07f0e823ce9cc532283ca",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1069
+    },
+    {
+      "run_id": "6d52ba233f1eae620f7dd40f",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "dc2c47bc653c42019122e026",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "ae7a55546bd239158a1c0f87",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "44b2ee08820479f9f251c02f",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "b8ed69ed6d8af385e112b117",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1304
+    },
+    {
+      "run_id": "dc72fd144dc07825b95e9f8f",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "d0e4cdd03f963268b0b837e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1276
+    },
+    {
+      "run_id": "1e42937d14ae06533a9dc011",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1286
+    },
+    {
+      "run_id": "4a40a5b9c9edacbf102d3de3",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "4b9bcfee80f9d6dd0a45ba4e",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1281
+    },
+    {
+      "run_id": "c804332a86f2b75587d636b4",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1323
+    },
+    {
+      "run_id": "a5b9b34d974ceb23210c41e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "317d870b6bfdb9bc4fd3e2fa",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "c4a0b355e9f41a7292554ccc",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "bbbfd5c80988068515990283",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1316
+    },
+    {
+      "run_id": "0f21a2ab0af4e53a4f5773e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1070
+    },
+    {
+      "run_id": "962a2f1ec62f8b62b24b27cf",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1066
+    },
+    {
+      "run_id": "c4dfa4744b8839cd3ce67a49",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1084
+    },
+    {
+      "run_id": "2c11d2bd3b8dd0106a410acd",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1062
+    },
+    {
+      "run_id": "5fa77e02707286538d2c02d4",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1066
+    },
+    {
+      "run_id": "7b597dce8e17e7578f1d572b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "52461e0c6bed588e5d3558e8",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1071
+    },
+    {
+      "run_id": "6d10e109856ee5251d5d231f",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1063
+    },
+    {
+      "run_id": "4b6cd49950d26020a44cbfba",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1073
+    },
+    {
+      "run_id": "704205d07bf129586fc039df",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1061
+    },
+    {
+      "run_id": "74692e033da8462ad910c85a",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "db1da670631ff8674a667193",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "82cdb6657e41396f4e6d7532",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "73c9f93dd8e1e00153f844fa",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "bfd14b9d5c95fe2941976f07",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1302
+    },
+    {
+      "run_id": "621e32d6eaef77f65256d94d",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1264
+    },
+    {
+      "run_id": "0bede9ee50d30983f526b09e",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1287
+    },
+    {
+      "run_id": "383d01dff1a7c11c357a8b7d",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "39ea50da29d99b7ebb8fced3",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1289
+    },
+    {
+      "run_id": "054a3237ad43dc034b43f328",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "9c52537556ba84c8736f430b",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1320
+    },
+    {
+      "run_id": "44f4dacd9be40391fda5407b",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1313
+    },
+    {
+      "run_id": "ac186cd4f7d3d915a519a8dd",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "7b5dd20595266d6cd4bf490b",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1302
+    },
+    {
+      "run_id": "9cb104e6dfecdb5c1e324b91",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "34a5fc24ee7a702e021b8e7d",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1072
+    },
+    {
+      "run_id": "5b264db6fc27feb0e1c32027",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "340b38e18c78d735f3eaa79f",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1060
+    },
+    {
+      "run_id": "e753d2a4d93efc42214d6ea6",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1068
+    },
+    {
+      "run_id": "888735b551ad1c03171876a7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1057
+    },
+    {
+      "run_id": "c6d2864520ee3d766412a162",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1062
+    },
+    {
+      "run_id": "fc850df56c3937cc5b7e0b2e",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1059
+    },
+    {
+      "run_id": "9edddbbf48a94d96d896e929",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1059
+    },
+    {
+      "run_id": "ab5967d895935ed7e41a1b72",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1080
+    },
+    {
+      "run_id": "6e019d2b5ef661fad5fc2522",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1073
+    },
+    {
+      "run_id": "f6d0f453c7fde9ce2fa77f9d",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1295
+    },
+    {
+      "run_id": "08d2b6d03169b7532ddd788f",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1286
+    },
+    {
+      "run_id": "9877487869f2836a221a4fc9",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1284
+    },
+    {
+      "run_id": "90e2d3f7583aa10000ff52e8",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1297
+    },
+    {
+      "run_id": "7357791b73affa177ad3cda5",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1325
+    },
+    {
+      "run_id": "a74cd18c019269df584f6a35",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1275
+    },
+    {
+      "run_id": "c0929a471848e113cee6f164",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "4ef636dbea013586152ef795",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "cd41a7743aad542bc9248791",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "d8448a5bc5754b32d1502bdf",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "cf85df46f1fa9667bf0b8727",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1327
+    },
+    {
+      "run_id": "e1f7e6a831358708f745c734",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1314
+    },
+    {
+      "run_id": "ffdc51b0aa4071303a8330c2",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1304
+    },
+    {
+      "run_id": "862ffe41b95016e9f8a64dc0",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "9b91e2cea498a63f467530a5",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "adc5a196741fb7e650f144b5",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1075
+    },
+    {
+      "run_id": "c9a4b1a068a4e0053e08adad",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1069
+    },
+    {
+      "run_id": "d358fe8d043b84d6bf650ef9",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1064
+    },
+    {
+      "run_id": "3c98e50e1f9c1a5872c6923b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "095c72f94f03034c83400f6a",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1071
+    },
+    {
+      "run_id": "750b31e440a14921840f1ddb",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1051
+    },
+    {
+      "run_id": "5014289367470c829f351d53",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "bc5c94d0081228277f96ea06",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1074
+    },
+    {
+      "run_id": "44c3349657d7d186ed5fffba",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1074
+    },
+    {
+      "run_id": "48cb2b26d8eaf0c61555034e",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1073
+    },
+    {
+      "run_id": "3798247404bbcd5190dfe271",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1295
+    },
+    {
+      "run_id": "5e9e51602d294dabc8575abc",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1284
+    },
+    {
+      "run_id": "997d073d1980404816611789",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "fc0701e8f3a251090bb14ead",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "cacce74855793701f46d534f",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1298
+    },
+    {
+      "run_id": "3daf57158daef7d598616b38",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1272
+    },
+    {
+      "run_id": "713bc20c73338c51cd9f91da",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "837a7d33e27e295b322e8ec5",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "1c70ba7e5947bcc6fc984531",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1278
+    },
+    {
+      "run_id": "6907562bccdbf715db018a13",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1269
+    },
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 0,
+      "usable": false,
+      "tokens": 854
+    },
+    {
+      "run_id": "751ead6e979a349b71ffcc5f",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1298
+    },
+    {
+      "run_id": "696b6ca4c2d057fcf67fc899",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "f12983285c6b56a90e382aa2",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "fbb8036409fe47798d1d1c1c",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "d9b0c8241840f916331fed0f",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1060
+    },
+    {
+      "run_id": "441f4848151f6bfe4959a490",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1072
+    },
+    {
+      "run_id": "7d3387e69ad8093361c728bc",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1066
+    },
+    {
+      "run_id": "9982feb4578e4f43b1aabebb",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1068
+    },
+    {
+      "run_id": "8820db229b57b86ffa1b9a5a",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1073
+    },
+    {
+      "run_id": "8462c8793839ce57cd54cdb4",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1095
+    },
+    {
+      "run_id": "8e904a43f2986e996bdbffbe",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1069
+    },
+    {
+      "run_id": "e53d3ed33e4c2cc632a2c669",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 0,
+      "usable": false,
+      "tokens": 826
+    },
+    {
+      "run_id": "a71272acd2fe0997acb7c8b7",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1077
+    },
+    {
+      "run_id": "a802765698d3e965d8775d9d",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1078
+    },
+    {
+      "run_id": "d2eb8b65188068d01dd78619",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1285
+    },
+    {
+      "run_id": "e907a8050f83593bb0d5e8f7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "6f1365a589564793eedd5271",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "5907a888e41810a59c6c56fa",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 56,
+      "usable": true,
+      "tokens": 1262
+    },
+    {
+      "run_id": "1acf973eeb55223dd1401bcb",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1291
+    },
+    {
+      "run_id": "b8816a5993f6e17b0b0f247a",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1284
+    },
+    {
+      "run_id": "39e972166970bbbce4d3ae66",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1286
+    },
+    {
+      "run_id": "6f79c6a4f64bceb5504945d9",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1283
+    },
+    {
+      "run_id": "3bae0f8e18b4275a25ef1c13",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "af063e5188c6b2fd0b0530e1",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "95323f829eb2cdc0a7a9c694",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "cbf9a571afab324819a511c5",
+      "split": "calibration",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "b352ccc9ecac53f4d79c1861",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1313
+    },
+    {
+      "run_id": "8f5e25c7853f01dac914f5d1",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "e4782bdfc154e740505466ef",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1322
+    },
+    {
+      "run_id": "74e2a260f2013101199b3f80",
+      "split": "gate_selection",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1056
+    },
+    {
+      "run_id": "cbc247593db62bbaff1e94c7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1075
+    },
+    {
+      "run_id": "64af67464eab2734e054fd73",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1064
+    },
+    {
+      "run_id": "a5a8aaad73b0dc500441ac0b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1063
+    },
+    {
+      "run_id": "d895a0f5958d554ff40177bf",
+      "split": "regression_re1_ob",
+      "cohort": "RE1-OB",
+      "dynamics_retained": 49,
+      "usable": true,
+      "tokens": 1061
+    },
+    {
+      "run_id": "9ab31bb621d3e0d8f2897404",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1477
+    },
+    {
+      "run_id": "e2eeb171fbb7c286d627e338",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1519
+    },
+    {
+      "run_id": "b9b1841de08e5a310d7a19f8",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1496
+    },
+    {
+      "run_id": "fa27e0d1876a557015bc4348",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1515
+    },
+    {
+      "run_id": "5edcafb57f99d79d2ee7d28d",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1527
+    },
+    {
+      "run_id": "cd53d41710affaee66337a56",
+      "split": "calibration",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1524
+    },
+    {
+      "run_id": "9a525222a48b89519effc22b",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 73,
+      "usable": true,
+      "tokens": 1519
+    },
+    {
+      "run_id": "8000fa55d1c1ac841e8f6b2d",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 68,
+      "usable": true,
+      "tokens": 1423
+    },
+    {
+      "run_id": "24387285acf41cf89445b591",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1434
+    },
+    {
+      "run_id": "0a6f2329dca752051eced5b8",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1510
+    },
+    {
+      "run_id": "5e32212427a2c11858169a1d",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1533
+    },
+    {
+      "run_id": "b39b6119a08d7b7c23e385d8",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 69,
+      "usable": true,
+      "tokens": 1495
+    },
+    {
+      "run_id": "6ebe12cfee90cb9811edf56a",
+      "split": "calibration",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1432
+    },
+    {
+      "run_id": "c2471bfe4cabeb3b9e376c4c",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1524
+    },
+    {
+      "run_id": "c1a04d1ba7de8dbc2c58292e",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1505
+    },
+    {
+      "run_id": "20ab37ccb42291037032aaf1",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1523
+    },
+    {
+      "run_id": "e868d5254597f5ce9c695770",
+      "split": "calibration",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1522
+    },
+    {
+      "run_id": "c12c7f6d92a32e1453508ebd",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1524
+    },
+    {
+      "run_id": "5cfb4ad3e095988a686a326b",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1539
+    },
+    {
+      "run_id": "5d16ca1fb13294e3197a6482",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1537
+    },
+    {
+      "run_id": "1e09481338c69541448d5d0b",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1523
+    },
+    {
+      "run_id": "36c5f09960143aaf4d2ea4d7",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 73,
+      "usable": true,
+      "tokens": 1505
+    },
+    {
+      "run_id": "6964ef02b6108a5f1eef252d",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1535
+    },
+    {
+      "run_id": "c218b6d37345bca2bd28b89b",
+      "split": "calibration",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1524
+    },
+    {
+      "run_id": "9d82c8b8d583c89e35470808",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1505
+    },
+    {
+      "run_id": "f8c60f1c81675f0c04f88051",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1528
+    },
+    {
+      "run_id": "8cd77d967050f2250df08824",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1517
+    },
+    {
+      "run_id": "5f40eb76c44aaf786a5aabe8",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1458
+    },
+    {
+      "run_id": "4a02e503ec61ac851da05f55",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1518
+    },
+    {
+      "run_id": "4f3d5a725f5be826f6bb5fec",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1534
+    },
+    {
+      "run_id": "5ddde828f40eca37a8fcb216",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1479
+    },
+    {
+      "run_id": "d491eb0edbec6d8022166fb4",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1488
+    },
+    {
+      "run_id": "09bc6ac33020a4b1581db2a1",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1495
+    },
+    {
+      "run_id": "2c88bcc3ecf60b86f27ae2c9",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1500
+    },
+    {
+      "run_id": "f72f83445af4315cacabd01e",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1510
+    },
+    {
+      "run_id": "f225f4d50531fc76f99172c6",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1506
+    },
+    {
+      "run_id": "e3d5bb422657cf4bede301cf",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 73,
+      "usable": true,
+      "tokens": 1494
+    },
+    {
+      "run_id": "70ee6c3740ce01315d36c2a7",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1507
+    },
+    {
+      "run_id": "a8445703f47594c89d2c8834",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1508
+    },
+    {
+      "run_id": "5b40fee898627996dc7b4f6e",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1470
+    },
+    {
+      "run_id": "d4593da6bda5bdf2d4b04d54",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1502
+    },
+    {
+      "run_id": "c89e1cd0cb846af202640a40",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1522
+    },
+    {
+      "run_id": "9dd37341cd35615e690c58ba",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1463
+    },
+    {
+      "run_id": "2f58e82aece32c8ba7dc4432",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1496
+    },
+    {
+      "run_id": "b1fb4178a1269f250be24fb6",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1499
+    },
+    {
+      "run_id": "199b6da3d2d45ff1db467417",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1466
+    },
+    {
+      "run_id": "fbf324cd8cd7947c5e62b399",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1455
+    },
+    {
+      "run_id": "2d7a8a71d1965a501be03ce6",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1444
+    },
+    {
+      "run_id": "e15dcfd0d3769d59bcabad04",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1464
+    },
+    {
+      "run_id": "beb6f24a17ed130af9f2874d",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1477
+    },
+    {
+      "run_id": "054e489835012f8438da7eae",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1498
+    },
+    {
+      "run_id": "b935a0f794749d2f63505fc3",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1503
+    },
+    {
+      "run_id": "119ae31af074a86d82098bed",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1464
+    },
+    {
+      "run_id": "16193a4d504a8a970a5dca9b",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1479
+    },
+    {
+      "run_id": "f0fa3f97aaf3f59a53c593c1",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1473
+    },
+    {
+      "run_id": "bedce39822f1c91c60948802",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 73,
+      "usable": true,
+      "tokens": 1484
+    },
+    {
+      "run_id": "717663bf496f698ebfe3c3b7",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1532
+    },
+    {
+      "run_id": "1561133f8c7873d8c0a57968",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1454
+    },
+    {
+      "run_id": "b17767fc1316ed5cfe2fb885",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1454
+    },
+    {
+      "run_id": "b0195c897181cadddfbfcbf3",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1443
+    },
+    {
+      "run_id": "83497c625cc3222bc8a8a2b6",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1484
+    },
+    {
+      "run_id": "0eb0108d0cd4648716bd9d6f",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1508
+    },
+    {
+      "run_id": "600fe120a642ee3205886d12",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1510
+    },
+    {
+      "run_id": "532310c5ef1a2f9a4f7708bb",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1457
+    },
+    {
+      "run_id": "b9de3bf585ba61b4e1aa2c26",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1511
+    },
+    {
+      "run_id": "552e3d6387f099690460ad95",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1505
+    },
+    {
+      "run_id": "bb95fcd81e7ed274b5bd621d",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 73,
+      "usable": true,
+      "tokens": 1493
+    },
+    {
+      "run_id": "8ad019797e1898d727bdd311",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1507
+    },
+    {
+      "run_id": "b90067e0d40bd0639f79b32b",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1513
+    },
+    {
+      "run_id": "e00a3678a1a1a5c714f5c8f4",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 72,
+      "usable": true,
+      "tokens": 1495
+    },
+    {
+      "run_id": "c264dcd5d425d190bad6859c",
+      "split": "calibration",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 71,
+      "usable": true,
+      "tokens": 1481
+    },
+    {
+      "run_id": "a83caa602745ace294bda03d",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 68,
+      "usable": true,
+      "tokens": 1438
+    },
+    {
+      "run_id": "9cb313f397e19d48782c835a",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 70,
+      "usable": true,
+      "tokens": 1453
+    },
+    {
+      "run_id": "e7077f3da7cfd32cc7f93b1a",
+      "split": "regression_re2_ob",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1498
+    },
+    {
+      "run_id": "9d45f321aeda4d266eee8bd6",
+      "split": "gate_selection",
+      "cohort": "RE2-OB",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1509
+    },
+    {
+      "run_id": "d8c04b6d0fb9cb0acac46bbf",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1313
+    },
+    {
+      "run_id": "22eeb8727f7c631b00fcaceb",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "285a01db656bb23fbc506e81",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "9fcc9788e706ef6219da61c3",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "5f6d8f696564101ceed0a071",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "0ffbbef975bd3d9591a7d9ad",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "d6fd426b73f909dd3fafbb2e",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "7e671a0975fe9f3ebd2f9c5d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "d70fdf1d616b080e8fd4bcf8",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1314
+    },
+    {
+      "run_id": "481466ab0209e9ab62cd2f40",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "dec4b345102add4b948a6e1a",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1294
+    },
+    {
+      "run_id": "0cc013bd863f69eafc69e4db",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1308
+    },
+    {
+      "run_id": "e4248dae99ca23e7e1277d6d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "4ae2ff5e1188c105df619abf",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "37bdfeb08a21a03dfeeb24ab",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1290
+    },
+    {
+      "run_id": "4325c98e93ccfa553bcecb1e",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "dd2d08da92ad45aa52b2ffa7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "d1b96290ca6c917b2bf8da0f",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "f88d7548f13042a64d121b49",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1336
+    },
+    {
+      "run_id": "0976e20a0dddf9a8e7cd612d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1330
+    },
+    {
+      "run_id": "9191c2bc66a65b09cd7a74da",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "a3c6779fcb610fc20178c690",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "85f6ca06dbae43edbee7fecc",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "09dfeb592feec3d7be7d918c",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1322
+    },
+    {
+      "run_id": "95abf8ed22a09541ac9de284",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "0f67d1a288812bec765d598f",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "8903099dad6881f322724c14",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "5c3c768b5ec37f4ef81ea192",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "8a97bb53b9f500cbf581cbe8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1326
+    },
+    {
+      "run_id": "bdc54e3265bafc2fd21bc918",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "2dd1f5e8158c0639dce9c690",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1327
+    },
+    {
+      "run_id": "7d33a32c132865ca19f74d1e",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "ebdfe5827453bfee6fd3c71f",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1326
+    },
+    {
+      "run_id": "3498e07d2bc3952bdaf366d0",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1325
+    },
+    {
+      "run_id": "8d18946bedb3daceb4d5611a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "23f5b4dedda1211f36fac0a3",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1286
+    },
+    {
+      "run_id": "2740141ceeaa6611f13470ce",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "4540d257d515f6b9456e35ab",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "2985fe600a7d0eb89cd57b0c",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1420
+    },
+    {
+      "run_id": "1804cd18e9a65e5ece5b6f58",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1332
+    },
+    {
+      "run_id": "6a3d3281d689c236669309d6",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "0eb39a19b0184370cb6cce2b",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1345
+    },
+    {
+      "run_id": "4331ee15b74a31c2bc2bd41a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "9a35cec6a698feaa00ed312b",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1323
+    },
+    {
+      "run_id": "fb28719ba9ad1e2b1241a9eb",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "256c5ce919142c9128df5cc8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "641561b193799b1a506c83a8",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1332
+    },
+    {
+      "run_id": "e24b03174cb5bd07e33d7aa4",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1327
+    },
+    {
+      "run_id": "a784c8ea79eb16c8d6326192",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "fe5de3ac56cdfa909c047364",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "1ae8f343909a2c1abbdb740a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1336
+    },
+    {
+      "run_id": "d30d1c6f76b4afca53d8f569",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1316
+    },
+    {
+      "run_id": "0fa68eca0ae629bd465e8285",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "7256356ffb86c4ae6f46bc2c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "db08bd001dc297de305e5a13",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "3577255f3ddfe3acdec76240",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "0de55fe3adea637d81595c8c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "433315ec6255dd1746e42e15",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "21710f465c3f3221183a6e9c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "81aa915a707edadcae52c7ae",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1320
+    },
+    {
+      "run_id": "8f45e699d11b2d3a3c627a4c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "e32fe84a490ed95926850f5a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1349
+    },
+    {
+      "run_id": "99045ea8e64b3d7a6dec4a5a",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "d41613df5cea1fd49c1e2d3d",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1341
+    },
+    {
+      "run_id": "39cedb70fd22b80410295af2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1339
+    },
+    {
+      "run_id": "ff7fd7371b2b687e1775bccb",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1349
+    },
+    {
+      "run_id": "6f95ffe5aabd94895c7a7f4a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1338
+    },
+    {
+      "run_id": "a2e047d6447d73016c06b050",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1325
+    },
+    {
+      "run_id": "444588dd51068ddea6d798af",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1332
+    },
+    {
+      "run_id": "312c4d1ffe844a1073cd3392",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "b775bf10348599d6d15e85c7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "93e23bba33e402fc04af51fa",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1323
+    },
+    {
+      "run_id": "6ea530ecc35d80e76014f4e3",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "f3ecc579c50d9a6e27650d91",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "ed457761395f49c6a3e146df",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "eb628868752fbdc887afc783",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "a824e56bd1e0e1958cc22c45",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "520606e2fb17e4a29cecc9b2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1304
+    },
+    {
+      "run_id": "2e798afa02e34ddadad09a0b",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "66da48b16d95024d5d8b5492",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "c89f041f5db53920dfd6a075",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "b830ddf61a5a36015a62c9d1",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "a1fbb7e8ac2e738646648e16",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1297
+    },
+    {
+      "run_id": "75f4fae8fd46fcf83c261bdb",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1314
+    },
+    {
+      "run_id": "0484cb76295ff31953274f21",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "d42bcd0bf8967c3bb250d2cf",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 57,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "9437065abf0cd2b98a78924d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1349
+    },
+    {
+      "run_id": "fe749b61a125058491b2fec2",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1348
+    },
+    {
+      "run_id": "ca2eb98fabec558e08d19646",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1356
+    },
+    {
+      "run_id": "09a2a5a9caa649559cf0a73a",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1336
+    },
+    {
+      "run_id": "cf418fbdcc7f7b09faa136ea",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1326
+    },
+    {
+      "run_id": "ec3c54b355fe31b29f3747a8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1322
+    },
+    {
+      "run_id": "d48d4110ecaaa0d851b34578",
+      "split": "regression_ss",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1313
+    },
+    {
+      "run_id": "6f7db898caca47ea10966fb8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "502457b5c722f04f4309fcdc",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "06d5a4963a2284a923ec8fc1",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "053e676f22a2b6c0c2a2bca6",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "340d6a4449154f021778117b",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "74ccfcb0e3a0cfe2d9f0bf2b",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "49e4a73f4c64415fb6ae7437",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "8b7d52d0eebc91346bc7a392",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "1d2ae04edd168604f5b54d70",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "f22985c64df56615009ae116",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "d253d3fc85b13976d86776b7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "a78011b56ce028ccad350807",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "ce5b63047d784972b0e60371",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "d9a93e0cb995a28449af4135",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "2aa2a29c64c510b135d99021",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "1641bb262b9aaccc0a46526c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "b843c5aa80aec2fceaef789b",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "3b5796d4ddc1852323ad9af2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "38d0c513976090f4824c4944",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1344
+    },
+    {
+      "run_id": "6875f923883259e75ed7ea9c",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "6b4672426ecc8f5493c13f9a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "c4ae44446f6917ebad40cf6b",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1330
+    },
+    {
+      "run_id": "71c012bd825041b62a9f3f4f",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1354
+    },
+    {
+      "run_id": "7191621e1f005ee91f87fd89",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 58,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "1e22d53ed7f26d3176a19c0a",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "0aaa10081ee22dc8bdd56613",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1345
+    },
+    {
+      "run_id": "4d4db035bcc802da2850d3c4",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1343
+    },
+    {
+      "run_id": "0a6a87a5eb6245947b65400a",
+      "split": "gate_selection",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "f196499c0110ff93f3c89717",
+      "split": "calibration",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1322
+    },
+    {
+      "run_id": "6014bc12832bffbc01d82ea7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1308
+    },
+    {
+      "run_id": "3a7465e6a27308fa1ca61190",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 59,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "d9feebb0d2e2c48c60b3b764",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "dynamics_retained": 60,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "0ec1fd560716ff076c72a706",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1574
+    },
+    {
+      "run_id": "04794061ffc3a4be04359733",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1628
+    },
+    {
+      "run_id": "d86709911776e1dc30536d58",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1629
+    },
+    {
+      "run_id": "394b273941208e7ec35ce19a",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 79,
+      "usable": true,
+      "tokens": 1628
+    },
+    {
+      "run_id": "ab1524814c5471db1b65ca61",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1586
+    },
+    {
+      "run_id": "29c4a3778a6071b1a61342c6",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "cce449fae641f00a789ec169",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1606
+    },
+    {
+      "run_id": "5a229245ed1166f68a3a16b6",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1563
+    },
+    {
+      "run_id": "512d86d809d22738fedfd759",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1580
+    },
+    {
+      "run_id": "40667899a724b4ef3b8e2e0a",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 79,
+      "usable": true,
+      "tokens": 1638
+    },
+    {
+      "run_id": "f5164f95dcd79676050bc2f9",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1603
+    },
+    {
+      "run_id": "f8f7e7d35c9ac4a4ce238fef",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1594
+    },
+    {
+      "run_id": "2c04cecc44ce6410eb0e209a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1602
+    },
+    {
+      "run_id": "db25fa8c137b9fc1db544ac0",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1616
+    },
+    {
+      "run_id": "2c59c7378dc05991247e71c9",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1562
+    },
+    {
+      "run_id": "f12b1443307a57694356be3a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1579
+    },
+    {
+      "run_id": "efcd3c025d7e17a87fe83913",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1587
+    },
+    {
+      "run_id": "afd12b38882329aa71028f17",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1582
+    },
+    {
+      "run_id": "b630b221be84c52b0a4db3b6",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 80,
+      "usable": true,
+      "tokens": 1654
+    },
+    {
+      "run_id": "38e7a34d72a664cef712feee",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1587
+    },
+    {
+      "run_id": "1632d6c1276806617aab50a8",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1594
+    },
+    {
+      "run_id": "74277310a1de718d61bfb138",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 79,
+      "usable": true,
+      "tokens": 1641
+    },
+    {
+      "run_id": "66f62812927a257a5a3c6d48",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1581
+    },
+    {
+      "run_id": "fd6c62eb30906322da5d24d2",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "f1cc2a2484365469bae1cfd0",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1622
+    },
+    {
+      "run_id": "35df5ca7535b543b97e8d551",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1601
+    },
+    {
+      "run_id": "22753315242e76c8a27046fc",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1612
+    },
+    {
+      "run_id": "a023e473997d8781c90c6fac",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1603
+    },
+    {
+      "run_id": "311016e3b6a96bb88f9e444f",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "bad32e97ffd5117780170961",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1576
+    },
+    {
+      "run_id": "79f7d2dd252e32c415a1e617",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1609
+    },
+    {
+      "run_id": "2a4346330b65263e6b6008b8",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1614
+    },
+    {
+      "run_id": "dc5bb2261d2f72a547a157c0",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1626
+    },
+    {
+      "run_id": "509b6b3697a2bfa9aefa62f1",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 80,
+      "usable": true,
+      "tokens": 1627
+    },
+    {
+      "run_id": "bddbd926c8715efdee0406c0",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1567
+    },
+    {
+      "run_id": "8e68e71d76f74db1b8519a10",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1553
+    },
+    {
+      "run_id": "fe5c9414a9e591d067260a48",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1696
+    },
+    {
+      "run_id": "a287f0741ae95c96e3cfa3b0",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1612
+    },
+    {
+      "run_id": "cc1657b0fabc9cbec57422f4",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1627
+    },
+    {
+      "run_id": "be3a9fba9f56bce0df20b095",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1630
+    },
+    {
+      "run_id": "566e006edbeddc24c18b1cbd",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1599
+    },
+    {
+      "run_id": "e2badd80e0bea7311b95e819",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1615
+    },
+    {
+      "run_id": "493339e338e4be04df0aad72",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1645
+    },
+    {
+      "run_id": "33e01584da099a39e96a08c6",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1618
+    },
+    {
+      "run_id": "5410966c5a82406ccdafd74f",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1579
+    },
+    {
+      "run_id": "fcc19dae1108f092045645cf",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1624
+    },
+    {
+      "run_id": "847abeb18daf570f76c2e10d",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1596
+    },
+    {
+      "run_id": "635a445ca16e6d2996ca5751",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1606
+    },
+    {
+      "run_id": "89ce37ea30e112ffd9220b4a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 81,
+      "usable": true,
+      "tokens": 1659
+    },
+    {
+      "run_id": "d9f52ec3d989314c4531bfb6",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1587
+    },
+    {
+      "run_id": "5d79d91c5419bb27ddab8be2",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1560
+    },
+    {
+      "run_id": "b00ae6ce029b5c9f7b3ad3d0",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 80,
+      "usable": true,
+      "tokens": 1674
+    },
+    {
+      "run_id": "97dba8bbae26d676a5f7b600",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1610
+    },
+    {
+      "run_id": "af7879268e82a17ebd9878d0",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1592
+    },
+    {
+      "run_id": "35b35bad541566de4ac685e8",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1639
+    },
+    {
+      "run_id": "ca61012a9214bd3744b38656",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1605
+    },
+    {
+      "run_id": "fd307a526b828e67053b1afa",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1608
+    },
+    {
+      "run_id": "a1e6d125fc5b5855369d37d2",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1586
+    },
+    {
+      "run_id": "adc8d57049637266dffb0cd3",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1595
+    },
+    {
+      "run_id": "c62dd39def5831aef76a6f95",
+      "split": "calibration",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1604
+    },
+    {
+      "run_id": "093e1d636fa40891747cc602",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1615
+    },
+    {
+      "run_id": "d58c667bbfad5562a03362d8",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1588
+    },
+    {
+      "run_id": "c105aaa3f08dac08ba1eb4da",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 76,
+      "usable": true,
+      "tokens": 1619
+    },
+    {
+      "run_id": "dcd0d07889b7c475cfd29f96",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 82,
+      "usable": true,
+      "tokens": 1659
+    },
+    {
+      "run_id": "585cec562cf346350a162d2f",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "1bd8df50b9c37441bbcf6c13",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1582
+    },
+    {
+      "run_id": "996705074316baa041b54133",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 81,
+      "usable": true,
+      "tokens": 1684
+    },
+    {
+      "run_id": "5772c699b14d7a59971b778a",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1576
+    },
+    {
+      "run_id": "2e10f74aa073a9c93f3fdc87",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1592
+    },
+    {
+      "run_id": "917c28ec9f12f4cea77c56af",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1649
+    },
+    {
+      "run_id": "2d8143b7ac4d7a603471d493",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 75,
+      "usable": true,
+      "tokens": 1646
+    },
+    {
+      "run_id": "783ce9e34223447187b3619c",
+      "split": "gate_selection",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 78,
+      "usable": true,
+      "tokens": 1625
+    },
+    {
+      "run_id": "07919ab9f70e018b0668f337",
+      "split": "regression_ss",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 77,
+      "usable": true,
+      "tokens": 1627
+    },
+    {
+      "run_id": "553ed47c6af06d3fbefe3846",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1573
+    },
+    {
+      "run_id": "5dd1a7bd1947b9f178ec9148",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "dynamics_retained": 74,
+      "usable": true,
+      "tokens": 1552
+    }
+  ],
+  "legacy_inputs_identical_count": 400,
+  "legacy_numeric_prefix_identical_count": 400,
+  "labels_candidates_and_case_groups_unchanged": true,
+  "future_observations_used": false,
+  "cross_split_overlap": 0,
+  "feature_spec_sha256": "c2d21fa16a3ea717157c7e694371fa54f88552026d480617c19871cdf85d8d09",
+  "train_saturation": {
+    "cpu": {
+      "metrics": 2265,
+      "nonmissing_z": 2253,
+      "clipped_at_100": 40
+    },
+    "mem": {
+      "metrics": 2265,
+      "nonmissing_z": 2253,
+      "clipped_at_100": 39
+    },
+    "workload": {
+      "metrics": 1270,
+      "nonmissing_z": 1259,
+      "clipped_at_100": 0
+    },
+    "error": {
+      "metrics": 613,
+      "nonmissing_z": 592,
+      "clipped_at_100": 27
+    },
+    "latency-50": {
+      "metrics": 1225,
+      "nonmissing_z": 1215,
+      "clipped_at_100": 83
+    },
+    "latency-90": {
+      "metrics": 1225,
+      "nonmissing_z": 1215,
+      "clipped_at_100": 150
+    },
+    "load": {
+      "metrics": 240,
+      "nonmissing_z": 240,
+      "clipped_at_100": 0
+    },
+    "latency": {
+      "metrics": 200,
+      "nonmissing_z": 200,
+      "clipped_at_100": 7
+    },
+    "diskio": {
+      "metrics": 299,
+      "nonmissing_z": 298,
+      "clipped_at_100": 9
+    },
+    "socket": {
+      "metrics": 540,
+      "nonmissing_z": 540,
+      "clipped_at_100": 0
+    }
+  },
+  "known_onset": true,
+  "note": "Additional summaries from existing telemetry, not independent new cases. Formula fixed before all-partition preparation. No label or split affects summary values."
+}

@@ -5,6 +5,7 @@ import numpy as np
 from .common import read,file_hash
 from .schema import TrainingExample,Metric
 from .temporal import temporal_summary
+from .dynamics import dynamics_summary
 
 VERSION='causal-missing-v1'
 
@@ -32,7 +33,7 @@ def causal_view(example, frame, onset, kind):
         t=temporal_summary(frame,col,onset,decision)
         metrics.append(Metric(service=old.service,name=old.name,unit=old.unit,baseline_mean=bm,observed_mean=om,change_z=z,
             missing_fraction=1-len(o)/max(len(obs),1),baseline_samples=len(b),observed_samples=len(o),
-            observed_until=float(obs.loc[o.index,'time'].max()) if len(o) else decision,temporal=t))
+            observed_until=float(obs.loc[o.index,'time'].max()) if len(o) else decision,temporal=t,dynamics=dynamics_summary(frame,col,onset,decision) if old.dynamics is not None else None))
     ex.input.evidence.metrics=metrics
     ex.opaque_incident_id=example.opaque_incident_id+'__'+kind
     ex.parent_incident_id=example.opaque_incident_id

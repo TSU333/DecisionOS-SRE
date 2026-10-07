@@ -1,0 +1,135 @@
+{
+  "created_utc": "2026-10-07T13:56:39.136899+00:00",
+  "client_date": "2026-10-08",
+  "execution_scope": "mvp",
+  "parent": "artifacts\\round5\\temporal_seed44\\frozen",
+  "parent_checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "trials": [
+    {
+      "name": "legacy_control",
+      "config": "configs/round12_legacy_control.json",
+      "config_sha256": "33c87cabed408beb014d898fc0815d4329f71a4af7adfad26538cd533566fdd0",
+      "mode": "frozen"
+    },
+    {
+      "name": "dynamics_fault",
+      "config": "configs/round12_dynamics_fault.json",
+      "config_sha256": "0a19b0738b6227ee9e58cee9394ca10ce6bb4537b790a5cdabcdd0d1ac5edb6c",
+      "mode": "frozen"
+    },
+    {
+      "name": "dynamics_drop15",
+      "config": "configs/round12_dynamics_drop15.json",
+      "config_sha256": "1cd60a9a116bf739e95764ee8b8aa47e788a77a342fa573e50d2b84e2261a89e",
+      "mode": "frozen"
+    },
+    {
+      "name": "dynamics_joint",
+      "config": "configs/round12_dynamics_joint.json",
+      "config_sha256": "da19cf8a4e5a10f59321999215314032e16cf15d8ec2b55c6cd6fae630216058",
+      "mode": "frozen"
+    }
+  ],
+  "selection_config": {
+    "execution_scope": "mvp",
+    "seed": 44,
+    "data_dir": "data/round5",
+    "backbone_dir": "artifacts/backbone",
+    "artifact_root": "artifacts/round5/temporal_seed44",
+    "max_length": 2048,
+    "epochs": 240,
+    "batch_size": 16,
+    "gradient_accumulation": 1,
+    "learning_rate_sft": 2e-05,
+    "learning_rate_frozen": 0.0003,
+    "weight_decay": 0.01,
+    "loss_weights": [
+      1,
+      1
+    ],
+    "head_size": 128,
+    "train_device": "cuda",
+    "inference_device": "cpu",
+    "cpu_threads": 8,
+    "gradient_checkpointing": true,
+    "early_stopping_patience": 60,
+    "max_steps": 2000,
+    "calibration_min_samples": 10,
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30,
+    "ece_bins": 10,
+    "benchmark_warmup": 3,
+    "benchmark_repeats": 12,
+    "execute_remediation": false,
+    "external_llm_enabled": false,
+    "backbone_learning_rate": 2e-05,
+    "head_learning_rate": 0.0003,
+    "schedule": "constant",
+    "warmup_fraction": 0,
+    "augmentation": {
+      "candidate_shuffle": false,
+      "metric_dropout": 0.0,
+      "evidence_dropout": 0.0
+    },
+    "serializer_version": "metrics-canonical-v2",
+    "pooling": "mean",
+    "numeric_fusion": true,
+    "numeric_metrics": [
+      "cpu",
+      "diskio",
+      "error",
+      "latency",
+      "latency-50",
+      "latency-90",
+      "load",
+      "mem",
+      "socket",
+      "workload"
+    ],
+    "initialization_artifact": "artifacts/round4/balanced_seed43/frozen",
+    "selection_metric": "cohort_guarded_retention",
+    "cache_frozen_features": true,
+    "text_logit_weight": 0.1,
+    "root_conditioned_fault": true,
+    "sampling_strategy": "cohort_balanced",
+    "preserve_validation_cohorts": [
+      "RE1-OB",
+      "RE2-OB"
+    ],
+    "preserve_joint_floor": 0.85,
+    "retention_floors": {
+      "Online Boutique": 0.95,
+      "Sock Shop": 0.9
+    },
+    "numeric_feature_version": "temporal-v1",
+    "evaluation_split": "regression_ss",
+    "numeric_feature_upgrade": "zero_pad_temporal_v1"
+  },
+  "training_budget_max_updates": 8800,
+  "data_audit_sha256": "d7b2a7a13d9a9b05b15797ae15ddead236a39029d6fa4d7a3b6917f2ccd84234",
+  "feature_spec_sha256": "c2d21fa16a3ea717157c7e694371fa54f88552026d480617c19871cdf85d8d09",
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_origin": "prior working assumption, not explicit user numeric requirements",
+  "selection": "Retain OB validation joint >=95%, SS >=90%; then cohort macro joint, overall joint, sum NLL; compare incumbent on the original 40 validation cases.",
+  "release_guard": "Only the single frozen validation winner may undergo historical regression. If no candidate beats the incumbent, skip regression and retain incumbent. Otherwise require every cohort root/fault/joint non-regressed before promotion. No runner-up or post-regression tuning.",
+  "original_cases": 400,
+  "new_independent_cases": 0,
+  "eligible_train_cases": 164,
+  "training_views": 0,
+  "known_onset": true,
+  "hypothesis": "Unclipped signed-log amplitude quantiles and local waveform dynamics may preserve fault information lost in existing clipped summaries. Compare a matched legacy control, dynamics fault heads, dynamics dropout .15, and joint heads. Existing text and numeric prefixes remain unchanged. New input weights initialize to zero.",
+  "backbone_frozen": true,
+  "predeclared_trials_complete_before_evaluation": true,
+  "ablations_if_regression_opened": [
+    "reverse_candidates",
+    "consistent_service_rename",
+    "mask_all_metrics",
+    "mask_temporal_ob",
+    "mask_dynamics_ob"
+  ],
+  "mask_temporal_ob_definition": "Remove old TemporalSummary only; keep new dynamics. mask_dynamics_ob removes new DynamicsSummary only."
+}

@@ -26,8 +26,8 @@ class Serializer:
         self.trace_features=trace_features
         self.application_fault_names=application_names(application_fault_names)
         if trace_features and not numeric_metrics:raise ValueError("trace fusion requires numeric metrics")
-        if numeric_feature_version not in ("mean-v1","temporal-v1"):raise ValueError("unknown numeric feature version")
-        if numeric_feature_version=="temporal-v1" and not self.numeric_metrics:raise ValueError("temporal features require numeric metrics")
+        if numeric_feature_version not in ("mean-v1","temporal-v1","temporal-dynamics-v1"):raise ValueError("unknown numeric feature version")
+        if numeric_feature_version in ("temporal-v1","temporal-dynamics-v1") and not self.numeric_metrics:raise ValueError("temporal features require numeric metrics")
         if version not in (SERIALIZER,"metrics-canonical-v2"): raise ValueError("unsupported serializer version")
         if self.numeric_metrics and version != "metrics-canonical-v2": raise ValueError("numeric features require v2")
 

@@ -1,0 +1,25 @@
+{
+  "version": "temporal-dynamics-v1",
+  "source_sha256": "45e7b5f09b70c9a304f1645488f7e969fb995ab9f0d0ae87a63ec5a0b8044dd1",
+  "fields": [
+    "q10_z_log",
+    "q90_z_log",
+    "roughness_log",
+    "max_jump_log",
+    "lag1_correlation",
+    "excursion_fraction"
+  ],
+  "baseline": "[onset-300,onset)",
+  "observation": "[onset,decision_time], decision_time <= onset+60",
+  "scale": "max(baseline population std, abs(baseline mean)*0.01, 1e-6)",
+  "q10_q90": "signed log1p of standardized quantiles, saturate at abs 1e6, divide by 5",
+  "roughness": "log1p(mean(abs(delta value)/delta seconds)/scale)/5; pairs with 0<dt<=5 only",
+  "jump": "log1p(max(abs(delta value))/scale)/5; same adjacent pairs",
+  "lag1": "Pearson correlation of valid adjacent observations, constant=0",
+  "excursion": "fraction of observed absolute z >3",
+  "missing": "None if baseline <2, observations <6, <3 adjacent pairs or missing either 0:30 or 30:60 coverage",
+  "duplicates": "mean by timestamp; no interpolation",
+  "learned_statistics": false,
+  "labels_used": false,
+  "new_independent_cases": 0
+}

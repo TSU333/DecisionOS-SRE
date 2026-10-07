@@ -69,9 +69,12 @@ class Engine:
                            "confidence":p[choice],"calibration_status":status}
         routing=route(probs["root"],probs["fault"],enc.report.get("modality_evidence_usable",enc.report.get("numeric_evidence_usable",enc.report["usable_metrics_retained"]>0)),
                       self.calibrator,self.policy,self.binding)
-        if self.serializer.numeric_feature_version=='temporal-v1' and not enc.report['temporal_metrics_retained'] and not (self.serializer.trace_features and enc.report['trace_summaries_retained']):
+        if self.serializer.numeric_feature_version in ('temporal-v1','temporal-dynamics-v1') and not enc.report['temporal_metrics_retained'] and not (self.serializer.trace_features and enc.report['trace_summaries_retained']):
             routing['reason_codes']=[x for x in routing['reason_codes'] if x!='THRESHOLD_PASSED']+['NO_TEMPORAL_EVIDENCE']
             routing['destination']='REVIEW'
+        if self.serializer.numeric_feature_version=='temporal-dynamics-v1' and not enc.report['dynamics_metrics_retained']:
+            routing['destination']='REVIEW'
+            routing['reason_codes']=[x for x in routing['reason_codes'] if x!='THRESHOLD_PASSED']+['NO_DYNAMICS_EVIDENCE']
         if incident.application not in self.metadata["supported_applications"]:
             routing["destination"]="REVIEW"
             routing["reason_codes"]=[x for x in routing["reason_codes"] if x!="THRESHOLD_PASSED"]+["UNVALIDATED_APPLICATION"]

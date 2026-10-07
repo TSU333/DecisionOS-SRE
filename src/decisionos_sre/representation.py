@@ -18,7 +18,7 @@ def canonical_encode(serializer,incident):
     if serializer.trace_features:services|={t.service for t in incident.evidence.traces or []}
     def signature(service):
         ms=byservice[service]
-        content=sorted([canonical({k:v for k,v in m.model_dump().items() if k not in ('service','observed_until','temporal')}) for m in ms])
+        content=sorted([canonical({k:v for k,v in m.model_dump().items() if k not in ('service','observed_until','temporal','dynamics')}) for m in ms])
         return (-max([abs(m.change_z or 0) for m in ms]+[0]),canonical(content),service)
     services=sorted(services,key=signature)
     aliases={s:f'C{i}' for i,s in enumerate(services)}
@@ -34,7 +34,7 @@ def canonical_encode(serializer,incident):
     header_fits=len(ids)+len(tokens)+1<=serializer.max_length
     if header_fits:ids+=tokens
     retained=[]
-    metrics=sorted(incident.evidence.metrics,key=lambda m:(-abs(m.change_z or 0),services.index(m.service),m.name,canonical({k:v for k,v in m.model_dump().items() if k not in ('service','observed_until','temporal')})))
+    metrics=sorted(incident.evidence.metrics,key=lambda m:(-abs(m.change_z or 0),services.index(m.service),m.name,canonical({k:v for k,v in m.model_dump().items() if k not in ('service','observed_until','temporal','dynamics')})))
     fmt=lambda x:'NA' if x is None else f'{x:.3g}'
     for m in metrics:
         if not header_fits: break
@@ -70,7 +70,8 @@ def canonical_encode(serializer,incident):
             'numeric_evidence_scope':'retained metrics only','descriptions_serialized':False}
     report['numeric_feature_version']=serializer.numeric_feature_version
     report['temporal_metrics_retained']=sum(m.temporal is not None for m in retained)
-    report['numeric_evidence_usable']=report['usable_metrics_retained']>0 and (serializer.numeric_feature_version!='temporal-v1' or report['temporal_metrics_retained']>0)
+    report['dynamics_metrics_retained']=sum(m.dynamics is not None for m in retained)
+    report['numeric_evidence_usable']=report['usable_metrics_retained']>0 and (serializer.numeric_feature_version=='mean-v1' or report['temporal_metrics_retained']>0) and (serializer.numeric_feature_version!='temporal-dynamics-v1' or report['dynamics_metrics_retained']>0)
     report['trace_summaries_total']=len(incident.evidence.traces or [])
     report['trace_summaries_retained']=len(retained_traces)
     report['trace_services_retained']=[t.service for t in retained_traces]
@@ -82,8 +83,8 @@ def canonical_encode(serializer,incident):
 def numeric_dimension(config):
     version=config.get('numeric_feature_version','mean-v1')
     if config.get('trace_features') and config.get('trace_feature_version','service-trace-v1')!='service-trace-v1':raise ValueError('unknown trace feature version')
-    if version not in ('mean-v1','temporal-v1'):raise ValueError('unknown numeric feature version')
-    return (len(config.get('numeric_metrics',[]))*(12 if version=='temporal-v1' else 6)+(24 if config.get('trace_features') else 0)) if config.get('numeric_fusion') else 0
+    if version not in ('mean-v1','temporal-v1','temporal-dynamics-v1'):raise ValueError('unknown numeric feature version')
+    return (len(config.get('numeric_metrics',[]))*{'mean-v1':6,'temporal-v1':12,'temporal-dynamics-v1':19}[version]+(24 if config.get('trace_features') else 0)) if config.get('numeric_fusion') else 0
 
 
 def numeric_features(metrics,ids,names,version='mean-v1'):
@@ -95,20 +96,27 @@ def numeric_features(metrics,ids,names,version='mean-v1'):
             found=[m for m in ms if m.name==name]
             if not found:result.extend([0.]*6);continue
             # Duplicate name aggregation uses the greatest observable anomaly.
-            m=max(found,key=lambda m:(abs(m.change_z or 0),canonical(m.model_dump(exclude={'service','observed_until','temporal'}))))
+            m=max(found,key=lambda m:(abs(m.change_z or 0),canonical(m.model_dump(exclude={'service','observed_until','temporal','dynamics'}))))
             rel=None if m.observed_mean is None or m.baseline_mean is None else (m.observed_mean-m.baseline_mean)/max(abs(m.baseline_mean),1e-6)
             result.extend([squash(m.change_z),squash(rel),squash(m.observed_mean),squash(m.baseline_mean),m.missing_fraction,float(m.observed_samples>0 and m.observed_mean is not None)])
-        if version=='temporal-v1':
+        if version in ('temporal-v1','temporal-dynamics-v1'):
             for name in names:
                 found=[m for m in ms if m.name==name]
-                m=max(found,key=lambda m:(abs(m.change_z or 0),canonical(m.model_dump(exclude={'service','observed_until','temporal'})))) if found else None
+                m=max(found,key=lambda m:(abs(m.change_z or 0),canonical(m.model_dump(exclude={'service','observed_until','temporal','dynamics'})))) if found else None
                 t=m.temporal if m else None
                 result.extend([squash(t.q10_z),squash(t.q90_z),squash(t.std_ratio),squash(t.trend_z),squash(t.late_shift_z),1.] if t else [0.]*6)
+        if version=='temporal-dynamics-v1':
+            from .dynamics import FIELDS
+            for name in names:
+                found=[m for m in ms if m.name==name]
+                m=max(found,key=lambda m:(abs(m.change_z or 0),canonical(m.model_dump(exclude={'service','observed_until','temporal','dynamics'})))) if found else None
+                d=m.dynamics if m else None
+                result.extend([getattr(d,k) for k in FIELDS]+[1.] if d else [0.]*7)
         return result
     nums=[values([m for m in metrics if m.service==s]) for s in ids]
     allservices=sorted({m.service for m in metrics})
     allnums=sorted(values([m for m in metrics if m.service==s]) for s in allservices)
-    if not allnums:global_values=[0.]*(len(names)*(36 if version=="temporal-v1" else 18))
+    if not allnums:global_values=[0.]*(len(names)*{'mean-v1':18,'temporal-v1':36,'temporal-dynamics-v1':57}[version])
     else:
         columns=list(zip(*allnums))
         global_values=[x for col in columns for x in (min(col),max(col),sum(col)/len(col))]

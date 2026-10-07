@@ -308,13 +308,16 @@ def initialize_from_artifact(model,config,trainset,valset):
     old_version=meta['config'].get('numeric_feature_version','mean-v1')
     new_version=config.get('numeric_feature_version','mean-v1')
     if old_version!=new_version:
-        if (old_version,new_version)!=('mean-v1','temporal-v1') or config.get('numeric_feature_upgrade')!='zero_pad_temporal_v1':
+        temporal=(old_version,new_version)==('mean-v1','temporal-v1') and config.get('numeric_feature_upgrade')=='zero_pad_temporal_v1'
+        dynamics=(old_version,new_version)==('temporal-v1','temporal-dynamics-v1') and config.get('numeric_feature_upgrade')=='zero_pad_dynamics_v1'
+        if not (temporal or dynamics) or meta['config'].get('trace_features') or config.get('trace_features'):
             raise ValueError('Unsupported numeric feature migration')
         expected=model.state_dict()
         for name in ['numeric_root.0.weight','numeric_fault.0.weight','numeric_local_fault.0.weight']:
             if name not in state:continue
             old=state[name];target=expected[name]
-            if target.shape[0]!=old.shape[0] or target.shape[1]!=2*old.shape[1]:raise ValueError('Invalid temporal expansion shape')
+            extra=old.shape[1] if temporal else len(config['numeric_metrics'])*7*(3 if name=='numeric_fault.0.weight' else 1)
+            if target.shape[0]!=old.shape[0] or target.shape[1]!=old.shape[1]+extra:raise ValueError('Invalid numeric expansion shape')
             expanded=torch.zeros_like(target);expanded[:,:old.shape[1]]=old
             state[name]=expanded;migrated.append(name)
     old_trace=meta['config'].get('trace_features',False);new_trace=config.get('trace_features',False)

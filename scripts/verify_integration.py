@@ -81,7 +81,7 @@ try:
    checks['application_experts'][ex.input.application]={'status':status,'probability_max_abs_diff':max(app_deltas)}
  checks["decide"]=code
  checks["decision"]=result
- if meta['config'].get('numeric_feature_version')=='temporal-v1':
+ if meta['config'].get('numeric_feature_version') in ('temporal-v1','temporal-dynamics-v1'):
   import copy
   missing=copy.deepcopy(body)
   for metric in missing['evidence']['metrics']:metric.pop('temporal',None)
@@ -89,6 +89,13 @@ try:
   code,no_time=request('/v1/decide',missing)
   assert code==200 and no_time['routing']['destination']=='REVIEW' and 'NO_TEMPORAL_EVIDENCE' in no_time['routing']['reason_codes']
   checks['missing_temporal']=no_time['routing']
+ if meta['config'].get('numeric_feature_version')=='temporal-dynamics-v1':
+  import copy
+  missing=copy.deepcopy(body)
+  for metric in missing['evidence']['metrics']:metric.pop('dynamics',None)
+  code,no_shape=request('/v1/decide',missing)
+  assert code==200 and no_shape['routing']['destination']=='REVIEW' and 'NO_DYNAMICS_EVIDENCE' in no_shape['routing']['reason_codes']
+  checks['missing_dynamics']=no_shape['routing']
  if meta['config'].get('trace_features'):
   traced=next(e for e in load_split(meta['config']['data_dir'],'regression_re2_ob') if e.input.modality_availability.traces)
   code,trace_result=request('/v1/decide',traced.input.model_dump())
