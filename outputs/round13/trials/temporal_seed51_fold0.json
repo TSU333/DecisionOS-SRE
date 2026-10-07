@@ -1,0 +1,3614 @@
+{
+  "variant": "temporal",
+  "seed": 51,
+  "fold": 0,
+  "mode": "development_cv_head_only",
+  "artifact": "artifacts\\round13\\temporal\\seed51\\fold0",
+  "initialization": "original pretrained ModernBERT plus fresh paired heads",
+  "paired_initial_head_sha256": "4a1b8efef983adce4f98bf707182b36877563239893638dc6b2d303f48a954e3",
+  "fit_run_ids": [
+    "dc72fd144dc07825b95e9f8f",
+    "704205d07bf129586fc039df",
+    "82cdb6657e41396f4e6d7532",
+    "73c9f93dd8e1e00153f844fa",
+    "054a3237ad43dc034b43f328",
+    "ac186cd4f7d3d915a519a8dd",
+    "9cb104e6dfecdb5c1e324b91",
+    "5b264db6fc27feb0e1c32027",
+    "888735b551ad1c03171876a7",
+    "9edddbbf48a94d96d896e929",
+    "90e2d3f7583aa10000ff52e8",
+    "cf85df46f1fa9667bf0b8727",
+    "adc5a196741fb7e650f144b5",
+    "3c98e50e1f9c1a5872c6923b",
+    "750b31e440a14921840f1ddb",
+    "fc0701e8f3a251090bb14ead",
+    "3daf57158daef7d598616b38",
+    "696b6ca4c2d057fcf67fc899",
+    "8e904a43f2986e996bdbffbe",
+    "a802765698d3e965d8775d9d",
+    "6f1365a589564793eedd5271",
+    "b352ccc9ecac53f4d79c1861",
+    "64af67464eab2734e054fd73",
+    "a5a8aaad73b0dc500441ac0b",
+    "f8c60f1c81675f0c04f88051",
+    "4f3d5a725f5be826f6bb5fec",
+    "2c88bcc3ecf60b86f27ae2c9",
+    "2d7a8a71d1965a501be03ce6",
+    "054e489835012f8438da7eae",
+    "16193a4d504a8a970a5dca9b",
+    "f0fa3f97aaf3f59a53c593c1",
+    "0eb0108d0cd4648716bd9d6f",
+    "b9de3bf585ba61b4e1aa2c26",
+    "8ad019797e1898d727bdd311",
+    "d6fd426b73f909dd3fafbb2e",
+    "481466ab0209e9ab62cd2f40",
+    "e4248dae99ca23e7e1277d6d",
+    "f88d7548f13042a64d121b49",
+    "0976e20a0dddf9a8e7cd612d",
+    "9191c2bc66a65b09cd7a74da",
+    "0f67d1a288812bec765d598f",
+    "bdc54e3265bafc2fd21bc918",
+    "7d33a32c132865ca19f74d1e",
+    "ebdfe5827453bfee6fd3c71f",
+    "8d18946bedb3daceb4d5611a",
+    "4540d257d515f6b9456e35ab",
+    "1804cd18e9a65e5ece5b6f58",
+    "6a3d3281d689c236669309d6",
+    "4331ee15b74a31c2bc2bd41a",
+    "256c5ce919142c9128df5cc8",
+    "fe5de3ac56cdfa909c047364",
+    "0de55fe3adea637d81595c8c",
+    "21710f465c3f3221183a6e9c",
+    "e32fe84a490ed95926850f5a",
+    "6f95ffe5aabd94895c7a7f4a",
+    "444588dd51068ddea6d798af",
+    "312c4d1ffe844a1073cd3392",
+    "b775bf10348599d6d15e85c7",
+    "520606e2fb17e4a29cecc9b2",
+    "d42bcd0bf8967c3bb250d2cf",
+    "ca2eb98fabec558e08d19646",
+    "ec3c54b355fe31b29f3747a8",
+    "8b7d52d0eebc91346bc7a392",
+    "d253d3fc85b13976d86776b7",
+    "a78011b56ce028ccad350807",
+    "ce5b63047d784972b0e60371",
+    "38d0c513976090f4824c4944",
+    "7191621e1f005ee91f87fd89",
+    "0aaa10081ee22dc8bdd56613",
+    "4d4db035bcc802da2850d3c4",
+    "6014bc12832bffbc01d82ea7",
+    "29c4a3778a6071b1a61342c6",
+    "22753315242e76c8a27046fc",
+    "a023e473997d8781c90c6fac",
+    "cc1657b0fabc9cbec57422f4",
+    "493339e338e4be04df0aad72",
+    "847abeb18daf570f76c2e10d",
+    "af7879268e82a17ebd9878d0",
+    "ca61012a9214bd3744b38656",
+    "a1e6d125fc5b5855369d37d2",
+    "c105aaa3f08dac08ba1eb4da",
+    "585cec562cf346350a162d2f"
+  ],
+  "inner_stop_run_ids": [
+    "ae7a55546bd239158a1c0f87",
+    "d0e4cdd03f963268b0b837e4",
+    "4b9bcfee80f9d6dd0a45ba4e",
+    "317d870b6bfdb9bc4fd3e2fa",
+    "bbbfd5c80988068515990283",
+    "0f21a2ab0af4e53a4f5773e4",
+    "7b597dce8e17e7578f1d572b",
+    "bfd14b9d5c95fe2941976f07",
+    "5014289367470c829f351d53",
+    "6907562bccdbf715db018a13",
+    "e907a8050f83593bb0d5e8f7",
+    "39e972166970bbbce4d3ae66",
+    "9ab31bb621d3e0d8f2897404",
+    "0a6f2329dca752051eced5b8",
+    "70ee6c3740ce01315d36c2a7",
+    "2740141ceeaa6611f13470ce",
+    "9a35cec6a698feaa00ed312b",
+    "a784c8ea79eb16c8d6326192",
+    "1ae8f343909a2c1abbdb740a",
+    "db08bd001dc297de305e5a13",
+    "8f45e699d11b2d3a3c627a4c",
+    "6ea530ecc35d80e76014f4e3",
+    "f3ecc579c50d9a6e27650d91",
+    "053e676f22a2b6c0c2a2bca6",
+    "3a7465e6a27308fa1ca61190",
+    "cce449fae641f00a789ec169",
+    "fd6c62eb30906322da5d24d2",
+    "89ce37ea30e112ffd9220b4a"
+  ],
+  "outer_run_ids": [
+    "44b2ee08820479f9f251c02f",
+    "a5b9b34d974ceb23210c41e4",
+    "52461e0c6bed588e5d3558e8",
+    "c6d2864520ee3d766412a162",
+    "ab5967d895935ed7e41a1b72",
+    "cd41a7743aad542bc9248791",
+    "d8448a5bc5754b32d1502bdf",
+    "9b91e2cea498a63f467530a5",
+    "d358fe8d043b84d6bf650ef9",
+    "095c72f94f03034c83400f6a",
+    "3798247404bbcd5190dfe271",
+    "713bc20c73338c51cd9f91da",
+    "cbc247593db62bbaff1e94c7",
+    "1561133f8c7873d8c0a57968",
+    "9cb313f397e19d48782c835a",
+    "22eeb8727f7c631b00fcaceb",
+    "9fcc9788e706ef6219da61c3",
+    "5f6d8f696564101ceed0a071",
+    "7e671a0975fe9f3ebd2f9c5d",
+    "0cc013bd863f69eafc69e4db",
+    "4ae2ff5e1188c105df619abf",
+    "dd2d08da92ad45aa52b2ffa7",
+    "85f6ca06dbae43edbee7fecc",
+    "95abf8ed22a09541ac9de284",
+    "8a97bb53b9f500cbf581cbe8",
+    "7256356ffb86c4ae6f46bc2c",
+    "433315ec6255dd1746e42e15",
+    "39cedb70fd22b80410295af2",
+    "eb628868752fbdc887afc783",
+    "a824e56bd1e0e1958cc22c45",
+    "b830ddf61a5a36015a62c9d1",
+    "75f4fae8fd46fcf83c261bdb",
+    "0484cb76295ff31953274f21",
+    "9437065abf0cd2b98a78924d",
+    "6f7db898caca47ea10966fb8",
+    "502457b5c722f04f4309fcdc",
+    "06d5a4963a2284a923ec8fc1",
+    "49e4a73f4c64415fb6ae7437",
+    "1641bb262b9aaccc0a46526c",
+    "b843c5aa80aec2fceaef789b",
+    "3b5796d4ddc1852323ad9af2",
+    "6b4672426ecc8f5493c13f9a",
+    "d9feebb0d2e2c48c60b3b764",
+    "0ec1fd560716ff076c72a706",
+    "f8f7e7d35c9ac4a4ce238fef",
+    "2c04cecc44ce6410eb0e209a",
+    "f12b1443307a57694356be3a",
+    "b630b221be84c52b0a4db3b6",
+    "2a4346330b65263e6b6008b8",
+    "bddbd926c8715efdee0406c0",
+    "e2badd80e0bea7311b95e819",
+    "2e10f74aa073a9c93f3fdc87",
+    "917c28ec9f12f4cea77c56af",
+    "5dd1a7bd1947b9f178ec9148"
+  ],
+  "steps": 438,
+  "best_steps": 288,
+  "best_epoch": 48,
+  "epochs": 73,
+  "history": [
+    {
+      "epoch": 1,
+      "steps": 6,
+      "fit_loss": 4.110124270121257,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 2.3947678444740723
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.2857142857142857,
+          "nll": 1.5875438631750038,
+          "macro_f1": 0.15523809523809523,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 0,
+            "disk_io_stress": 12,
+            "network_delay": 16,
+            "network_packet_loss": 0
+          }
+        },
+        "joint_accuracy": 0.21428571428571427,
+        "sum_nll": 3.9823117076490764,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.1
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.25416666666666665
+      }
+    },
+    {
+      "epoch": 2,
+      "steps": 12,
+      "fit_loss": 3.882718841234843,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 2.133536878445589
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.10714285714285714,
+          "nll": 1.6168327212913975,
+          "macro_f1": 0.07076923076923078,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 0,
+            "disk_io_stress": 0,
+            "network_delay": 22,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.03571428571428571,
+        "sum_nll": 3.7503695997369864,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.0
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.08333333333333333
+      }
+    },
+    {
+      "epoch": 3,
+      "steps": 18,
+      "fit_loss": 3.5689275662104287,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 1.8864793070632302
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.21428571428571427,
+          "nll": 1.6311629071648783,
+          "macro_f1": 0.1619047619047619,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 1,
+            "disk_io_stress": 0,
+            "network_delay": 10,
+            "network_packet_loss": 17
+          }
+        },
+        "joint_accuracy": 0.17857142857142858,
+        "sum_nll": 3.5176422142281085,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.1
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.17083333333333334
+      }
+    },
+    {
+      "epoch": 4,
+      "steps": 24,
+      "fit_loss": 3.2974154949188232,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 1.6553115441536743
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.21428571428571427,
+          "nll": 1.6120770586669146,
+          "macro_f1": 0.15555555555555553,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 3,
+            "disk_io_stress": 0,
+            "network_delay": 5,
+            "network_packet_loss": 20
+          }
+        },
+        "joint_accuracy": 0.17857142857142858,
+        "sum_nll": 3.267388602820589,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.1
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.17083333333333334
+      }
+    },
+    {
+      "epoch": 5,
+      "steps": 30,
+      "fit_loss": 3.136619726816813,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 1.4434828991039745
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.25,
+          "nll": 1.6034777621954415,
+          "macro_f1": 0.20752136752136754,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 3,
+            "disk_io_stress": 0,
+            "network_delay": 16,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.17857142857142858,
+        "sum_nll": 3.046960661299416,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.1
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.17083333333333334
+      }
+    },
+    {
+      "epoch": 6,
+      "steps": 36,
+      "fit_loss": 2.7994265953699746,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 1.2516991867516711
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.14285714285714285,
+          "nll": 1.5857854754090048,
+          "macro_f1": 0.0873015873015873,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 3,
+            "disk_io_stress": 0,
+            "network_delay": 24,
+            "network_packet_loss": 1
+          }
+        },
+        "joint_accuracy": 0.10714285714285714,
+        "sum_nll": 2.837484662160676,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.16666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.0
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.125
+      }
+    },
+    {
+      "epoch": 7,
+      "steps": 42,
+      "fit_loss": 2.6103200117746987,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 1.078811549856107
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.2857142857142857,
+          "nll": 1.5582777398928582,
+          "macro_f1": 0.2733766233766234,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 5,
+            "disk_io_stress": 0,
+            "network_delay": 20,
+            "network_packet_loss": 3
+          }
+        },
+        "joint_accuracy": 0.21428571428571427,
+        "sum_nll": 2.6370892897489653,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.19583333333333333
+      }
+    },
+    {
+      "epoch": 8,
+      "steps": 48,
+      "fit_loss": 2.372403899828593,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.9388822115073552
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.32142857142857145,
+          "nll": 1.5312169401260356,
+          "macro_f1": 0.2754545454545455,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 4,
+            "disk_io_stress": 2,
+            "network_delay": 4,
+            "network_packet_loss": 18
+          }
+        },
+        "joint_accuracy": 0.2857142857142857,
+        "sum_nll": 2.4700991516333906,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.3625
+      }
+    },
+    {
+      "epoch": 9,
+      "steps": 54,
+      "fit_loss": 2.1984873612721763,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.8239937487759356
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.4642857142857143,
+          "nll": 1.5007894967220532,
+          "macro_f1": 0.5232448710709581,
+          "prediction_counts": {
+            "cpu_stress": 2,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 19,
+            "network_packet_loss": 2
+          }
+        },
+        "joint_accuracy": 0.35714285714285715,
+        "sum_nll": 2.3247832454979886,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4041666666666667
+      }
+    },
+    {
+      "epoch": 10,
+      "steps": 60,
+      "fit_loss": 2.214638630549113,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.7352921419283681
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.42857142857142855,
+          "nll": 1.4714006676097633,
+          "macro_f1": 0.45657820440429137,
+          "prediction_counts": {
+            "cpu_stress": 2,
+            "memory_stress": 4,
+            "disk_io_stress": 2,
+            "network_delay": 19,
+            "network_packet_loss": 1
+          }
+        },
+        "joint_accuracy": 0.35714285714285715,
+        "sum_nll": 2.2066928095381315,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4041666666666667
+      }
+    },
+    {
+      "epoch": 11,
+      "steps": 66,
+      "fit_loss": 1.9159565369288127,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.6691127761045851
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.42857142857142855,
+          "nll": 1.4412913813722603,
+          "macro_f1": 0.43780663780663776,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 17,
+            "network_packet_loss": 1
+          }
+        },
+        "joint_accuracy": 0.35714285714285715,
+        "sum_nll": 2.1104041574768453,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4666666666666667
+      }
+    },
+    {
+      "epoch": 12,
+      "steps": 72,
+      "fit_loss": 2.0010308821996055,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.619080610749539
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.4226592658807442,
+          "macro_f1": 0.5127272727272727,
+          "prediction_counts": {
+            "cpu_stress": 11,
+            "memory_stress": 2,
+            "disk_io_stress": 2,
+            "network_delay": 2,
+            "network_packet_loss": 11
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 2.0417398766302832,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.5166666666666666
+      }
+    },
+    {
+      "epoch": 13,
+      "steps": 78,
+      "fit_loss": 1.8112380504608154,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.5829593549509973
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.4642857142857143,
+          "nll": 1.379653399069528,
+          "macro_f1": 0.4658925388337153,
+          "prediction_counts": {
+            "cpu_stress": 12,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 1,
+            "network_packet_loss": 10
+          }
+        },
+        "joint_accuracy": 0.39285714285714285,
+        "sum_nll": 1.9626127540205254,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.25
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.49583333333333335
+      }
+    },
+    {
+      "epoch": 14,
+      "steps": 84,
+      "fit_loss": 1.83028511206309,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.556014154404976
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.329633242954929,
+          "macro_f1": 0.5004545454545455,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 7,
+            "network_delay": 1,
+            "network_packet_loss": 12
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.885647397359905,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.3
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.44999999999999996
+      }
+    },
+    {
+      "epoch": 15,
+      "steps": 90,
+      "fit_loss": 1.9719462792078655,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.5398945436752468
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.308167865124116,
+          "macro_f1": 0.43656565656565655,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 6,
+            "disk_io_stress": 9,
+            "network_delay": 7,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.848062408799363,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4541666666666666
+      }
+    },
+    {
+      "epoch": 16,
+      "steps": 96,
+      "fit_loss": 1.9198396404584248,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.5368415232098249
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.2966466964614405,
+          "macro_f1": 0.4569632981397687,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 6,
+            "disk_io_stress": 8,
+            "network_delay": 5,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.8334882196712654,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4541666666666666
+      }
+    },
+    {
+      "epoch": 17,
+      "steps": 102,
+      "fit_loss": 1.6590709288914998,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.4968637801377246
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.2958052849209292,
+          "macro_f1": 0.4735115864527629,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 5,
+            "disk_io_stress": 6,
+            "network_delay": 4,
+            "network_packet_loss": 13
+          }
+        },
+        "joint_accuracy": 0.39285714285714285,
+        "sum_nll": 1.7926690650586536,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.42499999999999993
+      }
+    },
+    {
+      "epoch": 18,
+      "steps": 108,
+      "fit_loss": 2.007855494817098,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.47392411825584146
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.3033043039850394,
+          "macro_f1": 0.5469108669108669,
+          "prediction_counts": {
+            "cpu_stress": 2,
+            "memory_stress": 3,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 16
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.777228422240881,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5833333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.4458333333333333
+      }
+    },
+    {
+      "epoch": 19,
+      "steps": 114,
+      "fit_loss": 1.5801475246747334,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.4491100585192912
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 1.316046831219986,
+          "macro_f1": 0.5592352092352092,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 3,
+            "network_packet_loss": 17
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.765156889739277,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.5083333333333333
+      }
+    },
+    {
+      "epoch": 20,
+      "steps": 120,
+      "fit_loss": 1.7695515553156536,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.43013369605345303
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.39285714285714285,
+          "nll": 1.3019920170685069,
+          "macro_f1": 0.3727272727272727,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 2,
+            "disk_io_stress": 2,
+            "network_delay": 0,
+            "network_packet_loss": 20
+          }
+        },
+        "joint_accuracy": 0.35714285714285715,
+        "sum_nll": 1.7321257131219598,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.4041666666666666
+      }
+    },
+    {
+      "epoch": 21,
+      "steps": 126,
+      "fit_loss": 1.3032410442829132,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.4139676578087955
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.39285714285714285,
+          "nll": 1.2572391759271013,
+          "macro_f1": 0.3916883116883117,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 1,
+            "disk_io_stress": 2,
+            "network_delay": 1,
+            "network_packet_loss": 18
+          }
+        },
+        "joint_accuracy": 0.32142857142857145,
+        "sum_nll": 1.671206833735897,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.2
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.3833333333333333
+      }
+    },
+    {
+      "epoch": 22,
+      "steps": 132,
+      "fit_loss": 1.4145370920499165,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.4010907051221943
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5714285714285714,
+          "nll": 1.1697941121142945,
+          "macro_f1": 0.5810207336523125,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 2,
+            "disk_io_stress": 10,
+            "network_delay": 5,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.4642857142857143,
+        "sum_nll": 1.5708848172364889,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.475
+      }
+    },
+    {
+      "epoch": 23,
+      "steps": 138,
+      "fit_loss": 1.741002122561137,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.3871935556827461
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6785714285714286,
+          "nll": 1.114604663081754,
+          "macro_f1": 0.6673593073593074,
+          "prediction_counts": {
+            "cpu_stress": 2,
+            "memory_stress": 5,
+            "disk_io_stress": 12,
+            "network_delay": 6,
+            "network_packet_loss": 3
+          }
+        },
+        "joint_accuracy": 0.5714285714285714,
+        "sum_nll": 1.5017982187645003,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.5416666666666666
+      }
+    },
+    {
+      "epoch": 24,
+      "steps": 144,
+      "fit_loss": 1.1725945870081584,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.3715802833465025
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6428571428571429,
+          "nll": 1.0996503533913755,
+          "macro_f1": 0.5733116883116883,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 6,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.5,
+        "sum_nll": 1.471230636737878,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.5
+      }
+    },
+    {
+      "epoch": 25,
+      "steps": 150,
+      "fit_loss": 1.1092333296934764,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.36539328815663935
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6071428571428571,
+          "nll": 1.11573863165195,
+          "macro_f1": 0.5373303167420815,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 11,
+            "disk_io_stress": 4,
+            "network_delay": 4,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.42857142857142855,
+        "sum_nll": 1.4811319198085893,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.39166666666666666
+      }
+    },
+    {
+      "epoch": 26,
+      "steps": 156,
+      "fit_loss": 1.6499553124109905,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.35297020380648847
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6071428571428571,
+          "nll": 1.089489908241977,
+          "macro_f1": 0.5499676793794441,
+          "prediction_counts": {
+            "cpu_stress": 0,
+            "memory_stress": 11,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 10
+          }
+        },
+        "joint_accuracy": 0.4642857142857143,
+        "sum_nll": 1.4424601120484652,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.41666666666666663
+      }
+    },
+    {
+      "epoch": 27,
+      "steps": 162,
+      "fit_loss": 1.19437175989151,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.34406051445528213
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 1.0627283571020145,
+          "macro_f1": 0.7376190476190476,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 6,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 11
+          }
+        },
+        "joint_accuracy": 0.5714285714285714,
+        "sum_nll": 1.4067888715572967,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5416666666666666
+      }
+    },
+    {
+      "epoch": 28,
+      "steps": 168,
+      "fit_loss": 1.0723562637964885,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.3347293869043968
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6428571428571429,
+          "nll": 1.0459788981629636,
+          "macro_f1": 0.6564102564102564,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 6,
+            "disk_io_stress": 4,
+            "network_delay": 2,
+            "network_packet_loss": 12
+          }
+        },
+        "joint_accuracy": 0.5357142857142857,
+        "sum_nll": 1.3807082850673604,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5166666666666667
+      }
+    },
+    {
+      "epoch": 29,
+      "steps": 174,
+      "fit_loss": 1.191728949546814,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8571428571428571,
+          "nll": 0.3251280085395953
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6428571428571429,
+          "nll": 1.0363901624407525,
+          "macro_f1": 0.6564102564102564,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 6,
+            "disk_io_stress": 4,
+            "network_delay": 2,
+            "network_packet_loss": 12
+          }
+        },
+        "joint_accuracy": 0.5357142857142857,
+        "sum_nll": 1.3615181709803479,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5166666666666667
+      }
+    },
+    {
+      "epoch": 30,
+      "steps": 180,
+      "fit_loss": 1.2359168628851573,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.31083191759463574
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 1.005911390676563,
+          "macro_f1": 0.7621978021978022,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 7,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.6428571428571429,
+        "sum_nll": 1.3167433082711988,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5916666666666667
+      }
+    },
+    {
+      "epoch": 31,
+      "steps": 186,
+      "fit_loss": 1.070202648639679,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.30382957528402316
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6785714285714286,
+          "nll": 0.9795836811810589,
+          "macro_f1": 0.6546153846153846,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 6,
+            "network_delay": 1,
+            "network_packet_loss": 11
+          }
+        },
+        "joint_accuracy": 0.6071428571428571,
+        "sum_nll": 1.283413256465082,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5833333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5708333333333333
+      }
+    },
+    {
+      "epoch": 32,
+      "steps": 192,
+      "fit_loss": 1.1313547392686207,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.29722428895540215
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.9679842753249309,
+          "macro_f1": 0.7361721611721612,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 6,
+            "disk_io_stress": 7,
+            "network_delay": 3,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.6071428571428571,
+        "sum_nll": 1.265208564280333,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5666666666666667
+      }
+    },
+    {
+      "epoch": 33,
+      "steps": 198,
+      "fit_loss": 1.1915153861045837,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.2838404862087492
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.9463774247862367,
+          "macro_f1": 0.7665656565656566,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 9,
+            "network_delay": 5,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.6428571428571429,
+        "sum_nll": 1.2302179109949858,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.6458333333333333
+      }
+    },
+    {
+      "epoch": 34,
+      "steps": 204,
+      "fit_loss": 1.0207265118757884,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.2715434610516738
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6428571428571429,
+          "nll": 0.9207138291887302,
+          "macro_f1": 0.6243677375256322,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 10,
+            "network_delay": 7,
+            "network_packet_loss": 3
+          }
+        },
+        "joint_accuracy": 0.5714285714285714,
+        "sum_nll": 1.192257290240404,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.6
+      }
+    },
+    {
+      "epoch": 35,
+      "steps": 210,
+      "fit_loss": 1.2669684986273448,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.2531575416115334
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.890046291817093,
+          "macro_f1": 0.7187878787878788,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 11,
+            "network_delay": 4,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.6071428571428571,
+        "sum_nll": 1.1432038334286265,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5666666666666667
+      }
+    },
+    {
+      "epoch": 36,
+      "steps": 216,
+      "fit_loss": 0.9359566072622935,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.2426284953074628
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.8829229895415726,
+          "macro_f1": 0.7335497835497835,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 9,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.6071428571428571,
+        "sum_nll": 1.1255514848490353,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5625
+      }
+    },
+    {
+      "epoch": 37,
+      "steps": 222,
+      "fit_loss": 1.0295398732026417,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.234069413849653
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5714285714285714,
+          "nll": 0.9291415579948625,
+          "macro_f1": 0.5609523809523809,
+          "prediction_counts": {
+            "cpu_stress": 7,
+            "memory_stress": 4,
+            "disk_io_stress": 5,
+            "network_delay": 1,
+            "network_packet_loss": 11
+          }
+        },
+        "joint_accuracy": 0.5,
+        "sum_nll": 1.1632109718445156,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5833333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.4
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.4958333333333333
+      }
+    },
+    {
+      "epoch": 38,
+      "steps": 228,
+      "fit_loss": 1.0746551652749379,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9285714285714286,
+          "nll": 0.2283704334396403
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5,
+          "nll": 0.9691657223096968,
+          "macro_f1": 0.4944639674051439,
+          "prediction_counts": {
+            "cpu_stress": 12,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 1,
+            "network_packet_loss": 10
+          }
+        },
+        "joint_accuracy": 0.4642857142857143,
+        "sum_nll": 1.1975361557493371,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.3333333333333333
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5416666666666666
+      }
+    },
+    {
+      "epoch": 39,
+      "steps": 234,
+      "fit_loss": 0.8137125472227732,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9285714285714286,
+          "nll": 0.22050762535943644
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.5714285714285714,
+          "nll": 0.9539676020447636,
+          "macro_f1": 0.5956327985739751,
+          "prediction_counts": {
+            "cpu_stress": 12,
+            "memory_stress": 3,
+            "disk_io_stress": 2,
+            "network_delay": 4,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.5,
+        "sum_nll": 1.1744752274042,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.4166666666666667
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5625
+      }
+    },
+    {
+      "epoch": 40,
+      "steps": 240,
+      "fit_loss": 0.8904039164384207,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9285714285714286,
+          "nll": 0.2110249401164526
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6428571428571429,
+          "nll": 0.8655168332279725,
+          "macro_f1": 0.6621212121212121,
+          "prediction_counts": {
+            "cpu_stress": 10,
+            "memory_stress": 4,
+            "disk_io_stress": 3,
+            "network_delay": 4,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.5714285714285714,
+        "sum_nll": 1.0765417733444251,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.5833333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6041666666666667
+      }
+    },
+    {
+      "epoch": 41,
+      "steps": 246,
+      "fit_loss": 0.7146709362665812,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.20757882338250175
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.8234189335921555,
+          "macro_f1": 0.7590615267085855,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 7,
+            "network_packet_loss": 3
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 1.0309977569746571,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          }
+        },
+        "cohort_macro_joint": 0.6749999999999999
+      }
+    },
+    {
+      "epoch": 42,
+      "steps": 252,
+      "fit_loss": 0.9752105176448822,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.20339137683738603
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.8130084820166285,
+          "macro_f1": 0.7800699300699302,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 7,
+            "network_delay": 4,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 1.0163998588540144,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6125
+      }
+    },
+    {
+      "epoch": 43,
+      "steps": 258,
+      "fit_loss": 0.7721393505732218,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.8928571428571429,
+          "nll": 0.19461948529041886
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7995526799564835,
+          "macro_f1": 0.7335497835497835,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 9,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.6071428571428571,
+        "sum_nll": 0.9941721652469023,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 0.6666666666666666
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.5625
+      }
+    },
+    {
+      "epoch": 44,
+      "steps": 264,
+      "fit_loss": 0.6907254358132681,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.19035864121828036
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7855078321587696,
+          "macro_f1": 0.7597060833902939,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 10,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.97586647337705,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6916666666666668
+      }
+    },
+    {
+      "epoch": 45,
+      "steps": 270,
+      "fit_loss": 0.8566964864730835,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.18823531144585842
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7703716517464201,
+          "macro_f1": 0.7659879336349924,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 2,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.9586069631922784,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7208333333333333
+      }
+    },
+    {
+      "epoch": 46,
+      "steps": 276,
+      "fit_loss": 0.7883101205031077,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.17899434229743721
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7718574743920319,
+          "macro_f1": 0.7505537599655248,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 3,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.950851816689469,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6958333333333334
+      }
+    },
+    {
+      "epoch": 47,
+      "steps": 282,
+      "fit_loss": 0.6205563421050707,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.17423774421499896
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7672326800601101,
+          "macro_f1": 0.7848318348318349,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 7,
+            "disk_io_stress": 7,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.9414704242751091,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 48,
+      "steps": 288,
+      "fit_loss": 0.7132327953974406,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1693241687954628
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.8214285714285714,
+          "nll": 0.7446959757069858,
+          "macro_f1": 0.8162043838514427,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.7857142857142857,
+        "sum_nll": 0.9140201445024485,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7416666666666667
+      }
+    },
+    {
+      "epoch": 49,
+      "steps": 294,
+      "fit_loss": 0.6630729486544927,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.16551500661021037
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7450717884459017,
+          "macro_f1": 0.7597060833902939,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 10,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.9105867950561121,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6916666666666668
+      }
+    },
+    {
+      "epoch": 50,
+      "steps": 300,
+      "fit_loss": 0.7091477910677592,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.16119194248779967
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7328447532945097,
+          "macro_f1": 0.7268831168831169,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 5,
+            "disk_io_stress": 11,
+            "network_delay": 3,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8940366957823094,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 51,
+      "steps": 306,
+      "fit_loss": 0.6950314790010452,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.15741134885194338
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7146750989288063,
+          "macro_f1": 0.7247619047619048,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 4,
+            "disk_io_stress": 11,
+            "network_delay": 3,
+            "network_packet_loss": 6
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8720864477807497,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 52,
+      "steps": 312,
+      "fit_loss": 0.6811479528745016,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.15577789901813774
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7232528672076602,
+          "macro_f1": 0.7659879336349924,
+          "prediction_counts": {
+            "cpu_stress": 3,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 2,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.879030766225798,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7208333333333333
+      }
+    },
+    {
+      "epoch": 53,
+      "steps": 318,
+      "fit_loss": 0.880967785914739,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1497032967700529
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7388957666670872,
+          "macro_f1": 0.758095238095238,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 6,
+            "disk_io_stress": 6,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.8885990634371401,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6916666666666668
+      }
+    },
+    {
+      "epoch": 54,
+      "steps": 324,
+      "fit_loss": 0.6703890711069107,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1471393419830542
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7288571476178004,
+          "macro_f1": 0.7366666666666666,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 6,
+            "disk_io_stress": 7,
+            "network_delay": 2,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.8759964896008546,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6958333333333334
+      }
+    },
+    {
+      "epoch": 55,
+      "steps": 330,
+      "fit_loss": 0.5560770606001219,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.14663832894449805
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7174286641923834,
+          "macro_f1": 0.7846193022663611,
+          "prediction_counts": {
+            "cpu_stress": 7,
+            "memory_stress": 5,
+            "disk_io_stress": 8,
+            "network_delay": 3,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8640669931368814,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 56,
+      "steps": 336,
+      "fit_loss": 0.6476984322071075,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1437259450825261
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.6826030939778115,
+          "macro_f1": 0.788796992481203,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 6,
+            "disk_io_stress": 10,
+            "network_delay": 3,
+            "network_packet_loss": 4
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8263290390603376,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 57,
+      "steps": 342,
+      "fit_loss": 0.5259413520495096,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.14062873006417778
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.6757374774435919,
+          "macro_f1": 0.7424585218702866,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 7,
+            "disk_io_stress": 8,
+            "network_delay": 4,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.8163662075077697,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6958333333333334
+      }
+    },
+    {
+      "epoch": 58,
+      "steps": 348,
+      "fit_loss": 0.47498858471711475,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1369247062408138
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.6882791691278423,
+          "macro_f1": 0.7848318348318349,
+          "prediction_counts": {
+            "cpu_stress": 4,
+            "memory_stress": 7,
+            "disk_io_stress": 7,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.825203875368656,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 59,
+      "steps": 354,
+      "fit_loss": 0.7639664908250173,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.13520558656927026
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7235814445166893,
+          "macro_f1": 0.7922344322344322,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 7,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8587870310859596,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 60,
+      "steps": 360,
+      "fit_loss": 0.5357988228400549,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1340826010742238
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7307053113063151,
+          "macro_f1": 0.793073593073593,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 6,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8647879123805389,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 61,
+      "steps": 366,
+      "fit_loss": 0.6059181094169617,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.13194717654352864
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7155853993124236,
+          "macro_f1": 0.7238528138528139,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 4,
+            "disk_io_stress": 7,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8475325758559522,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6666666666666667
+      }
+    },
+    {
+      "epoch": 62,
+      "steps": 372,
+      "fit_loss": 0.4589507182439168,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.12746737026950763
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.7115888538150971,
+          "macro_f1": 0.7447619047619047,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 4,
+            "disk_io_stress": 11,
+            "network_delay": 3,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.8390562240846047,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6916666666666668
+      }
+    },
+    {
+      "epoch": 63,
+      "steps": 378,
+      "fit_loss": 0.5945691366990408,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.12391014764788834
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7073880596588094,
+          "macro_f1": 0.7071861471861471,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 3,
+            "disk_io_stress": 11,
+            "network_delay": 3,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8312982073066977,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 64,
+      "steps": 384,
+      "fit_loss": 0.512786661585172,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.12242953035706854
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7370911672385397,
+          "macro_f1": 0.706516290726817,
+          "prediction_counts": {
+            "cpu_stress": 7,
+            "memory_stress": 3,
+            "disk_io_stress": 10,
+            "network_delay": 3,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8595206975956082,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 65,
+      "steps": 390,
+      "fit_loss": 0.5390264540910721,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.11953559259321021
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.6785714285714286,
+          "nll": 0.7860010930903739,
+          "macro_f1": 0.7021245421245421,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 4,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.6428571428571429,
+        "sum_nll": 0.9055366856835841,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6458333333333334
+      }
+    },
+    {
+      "epoch": 66,
+      "steps": 396,
+      "fit_loss": 0.5428961465756098,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.11778798702197164
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7540346310493865,
+          "macro_f1": 0.7327339327339327,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 5,
+            "disk_io_stress": 4,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.8718226180713582,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 67,
+      "steps": 402,
+      "fit_loss": 0.48868998388449353,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.11533198498030162
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.716639925041327,
+          "macro_f1": 0.793073593073593,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 6,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8319719100216286,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 68,
+      "steps": 408,
+      "fit_loss": 0.3931512087583542,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.11333543757575794
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7093716855314154,
+          "macro_f1": 0.793073593073593,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 6,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.75,
+        "sum_nll": 0.8227071231071733,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7166666666666667
+      }
+    },
+    {
+      "epoch": 69,
+      "steps": 414,
+      "fit_loss": 0.47340188423792523,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.11205394721720485
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.75,
+          "nll": 0.6821633836379469,
+          "macro_f1": 0.7512265512265512,
+          "prediction_counts": {
+            "cpu_stress": 6,
+            "memory_stress": 5,
+            "disk_io_stress": 9,
+            "network_delay": 3,
+            "network_packet_loss": 5
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.7942173308551518,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6916666666666668
+      }
+    },
+    {
+      "epoch": 70,
+      "steps": 420,
+      "fit_loss": 0.4470115552345912,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1103353992118401
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.6562632619951927,
+          "macro_f1": 0.728796992481203,
+          "prediction_counts": {
+            "cpu_stress": 7,
+            "memory_stress": 4,
+            "disk_io_stress": 10,
+            "network_delay": 3,
+            "network_packet_loss": 4
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.7665986612070328,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.8333333333333334
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6666666666666667
+      }
+    },
+    {
+      "epoch": 71,
+      "steps": 426,
+      "fit_loss": 0.4351719121138255,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 0.9642857142857143,
+          "nll": 0.1075283327290244
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.67868436671666,
+          "macro_f1": 0.7246031746031746,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 3,
+            "disk_io_stress": 9,
+            "network_delay": 3,
+            "network_packet_loss": 4
+          }
+        },
+        "joint_accuracy": 0.6785714285714286,
+        "sum_nll": 0.7862126994456844,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.75
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.6
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6708333333333334
+      }
+    },
+    {
+      "epoch": 72,
+      "steps": 432,
+      "fit_loss": 0.4013995826244354,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 1.0,
+          "nll": 0.10702794531030392
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7142857142857143,
+          "nll": 0.7183141650551207,
+          "macro_f1": 0.7245021645021644,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 3,
+            "disk_io_stress": 6,
+            "network_delay": 3,
+            "network_packet_loss": 7
+          }
+        },
+        "joint_accuracy": 0.7142857142857143,
+        "sum_nll": 0.8253421103654246,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.9166666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.5
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.6875
+      }
+    },
+    {
+      "epoch": 73,
+      "steps": 438,
+      "fit_loss": 0.4038521945476532,
+      "inner_stop": {
+        "root": {
+          "n": 28,
+          "accuracy": 1.0,
+          "nll": 0.10737255710293978
+        },
+        "fault": {
+          "n": 28,
+          "accuracy": 0.7857142857142857,
+          "nll": 0.7196636943871234,
+          "macro_f1": 0.7922344322344322,
+          "prediction_counts": {
+            "cpu_stress": 5,
+            "memory_stress": 7,
+            "disk_io_stress": 5,
+            "network_delay": 3,
+            "network_packet_loss": 8
+          }
+        },
+        "joint_accuracy": 0.7857142857142857,
+        "sum_nll": 0.8270362514900632,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 12,
+            "joint_accuracy": 0.9166666666666666
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 0.7
+          },
+          "RE2-OB": {
+            "n": 3,
+            "joint_accuracy": 1.0
+          },
+          "RE2-SS": {
+            "n": 3,
+            "joint_accuracy": 0.3333333333333333
+          }
+        },
+        "cohort_macro_joint": 0.7375
+      }
+    }
+  ],
+  "outer_summary": {
+    "root": {
+      "n": 54,
+      "accuracy": 0.9259259259259259,
+      "nll": 0.18200855579847663
+    },
+    "fault": {
+      "n": 54,
+      "accuracy": 0.7222222222222222,
+      "nll": 0.7251389768367522,
+      "macro_f1": 0.7051361937295441,
+      "prediction_counts": {
+        "cpu_stress": 4,
+        "memory_stress": 14,
+        "disk_io_stress": 13,
+        "network_delay": 9,
+        "network_packet_loss": 14
+      }
+    },
+    "joint_accuracy": 0.7037037037037037,
+    "sum_nll": 0.9071475326352288,
+    "cohorts": {
+      "RE1-OB": {
+        "n": 13,
+        "joint_accuracy": 0.8461538461538461
+      },
+      "RE1-SS": {
+        "n": 28,
+        "joint_accuracy": 0.5714285714285714
+      },
+      "RE2-OB": {
+        "n": 2,
+        "joint_accuracy": 1.0
+      },
+      "RE2-SS": {
+        "n": 11,
+        "joint_accuracy": 0.8181818181818182
+      }
+    },
+    "cohort_macro_joint": 0.8089410589410589
+  },
+  "heads_sha256": "62f7c708144d650738c938720f21d14eb155eca31c63e457ae5fcfc4f4d7c020",
+  "source_revision": "cf48a95b83f2c00a7e46d4166d4bacb0354c0334",
+  "protocol_sha256": "16d86a6ba749afdfd47e954850a759fb8798401d8cf270330714faf25aa35ac8",
+  "backbone_tensor_sha256": "a208438d04e1a9961d992cb74ae67d3c32a00a635d5959f1101413f6d16df242",
+  "cached_full_logit_max_diff": 0.0,
+  "trainable_parameters": 369809,
+  "trainable_parameter_names": [
+    "scorer.0.weight",
+    "scorer.0.bias",
+    "scorer.2.weight",
+    "scorer.2.bias",
+    "fault_head.weight",
+    "fault_head.bias",
+    "numeric_root.0.weight",
+    "numeric_root.0.bias",
+    "numeric_root.2.weight",
+    "numeric_root.2.bias",
+    "numeric_fault.0.weight",
+    "numeric_fault.0.bias",
+    "numeric_fault.2.weight",
+    "numeric_fault.2.bias",
+    "numeric_local_fault.0.weight",
+    "numeric_local_fault.0.bias",
+    "numeric_local_fault.2.weight",
+    "numeric_local_fault.2.bias"
+  ],
+  "seconds": 6.228544797748327,
+  "peak_cuda_allocated_bytes": 713883136,
+  "group_overlap": 0,
+  "outer_used_for_stopping": false
+}

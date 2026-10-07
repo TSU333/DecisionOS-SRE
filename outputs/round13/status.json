@@ -1,0 +1,31 @@
+{
+  "execution_scope": "mvp",
+  "grouped_cv": "completed",
+  "train_error_audit": "completed",
+  "external_source_preparation": "completed_with_no_admissible_cases",
+  "new_usable_independent_data": "not_obtained",
+  "formal_training_runs": 18,
+  "formal_optimizer_updates": 10548,
+  "tests_passed": 97,
+  "engineering_checks": "passed",
+  "global_holdouts_evaluated": false,
+  "default_model_updated": false,
+  "new_model_strength_confirmed": false,
+  "fresh_independent_evaluation_completed": false,
+  "new_independent_cases": 0,
+  "source_events_audited": 94,
+  "source_events_admitted": 0,
+  "mvp_definition_of_done": "Prior engineering MVP retained; this round verifies grouped CV and data readiness. Prior CPU/API benchmarks are not rerun or relabeled as new measurements.",
+  "not_run": [
+    "new full-TRAIN deployment candidate",
+    "new global-validation or historical-regression model evaluation",
+    "new calibration or gate selection",
+    "new API latency benchmark",
+    "new independent quality confirmation",
+    "production fault injection",
+    "KD",
+    "external LLM",
+    "ONNX",
+    "quantization"
+  ]
+}

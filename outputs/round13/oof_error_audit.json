@@ -1,0 +1,4672 @@
+{
+  "original_train_only": true,
+  "unique_cases": 164,
+  "seeds": 3,
+  "label_changes": 0,
+  "cases_are_not_proven_mislabeled": true,
+  "variants": {
+    "temporal": {
+      "stable_errors_all_three_seeds": 37,
+      "any_seed_errors": 65,
+      "confusions_across_492_repeated_predictions": {
+        "cpu_stress -> disk_io_stress": 40,
+        "disk_io_stress -> cpu_stress": 23,
+        "network_delay -> network_packet_loss": 21,
+        "network_packet_loss -> network_delay": 13,
+        "cpu_stress -> memory_stress": 10,
+        "memory_stress -> cpu_stress": 8,
+        "disk_io_stress -> network_packet_loss": 5,
+        "network_packet_loss -> disk_io_stress": 4,
+        "memory_stress -> disk_io_stress": 3,
+        "cpu_stress -> network_packet_loss": 3,
+        "disk_io_stress -> memory_stress": 3,
+        "cpu_stress -> network_delay": 2,
+        "disk_io_stress -> network_delay": 1
+      },
+      "cases": [
+        {
+          "run_id": "0484cb76295ff31953274f21",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "054e489835012f8438da7eae",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0eb0108d0cd4648716bd9d6f",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "16193a4d504a8a970a5dca9b",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "1ae8f343909a2c1abbdb740a",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "22753315242e76c8a27046fc",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "22eeb8727f7c631b00fcaceb",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "256c5ce919142c9128df5cc8",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "29c4a3778a6071b1a61342c6",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "2d7a8a71d1965a501be03ce6",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "312c4d1ffe844a1073cd3392",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "shipping"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "shipping"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "shipping"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "39cedb70fd22b80410295af2",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "queue-master"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "493339e338e4be04df0aad72",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "520606e2fb17e4a29cecc9b2",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "585cec562cf346350a162d2f",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "user",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "5f6d8f696564101ceed0a071",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "70ee6c3740ce01315d36c2a7",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "emailservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "7256356ffb86c4ae6f46bc2c",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "73c9f93dd8e1e00153f844fa",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "cartservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "888735b551ad1c03171876a7",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "89ce37ea30e112ffd9220b4a",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8ad019797e1898d727bdd311",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8b7d52d0eebc91346bc7a392",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "user",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9fcc9788e706ef6219da61c3",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "a824e56bd1e0e1958cc22c45",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "af7879268e82a17ebd9878d0",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b352ccc9ecac53f4d79c1861",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bdc54e3265bafc2fd21bc918",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bfd14b9d5c95fe2941976f07",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "cartservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "cce449fae641f00a789ec169",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "d253d3fc85b13976d86776b7",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "user",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "db08bd001dc297de305e5a13",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e32fe84a490ed95926850f5a",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "eb628868752fbdc887afc783",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f88d7548f13042a64d121b49",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f8f7e7d35c9ac4a4ce238fef",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "fd6c62eb30906322da5d24d2",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "1804cd18e9a65e5ece5b6f58",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "317d870b6bfdb9bc4fd3e2fa",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "adservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "4540d257d515f6b9456e35ab",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "713bc20c73338c51cd9f91da",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "75f4fae8fd46fcf83c261bdb",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8a97bb53b9f500cbf581cbe8",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9ab31bb621d3e0d8f2897404",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "ab5967d895935ed7e41a1b72",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b843c5aa80aec2fceaef789b",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "user",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bbbfd5c80988068515990283",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "adservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e907a8050f83593bb0d5e8f7",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "frontend"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f0fa3f97aaf3f59a53c593c1",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f12b1443307a57694356be3a",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "fc0701e8f3a251090bb14ead",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0a6f2329dca752051eced5b8",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend-external"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0f67d1a288812bec765d598f",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "3daf57158daef7d598616b38",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "5b264db6fc27feb0e1c32027",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "704205d07bf129586fc039df",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "847abeb18daf570f76c2e10d",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8e904a43f2986e996bdbffbe",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9cb313f397e19d48782c835a",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "a78011b56ce028ccad350807",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "user",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b830ddf61a5a36015a62c9d1",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "d8448a5bc5754b32d1502bdf",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "dd2d08da92ad45aa52b2ffa7",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "carts",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e2badd80e0bea7311b95e819",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "orders",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f8c60f1c81675f0c04f88051",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        }
+      ]
+    },
+    "dynamics": {
+      "stable_errors_all_three_seeds": 27,
+      "any_seed_errors": 67,
+      "confusions_across_492_repeated_predictions": {
+        "cpu_stress -> disk_io_stress": 26,
+        "disk_io_stress -> cpu_stress": 22,
+        "network_delay -> network_packet_loss": 18,
+        "network_packet_loss -> network_delay": 13,
+        "disk_io_stress -> network_packet_loss": 7,
+        "memory_stress -> cpu_stress": 7,
+        "cpu_stress -> memory_stress": 7,
+        "disk_io_stress -> memory_stress": 6,
+        "cpu_stress -> network_packet_loss": 5,
+        "network_packet_loss -> disk_io_stress": 4,
+        "memory_stress -> network_packet_loss": 3,
+        "disk_io_stress -> network_delay": 2,
+        "network_delay -> disk_io_stress": 2,
+        "memory_stress -> disk_io_stress": 1
+      },
+      "cases": [
+        {
+          "run_id": "054e489835012f8438da7eae",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0a6f2329dca752051eced5b8",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend-external"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0eb0108d0cd4648716bd9d6f",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "16193a4d504a8a970a5dca9b",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "1ae8f343909a2c1abbdb740a",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "22753315242e76c8a27046fc",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "22eeb8727f7c631b00fcaceb",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "2d7a8a71d1965a501be03ce6",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "312c4d1ffe844a1073cd3392",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "shipping"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "shipping"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "shipping"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "39cedb70fd22b80410295af2",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "520606e2fb17e4a29cecc9b2",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "5f6d8f696564101ceed0a071",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "70ee6c3740ce01315d36c2a7",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "emailservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "emailservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "7256356ffb86c4ae6f46bc2c",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "73c9f93dd8e1e00153f844fa",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "cartservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "89ce37ea30e112ffd9220b4a",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8ad019797e1898d727bdd311",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9437065abf0cd2b98a78924d",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9fcc9788e706ef6219da61c3",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "af7879268e82a17ebd9878d0",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b352ccc9ecac53f4d79c1861",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "cce449fae641f00a789ec169",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "db08bd001dc297de305e5a13",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e32fe84a490ed95926850f5a",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f0fa3f97aaf3f59a53c593c1",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f8f7e7d35c9ac4a4ce238fef",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "carts",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "fd6c62eb30906322da5d24d2",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 3,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0484cb76295ff31953274f21",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "29c4a3778a6071b1a61342c6",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "carts",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "317d870b6bfdb9bc4fd3e2fa",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "adservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "4540d257d515f6b9456e35ab",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "493339e338e4be04df0aad72",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "5b264db6fc27feb0e1c32027",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "75f4fae8fd46fcf83c261bdb",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "888735b551ad1c03171876a7",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8b7d52d0eebc91346bc7a392",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "user",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "9ab31bb621d3e0d8f2897404",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b830ddf61a5a36015a62c9d1",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "payment",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b9de3bf585ba61b4e1aa2c26",
+          "application": "Online Boutique",
+          "cohort": "RE2-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "recommendationservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "recommendationservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "recommendationservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "ca2eb98fabec558e08d19646",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "d253d3fc85b13976d86776b7",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "user",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "fc0701e8f3a251090bb14ead",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 2,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "053e676f22a2b6c0c2a2bca6",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "0f21a2ab0af4e53a4f5773e4",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "memory_stress",
+          "root_gold": "adservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "cpu_stress",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "adservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "256c5ce919142c9128df5cc8",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "38d0c513976090f4824c4944",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "user",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "39e972166970bbbce4d3ae66",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "3daf57158daef7d598616b38",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "585cec562cf346350a162d2f",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "user",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "user"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "696b6ca4c2d057fcf67fc899",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "currencyservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "currencyservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "6ea530ecc35d80e76014f4e3",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "704205d07bf129586fc039df",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "cartservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "frontend-external"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "847abeb18daf570f76c2e10d",
+          "application": "Sock Shop",
+          "cohort": "RE2-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8e904a43f2986e996bdbffbe",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "cpu_stress",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "8f45e699d11b2d3a3c627a4c",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "b775bf10348599d6d15e85c7",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bbbfd5c80988068515990283",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "adservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "adservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "adservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bdc54e3265bafc2fd21bc918",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "catalogue",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "catalogue"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "bfd14b9d5c95fe2941976f07",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "cartservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "cartservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "cartservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "ce5b63047d784972b0e60371",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_delay",
+          "root_gold": "user",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "user"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "user"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "cf85df46f1fa9667bf0b8727",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "checkoutservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "checkoutservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "d42bcd0bf8967c3bb250d2cf",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "memory_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e4248dae99ca23e7e1277d6d",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "disk_io_stress",
+          "root_gold": "carts",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "e907a8050f83593bb0d5e8f7",
+          "application": "Online Boutique",
+          "cohort": "RE1-OB",
+          "fault_gold": "network_delay",
+          "root_gold": "productcatalogservice",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": false,
+              "fault_correct": true,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "frontend"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "productcatalogservice"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_delay",
+              "root_pred": "productcatalogservice"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "eb628868752fbdc887afc783",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "cpu_stress",
+          "root_gold": "payment",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "disk_io_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "cpu_stress",
+              "root_pred": "payment"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f3ecc579c50d9a6e27650d91",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "memory_stress",
+          "root_gold": "orders",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "memory_stress",
+              "root_pred": "orders"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        },
+        {
+          "run_id": "f88d7548f13042a64d121b49",
+          "application": "Sock Shop",
+          "cohort": "RE1-SS",
+          "fault_gold": "network_packet_loss",
+          "root_gold": "carts",
+          "wrong_seeds": 1,
+          "predictions": [
+            {
+              "seed": 50,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 51,
+              "root_correct": true,
+              "fault_correct": false,
+              "joint_correct": false,
+              "fault_pred": "network_delay",
+              "root_pred": "carts"
+            },
+            {
+              "seed": 52,
+              "root_correct": true,
+              "fault_correct": true,
+              "joint_correct": true,
+              "fault_pred": "network_packet_loss",
+              "root_pred": "carts"
+            }
+          ],
+          "action": "review source telemetry and independent injection metadata; do not relabel from prediction"
+        }
+      ]
+    }
+  }
+}

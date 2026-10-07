@@ -2,13 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第十二轮结果见 `docs/round12_results.md`，机器结果 `outputs/round12/results.json`，验收 `outputs/round12/status.json`。本轮候选未通过历史回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。execution_scope 保持 mvp，历史模型与失败证据保留。
+最新第十三轮结果见 `docs/round13_results.md`，机器结果 `outputs/round13/results.json`，验收 `outputs/round13/status.json`。本轮完成TRAIN内分组交叉验证、训练错误审计和外部来源准备，默认仍为第五轮，入口 `outputs/latest_model.json`。execution_scope保持mvp。
 
-本轮实现并审计因果动态摘要，比较旧特征对照、新特征故障头、dropout与联合头四组真实GPU训练，共3608次优化器更新，主干全部冻结。有效TRAIN仍为164个原案例，没有新增独立数据。旧文本和数值前缀在400例上保持一致，新增权重从零迁移；新特征方案没有超过匹配的旧特征对照，不能据此宣称特征扩展有效。
+两种特征 × 三折 × 三个seed，共18次真实GPU训练、10548次优化器更新。每折从原始预训练主干和新分类头开始，inner-fit/inner-stop/outer互不重叠；旧验证、校准、门控及历史回归未参与本轮新模型评测。旧时间摘要的折外联合均值68.9%，动态摘要72.4%，seed间标准差分别2.20/6.69个百分点。新特征均值更高但波动更大，不能认定稳定收益；这些小训练折的结果也不能与现任完整TRAIN模型的95%验证值直接比较。
 
-验证选中legacy_control，联合准确率从92.5%升至95.0%，sum NLL从0.259229降至0.252290；但历史RE2-OB联合76%→72%，Sock Shop 93.3%→90%，RE1-OB保持86.7%。因此不替换默认模型，具体协议见 `docs/round12_protocol.md`。
+原TRAIN标签与注入元数据核对一致，反复错误已列入复核清单，未依据预测改标签。另下载OpenNetAI Sock Shop固定公开来源19个遥测CSV，审计94条容器故障；因60秒窗口最多2个观测点及指标语义不兼容，准入0条。原始资料、逐事件原因与补充要求见 `docs/round13_new_data_requirements.md`，没有新增可用独立数据。
 
-91项测试、依赖检查、真实HTTP、CPU重载、数据和训练权重审计通过；候选CPU端到端P95为871.0ms。24个实际训练源文件与训练前提交 `2efebde78dd7819d87eebb5bb4feafc95e742f94` 哈希一致。原MVP工程流程完成，未知案例质量和自动接受风险仍缺新的独立确认；系统不执行运维操作。
+97项测试、依赖检查、18份分类头的CPU重建与权重/抽样/源码审计通过。CPU/GPU最大logit差约8e-6，检查样本argmax一致。默认推理路径本轮未改；CPU延迟与真实HTTP沿用第十二轮证据，没有重新测量。分组CV完整复现入口 `./scripts/reproduce_round13.ps1 -CheckOnly`（仅预检），去掉CheckOnly会在新目录实际重训。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE

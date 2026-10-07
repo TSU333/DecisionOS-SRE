@@ -1,0 +1,33 @@
+{
+  "revision": "cf48a95b83f2c00a7e46d4166d4bacb0354c0334",
+  "source_hashes": {
+    "src\\decisionos_sre\\api.py": "d8496ec98940030c1a287f9ac64f62a1dc3fbfa47d82ac7cdcb26b9660a8e4ca",
+    "src\\decisionos_sre\\application_heads.py": "7a8109c24be930669314ef61bfb700163bc1ad54f2ee9e6a27c33fd50101c96d",
+    "src\\decisionos_sre\\cached_training.py": "dc3a01558de9e14c46277444fb42d8ca5b22ae61c20b318f27b63ee9309829b3",
+    "src\\decisionos_sre\\calibration.py": "ad08724034ee11535d80b457dbf5c971b3be4f98988905fbcdba1e1ae57930c3",
+    "src\\decisionos_sre\\cli.py": "4bdd56bdc38f0a901ffba05948d328649317a0966665d6f1267d1716c8c2a08b",
+    "src\\decisionos_sre\\common.py": "b84b2455a79fb0b880f0d8c1fdf7568ec0d5b68ad3a75cc9181995cb8a7a81a1",
+    "src\\decisionos_sre\\data.py": "0b0b9c68bdfbf7c647a71153170c190b513f8bc4f5b0d2accab5b51c9b713a06",
+    "src\\decisionos_sre\\dynamics.py": "45e7b5f09b70c9a304f1645488f7e969fb995ab9f0d0ae87a63ec5a0b8044dd1",
+    "src\\decisionos_sre\\fault_regularization.py": "0244ac6ee7ca085fc0cfd006e32a151bd07b060aa6b307a0007ab102be9bc1fe",
+    "src\\decisionos_sre\\grouped_validation.py": "791449795703c7491ec44f2dd3758aef370974b611637a1db6c35f7162b17405",
+    "src\\decisionos_sre\\metrics.py": "656b520c50a3fce257bc52b465900239dd8be03c642d3bb8c02bb139b8046003",
+    "src\\decisionos_sre\\model.py": "1bc0eaa94e4679c8f14c888e9bc4a3626df55cbdd0e99dadc5f1d95d4fe7d4c9",
+    "src\\decisionos_sre\\partial_training.py": "f87f74773188d7124f3e3255db2bf0ab096991c2108c8542dd6c21f86004e83b",
+    "src\\decisionos_sre\\pipeline.py": "2c4fe5ffb203a1264419634e41e32490236ea1fecd82d84ef60520aee0f77d05",
+    "src\\decisionos_sre\\policy.py": "7b82bebd94924389b0720cae0787bbc56b2a9c170e9d52366a4c7c2559e42126",
+    "src\\decisionos_sre\\representation.py": "63fa56c808eac0a532d2dd7048af8725ea054f66467eceb07ec9253c0169c07c",
+    "src\\decisionos_sre\\runtime.py": "e39e9cd964293498a3a45cff3f88c9491e0831ac6364bfd44bf0b7ef56cf7bce",
+    "src\\decisionos_sre\\schema.py": "f0fa6d207c22b046ff6c497eabeec289a2f4e946820bcd3b4f7e0309466b97fc",
+    "src\\decisionos_sre\\serializer.py": "b4c077ba16278cbe5ca07af493d8ffebbff5ef6bc7399875ae1e6d1e142d5568",
+    "src\\decisionos_sre\\temporal.py": "cd62c6a1fd71bf11088eda22de9d4bd7c33d4b90c97678ea449a3ef1d6797053",
+    "src\\decisionos_sre\\traces.py": "36a2604e80c2d618e525b5a78aab0ca52b40ec0c2852b89a09f31f04a98f3bea",
+    "src\\decisionos_sre\\training.py": "8f8f057fb7fdce27157b824751498c1f1109fea89845c67136e9a73a1cfa3dfa",
+    "src\\decisionos_sre\\training_views.py": "736443deb63ca38464537243ed1b1c0c9043920bb0c34cb9cb819d9e1de3302f",
+    "src\\decisionos_sre\\__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+    "src\\decisionos_sre\\__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+    "scripts\\run_round13_cv.py": "06b42101f6cb0f6d15503195cdc2feca914f130a828d195cf4fbc8247241f324",
+    "scripts\\prepare_round13.py": "43174f9bd41f7aef976abb18aa1d21f680d40e514b218695634589b8d964c617"
+  },
+  "all_files_match_git": true
+}
