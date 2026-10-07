@@ -14,7 +14,7 @@ from .model import build_model, labels, supervised_loss
 
 def config_binding(config,checkpoint_hash,split_hash,tokenizer_hash):
     pipeline={"serializer":config.get("serializer_version",SERIALIZER),"max_length":config["max_length"],"ontology":FAULTS}
-    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight","numeric_feature_version","trace_features","trace_feature_version"):
+    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight","numeric_feature_version","trace_features","trace_feature_version","application_fault_names"):
         if key in config: pipeline[key]=config[key]
     return {"checkpoint_sha256":checkpoint_hash,"split_hash":split_hash,
             "pipeline_hash":digest(pipeline),
@@ -51,7 +51,7 @@ def train(config,mode):
         if mode!="frozen": raise ValueError("Feature caching requires frozen mode")
         from .cached_training import train_cached
         return train_cached(config)
-    if config.get("head_training_policy","all_heads")!="all_heads" or config.get("fault_hidden_dropout",0.) or config.get("fault_label_smoothing",0.) or config.get("training_views_file") or config.get("training_view_probability",0.) or config.get("require_train_usable_evidence",False):
+    if config.get("head_training_policy","all_heads")!="all_heads" or config.get("fault_hidden_dropout",0.) or config.get("fault_label_smoothing",0.) or config.get("training_views_file") or config.get("training_view_probability",0.) or config.get("require_train_usable_evidence",False) or config.get("application_fault_names"):
         raise ValueError("Fault training controls require the cached frozen trainer")
     if mode not in ["frozen","sft"]:
         raise ValueError("mode must be frozen or sft")
@@ -66,8 +66,8 @@ def train(config,mode):
     if (out/"checkpoint.pt").exists():
         raise FileExistsError("Checkpoint exists. Choose a fresh artifact_root; never silently overwrite a evaluated model.")
     tokenizer=AutoTokenizer.from_pretrained(config["backbone_dir"],local_files_only=True)
-    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [],config.get("numeric_feature_version","mean-v1"),config.get("trace_features",False))
-    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.)).to(device)
+    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [],config.get("numeric_feature_version","mean-v1"),config.get("trace_features",False),config.get("application_fault_names",[]))
+    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.),application_fault_names=config.get("application_fault_names",[])).to(device)
     if mode=="frozen":
         for p in model.backbone.parameters():
             p.requires_grad=False
@@ -190,11 +190,11 @@ def load_checkpoint(artifact_dir,device="cpu"):
     if expected!=metadata["binding"] or metadata["ontology"]!=FAULTS:
         raise ValueError("pipeline/ontology version mismatch")
     torch.set_num_threads(cfg["cpu_threads"])
-    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=numeric_dimension(cfg),root_conditioned_fault=cfg.get("root_conditioned_fault",False),text_logit_weight=cfg.get("text_logit_weight",1.))
+    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=numeric_dimension(cfg),root_conditioned_fault=cfg.get("root_conditioned_fault",False),text_logit_weight=cfg.get("text_logit_weight",1.),application_fault_names=cfg.get("application_fault_names",[]))
     model.load_state_dict(torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True),strict=True)
     model.to(device).eval()
     tok=AutoTokenizer.from_pretrained(folder/"tokenizer",local_files_only=True)
-    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else [],cfg.get("numeric_feature_version","mean-v1"),cfg.get("trace_features",False)),metadata
+    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else [],cfg.get("numeric_feature_version","mean-v1"),cfg.get("trace_features",False),cfg.get("application_fault_names",[])),metadata
 
 def baseline(data_dir):
     from collections import Counter
@@ -324,10 +324,12 @@ def initialize_from_artifact(model,config,trainset,valset):
             old=state[name];target=expected[name];extra=72 if name=='numeric_fault.0.weight' else 24
             if target.shape[0]!=old.shape[0] or target.shape[1]!=old.shape[1]+extra:raise ValueError('Invalid trace expansion shape')
             expanded=torch.zeros_like(target);expanded[:,:old.shape[1]]=old;state[name]=expanded;migrated.append(name)
+    from .application_heads import migrate_application_heads
+    app_copied=migrate_application_heads(state,model,meta['config'].get('application_fault_names',[]),config.get('application_fault_names',[]),config.get('application_head_upgrade'))
     missing,unexpected=model.load_state_dict(state,strict=False)
     if unexpected or any(not n.startswith(("numeric_root.","numeric_fault.","numeric_local_fault.")) for n in missing):
         raise ValueError("Unexpected parent architecture mismatch")
-    return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing,"zero_padded_temporal_inputs":migrated}
+    return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing,"zero_padded_temporal_inputs":migrated,"copied_application_head_parameters":app_copied}
 
 
 def training_order(examples,rng,config):

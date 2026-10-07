@@ -129,7 +129,7 @@ def benchmark(folder,config):
     ex=samples[0]
     for token_limit,count in [(512,2),(1024,7),(2048,len(ex.input.candidates))]:
         inc=ex.input.model_copy(deep=True); inc.candidates=inc.candidates[:count]
-        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics,engine.serializer.numeric_feature_version,engine.serializer.trace_features); enc=ser(inc)
+        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics,engine.serializer.numeric_feature_version,engine.serializer.trace_features,engine.serializer.application_fault_names); enc=ser(inc)
         batch=collate([enc],engine.tokenizer.pad_token_id)
         with torch.inference_mode():
             engine.model(**batch)

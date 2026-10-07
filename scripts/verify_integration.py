@@ -25,6 +25,11 @@ for r,ref in zip(rows,reference):
   delta=float(np.max(np.abs(np.asarray(r[head+"_logits"])-ref[head+"_logits"])))
   assert delta<=1e-6,delta
   deltas.append(delta)
+app_examples=[];app_rows=[]
+if meta['config'].get('application_fault_names'):
+ for app in meta['config']['application_fault_names']:
+  app_examples.append(next(e for e in load_split(meta['config']['data_dir'],'model_validation') if e.input.application==app))
+ app_rows=predict(model,tok,ser,app_examples,'cpu','model_validation')
 del model,tok,ser
 import gc
 gc.collect()
@@ -62,6 +67,18 @@ try:
                 rows[0]["evidence_usable"],cal,pol,meta["binding"])
  assert result["routing"]==expected
  assert result["execute_remediation"] is False
+ if app_examples:
+  checks['application_experts']={}
+  from decisionos_sre.common import FAULTS
+  for ex,row in zip(app_examples,app_rows):
+   status,reply=request('/v1/decide',ex.input.model_dump())
+   assert status==200 and reply['execute_remediation'] is False
+   app_deltas=[]
+   for head,field,names in [('root','root_cause',row['candidate_ids']),('fault','fault_type',FAULTS)]:
+    expected_probs=probabilities(row[head+'_logits'],cal[head]['temperature'])
+    delta=float(np.max(np.abs(np.asarray([reply[field]['probabilities'][name] for name in names])-expected_probs)))
+    assert delta<=1e-6;app_deltas.append(delta)
+   checks['application_experts'][ex.input.application]={'status':status,'probability_max_abs_diff':max(app_deltas)}
  checks["decide"]=code
  checks["decision"]=result
  if meta['config'].get('numeric_feature_version')=='temporal-v1':

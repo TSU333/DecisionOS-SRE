@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from .schema import IncidentInput
 from .common import SERIALIZER
+from .application_heads import application_names
 
 class UnsupportedInput(ValueError):
     pass
@@ -13,15 +14,17 @@ class Encoded:
     report: dict
     candidate_numeric: list | None = None
     incident_numeric: list | None = None
+    application_index: int | None = None
 
 class Serializer:
-    def __init__(self, tokenizer, max_length=2048, version=SERIALIZER, numeric_metrics=(), numeric_feature_version="mean-v1", trace_features=False):
+    def __init__(self, tokenizer, max_length=2048, version=SERIALIZER, numeric_metrics=(), numeric_feature_version="mean-v1", trace_features=False, application_fault_names=()):
         self.tokenizer=tokenizer
         self.max_length=max_length
         self.version=version
         self.numeric_metrics=list(numeric_metrics)
         self.numeric_feature_version=numeric_feature_version
         self.trace_features=trace_features
+        self.application_fault_names=application_names(application_fault_names)
         if trace_features and not numeric_metrics:raise ValueError("trace fusion requires numeric metrics")
         if numeric_feature_version not in ("mean-v1","temporal-v1"):raise ValueError("unknown numeric feature version")
         if numeric_feature_version=="temporal-v1" and not self.numeric_metrics:raise ValueError("temporal features require numeric metrics")
@@ -30,6 +33,12 @@ class Serializer:
 
     def __call__(self, incident):
         incident=IncidentInput.model_validate(incident)
+        encoded=self.encode(incident)
+        if self.application_fault_names:
+            encoded.application_index=self.application_fault_names.index(incident.application) if incident.application in self.application_fault_names else -1
+        return encoded
+
+    def encode(self, incident):
         if self.version=="metrics-canonical-v2":
             from .representation import canonical_encode
             return canonical_encode(self,incident)
@@ -90,4 +99,7 @@ def collate(encoded, pad_token_id, device="cpu"):
         numbers=torch.zeros((len(encoded),k,dim),dtype=torch.float32)
         for i,x in enumerate(encoded): numbers[i,:len(x.spans)]=torch.tensor(x.candidate_numeric)
         tensors.update(candidate_numeric=numbers,incident_numeric=torch.tensor([x.incident_numeric for x in encoded],dtype=torch.float32))
+    if any(x.application_index is not None for x in encoded):
+        if not all(x.application_index is not None for x in encoded):raise ValueError("mixed application routing schemas")
+        tensors['application_index']=torch.tensor([x.application_index for x in encoded],dtype=torch.long)
     return {name:t.to(device) for name,t in tensors.items()}

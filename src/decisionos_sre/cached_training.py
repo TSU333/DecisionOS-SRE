@@ -23,7 +23,8 @@ def feature_batch(items):
         if x.get('candidate_numeric') is not None:numeric.append(torch.nn.functional.pad(x['candidate_numeric'],(0,0,0,max_k-k)))
     return {'incident':torch.cat([x['incident'] for x in items]),'candidate':torch.cat(candidates),
             'candidate_mask':torch.cat(masks),'candidate_numeric':torch.cat(numeric) if numeric else None,
-            'incident_numeric':torch.cat([x['incident_numeric'] for x in items]) if numeric else None}
+            'incident_numeric':torch.cat([x['incident_numeric'] for x in items]) if numeric else None,
+            'application_index':torch.cat([x['application_index'] for x in items]) if items[0].get('application_index') is not None else None}
 
 def train_cached(config):
     options=config.get('augmentation',{})
@@ -34,12 +35,15 @@ def train_cached(config):
     if (out/'checkpoint.pt').exists():raise FileExistsError('Refusing to overwrite checkpoint')
     out.mkdir(parents=True,exist_ok=True)
     trainset=load_split(config['data_dir'],'train');valset=load_split(config['data_dir'],'model_validation')
+    apps=config.get('application_fault_names',[])
+    if apps and apps!=sorted({e.input.application for e in trainset}):
+        raise ValueError('Application heads must use the sorted observable TRAIN applications')
     views,view_meta=load_training_views(config,trainset)
     cache_train=trainset+views;val_start=len(cache_train)
     tok=AutoTokenizer.from_pretrained(config['backbone_dir'],local_files_only=True)
     names=config.get('numeric_metrics',[]) if config.get('numeric_fusion') else []
-    ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names,config.get('numeric_feature_version','mean-v1'),config.get('trace_features',False))
-    model=build_model(config['backbone_dir'],head_size=config['head_size'],pooling=config.get('pooling','cls'),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.))
+    ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names,config.get('numeric_feature_version','mean-v1'),config.get('trace_features',False),apps)
+    model=build_model(config['backbone_dir'],head_size=config['head_size'],pooling=config.get('pooling','cls'),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.),application_fault_names=apps)
     initialization=initialize_from_artifact(model,config,trainset,valset)
     dropout_handles=configure_cached_heads(model,config)
     model.to(device).eval();start=time.perf_counter()
@@ -49,7 +53,7 @@ def train_cached(config):
             enc=ser(ex.input);batch=collate([enc],tok.pad_token_id,device)
             inc,cand=model.encode_representations(batch['input_ids'],batch['attention_mask'],batch['spans'],batch['candidate_mask'])
             cache.append({'incident':inc.detach(),'candidate':cand.detach(),'candidate_mask':batch['candidate_mask'],
-                          'candidate_numeric':batch.get('candidate_numeric'),'incident_numeric':batch.get('incident_numeric')})
+                          'candidate_numeric':batch.get('candidate_numeric'),'incident_numeric':batch.get('incident_numeric'),'application_index':batch.get('application_index')})
             rt,ft=labels([ex],[enc],device);root_targets.append(rt);fault_targets.append(ft)
             root=ex.targets.root_cause.value;fault=ex.targets.fault_type.value
             templates.append({'incident_id':ex.opaque_incident_id,'run_id':ex.original_run_id,'split':ex.source_metadata['split'],
@@ -110,7 +114,7 @@ def train_cached(config):
     for handle in dropout_handles:handle.remove()
     with torch.no_grad():
         root_change=max(float((model.score_representations(**x)[0]-old).abs().max()) for x,old in zip(cache[val_start:],root_reference))
-    if config.get('head_training_policy')=='fault_heads' and root_change!=0.:
+    if config.get('head_training_policy') in ('fault_heads','application_fault_heads') and root_change!=0.:
         raise ValueError('Frozen root branch changed during fault-only training')
     # Verify that inference through the full model agrees with the training cache.
     full=predict(model,tok,ser,valset,device,'model_validation')
