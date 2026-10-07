@@ -1,79 +1,97 @@
 # DecisionOS-SRE
 
-研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
+Auditable microservice diagnosis with ModernBERT, grouped evaluation, and FastAPI.
 
-最新第十三轮结果见 `docs/round13_results.md`，机器结果 `outputs/round13/results.json`，验收 `outputs/round13/status.json`。本轮完成TRAIN内分组交叉验证、训练错误审计和外部来源准备，默认仍为第五轮，入口 `outputs/latest_model.json`。execution_scope保持mvp。
+微服务故障诊断研究型MVP：从决策前遥测预测根因服务和五类故障，输出诊断结果或转人工复核。`execution_scope: mvp`，不执行运维操作。
 
-两种特征 × 三折 × 三个seed，共18次真实GPU训练、10548次优化器更新。每折从原始预训练主干和新分类头开始，inner-fit/inner-stop/outer互不重叠；旧验证、校准、门控及历史回归未参与本轮新模型评测。旧时间摘要的折外联合均值68.9%，动态摘要72.4%，seed间标准差分别2.20/6.69个百分点。新特征均值更高但波动更大，不能认定稳定收益；这些小训练折的结果也不能与现任完整TRAIN模型的95%验证值直接比较。
+## 核心设计
 
-原TRAIN标签与注入元数据核对一致，反复错误已列入复核清单，未依据预测改标签。另下载OpenNetAI Sock Shop固定公开来源19个遥测CSV，审计94条容器故障；因60秒窗口最多2个观测点及指标语义不兼容，准入0条。原始资料、逐事件原因与补充要求见 `docs/round13_new_data_requirements.md`，没有新增可用独立数据。
+- **一次共享编码、两个任务**：ModernBERT编码证据，融合数值和时间摘要，完成动态候选服务排序与故障分类。
+- **可审计评测**：Evidence与gold隔离；按原始运行分组，分开模型验证、校准、门控选择及历史回归。
+- **可追溯推理**：FastAPI接口、温度校准、低置信度复核、模型/数据/策略的SHA256版本绑定。
+- **保留负结果**：验证改善但回归退步时保留原模型，配置、逐案例预测和失败结论均留存。
 
-97项测试、依赖检查、18份分类头的CPU重建与权重/抽样/源码审计通过。CPU/GPU最大logit差约8e-6，检查样本argmax一致。默认推理路径本轮未改；CPU延迟与真实HTTP沿用第十二轮证据，没有重新测量。分组CV完整复现入口 `./scripts/reproduce_round13.ps1 -CheckOnly`（仅预检），去掉CheckOnly会在新目录实际重训。
+```mermaid
+flowchart LR
+    A[决策前遥测] --> B[结构化证据与候选服务]
+    B --> C[共享ModernBERT编码]
+    B --> D[数值与时间摘要]
+    C --> E[根因服务排序与故障分类]
+    D --> E
+    E --> F[校准与决策门控]
+    F --> G[诊断结果或人工复核]
+```
+
+## 真实结果
+
+| 项目 | 已执行结果与范围 |
+|---|---|
+| 数据 | RCAEval两个示例应用、五类受控故障，共400个原始案例；165条TRAIN中有效164条 |
+| 工程验收 | 原14项MVP验收完成；原含数据环境最近97项测试通过 |
+| 默认模型 | 第五轮temporal_seed44；原40例验证联合准确率92.5% |
+| 未采用候选 | 第十二轮40例验证达到95%，历史回归退步，未替换默认模型 |
+| 最新开发评估 | 2种特征 × 3折 × 3个seed，共18次真实GPU训练；旧/新特征折外联合均值68.9%/72.4% |
+| 波动 | 联合准确率seed间样本标准差2.20/6.69个百分点；尚不能认定稳定提升 |
+| CPU实测 | 第十二轮候选，Ryzen 9 7945HX、CPU 8线程、batch=1，P95为871.0ms；不是默认模型的新测量或生产SLA |
+| 新独立数据 | 审计94个外部事件，因采样和语义不符合准入，新增可用案例0条 |
+
+联合准确率指根因服务和故障类别同时正确。开发CV只使用既有TRAIN，不能与默认模型40例验证值直接比较。历史集合经过多轮使用，不是新的独立确认。
+
+- [第十二轮结果与MVP逐项验收](docs/round12_results.md)
+- [第十三轮分组CV、错误审计和外部数据审计](docs/round13_results.md)
+- [机器可读状态](outputs/round13/status.json)
+- [工程选择与原因](docs/decisions.md)
+
+## 从源码检查项目
+
+源码包不含原始遥测、模型权重或虚拟环境。以下命令只安装依赖并运行测试，不下载预训练模型或开始训练。原验证环境为Windows / Python 3.13；项目声明Python >=3.11，其他平台仍需验证。在仓库根目录运行：
 
 ```powershell
-Set-Location D:/CODEX/DecisionOS-SRE
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/cpu
+.\.venv\Scripts\python.exe -m pip install -e . pytest==8.3.5 httpx==0.28.1
+.\.venv\Scripts\python.exe -m pytest -q
+.\.venv\Scripts\python.exe -m decisionos_sre --help
+```
+
+本次不含数据和权重的源码副本实测92项通过、5项跳过，CLI帮助正常；使用原已安装环境，未重新安装依赖。缺少本地数据时，5项真实数据集成检查会明确跳过；其余小模型/fixture测试检查工程正确性，不生成正式实验指标。首次从公共包索引安装整套依赖的过程尚未在新的干净机器上复测。
+
+## 训练与复现
+
+`scripts/setup.ps1`面向Windows/CUDA，会安装依赖并下载固定版本ModernBERT；`scripts/reproduce.ps1`下载初始125例子集并执行基线、冻结头、SFT及评测。这个初始流程不会直接复现第十三轮结果。
+
+最终默认模型与后续实验依赖逐轮形成的数据、父模型及封存Git版本。源码ZIP不包含这些产物，也不含Git历史；下载源码不等于获得可立即推理的最终模型。具体入口及依赖见[本地运行记录](docs/local_runbook.md)和[发布与复现说明](docs/github_release.md)。
+
+已有完整本地产物时，在仓库根目录启动默认模型：
+
+```powershell
 $env:PYTHONPATH='src'
-./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round5/temporal_seed44/frozen --port 8000
+.\work\.venv\Scripts\python.exe -m decisionos_sre serve --artifact artifacts/round5/temporal_seed44/frozen --port 8000
 ```
-
-复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round5_temporal_seed44.json -Mode frozen`。需要保留 data/round5、固定主干和第四轮父模型；脚本创建新的输出目录并执行训练、校准、门控、历史回归、CPU benchmark 与真实 HTTP。重跑已有案例是复现，不是新的未见确认。
-
-协议与选择理由见 `docs/round5_protocol.md`。指标字段新增可选 `temporal` 对象，包含 q10_z / q90_z / std_ratio / trend_z / late_shift_z；使用 `decisionos_sre.temporal.temporal_summary` 从决策时刻之前的同一时间窗口提取，计算边界和尺度见实现。旧版模型继续兼容旧格式。
-
-第十二轮新增可选 `metric.dynamics`，通过 `decisionos_sre.dynamics.dynamics_summary` 从同一决策前窗口生成，六项数值和存在标识仅供 `numeric_feature_version=temporal-dynamics-v1` 的实验模型读取。新版本缺少动态证据会REVIEW；现任第五轮及本轮legacy_control继续忽略这个新字段。复现新候选用 `./scripts/reproduce_retraining.ps1 -Config configs/round12_legacy_control.json -Mode frozen`，依赖本地data/round12及第五轮父模型。
-
-## 本地环境
-本次工作目录为 D:\CODEX\DecisionOS-SRE。原 E 盘工作目录读操作可用，但写操作实际返回 WinError 433；用户已授权使用 D 盘指定目录。保留此事实以免误认为所有命令仍在原目录执行。
-
-Windows PowerShell，Python 3.13。硬件为 AMD Ryzen 9 7945HX、16 核 / 32 线程、约 16 GB RAM、RTX 4060 Laptop 8 GB。CUDA 训练、CPU 推理。安装与下载都使用仓库内 `work/`；不占用低剩余空间的 C 盘缓存。
-
-```powershell
-Set-Location D:\CODEX\DecisionOS-SRE
-.\scripts\setup.ps1
-.\scripts\reproduce.ps1
-```
-
-完整环境锁定见 `requirements-lock.txt`（生成后）；顶层经过选择的版本在 pyproject.toml。PyTorch CUDA 轮子来自官方 cu128 索引。若没有 CUDA，请显式修改训练设备并评估计算预算，不会自动启动长时间 CPU 训练。
-
-## 初始数据与实验（历史配置）
-官方 RCAEval RE1-OB，固定 revision，125 个受控故障注入案例，metrics-only；不是线上生产事故，也不是多模态实验。下载与模型路径均不进入 Git。125 个观测组划分为 50 train / 15 model_validation / 15 calibration / 30 gate_selection / 15 test。这些 holdout 很小，结果仅为流程可行性与探索性质量评估。
-
-标签来自官方索引中的注入元数据；候选来自遥测列，而非正确答案。时间窗口使用已知注入起点 `oracle_onset=true`，不测试故障检测。详见 data_audit 与 evaluation_protocol。
-
-CLI:
-```powershell
-$env:PYTHONPATH = 'src'
-$python = '.\work\.venv\Scripts\python.exe'
-& $python -m decisionos_sre audit-data
-& $python -m decisionos_sre make-splits
-& $python -m decisionos_sre prepare-data
-& $python -m decisionos_sre baseline
-& $python -m decisionos_sre train --mode frozen
-& $python -m decisionos_sre train --mode sft
-& $python -m decisionos_sre calibrate --artifact artifacts/sft --device cuda
-& $python -m decisionos_sre select-policy --artifact artifacts/sft --device cuda
-& $python -m decisionos_sre evaluate --artifact artifacts/sft --device cpu
-& $python -m decisionos_sre benchmark --artifact artifacts/sft
-& $python -m decisionos_sre serve --artifact artifacts/sft --port 8000
-```
-
-已有 checkpoint 不会被 train 静默覆盖。重新实验应复制配置、换新的 artifact_root，并把 `--config 路径` 放在子命令之前。测试集一旦打开，禁止用其结果选模型或修改阈值；代码缺陷修正须记录后重新标记评测历史。
 
 ## API
-只监听 127.0.0.1。GET /health 判断进程存活，GET /ready 检查模型加载。POST /v1/decide 仅接受 IncidentInput；训练标签、路径等额外字段为 422。缺 checkpoint 为 503，不回退随机模型。候选超预算返回 REVIEW 和明确原因，两个任务不伪造概率。API 支持指标摘要及可选 `evidence.traces` 服务摘要；调用链特征仅由显式启用的第六轮实验模型使用，默认第五轮模型仍只使用指标。logs 尚未接入。调用链原始数据需通过 `decisionos_sre.traces.summarize_traces` 按决策时间汇总；不能直接传入原始 span。
 
-准备数据后可从 examples.json 取出某条 `input` 保存为请求；不发送整个 TrainingExample。每个 metric 包含服务、原始指标名、基线均值、观测均值、变化 z 值、缺失比例和观测截止时点。汇总公式和时间边界必须与 adapter 一致。
+| 接口 | 用途 |
+|---|---|
+| `GET /health` | 进程存活检查 |
+| `GET /ready` | 模型加载状态，缺少工件返回503 |
+| `POST /v1/decide` | 接收IncidentInput，返回根因、故障、复核策略和版本信息 |
 
-## 验证与产物
-```powershell
-& .\work\.venv\Scripts\python.exe -m pytest -q
+输入结构见[schema.py](src/decisionos_sre/schema.py)。接口拒绝gold训练标签、未来证据等无效输入；缺模型时不会回退随机权重。
+
+## 目录
+
+```text
+src/decisionos_sre/  数据、序列化、模型、训练、评测与API
+configs/            固定实验配置
+scripts/            下载、复现、审计与报告入口
+tests/              正确性与异常边界测试
+docs/               数据审计、实验协议、决策与结果
+outputs/            已保存的机器结果、预测、日志与图表
 ```
-单元测试不下载模型或数据；已有真实数据时自动附加 manifest 检查。微型随机 backbone 只用于张量和错误分支测试，不生成正式实验结果。
 
-- data/rcaeval/: 原始 Parquet、每文件 checksum、审计 manifest、split 与输入样本。
-- artifacts/backbone/: 固定版本的官方权重和 tokenizer。
-- artifacts/frozen/ 与 artifacts/sft/: checkpoint、元数据、校准器、policy、逐 incident 预测、指标、消融、图表、benchmark。
-- outputs/: 运行证据、验收状态与最终报告。
-- docs/: 数据审计、协议、工程选择、结果与后续任务。
+## 适用范围与许可
 
-没有远程发布、付费 LLM、KD、ONNX、INT8、large 模型比较。此项目不能据当前小样本声称生产安全、开放集识别或普遍的自动接受保证。
+实验使用已知注入起点、300秒基线和60秒观测；没有验证生产故障检测、未知环境泛化或自动处置。默认路径主要使用指标，调用链仅在部分实验中启用，日志未接入。没有宣称生产上线、强化学习、从零预训练基础模型或95%的通用准确率。
+
+代码拟采用[MIT许可](LICENSE)公开。数据、预训练模型和依赖各自遵循上游许可，见[第三方来源说明](THIRD_PARTY_NOTICES.md)。原始遥测与权重不随仓库分发。

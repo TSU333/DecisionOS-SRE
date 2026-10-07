@@ -11,7 +11,12 @@ $python = '.\work\.venv\Scripts\python.exe'
 & $python -m pip install --no-cache-dir torch==2.7.1 --index-url https://download.pytorch.org/whl/cu128
 if ($LASTEXITCODE -ne 0) { throw 'PyTorch installation failed' }
 if (Test-Path requirements-lock.txt) {
-    & $python -m pip install --no-cache-dir -r requirements-lock.txt
+    # The local project is not published to PyPI; install it from this checkout below.
+    $thirdPartyLock = Join-Path (Get-Location) 'work/requirements-third-party.txt'
+    Get-Content -LiteralPath requirements-lock.txt |
+        Where-Object { $_ -notmatch '^decisionos[-_]sre\s*(==|@|$)' } |
+        Set-Content -LiteralPath $thirdPartyLock -Encoding UTF8
+    & $python -m pip install --no-cache-dir -r $thirdPartyLock
     if ($LASTEXITCODE -ne 0) { throw 'Locked dependencies failed' }
     & $python -m pip install --no-cache-dir --no-deps -e .
 } else {

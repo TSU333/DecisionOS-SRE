@@ -1,0 +1,48 @@
+{
+  "execution_scope": "mvp",
+  "base_revision": "67029e3c52b91fe0e7907593942e27b592f6dd4a",
+  "publication_status": "prepared_locally_not_uploaded",
+  "suggested_repository": "TSU333/DecisionOS-SRE",
+  "visibility": "awaiting_user_choice",
+  "proposed_license": "MIT",
+  "tests": {
+    "passed": 92,
+    "skipped": 5,
+    "failed": 0,
+    "warnings": 1,
+    "isolated_source_copy_without_data_or_weights": true,
+    "used_existing_installed_dependencies": true
+  },
+  "cli_help": "passed_imported_from_source_copy",
+  "setup_powershell_syntax": "passed",
+  "setup_lock_filter": {
+    "removed_local_project_entries": 1,
+    "other_entries_preserved": true
+  },
+  "sealed_training_sources_checked": 27,
+  "sealed_training_sources_unchanged": true,
+  "preparation_base_history_blob_scan": {
+    "blobs": 782,
+    "common_credential_pattern_matches": 0,
+    "largest_blob_bytes": 541612
+  },
+  "current_candidate_credential_matches": [],
+  "excluded_roots": [
+    ".git",
+    "data",
+    "artifacts",
+    "work",
+    ".venv"
+  ],
+  "not_run": [
+    "fresh_machine_dependency_install",
+    "new_training",
+    "new_quality_evaluation",
+    "github_repository_creation",
+    "github_upload"
+  ],
+  "limitations": [
+    "ZIP contains no Git history and no trained checkpoint.",
+    "Common credential pattern scanning is not a comprehensive security audit."
+  ]
+}
