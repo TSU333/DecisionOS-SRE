@@ -1,0 +1,138 @@
+{
+  "created_utc": "2026-10-07T09:12:35.494274+00:00",
+  "execution_scope": "mvp",
+  "parent": "artifacts\\round5\\temporal_seed44\\frozen",
+  "parent_checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "trials": [
+    {
+      "name": "fault_ce",
+      "config": "configs/round8_fault_ce.json",
+      "config_sha256": "79aaf820b5a6e4b8b66ce88e2d16cde235a2ed415779ec09f301cdac0b4871ea",
+      "dropout": 0.0,
+      "label_smoothing": 0.0
+    },
+    {
+      "name": "fault_ce_ls",
+      "config": "configs/round8_fault_ce_ls.json",
+      "config_sha256": "ecb0a78d150dc966cbc48335624c21c2ac4556973ba06dd4d4d39a4d0874c1ed",
+      "dropout": 0.0,
+      "label_smoothing": 0.05
+    },
+    {
+      "name": "fault_drop15",
+      "config": "configs/round8_fault_drop15.json",
+      "config_sha256": "e654f1a0dda03969e8994958cf6c329d6db2e1fd8cff27f540cbe8b60ac201a8",
+      "dropout": 0.15,
+      "label_smoothing": 0.0
+    },
+    {
+      "name": "fault_drop15_ls",
+      "config": "configs/round8_fault_drop15_ls.json",
+      "config_sha256": "3b7434b423a84f0bb5622b265b6ac809cfa8e578fef2b98b674befdf8ec84fa7",
+      "dropout": 0.15,
+      "label_smoothing": 0.05
+    },
+    {
+      "name": "fault_drop30",
+      "config": "configs/round8_fault_drop30.json",
+      "config_sha256": "b34e60ddc50395100c7f7ebe1f5af259f94f2304b88838a6db3a47f5baf19132",
+      "dropout": 0.3,
+      "label_smoothing": 0.0
+    },
+    {
+      "name": "fault_drop30_ls",
+      "config": "configs/round8_fault_drop30_ls.json",
+      "config_sha256": "9dc159ec7857d5a503af226fdfd2d164a1045dbedb4a39c9352fcb40306ac62a",
+      "dropout": 0.3,
+      "label_smoothing": 0.05
+    }
+  ],
+  "selection_config": {
+    "execution_scope": "mvp",
+    "seed": 44,
+    "data_dir": "data/round5",
+    "backbone_dir": "artifacts/backbone",
+    "artifact_root": "artifacts/round5/temporal_seed44",
+    "max_length": 2048,
+    "epochs": 240,
+    "batch_size": 16,
+    "gradient_accumulation": 1,
+    "learning_rate_sft": 2e-05,
+    "learning_rate_frozen": 0.0003,
+    "weight_decay": 0.01,
+    "loss_weights": [
+      1,
+      1
+    ],
+    "head_size": 128,
+    "train_device": "cuda",
+    "inference_device": "cpu",
+    "cpu_threads": 8,
+    "gradient_checkpointing": true,
+    "early_stopping_patience": 60,
+    "max_steps": 2000,
+    "calibration_min_samples": 10,
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30,
+    "ece_bins": 10,
+    "benchmark_warmup": 3,
+    "benchmark_repeats": 12,
+    "execute_remediation": false,
+    "external_llm_enabled": false,
+    "backbone_learning_rate": 2e-05,
+    "head_learning_rate": 0.0003,
+    "schedule": "constant",
+    "warmup_fraction": 0,
+    "augmentation": {
+      "candidate_shuffle": false,
+      "metric_dropout": 0.0,
+      "evidence_dropout": 0.0
+    },
+    "serializer_version": "metrics-canonical-v2",
+    "pooling": "mean",
+    "numeric_fusion": true,
+    "numeric_metrics": [
+      "cpu",
+      "diskio",
+      "error",
+      "latency",
+      "latency-50",
+      "latency-90",
+      "load",
+      "mem",
+      "socket",
+      "workload"
+    ],
+    "initialization_artifact": "artifacts/round4/balanced_seed43/frozen",
+    "selection_metric": "cohort_guarded_retention",
+    "cache_frozen_features": true,
+    "text_logit_weight": 0.1,
+    "root_conditioned_fault": true,
+    "sampling_strategy": "cohort_balanced",
+    "preserve_validation_cohorts": [
+      "RE1-OB",
+      "RE2-OB"
+    ],
+    "preserve_joint_floor": 0.85,
+    "retention_floors": {
+      "Online Boutique": 0.95,
+      "Sock Shop": 0.9
+    },
+    "numeric_feature_version": "temporal-v1",
+    "evaluation_split": "regression_ss"
+  },
+  "training_budget_max_updates": 13200,
+  "selection": "Fixed six trials; retain OB validation joint >=95%, SS >=90%, then maximize cohort/overall joint accuracy, then minimize NLL; compare incumbent; no regression-based tuning",
+  "release_guard": "Only validation winner is evaluated. Promote only if validation rank improves and no root/fault/joint accuracy is lower than incumbent in any of three historical regression cohorts. A failed guard keeps incumbent without trying a runner-up. Historical regression is not independent confirmation.",
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_origin": "previous working assumption, not explicit user numeric requirements",
+  "new_independent_test": false,
+  "data_audit_sha256": "35eaf5bab66b9f2536dd40645ae24615d893effea0825b85427b7eb0ca9542b3",
+  "head_regularization": "Dropout only at numeric fault hidden GELU outputs while training; absent in eval/export. Fault-only label smoothing, root/scorer/backbone frozen. No label-derived inputs.",
+  "no_external_dependencies_added": true,
+  "no_further_tuning_after_selection": true
+}

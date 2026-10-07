@@ -88,11 +88,11 @@ def labels(examples, encoded, device="cpu"):
                       if fault.provenance.kind=="gold" and fault.value in FAULTS else -100)
     return torch.tensor(roots,device=device),torch.tensor(faults,device=device)
 
-def supervised_loss(root_logits,fault_logits,root_targets,fault_targets,weights=(1.,1.)):
+def supervised_loss(root_logits,fault_logits,root_targets,fault_targets,weights=(1.,1.),fault_label_smoothing=0.):
     zero=fault_logits.sum()*0+root_logits[torch.isfinite(root_logits)].sum()*0
     total=zero
-    for logits,targets,w in zip((root_logits,fault_logits),(root_targets,fault_targets),weights):
+    for head,(logits,targets,w) in enumerate(zip((root_logits,fault_logits),(root_targets,fault_targets),weights)):
         valid=targets.ne(-100)
         if valid.any():
-            total=total+w*F.cross_entropy(logits[valid].float(),targets[valid],reduction="mean")
+            total=total+w*F.cross_entropy(logits[valid].float(),targets[valid],reduction="mean",label_smoothing=fault_label_smoothing if head==1 else 0.)
     return total

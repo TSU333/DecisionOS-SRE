@@ -51,6 +51,8 @@ def train(config,mode):
         if mode!="frozen": raise ValueError("Feature caching requires frozen mode")
         from .cached_training import train_cached
         return train_cached(config)
+    if config.get("head_training_policy","all_heads")!="all_heads" or config.get("fault_hidden_dropout",0.) or config.get("fault_label_smoothing",0.):
+        raise ValueError("Fault training controls require the cached frozen trainer")
     if mode not in ["frozen","sft"]:
         raise ValueError("mode must be frozen or sft")
     source_state=code_state()

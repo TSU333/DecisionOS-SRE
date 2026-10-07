@@ -7,6 +7,7 @@ from transformers import AutoTokenizer
 from .common import read,save,file_hash,seed_all,environment,MODEL_NAME,MODEL_REV,FAULTS,SERIALIZER
 from .data import load_split
 from .representation import numeric_dimension
+from .fault_regularization import configure_cached_heads
 from .serializer import Serializer,collate
 from .model import build_model,labels,supervised_loss
 from .training import predict,prediction_summary,selection_key,initialize_from_artifact,config_binding,code_state,training_order
@@ -37,7 +38,7 @@ def train_cached(config):
     ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names,config.get('numeric_feature_version','mean-v1'),config.get('trace_features',False))
     model=build_model(config['backbone_dir'],head_size=config['head_size'],pooling=config.get('pooling','cls'),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.))
     initialization=initialize_from_artifact(model,config,trainset,valset)
-    for p in model.backbone.parameters():p.requires_grad=False
+    dropout_handles=configure_cached_heads(model,config)
     model.to(device).eval();start=time.perf_counter()
     cache=[];templates=[];root_targets=[];fault_targets=[]
     with torch.no_grad():
@@ -54,11 +55,14 @@ def train_cached(config):
                 'fault_target':FAULTS.index(fault) if fault in FAULTS else None,'gold':ex.targets.model_dump(),
                 'serialization':enc.report,'evidence_usable':enc.report.get('modality_evidence_usable',enc.report.get('numeric_evidence_usable',enc.report['usable_metrics_retained']>0))})
     precompute_calls=model.encoder_calls
+    with torch.no_grad():
+        root_reference=[model.score_representations(**x)[0].detach().clone() for x in cache[len(trainset):]]
     heads=[p for p in model.parameters() if p.requires_grad]
     optimizer=torch.optim.AdamW(heads,lr=config['head_learning_rate'],weight_decay=config['weight_decay'])
     rng=random.Random(config['seed']);history=[];best=None;best_heads=None;best_rows=None;stale=0;steps=0
     sampling_log=[]
     for epoch in range(config['epochs']):
+        model.train();model.backbone.eval()
         order=training_order(trainset,rng,config);losses=[]
         used=[]
         for offset in range(0,len(order),config['batch_size']):
@@ -67,12 +71,12 @@ def train_cached(config):
             batch=feature_batch([cache[i] for i in indices])
             optimizer.zero_grad(set_to_none=True)
             roots,faults=model.score_representations(**batch)
-            loss=supervised_loss(roots,faults,torch.cat([root_targets[i] for i in indices]),torch.cat([fault_targets[i] for i in indices]),config['loss_weights'])
+            loss=supervised_loss(roots,faults,torch.cat([root_targets[i] for i in indices]),torch.cat([fault_targets[i] for i in indices]),config['loss_weights'],fault_label_smoothing=config.get('fault_label_smoothing',0.))
             if not torch.isfinite(loss):raise RuntimeError('nonfinite loss')
             loss.backward();torch.nn.utils.clip_grad_norm_(heads,1.);optimizer.step();steps+=1;losses.append(float(loss.detach()))
             if steps>=config['max_steps']:break
         sampling_log.append({'epoch':epoch+1,'run_ids':[trainset[i].original_run_id for i in used]})
-        rows=[]
+        rows=[];model.eval()
         with torch.no_grad():
             for i in range(len(trainset),len(cache)):
                 roots,faults=model.score_representations(**cache[i]);row=copy.deepcopy(templates[i])
@@ -91,6 +95,12 @@ def train_cached(config):
     with torch.no_grad():
         for n,p in model.named_parameters():
             if n in best_heads:p.copy_(best_heads[n].to(device))
+    model.eval()
+    for handle in dropout_handles:handle.remove()
+    with torch.no_grad():
+        root_change=max(float((model.score_representations(**x)[0]-old).abs().max()) for x,old in zip(cache[len(trainset):],root_reference))
+    if config.get('head_training_policy')=='fault_heads' and root_change!=0.:
+        raise ValueError('Frozen root branch changed during fault-only training')
     # Verify that inference through the full model agrees with the training cache.
     full=predict(model,tok,ser,valset,device,'model_validation')
     maxdiff=max(float(np.max(np.abs(np.array(a[h+'_logits'])-np.array(b[h+'_logits'])))) for a,b in zip(full,best_rows) for h in ('root','fault'))
@@ -98,7 +108,8 @@ def train_cached(config):
     torch.save(model.state_dict(),out/'checkpoint.pt');tok.save_pretrained(out/'tokenizer');model.backbone.config.save_pretrained(out/'backbone_config')
     split=read(Path(config['data_dir'])/'splits.json')
     metadata={'mode':'frozen','config':config,'model_name':MODEL_NAME,'model_revision':MODEL_REV,
-        'parameter_count':sum(p.numel() for p in model.parameters()),'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),
+        'parameter_count':sum(p.numel() for p in model.parameters()),'trainable_parameters':sum(p.numel() for p in model.parameters() if p.requires_grad),'trainable_parameter_names':[n for n,p in model.named_parameters() if p.requires_grad],
+        'root_validation_max_abs_logit_change':root_change,'training_regularization':{'fault_hidden_dropout':config.get('fault_hidden_dropout',0.),'fault_label_smoothing':config.get('fault_label_smoothing',0.),'hooks_removed_before_export':True},
         'history':history,'elapsed_seconds':time.perf_counter()-start,'environment':environment(),
         'selection':config['selection_metric'],'diagnostic_only':False,'initialization':initialization,
         'binding':config_binding(config,file_hash(out/'checkpoint.pt'),split['split_hash'],file_hash(out/'tokenizer/tokenizer.json')),

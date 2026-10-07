@@ -1,0 +1,22 @@
+{
+  "data_dir": "data/round5",
+  "new_cases": 0,
+  "cases": 400,
+  "counts": {
+    "train": 165,
+    "model_validation": 40,
+    "calibration": 40,
+    "gate_selection": 85,
+    "regression_re1_ob": 15,
+    "regression_re2_ob": 25,
+    "regression_ss": 30
+  },
+  "split_sha256": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+  "prepared_data_sha256": "d1830c26f1583413178e064a1a7d021531d445b8098ac14e2b70018cb1d41422",
+  "parent_prepared_data_matches": true,
+  "assignments_unchanged": true,
+  "train_ids_match_parent": true,
+  "validation_ids_match_parent": true,
+  "trace_features": false,
+  "regression_is_historical": true
+}
