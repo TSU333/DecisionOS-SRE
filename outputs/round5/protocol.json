@@ -1,0 +1,62 @@
+{
+  "execution_scope": "mvp",
+  "round": 5,
+  "parent": "artifacts/round4/balanced_seed43/frozen",
+  "data": "same 400 case groups; zero new cases; preserve all partitions",
+  "evaluation": "all previously opened tests are regression, no fresh target confirmation",
+  "features": "numeric temporal-v1: append six channels per retained metric after all 60 legacy channels; p10/p90 relative to baseline, std/base scale, linear change over 60s/base scale, late-first-half difference/base scale, presence. Time bounds baseline [-300,0), observation [0,60]. No labels/paths/cohort in features. Legacy text unchanged.",
+  "warm_start": "copy old numeric input columns, zero appended columns; new optimizer. Shared backbone remains frozen.",
+  "trials": [
+    {
+      "name": "mean_control",
+      "seed": 43,
+      "feature": "mean-v1"
+    },
+    {
+      "name": "temporal_seed42",
+      "seed": 42,
+      "feature": "temporal-v1"
+    },
+    {
+      "name": "temporal_seed43",
+      "seed": 43,
+      "feature": "temporal-v1"
+    },
+    {
+      "name": "temporal_seed44",
+      "seed": 44,
+      "feature": "temporal-v1"
+    }
+  ],
+  "budget_per_trial": {
+    "max_steps": 2000,
+    "epochs": 240,
+    "patience": 60,
+    "batch": 16,
+    "head_learning_rate": 0.0003
+  },
+  "selection": "include unchanged round4 incumbent; require OB validation joint >=95% and SS >=90%; then maximize four-cohort joint mean, then overall joint, then minimize sum NLL. All rankings only 40 existing model-validation cases. No cal/gate/regression selection.",
+  "selection_config": {
+    "selection_metric": "cohort_guarded_retention",
+    "retention_floors": {
+      "Online Boutique": 0.95,
+      "Sock Shop": 0.9
+    }
+  },
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_origin": "working assumption from earlier round, not user supplied numeric targets",
+  "gate": {
+    "empirical_risk": 0.05,
+    "min_groups": 30
+  },
+  "limitations": [
+    "repeated validation tuning increases overfitting risk",
+    "no new independent Online Boutique confirmation",
+    "gate and calibration are reused; no production risk guarantee",
+    "oracle onset controlled injections only"
+  ]
+}

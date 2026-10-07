@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "pyarrow": "20.0.0",
+    "pydantic": "2.11.5",
+    "fastapi": "0.115.12",
+    "scipy": "1.15.3"
+  },
+  "parent_git": "799eaabe9ffba6d29954697221241db1b5791c83",
+  "git_status": "GitStatus(staged={'add': [], 'delete': [], 'modify': []}, unstaged=[], untracked=['outputs/round5/legacy_representation_hashes.json', 'outputs/round5/protocol.json'])"
+}

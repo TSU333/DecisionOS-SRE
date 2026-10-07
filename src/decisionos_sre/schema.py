@@ -9,6 +9,13 @@ class Candidate(Strict):
     display_name: str = Field(min_length=1, max_length=300)
     observable_description: str = Field(default="", max_length=1000)
 
+class TemporalSummary(Strict):
+    q10_z: float = Field(ge=-100, le=100)
+    q90_z: float = Field(ge=-100, le=100)
+    std_ratio: float = Field(ge=0, le=100)
+    trend_z: float = Field(ge=-100, le=100)
+    late_shift_z: float = Field(ge=-100, le=100)
+
 class Metric(Strict):
     service: str = Field(min_length=1)
     name: str = Field(min_length=1)
@@ -20,6 +27,7 @@ class Metric(Strict):
     baseline_samples: int = Field(ge=0)
     observed_samples: int = Field(ge=0)
     observed_until: float
+    temporal: TemporalSummary | None = None
 
 class Evidence(Strict):
     metrics: list[Metric] = Field(default_factory=list, max_length=5000)

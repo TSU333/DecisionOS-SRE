@@ -68,9 +68,10 @@ def evaluate(folder,device="cpu",ablations=True):
     if freeze.exists() and read(freeze)!=frozen:
         raise ValueError("test previously opened with a different frozen artifact")
     save(freeze,frozen)
-    examples=load_split(meta["config"]["data_dir"],"test")
-    rows=predict(model,tok,ser,examples,device,"test")
-    metrics=write_evaluation(finish_rows(rows,cal,pol,meta["binding"]),Path(folder)/"test")
+    evaluation_split=meta["config"].get("evaluation_split","test")
+    examples=load_split(meta["config"]["data_dir"],evaluation_split)
+    rows=predict(model,tok,ser,examples,device,evaluation_split)
+    metrics=write_evaluation(finish_rows(rows,cal,pol,meta["binding"]),Path(folder)/evaluation_split)
     if ablations:
         for variant in ["mask_all_metrics","reverse_candidates","consistent_service_rename"]:
             altered=copy.deepcopy(examples)
@@ -89,7 +90,7 @@ def evaluate(folder,device="cpu",ablations=True):
                     for m in ex.input.evidence.metrics:
                         m.service=mapping[m.service]
                     ex.targets.root_cause.value=mapping.get(ex.targets.root_cause.value,ex.targets.root_cause.value)
-            vr=predict(model,tok,ser,altered,device,"test")
+            vr=predict(model,tok,ser,altered,device,evaluation_split)
             write_evaluation(finish_rows(vr,cal,pol,meta["binding"]),Path(folder)/variant)
     # Reload reproduction is verified separately without making another model selection.
     save(Path(folder)/"reload_reference.json",rows[:2])
@@ -103,7 +104,7 @@ def benchmark(folder,config):
     from .runtime import Engine
     from .serializer import collate,Serializer
     engine=Engine(folder,"cpu")
-    samples=load_split(config["data_dir"],"test")
+    samples=load_split(config["data_dir"],config.get("evaluation_split","test"))
     measurements=[]
     torch.set_num_threads(config["cpu_threads"])
     for ex in samples[:3]:
@@ -125,7 +126,7 @@ def benchmark(folder,config):
     ex=samples[0]
     for token_limit,count in [(512,2),(1024,7),(2048,len(ex.input.candidates))]:
         inc=ex.input.model_copy(deep=True); inc.candidates=inc.candidates[:count]
-        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics); enc=ser(inc)
+        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics,engine.serializer.numeric_feature_version); enc=ser(inc)
         batch=collate([enc],engine.tokenizer.pad_token_id)
         with torch.inference_mode():
             engine.model(**batch)

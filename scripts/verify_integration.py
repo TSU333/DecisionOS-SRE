@@ -13,9 +13,10 @@ from decisionos_sre.runtime import Engine
 
 folder=Path(sys.argv[1] if len(sys.argv)>1 else "artifacts/sft")
 meta=read(folder/"metadata.json")
-examples=load_split(meta["config"]["data_dir"],"test")[:2]
+evaluation_split=meta["config"].get("evaluation_split","test")
+examples=load_split(meta["config"]["data_dir"],evaluation_split)[:2]
 model,tok,ser,metadata=load_checkpoint(folder,"cpu")
-rows=predict(model,tok,ser,examples,"cpu","test")
+rows=predict(model,tok,ser,examples,"cpu",evaluation_split)
 reference=read(folder/"reload_reference.json")
 deltas=[]
 for r,ref in zip(rows,reference):
@@ -63,6 +64,13 @@ try:
  assert result["execute_remediation"] is False
  checks["decide"]=code
  checks["decision"]=result
+ if meta['config'].get('numeric_feature_version')=='temporal-v1':
+  import copy
+  missing=copy.deepcopy(body)
+  for metric in missing['evidence']['metrics']:metric.pop('temporal',None)
+  code,no_time=request('/v1/decide',missing)
+  assert code==200 and no_time['routing']['destination']=='REVIEW' and 'NO_TEMPORAL_EVIDENCE' in no_time['routing']['reason_codes']
+  checks['missing_temporal']=no_time['routing']
  invalid=dict(body,targets={"root_cause":"secret"})
  checks["reject_gold"]=request("/v1/decide",invalid)[0];assert checks["reject_gold"]==422
  singleton=dict(body,candidates=body["candidates"][:1])

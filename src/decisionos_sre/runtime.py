@@ -67,8 +67,11 @@ class Engine:
             probs[head]=p
             results[head]={"selected":names[choice],"probabilities":dict(zip(names,p)),
                            "confidence":p[choice],"calibration_status":status}
-        routing=route(probs["root"],probs["fault"],enc.report["usable_metrics_retained"]>0,
+        routing=route(probs["root"],probs["fault"],enc.report.get("numeric_evidence_usable",enc.report["usable_metrics_retained"]>0),
                       self.calibrator,self.policy,self.binding)
+        if self.serializer.numeric_feature_version=='temporal-v1' and not enc.report['temporal_metrics_retained']:
+            routing['reason_codes']=[x for x in routing['reason_codes'] if x!='THRESHOLD_PASSED']+['NO_TEMPORAL_EVIDENCE']
+            routing['destination']='REVIEW'
         if incident.application not in self.metadata["supported_applications"]:
             routing["destination"]="REVIEW"
             routing["reason_codes"]=[x for x in routing["reason_codes"] if x!="THRESHOLD_PASSED"]+["UNVALIDATED_APPLICATION"]

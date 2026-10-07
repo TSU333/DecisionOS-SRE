@@ -8,12 +8,13 @@ import torch
 from transformers import AutoTokenizer
 from .common import FAULTS, MODEL_REV, MODEL_NAME, SERIALIZER, digest, file_hash, save, read, seed_all, environment
 from .data import load_split, augment
+from .representation import numeric_dimension
 from .serializer import Serializer, collate
 from .model import build_model, labels, supervised_loss
 
 def config_binding(config,checkpoint_hash,split_hash,tokenizer_hash):
     pipeline={"serializer":config.get("serializer_version",SERIALIZER),"max_length":config["max_length"],"ontology":FAULTS}
-    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight"):
+    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight","numeric_feature_version"):
         if key in config: pipeline[key]=config[key]
     return {"checkpoint_sha256":checkpoint_hash,"split_hash":split_hash,
             "pipeline_hash":digest(pipeline),
@@ -41,7 +42,7 @@ def predict(model,tokenizer,serializer,examples,device,split):
               "fault_logits":faults[0].float().cpu().tolist(),
               "root_target":encoded.candidate_ids.index(rid) if rid in encoded.candidate_ids else (-1 if rid is not None else None),
               "fault_target":FAULTS.index(fid) if fid in FAULTS else None,
-              "gold":ex.targets.model_dump(),"evidence_usable":encoded.report["usable_metrics_retained"]>0,
+              "gold":ex.targets.model_dump(),"evidence_usable":encoded.report.get("numeric_evidence_usable",encoded.report["usable_metrics_retained"]>0),
               "serialization":encoded.report,"model_ms":elapsed*1000})
     return rows
 
@@ -63,8 +64,8 @@ def train(config,mode):
     if (out/"checkpoint.pt").exists():
         raise FileExistsError("Checkpoint exists. Choose a fresh artifact_root; never silently overwrite a evaluated model.")
     tokenizer=AutoTokenizer.from_pretrained(config["backbone_dir"],local_files_only=True)
-    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [])
-    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=len(config.get("numeric_metrics",[]))*6 if config.get("numeric_fusion",False) else 0,root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.)).to(device)
+    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [],config.get("numeric_feature_version","mean-v1"))
+    model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.)).to(device)
     if mode=="frozen":
         for p in model.backbone.parameters():
             p.requires_grad=False
@@ -187,11 +188,11 @@ def load_checkpoint(artifact_dir,device="cpu"):
     if expected!=metadata["binding"] or metadata["ontology"]!=FAULTS:
         raise ValueError("pipeline/ontology version mismatch")
     torch.set_num_threads(cfg["cpu_threads"])
-    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=len(cfg.get("numeric_metrics",[]))*6 if cfg.get("numeric_fusion",False) else 0,root_conditioned_fault=cfg.get("root_conditioned_fault",False),text_logit_weight=cfg.get("text_logit_weight",1.))
+    model=build_model(folder/"backbone_config",False,cfg["head_size"],pooling=cfg.get("pooling","cls"),numeric_dim=numeric_dimension(cfg),root_conditioned_fault=cfg.get("root_conditioned_fault",False),text_logit_weight=cfg.get("text_logit_weight",1.))
     model.load_state_dict(torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True),strict=True)
     model.to(device).eval()
     tok=AutoTokenizer.from_pretrained(folder/"tokenizer",local_files_only=True)
-    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else []),metadata
+    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else [],cfg.get("numeric_feature_version","mean-v1")),metadata
 
 def baseline(data_dir):
     from collections import Counter
@@ -266,6 +267,15 @@ def selection_key(summary,config):
     if criterion=="sum_nll":return (summary["sum_nll"],)
     if criterion=="cohort_macro_joint":
         return (-summary["cohort_macro_joint"],-summary["joint_accuracy"],summary["sum_nll"])
+    if criterion=="cohort_guarded_retention":
+        failures=0
+        for app,floor in config['retention_floors'].items():
+            suffix='OB' if app=='Online Boutique' else 'SS'
+            groups=[v for c,v in summary['cohorts'].items() if c.endswith('-'+suffix)]
+            n=sum(g['n'] for g in groups)
+            value=sum(g['n']*g['joint_accuracy'] for g in groups)/n if n else 0.
+            failures+=int(value+1e-12<floor)
+        return (failures,-summary['cohort_macro_joint'],-summary['joint_accuracy'],summary['sum_nll'])
     if criterion=="cohort_guarded_joint":
         groups=[summary["cohorts"][c] for c in config["preserve_validation_cohorts"]]
         n=sum(c["n"] for c in groups)
@@ -289,10 +299,23 @@ def initialize_from_artifact(model,config,trainset,valset):
     if meta["config"].get("numeric_fusion") and meta["config"].get("numeric_metrics",[])!=config.get("numeric_metrics",[]):
         raise ValueError("Parent numeric metric vocabulary/order mismatch")
     state=torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True)
+    migrated=[]
+    old_version=meta['config'].get('numeric_feature_version','mean-v1')
+    new_version=config.get('numeric_feature_version','mean-v1')
+    if old_version!=new_version:
+        if (old_version,new_version)!=('mean-v1','temporal-v1') or config.get('numeric_feature_upgrade')!='zero_pad_temporal_v1':
+            raise ValueError('Unsupported numeric feature migration')
+        expected=model.state_dict()
+        for name in ['numeric_root.0.weight','numeric_fault.0.weight','numeric_local_fault.0.weight']:
+            if name not in state:continue
+            old=state[name];target=expected[name]
+            if target.shape[0]!=old.shape[0] or target.shape[1]!=2*old.shape[1]:raise ValueError('Invalid temporal expansion shape')
+            expanded=torch.zeros_like(target);expanded[:,:old.shape[1]]=old
+            state[name]=expanded;migrated.append(name)
     missing,unexpected=model.load_state_dict(state,strict=False)
     if unexpected or any(not n.startswith(("numeric_root.","numeric_fault.","numeric_local_fault.")) for n in missing):
         raise ValueError("Unexpected parent architecture mismatch")
-    return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing}
+    return {"kind":"warm_start_weights_with_new_optimizer","artifact":str(folder),"binding":meta["binding"],"new_random_parameters":missing,"zero_padded_temporal_inputs":migrated}
 
 
 def training_order(examples,rng,config):

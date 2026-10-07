@@ -6,6 +6,7 @@ import torch
 from transformers import AutoTokenizer
 from .common import read,save,file_hash,seed_all,environment,MODEL_NAME,MODEL_REV,FAULTS,SERIALIZER
 from .data import load_split
+from .representation import numeric_dimension
 from .serializer import Serializer,collate
 from .model import build_model,labels,supervised_loss
 from .training import predict,prediction_summary,selection_key,initialize_from_artifact,config_binding,code_state,training_order
@@ -33,8 +34,8 @@ def train_cached(config):
     trainset=load_split(config['data_dir'],'train');valset=load_split(config['data_dir'],'model_validation')
     tok=AutoTokenizer.from_pretrained(config['backbone_dir'],local_files_only=True)
     names=config.get('numeric_metrics',[]) if config.get('numeric_fusion') else []
-    ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names)
-    model=build_model(config['backbone_dir'],head_size=config['head_size'],pooling=config.get('pooling','cls'),numeric_dim=len(names)*6,root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.))
+    ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names,config.get('numeric_feature_version','mean-v1'))
+    model=build_model(config['backbone_dir'],head_size=config['head_size'],pooling=config.get('pooling','cls'),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.))
     initialization=initialize_from_artifact(model,config,trainset,valset)
     for p in model.backbone.parameters():p.requires_grad=False
     model.to(device).eval();start=time.perf_counter()
@@ -51,7 +52,7 @@ def train_cached(config):
                 'cohort':ex.source_metadata.get('dataset_suite','RE1'),'application':ex.input.application,
                 'candidate_ids':enc.candidate_ids,'root_target':enc.candidate_ids.index(root) if root in enc.candidate_ids else (-1 if root else None),
                 'fault_target':FAULTS.index(fault) if fault in FAULTS else None,'gold':ex.targets.model_dump(),
-                'serialization':enc.report,'evidence_usable':enc.report['usable_metrics_retained']>0})
+                'serialization':enc.report,'evidence_usable':enc.report.get('numeric_evidence_usable',enc.report['usable_metrics_retained']>0)})
     precompute_calls=model.encoder_calls
     heads=[p for p in model.parameters() if p.requires_grad]
     optimizer=torch.optim.AdamW(heads,lr=config['head_learning_rate'],weight_decay=config['weight_decay'])
