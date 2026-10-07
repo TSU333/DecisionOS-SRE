@@ -1,0 +1,5552 @@
+[
+  {
+    "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+    "run_id": "d8c04b6d0fb9cb0acac46bbf",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_cpu_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_cpu_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 73.08249920606613,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "0ffbbef975bd3d9591a7d9ad",
+    "run_id": "0ffbbef975bd3d9591a7d9ad",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_delay_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_delay_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 70.8944983780384,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "d70fdf1d616b080e8fd4bcf8",
+    "run_id": "d70fdf1d616b080e8fd4bcf8",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_delay_4:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_delay_4:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 72.31489941477776,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "d1b96290ca6c917b2bf8da0f",
+    "run_id": "d1b96290ca6c917b2bf8da0f",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_loss_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_loss_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.79670003056526,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": true,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "a3c6779fcb610fc20178c690",
+    "run_id": "a3c6779fcb610fc20178c690",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 66.98830053210258,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "09dfeb592feec3d7be7d918c",
+    "run_id": "09dfeb592feec3d7be7d918c",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_mem_4:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_carts_mem_4:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.78129968047142,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "8903099dad6881f322724c14",
+    "run_id": "8903099dad6881f322724c14",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 2,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "catalogue",
+        "raw_value": "catalogue",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_cpu_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_cpu_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 65.61719998717308,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "23f5b4dedda1211f36fac0a3",
+    "run_id": "23f5b4dedda1211f36fac0a3",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 2,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "catalogue",
+        "raw_value": "catalogue",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_disk_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_disk_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 65.81860035657883,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "e24b03174cb5bd07e33d7aa4",
+    "run_id": "e24b03174cb5bd07e33d7aa4",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 2,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "catalogue",
+        "raw_value": "catalogue",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_mem_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_catalogue_mem_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 75.01989975571632,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "3577255f3ddfe3acdec76240",
+    "run_id": "3577255f3ddfe3acdec76240",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_orders_delay_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_orders_delay_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 80.75999841094017,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "d41613df5cea1fd49c1e2d3d",
+    "run_id": "d41613df5cea1fd49c1e2d3d",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_orders_disk_4:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_orders_disk_4:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 70.59340178966522,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "66da48b16d95024d5d8b5492",
+    "run_id": "66da48b16d95024d5d8b5492",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_cpu_5:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_cpu_5:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 84.52539891004562,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "fe749b61a125058491b2fec2",
+    "run_id": "fe749b61a125058491b2fec2",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_disk_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_disk_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 75.18419995903969,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "cf418fbdcc7f7b09faa136ea",
+    "run_id": "cf418fbdcc7f7b09faa136ea",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_loss_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_loss_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 74.22899827361107,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "d48d4110ecaaa0d851b34578",
+    "run_id": "d48d4110ecaaa0d851b34578",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE1-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_loss_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re1ss_payment_loss_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 78.29239964485168,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "5a229245ed1166f68a3a16b6",
+    "run_id": "5a229245ed1166f68a3a16b6",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 0,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "carts",
+        "raw_value": "carts",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_carts_disk_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_carts_disk_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 75.88830217719078,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": true,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "38e7a34d72a664cef712feee",
+    "run_id": "38e7a34d72a664cef712feee",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 2,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "catalogue",
+        "raw_value": "catalogue",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_catalogue_delay_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_catalogue_delay_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 82.17189833521843,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "66f62812927a257a5a3c6d48",
+    "run_id": "66f62812927a257a5a3c6d48",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 2,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "catalogue",
+        "raw_value": "catalogue",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_catalogue_disk_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_catalogue_disk_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 78.7087008357048,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "79f7d2dd252e32c415a1e617",
+    "run_id": "79f7d2dd252e32c415a1e617",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_cpu_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_cpu_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 65.4732994735241,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "509b6b3697a2bfa9aefa62f1",
+    "run_id": "509b6b3697a2bfa9aefa62f1",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_delay_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_delay_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.89410147070885,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "8e68e71d76f74db1b8519a10",
+    "run_id": "8e68e71d76f74db1b8519a10",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 3,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_delay_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_delay",
+        "raw_value": "delay",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_delay_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 64.80390205979347,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "566e006edbeddc24c18b1cbd",
+    "run_id": "566e006edbeddc24c18b1cbd",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_loss_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_loss_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 72.39830121397972,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "33e01584da099a39e96a08c6",
+    "run_id": "33e01584da099a39e96a08c6",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 5,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "orders",
+        "raw_value": "orders",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_orders_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.44689899682999,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "635a445ca16e6d2996ca5751",
+    "run_id": "635a445ca16e6d2996ca5751",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_cpu_3:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_cpu_3:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 82.9927995800972,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "35b35bad541566de4ac685e8",
+    "run_id": "35b35bad541566de4ac685e8",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_loss_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_loss_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.09630075097084,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "adc8d57049637266dffb0cd3",
+    "run_id": "adc8d57049637266dffb0cd3",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 7,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "payment",
+        "raw_value": "payment",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_mem_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_payment_mem_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 78.94439995288849,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "093e1d636fa40891747cc602",
+    "run_id": "093e1d636fa40891747cc602",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 13,
+    "fault_target": 0,
+    "gold": {
+      "root_cause": {
+        "value": "user",
+        "raw_value": "user",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_cpu_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "cpu_stress",
+        "raw_value": "cpu",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_cpu_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 78.1640000641346,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "5772c699b14d7a59971b778a",
+    "run_id": "5772c699b14d7a59971b778a",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 13,
+    "fault_target": 2,
+    "gold": {
+      "root_cause": {
+        "value": "user",
+        "raw_value": "user",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_disk_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "disk_io_stress",
+        "raw_value": "disk",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_disk_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 67.57500022649765,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "2d8143b7ac4d7a603471d493",
+    "run_id": "2d8143b7ac4d7a603471d493",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 13,
+    "fault_target": 4,
+    "gold": {
+      "root_cause": {
+        "value": "user",
+        "raw_value": "user",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_loss_2:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "network_packet_loss",
+        "raw_value": "loss",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_loss_2:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 69.98709961771965,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": true,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  },
+  {
+    "incident_id": "07919ab9f70e018b0668f337",
+    "run_id": "07919ab9f70e018b0668f337",
+    "split": "regression_ss",
+    "application": "Sock Shop",
+    "cohort": "RE2-SS",
+    "candidate_ids": [
+      "carts",
+      "carts-db",
+      "catalogue",
+      "catalogue-db",
+      "front-end",
+      "orders",
+      "orders-db",
+      "payment",
+      "queue-master",
+      "rabbitmq",
+      "rabbitmq-exporter",
+      "session-db",
+      "shipping",
+      "user",
+      "user-db"
+    ],
+    "root_logits": [
+      7.524672031402588,
+      -0.38415420055389404,
+      -1.650611400604248,
+      -3.437222480773926,
+      0.8256628513336182,
+      -4.265463352203369,
+      -6.427242279052734,
+      -5.098150730133057,
+      -5.328139305114746,
+      -7.794559955596924,
+      -6.271803855895996,
+      -5.902098655700684,
+      -7.910980224609375,
+      -6.585203647613525,
+      0.7209579944610596
+    ],
+    "fault_logits": [
+      -0.4915265440940857,
+      -0.7469295263290405,
+      -0.4503757655620575,
+      -1.7318273782730103,
+      1.3621857166290283
+    ],
+    "root_target": 13,
+    "fault_target": 1,
+    "gold": {
+      "root_cause": {
+        "value": "user",
+        "raw_value": "user",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_mem_1:root_cause_service",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      },
+      "fault_type": {
+        "value": "memory_stress",
+        "raw_value": "mem",
+        "provenance": {
+          "kind": "gold",
+          "source_ref": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e/cases.parquet:re2ss_user_mem_1:fault",
+          "mapping_version": "rcaeval-re1-v1",
+          "collection_method": "official_injection_metadata"
+        }
+      }
+    },
+    "evidence_usable": false,
+    "serialization": {
+      "serializer_version": "metrics-canonical-v2",
+      "tokens": 107,
+      "candidate_count": 15,
+      "usable_metrics_retained": 0,
+      "metrics_total": 0,
+      "metrics_retained": 0,
+      "retained_fraction": null,
+      "retained_metric_keys": [],
+      "truncated": false,
+      "missing_modalities": [
+        "metrics",
+        "logs",
+        "traces",
+        "topology",
+        "deployment_context"
+      ],
+      "token_budgets": {
+        "max": 2048,
+        "candidate_reservation": true,
+        "logs": 0,
+        "traces": 0
+      },
+      "absolute_timestamps_serialized": false,
+      "service_names_serialized": false,
+      "candidate_order": "observable metric signature",
+      "numeric_metrics": [
+        "cpu",
+        "diskio",
+        "error",
+        "latency",
+        "latency-50",
+        "latency-90",
+        "load",
+        "mem",
+        "socket",
+        "workload"
+      ],
+      "numeric_evidence_scope": "retained metrics only",
+      "descriptions_serialized": false,
+      "numeric_feature_version": "temporal-v1",
+      "temporal_metrics_retained": 0,
+      "numeric_evidence_usable": false,
+      "trace_summaries_total": 0,
+      "trace_summaries_retained": 0,
+      "trace_services_retained": [],
+      "trace_feature_version": null,
+      "modality_evidence_usable": false
+    },
+    "model_ms": 67.2328993678093,
+    "root_raw": [
+      0.9971598813226339,
+      0.0003664419675658996,
+      0.00010327372282740153,
+      1.730113119431368e-05,
+      0.0012286327176830407,
+      7.557428712099317e-06,
+      8.700123152637149e-07,
+      3.2865672695592774e-06,
+      2.611317966737635e-06,
+      2.2166997805713618e-07,
+      1.016322287740981e-06,
+      1.4709312614445174e-06,
+      1.9730868305603094e-07,
+      7.428885239963389e-07,
+      0.0011064946910971376
+    ],
+    "root_prob": [
+      0.3610747604415681,
+      0.08075032532460388,
+      0.06353102750653057,
+      0.04529476234507438,
+      0.1015416869736807,
+      0.038719541998351543,
+      0.025712070138070645,
+      0.033070955249558456,
+      0.03166150671107079,
+      0.019846479600337426,
+      0.0264801785379014,
+      0.028400560611490662,
+      0.019413713809467006,
+      0.02495431669194634,
+      0.09954811406034791
+    ],
+    "root_pred": 0,
+    "root_correct": false,
+    "fault_raw": [
+      0.10538092528252424,
+      0.0816285161010687,
+      0.10980789431490594,
+      0.03048640391661972,
+      0.6726962603848814
+    ],
+    "fault_prob": [
+      0.17395515936514083,
+      0.15550602924769721,
+      0.17712599698643094,
+      0.1009220547054578,
+      0.39249075969527314
+    ],
+    "fault_pred": 4,
+    "fault_correct": false,
+    "joint_correct": false,
+    "routing_score": 0.3610747604415681,
+    "routing": {
+      "destination": "REVIEW",
+      "routing_score": 0.3610747604415681,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD"
+      ]
+    }
+  }
+]

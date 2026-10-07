@@ -13,7 +13,7 @@ from decisionos_sre.runtime import Engine
 
 folder=Path(sys.argv[1] if len(sys.argv)>1 else "artifacts/sft")
 meta=read(folder/"metadata.json")
-evaluation_split=meta["config"].get("evaluation_split","test")
+evaluation_split=sys.argv[2] if len(sys.argv)>2 else meta["config"].get("evaluation_split","test")
 examples=load_split(meta["config"]["data_dir"],evaluation_split)[:2]
 model,tok,ser,metadata=load_checkpoint(folder,"cpu")
 rows=predict(model,tok,ser,examples,"cpu",evaluation_split)

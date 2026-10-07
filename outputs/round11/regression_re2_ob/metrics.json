@@ -1,0 +1,618 @@
+{
+  "runs": 25,
+  "observations": 25,
+  "missing_root": 0,
+  "candidate_misses": 0,
+  "missing_fault": 0,
+  "root": {
+    "n": 25,
+    "acc_at_1": 0.96,
+    "mrr": 0.9733333333333333,
+    "recall_at_3": 1.0,
+    "candidate_coverage": 1.0
+  },
+  "fault": {
+    "n": 25,
+    "accuracy": 0.76,
+    "macro_f1": 0.7415584415584415,
+    "per_class": {
+      "cpu_stress": {
+        "precision": 0.8333333333333334,
+        "recall": 1.0,
+        "f1": 0.9090909090909091,
+        "support": 5
+      },
+      "memory_stress": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8,
+        "f1": 0.7272727272727273,
+        "support": 5
+      },
+      "disk_io_stress": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6666666666666666,
+        "support": 5
+      },
+      "network_delay": {
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "f1": 0.8333333333333334,
+        "support": 5
+      },
+      "network_packet_loss": {
+        "precision": 1.0,
+        "recall": 0.4,
+        "f1": 0.5714285714285714,
+        "support": 5
+      }
+    },
+    "confusion_matrix": [
+      [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        3,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        5,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        2,
+        2
+      ]
+    ]
+  },
+  "groups": {
+    "application": {
+      "Online Boutique": {
+        "n": 25,
+        "acc_at_1": 0.96,
+        "mrr": 0.9733333333333333,
+        "recall_at_3": 1.0,
+        "candidate_coverage": 1.0
+      }
+    },
+    "candidate_count": {
+      "11": {
+        "n": 1,
+        "acc_at_1": 1.0,
+        "mrr": 1.0,
+        "recall_at_3": 1.0,
+        "candidate_coverage": 1.0
+      },
+      "12": {
+        "n": 24,
+        "acc_at_1": 0.9583333333333334,
+        "mrr": 0.9722222222222222,
+        "recall_at_3": 1.0,
+        "candidate_coverage": 1.0
+      }
+    }
+  },
+  "joint_accuracy": 0.72,
+  "joint_n": 25,
+  "joint_error_wilson_95": [
+    0.14283853850956563,
+    0.47576605190361576
+  ],
+  "probability": {
+    "root": {
+      "raw": {
+        "n": 25,
+        "nll": 0.37512521587535924,
+        "ece": 0.036799498141134125,
+        "brier": 0.06637823896188827,
+        "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+        "ece_binning": "10 equal width bins; final bin includes 1",
+        "reliability": [
+          {
+            "lo": 0.0,
+            "hi": 0.1,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.1,
+            "hi": 0.2,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.2,
+            "hi": 0.3,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.3,
+            "hi": 0.4,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.4,
+            "hi": 0.5,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.5,
+            "hi": 0.6,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.6,
+            "hi": 0.7,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.7,
+            "hi": 0.8,
+            "n": 1,
+            "accuracy": 0.0,
+            "confidence": 0.7671793556869378
+          },
+          {
+            "lo": 0.8,
+            "hi": 0.9,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.9,
+            "hi": 1.0,
+            "n": 24,
+            "accuracy": 1.0,
+            "confidence": 0.9936329959232744
+          }
+        ],
+        "condition": "gold covered by candidates"
+      },
+      "prob": {
+        "n": 25,
+        "nll": 0.21225363219848062,
+        "ece": 0.0732514407122824,
+        "brier": 0.09668481327267328,
+        "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+        "ece_binning": "10 equal width bins; final bin includes 1",
+        "reliability": [
+          {
+            "lo": 0.0,
+            "hi": 0.1,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.1,
+            "hi": 0.2,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.2,
+            "hi": 0.3,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.3,
+            "hi": 0.4,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.4,
+            "hi": 0.5,
+            "n": 2,
+            "accuracy": 0.5,
+            "confidence": 0.4788861848866364
+          },
+          {
+            "lo": 0.5,
+            "hi": 0.6,
+            "n": 1,
+            "accuracy": 1.0,
+            "confidence": 0.5069081820132993
+          },
+          {
+            "lo": 0.6,
+            "hi": 0.7,
+            "n": 1,
+            "accuracy": 1.0,
+            "confidence": 0.6339031408902094
+          },
+          {
+            "lo": 0.7,
+            "hi": 0.8,
+            "n": 1,
+            "accuracy": 1.0,
+            "confidence": 0.7917155760898794
+          },
+          {
+            "lo": 0.8,
+            "hi": 0.9,
+            "n": 3,
+            "accuracy": 1.0,
+            "confidence": 0.8513570390293733
+          },
+          {
+            "lo": 0.9,
+            "hi": 1.0,
+            "n": 17,
+            "accuracy": 1.0,
+            "confidence": 0.9837849174316564
+          }
+        ],
+        "condition": "gold covered by candidates"
+      }
+    },
+    "fault": {
+      "raw": {
+        "n": 25,
+        "nll": 1.151955688664166,
+        "ece": 0.17100328222650457,
+        "brier": 0.3987991478886495,
+        "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+        "ece_binning": "10 equal width bins; final bin includes 1",
+        "reliability": [
+          {
+            "lo": 0.0,
+            "hi": 0.1,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.1,
+            "hi": 0.2,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.2,
+            "hi": 0.3,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.3,
+            "hi": 0.4,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.4,
+            "hi": 0.5,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.5,
+            "hi": 0.6,
+            "n": 1,
+            "accuracy": 0.0,
+            "confidence": 0.580322607628197
+          },
+          {
+            "lo": 0.6,
+            "hi": 0.7,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.7,
+            "hi": 0.8,
+            "n": 3,
+            "accuracy": 0.6666666666666666,
+            "confidence": 0.749077318652302
+          },
+          {
+            "lo": 0.8,
+            "hi": 0.9,
+            "n": 2,
+            "accuracy": 0.5,
+            "confidence": 0.847818747740138
+          },
+          {
+            "lo": 0.9,
+            "hi": 1.0,
+            "n": 19,
+            "accuracy": 0.8421052631578947,
+            "confidence": 0.9869415787682755
+          }
+        ],
+        "condition": "known gold fault label"
+      },
+      "prob": {
+        "n": 25,
+        "nll": 0.6948739244923968,
+        "ece": 0.09784602260891562,
+        "brier": 0.3452267178191511,
+        "brier_definition": "mean sum_k (p_k-y_k)^2; not divided by class count",
+        "ece_binning": "10 equal width bins; final bin includes 1",
+        "reliability": [
+          {
+            "lo": 0.0,
+            "hi": 0.1,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.1,
+            "hi": 0.2,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.2,
+            "hi": 0.3,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.3,
+            "hi": 0.4,
+            "n": 0,
+            "accuracy": null,
+            "confidence": null
+          },
+          {
+            "lo": 0.4,
+            "hi": 0.5,
+            "n": 1,
+            "accuracy": 0.0,
+            "confidence": 0.4834691814492984
+          },
+          {
+            "lo": 0.5,
+            "hi": 0.6,
+            "n": 4,
+            "accuracy": 0.5,
+            "confidence": 0.5538807583703258
+          },
+          {
+            "lo": 0.6,
+            "hi": 0.7,
+            "n": 2,
+            "accuracy": 0.5,
+            "confidence": 0.6763737435889718
+          },
+          {
+            "lo": 0.7,
+            "hi": 0.8,
+            "n": 2,
+            "accuracy": 0.5,
+            "confidence": 0.7100576034063392
+          },
+          {
+            "lo": 0.8,
+            "hi": 0.9,
+            "n": 3,
+            "accuracy": 1.0,
+            "confidence": 0.8408916633400988
+          },
+          {
+            "lo": 0.9,
+            "hi": 1.0,
+            "n": 13,
+            "accuracy": 0.9230769230769231,
+            "confidence": 0.9613054343324587
+          }
+        ],
+        "condition": "known gold fault label"
+      }
+    }
+  },
+  "selective": {
+    "overall_n": 25,
+    "joint_gold_n": 25,
+    "accepted_total": 7,
+    "accepted_joint_gold_n": 7,
+    "errors": 1,
+    "coverage": 0.28,
+    "selective_risk": 0.14285714285714285,
+    "selective_accuracy": 0.8571428571428572,
+    "risk_wilson_95": [
+      0.02567962434474355,
+      0.5131278292743189
+    ]
+  },
+  "risk_coverage": [
+    {
+      "threshold": 0.9906377455328306,
+      "coverage": 0.04,
+      "risk": 0.0,
+      "n": 1
+    },
+    {
+      "threshold": 0.9874820958098143,
+      "coverage": 0.08,
+      "risk": 0.0,
+      "n": 2
+    },
+    {
+      "threshold": 0.9787949687905634,
+      "coverage": 0.12,
+      "risk": 0.0,
+      "n": 3
+    },
+    {
+      "threshold": 0.953450954132368,
+      "coverage": 0.16,
+      "risk": 0.0,
+      "n": 4
+    },
+    {
+      "threshold": 0.9510354428194089,
+      "coverage": 0.2,
+      "risk": 0.2,
+      "n": 5
+    },
+    {
+      "threshold": 0.9228517060044358,
+      "coverage": 0.24,
+      "risk": 0.16666666666666666,
+      "n": 6
+    },
+    {
+      "threshold": 0.9159428147745967,
+      "coverage": 0.28,
+      "risk": 0.14285714285714285,
+      "n": 7
+    },
+    {
+      "threshold": 0.877570681172172,
+      "coverage": 0.32,
+      "risk": 0.125,
+      "n": 8
+    },
+    {
+      "threshold": 0.8752633192353906,
+      "coverage": 0.36,
+      "risk": 0.1111111111111111,
+      "n": 9
+    },
+    {
+      "threshold": 0.8623259386049152,
+      "coverage": 0.4,
+      "risk": 0.1,
+      "n": 10
+    },
+    {
+      "threshold": 0.8512251875235928,
+      "coverage": 0.44,
+      "risk": 0.09090909090909091,
+      "n": 11
+    },
+    {
+      "threshold": 0.8091238638917883,
+      "coverage": 0.48,
+      "risk": 0.08333333333333333,
+      "n": 12
+    },
+    {
+      "threshold": 0.7158946686920284,
+      "coverage": 0.52,
+      "risk": 0.07692307692307693,
+      "n": 13
+    },
+    {
+      "threshold": 0.7042205381206499,
+      "coverage": 0.56,
+      "risk": 0.14285714285714285,
+      "n": 14
+    },
+    {
+      "threshold": 0.6841473114689075,
+      "coverage": 0.6,
+      "risk": 0.2,
+      "n": 15
+    },
+    {
+      "threshold": 0.6686001757090361,
+      "coverage": 0.64,
+      "risk": 0.1875,
+      "n": 16
+    },
+    {
+      "threshold": 0.6339031408902094,
+      "coverage": 0.68,
+      "risk": 0.17647058823529413,
+      "n": 17
+    },
+    {
+      "threshold": 0.5991000509395448,
+      "coverage": 0.72,
+      "risk": 0.2222222222222222,
+      "n": 18
+    },
+    {
+      "threshold": 0.5878144821030693,
+      "coverage": 0.76,
+      "risk": 0.21052631578947367,
+      "n": 19
+    },
+    {
+      "threshold": 0.5198381994213579,
+      "coverage": 0.8,
+      "risk": 0.2,
+      "n": 20
+    },
+    {
+      "threshold": 0.508770301017331,
+      "coverage": 0.84,
+      "risk": 0.23809523809523808,
+      "n": 21
+    },
+    {
+      "threshold": 0.5069081820132993,
+      "coverage": 0.88,
+      "risk": 0.22727272727272727,
+      "n": 22
+    },
+    {
+      "threshold": 0.4919462975223523,
+      "coverage": 0.92,
+      "risk": 0.2608695652173913,
+      "n": 23
+    },
+    {
+      "threshold": 0.4834691814492984,
+      "coverage": 0.96,
+      "risk": 0.2916666666666667,
+      "n": 24
+    },
+    {
+      "threshold": 0.46582607225092054,
+      "coverage": 1.0,
+      "risk": 0.28,
+      "n": 25
+    }
+  ],
+  "risk_interval_note": "Descriptive test uncertainty; not a deployment guarantee."
+}

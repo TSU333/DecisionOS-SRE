@@ -1,0 +1,44 @@
+[
+  {
+    "artifact": "artifacts\\round11\\text_control\\sft",
+    "total_draws": 656,
+    "unique_train_cases": 156,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-SS": 149,
+      "RE1-OB": 160,
+      "RE2-OB": 155,
+      "RE2-SS": 192
+    },
+    "new_independent_cases": 0
+  },
+  {
+    "artifact": "artifacts\\round11\\tail2\\sft",
+    "total_draws": 820,
+    "unique_train_cases": 160,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-SS": 192,
+      "RE1-OB": 204,
+      "RE2-OB": 192,
+      "RE2-SS": 232
+    },
+    "new_independent_cases": 0
+  },
+  {
+    "artifact": "artifacts\\round11\\tail4\\sft",
+    "total_draws": 656,
+    "unique_train_cases": 156,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-SS": 149,
+      "RE1-OB": 160,
+      "RE2-OB": 155,
+      "RE2-SS": 192
+    },
+    "new_independent_cases": 0
+  }
+]

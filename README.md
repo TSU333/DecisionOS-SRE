@@ -2,13 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第十轮结果见 `docs/round10_results.md`，机器报告 `outputs/round10/results.json`，验收 `outputs/round10/status.json`。应用专属故障头候选未通过历史回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。全部历史实验保留，execution_scope 仍为 mvp。
+最新第十一轮结果见 `docs/round11_results.md`，机器结果 `outputs/round11/results.json`，验收 `outputs/round11/status.json`。本轮候选未通过历史回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。execution_scope 保持 mvp，全部历史模型与失败证据保留。
 
-本轮增加可选的应用专属故障头：只使用公开application字段路由，共享主干、根因与未知应用回退头冻结，一次事故仍只编码一次。未知应用强制REVIEW。4组真实GPU训练共5269次参数更新，无新主干SFT、无新独立案例、无增强视图。165条原TRAIN中的1条无有效观测记录不参与抽样，其余164条用于训练；所有原始数据划分及哈希保持不变。
+这次执行真实的共享编码器末层微调：比较文本故障头对照、最后2层、最后4层，冻结原有数值分支。3组共533次正式优化器更新，另有3步TRAIN资源探测并丢弃临时权重。两层和四层分别实际训练约1003万/2006万个参数；控制组只训练3845个参数。输入、推理架构和一次共享编码规则保持不变，仍使用164个有效TRAIN案例，无新独立数据或增强视图。
 
-验证选中 app_drop15，联合准确率95.0%（现任92.5%），但历史回归联合准确率下降：OB RE2 72.0%（现任76.0%），Sock Shop 90.0%（现任93.3%）。因此未替换默认模型，也未按回归结果改选次优模型。验证集提升不能单独证明模型更强。
+选中tail2，验证联合准确率仍为92.5%，sum NLL从0.259229小幅降至0.257282；历史回归OB RE2联合从76.0%降到72.0%，Sock Shop维持93.3%。因此不替换默认模型，不据概率损失的小幅改善宣称模型更强。协议和理由见 `docs/round11_protocol.md`。
 
-69项测试、真实HTTP（含两个应用的分支概率比对）与CPU重载通过，候选CPU端到端P95为964.9ms。原MVP工程流程已经完成，质量与自动接受风险仍缺新的独立确认。训练时22个源码SHA256和后续实现归档提交已逐文件核对，详细记录见 `outputs/round10/source_snapshot.json`。
+84项测试、真实HTTP和CPU重载通过；候选CPU端到端P95为939.3ms。所有实际训练源码与训练前提交 `62db696136a80c4e571cdf3fe2f25eb0e7a1b4c5` 的哈希一致，数值分支及其它冻结张量逐项核对。原MVP工程流程完成，但质量与自动接受风险仍缺新的独立确认；系统不执行运维动作。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE
