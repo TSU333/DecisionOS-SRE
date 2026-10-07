@@ -1,0 +1,29 @@
+{
+  "index": "data\\rcaeval\\cases.parquet",
+  "sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+  "total_rows": 735,
+  "by_dataset": {
+    "RE1-OB": 125,
+    "RE1-SS": 125,
+    "RE1-TT": 125,
+    "RE2-OB": 90,
+    "RE2-SS": 90,
+    "RE2-TT": 90,
+    "RE3-OB": 30,
+    "RE3-SS": 30,
+    "RE3-TT": 30
+  },
+  "same_application_five_fault_cases": 400,
+  "already_in_current_data": 400,
+  "remaining_compatible_cases": 0,
+  "excluded_same_app_faults": [
+    "f1",
+    "f2",
+    "f3",
+    "f4",
+    "f5",
+    "socket"
+  ],
+  "other_application": "Train Ticket is outside this same-application comparison; not counted as fresh OB/SS confirmation",
+  "independent_new_cases": 0
+}

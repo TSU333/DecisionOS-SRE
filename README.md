@@ -2,13 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第八轮结果见 `docs/round8_results.md`，机器报告 `outputs/round8/results.json`，验收 `outputs/round8/status.json`。新候选触发回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。全部历史模型保留，execution_scope 仍为 mvp。
+最新第九轮结果见 `docs/round9_results.md`，机器报告 `outputs/round9/results.json`，验收 `outputs/round9/status.json`。增强候选未通过回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。原模型及全部实验保留，execution_scope 仍为 mvp。
 
-本轮固定共享主干和根因分支，只训练66,831个故障头参数，比较6组Dropout/标签平滑方案，实际完成 4807 次更新。候选验证联合准确率从92.5%提高到95.0%，但历史回归必须同时满足预设的不退步保护。数据仍为原400个案例，没有新独立测试；未进行新的主干SFT。
+本轮审计发现原165个训练案例中有1例没有故障后的有效观测，保留原始记录但不再抽入训练。其余164例生成328个因果缺测视图：末尾延迟15秒与中间缺测15秒；标签和分组不变，不算新增独立案例。共4组真实训练、7590次更新。验证、校准与回归输入保持原样，未进行新的主干SFT。
 
-本轮选中候选的历史回归联合准确率：Online Boutique RE2为72.0%，Sock Shop为90.0%。第五轮对应为76%和93.3%；本轮发布决定详见报告，不能把验证集上的提高直接称为泛化增强。原始MVP工程流程已完成，整体质量和自动接受风险仍缺独立确认。
+选中候选验证联合准确率为92.5%，sum NLL为0.243747；第五轮为92.5% / 0.259229。候选历史回归联合准确率：OB RE2 72.0%、Sock Shop 90.0%；第五轮为76%与93.3%。晋升需同时通过验证选择及各历史cohort不退步保护，不能仅凭验证损失降低宣称模型增强。
 
-50项测试及候选的真实HTTP、CPU重载通过，所有冻结权重与父模型精确相同。候选CPU端到端P95为849.1ms，输入为与第五轮相同的3个SS案例。系统只输出诊断与REVIEW/ACCEPT_DIAGNOSIS，不执行运维动作。
+58项测试、候选真实HTTP和CPU重载通过。候选CPU端到端P95为1019.7ms。原MVP工程流程完成，但质量和自动接受风险仍缺新的独立确认；系统不执行运维动作。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE

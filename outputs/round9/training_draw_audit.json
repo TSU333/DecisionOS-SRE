@@ -1,0 +1,80 @@
+[
+  {
+    "artifact": "artifacts\\round9\\clean_control\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 17548,
+    "cohort_draws": {
+      "RE2-SS": 4359,
+      "RE2-OB": 4402,
+      "RE1-SS": 4430,
+      "RE1-OB": 4357
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "original": 17548
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 4428
+  },
+  {
+    "artifact": "artifacts\\round9\\views50_joint\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 30012,
+    "cohort_draws": {
+      "RE2-SS": 7457,
+      "RE2-OB": 7474,
+      "RE1-SS": 7588,
+      "RE1-OB": 7493
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "gap15_30": 7451,
+      "lag15": 7546,
+      "original": 15015
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 16892
+  },
+  {
+    "artifact": "artifacts\\round9\\views75_joint\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 32800,
+    "cohort_draws": {
+      "RE2-SS": 8161,
+      "RE2-OB": 8174,
+      "RE1-SS": 8246,
+      "RE1-OB": 8219
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "gap15_30": 12215,
+      "lag15": 12306,
+      "original": 8279
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 31160
+  },
+  {
+    "artifact": "artifacts\\round9\\views50_fault\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 32800,
+    "cohort_draws": {
+      "RE2-SS": 8161,
+      "RE2-OB": 8174,
+      "RE1-SS": 8246,
+      "RE1-OB": 8219
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "gap15_30": 8128,
+      "lag15": 8269,
+      "original": 16403
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 22140
+  }
+]

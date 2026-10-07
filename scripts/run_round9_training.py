@@ -31,7 +31,7 @@ for trial in protocol['trials']:
 inc=Path(protocol['parent']);oldmeta=read(inc/'metadata.json');oldsummary=prediction_summary(read(inc/'selected_validation_logits.json'))
 assert set(oldmeta['validation_run_ids'])==set(meta['validation_run_ids'])
 oldrank=list(selection_key(oldsummary,protocol['selection_config']));best=min(choices,key=lambda c:c['rank'])
-selection={'status':'frozen_before_round9_regression','timestamp_utc':datetime.now(timezone.utc).isoformat(),'protocol_sha256':file_hash('outputs/round9/protocol.json'),'selected':best,'candidates':choices,'incumbent':{'artifact':str(inc),'rank':oldrank,'validation':oldsummary,'binding':oldmeta['binding']},'promote_by_validation':best['rank'][0]==0 and best['rank']<oldrank,'no_fresh_test':True,'no_further_tuning':True,'note':'Selected challenger evaluated even if incumbent retained; promotion decided from validation before regression/calibration/gate.'}
+selection={'status':'frozen_before_round9_regression','timestamp_utc':datetime.now(timezone.utc).isoformat(),'protocol_sha256':file_hash('outputs/round9/protocol.json'),'selected':best,'candidates':choices,'incumbent':{'artifact':str(inc),'rank':oldrank,'validation':oldsummary,'binding':oldmeta['binding']},'promote_by_validation':best['rank'][0]==0 and best['rank']<oldrank,'no_fresh_test':True,'no_further_tuning':True,'note':'Validation eligibility frozen before regression; final release also requires the predeclared historical regression guard. No runner-up selection.'}
 path=Path('outputs/round9/selection.json')
 if path.exists():raise FileExistsError('Selection already frozen')
 save(path,selection)

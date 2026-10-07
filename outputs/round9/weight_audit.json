@@ -1,0 +1,19 @@
+{
+  "frozen_tensors_verified": 142,
+  "frozen_weights_exactly_equal": true,
+  "changed_head_tensors": [
+    "fault_head.weight",
+    "fault_head.bias",
+    "numeric_fault.0.weight",
+    "numeric_fault.0.bias",
+    "numeric_fault.2.weight",
+    "numeric_fault.2.bias",
+    "numeric_local_fault.0.weight",
+    "numeric_local_fault.0.bias",
+    "numeric_local_fault.2.weight",
+    "numeric_local_fault.2.bias"
+  ],
+  "root_branch_frozen": true,
+  "root_validation_max_abs_logit_change": 0.0,
+  "no_architecture_change": true
+}
