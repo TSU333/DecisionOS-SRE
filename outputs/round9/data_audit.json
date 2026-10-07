@@ -1,0 +1,3821 @@
+{
+  "version": "causal-missing-v1",
+  "original_cases": 400,
+  "new_independent_cases": 0,
+  "allowed_train_cases": 165,
+  "eligible_train_cases": 164,
+  "excluded_unusable_train": [
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "cohort": "RE1-OB",
+      "reason": "no retained usable temporal evidence"
+    }
+  ],
+  "training_view_count": 328,
+  "view_records": [
+    {
+      "parent_run": "ae7a55546bd239158a1c0f87",
+      "view_id": "ae7a55546bd239158a1c0f87__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1421,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "ae7a55546bd239158a1c0f87",
+      "view_id": "ae7a55546bd239158a1c0f87__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1428,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "44b2ee08820479f9f251c02f",
+      "view_id": "44b2ee08820479f9f251c02f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "44b2ee08820479f9f251c02f",
+      "view_id": "44b2ee08820479f9f251c02f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1422,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "dc72fd144dc07825b95e9f8f",
+      "view_id": "dc72fd144dc07825b95e9f8f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1403,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "dc72fd144dc07825b95e9f8f",
+      "view_id": "dc72fd144dc07825b95e9f8f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1396,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d0e4cdd03f963268b0b837e4",
+      "view_id": "d0e4cdd03f963268b0b837e4__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1394,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d0e4cdd03f963268b0b837e4",
+      "view_id": "d0e4cdd03f963268b0b837e4__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1394,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "4b9bcfee80f9d6dd0a45ba4e",
+      "view_id": "4b9bcfee80f9d6dd0a45ba4e__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1395,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "4b9bcfee80f9d6dd0a45ba4e",
+      "view_id": "4b9bcfee80f9d6dd0a45ba4e__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1392,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a5b9b34d974ceb23210c41e4",
+      "view_id": "a5b9b34d974ceb23210c41e4__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1452,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a5b9b34d974ceb23210c41e4",
+      "view_id": "a5b9b34d974ceb23210c41e4__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1451,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "317d870b6bfdb9bc4fd3e2fa",
+      "view_id": "317d870b6bfdb9bc4fd3e2fa__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1449,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "317d870b6bfdb9bc4fd3e2fa",
+      "view_id": "317d870b6bfdb9bc4fd3e2fa__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1441,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "bbbfd5c80988068515990283",
+      "view_id": "bbbfd5c80988068515990283__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1428,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "bbbfd5c80988068515990283",
+      "view_id": "bbbfd5c80988068515990283__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1431,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "0f21a2ab0af4e53a4f5773e4",
+      "view_id": "0f21a2ab0af4e53a4f5773e4__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1170,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "0f21a2ab0af4e53a4f5773e4",
+      "view_id": "0f21a2ab0af4e53a4f5773e4__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1168,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "7b597dce8e17e7578f1d572b",
+      "view_id": "7b597dce8e17e7578f1d572b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1167,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "7b597dce8e17e7578f1d572b",
+      "view_id": "7b597dce8e17e7578f1d572b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1167,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "52461e0c6bed588e5d3558e8",
+      "view_id": "52461e0c6bed588e5d3558e8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1174,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "52461e0c6bed588e5d3558e8",
+      "view_id": "52461e0c6bed588e5d3558e8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1175,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "704205d07bf129586fc039df",
+      "view_id": "704205d07bf129586fc039df__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1166,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "704205d07bf129586fc039df",
+      "view_id": "704205d07bf129586fc039df__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1161,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "82cdb6657e41396f4e6d7532",
+      "view_id": "82cdb6657e41396f4e6d7532__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1414,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "82cdb6657e41396f4e6d7532",
+      "view_id": "82cdb6657e41396f4e6d7532__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1415,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "73c9f93dd8e1e00153f844fa",
+      "view_id": "73c9f93dd8e1e00153f844fa__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1413,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "73c9f93dd8e1e00153f844fa",
+      "view_id": "73c9f93dd8e1e00153f844fa__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1406,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "bfd14b9d5c95fe2941976f07",
+      "view_id": "bfd14b9d5c95fe2941976f07__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "bfd14b9d5c95fe2941976f07",
+      "view_id": "bfd14b9d5c95fe2941976f07__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1406,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "054a3237ad43dc034b43f328",
+      "view_id": "054a3237ad43dc034b43f328__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1409,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "054a3237ad43dc034b43f328",
+      "view_id": "054a3237ad43dc034b43f328__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1399,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "ac186cd4f7d3d915a519a8dd",
+      "view_id": "ac186cd4f7d3d915a519a8dd__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1410,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "ac186cd4f7d3d915a519a8dd",
+      "view_id": "ac186cd4f7d3d915a519a8dd__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1414,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9cb104e6dfecdb5c1e324b91",
+      "view_id": "9cb104e6dfecdb5c1e324b91__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1426,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9cb104e6dfecdb5c1e324b91",
+      "view_id": "9cb104e6dfecdb5c1e324b91__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1425,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "5b264db6fc27feb0e1c32027",
+      "view_id": "5b264db6fc27feb0e1c32027__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1167,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "5b264db6fc27feb0e1c32027",
+      "view_id": "5b264db6fc27feb0e1c32027__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1168,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "888735b551ad1c03171876a7",
+      "view_id": "888735b551ad1c03171876a7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1159,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "888735b551ad1c03171876a7",
+      "view_id": "888735b551ad1c03171876a7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1165,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "c6d2864520ee3d766412a162",
+      "view_id": "c6d2864520ee3d766412a162__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1167,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "c6d2864520ee3d766412a162",
+      "view_id": "c6d2864520ee3d766412a162__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1161,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9edddbbf48a94d96d896e929",
+      "view_id": "9edddbbf48a94d96d896e929__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1160,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9edddbbf48a94d96d896e929",
+      "view_id": "9edddbbf48a94d96d896e929__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1166,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "ab5967d895935ed7e41a1b72",
+      "view_id": "ab5967d895935ed7e41a1b72__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1179,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "ab5967d895935ed7e41a1b72",
+      "view_id": "ab5967d895935ed7e41a1b72__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1179,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "90e2d3f7583aa10000ff52e8",
+      "view_id": "90e2d3f7583aa10000ff52e8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1413,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "90e2d3f7583aa10000ff52e8",
+      "view_id": "90e2d3f7583aa10000ff52e8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1409,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cd41a7743aad542bc9248791",
+      "view_id": "cd41a7743aad542bc9248791__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1411,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cd41a7743aad542bc9248791",
+      "view_id": "cd41a7743aad542bc9248791__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1405,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d8448a5bc5754b32d1502bdf",
+      "view_id": "d8448a5bc5754b32d1502bdf__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d8448a5bc5754b32d1502bdf",
+      "view_id": "d8448a5bc5754b32d1502bdf__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1410,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cf85df46f1fa9667bf0b8727",
+      "view_id": "cf85df46f1fa9667bf0b8727__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cf85df46f1fa9667bf0b8727",
+      "view_id": "cf85df46f1fa9667bf0b8727__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1436,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9b91e2cea498a63f467530a5",
+      "view_id": "9b91e2cea498a63f467530a5__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1430,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9b91e2cea498a63f467530a5",
+      "view_id": "9b91e2cea498a63f467530a5__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1431,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "adc5a196741fb7e650f144b5",
+      "view_id": "adc5a196741fb7e650f144b5__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1173,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "adc5a196741fb7e650f144b5",
+      "view_id": "adc5a196741fb7e650f144b5__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1176,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d358fe8d043b84d6bf650ef9",
+      "view_id": "d358fe8d043b84d6bf650ef9__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1165,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "d358fe8d043b84d6bf650ef9",
+      "view_id": "d358fe8d043b84d6bf650ef9__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1158,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3c98e50e1f9c1a5872c6923b",
+      "view_id": "3c98e50e1f9c1a5872c6923b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1165,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3c98e50e1f9c1a5872c6923b",
+      "view_id": "3c98e50e1f9c1a5872c6923b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1163,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "095c72f94f03034c83400f6a",
+      "view_id": "095c72f94f03034c83400f6a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1164,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "095c72f94f03034c83400f6a",
+      "view_id": "095c72f94f03034c83400f6a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1168,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "750b31e440a14921840f1ddb",
+      "view_id": "750b31e440a14921840f1ddb__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1161,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "750b31e440a14921840f1ddb",
+      "view_id": "750b31e440a14921840f1ddb__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1153,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "5014289367470c829f351d53",
+      "view_id": "5014289367470c829f351d53__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1161,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "5014289367470c829f351d53",
+      "view_id": "5014289367470c829f351d53__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1169,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3798247404bbcd5190dfe271",
+      "view_id": "3798247404bbcd5190dfe271__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1416,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3798247404bbcd5190dfe271",
+      "view_id": "3798247404bbcd5190dfe271__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1406,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "fc0701e8f3a251090bb14ead",
+      "view_id": "fc0701e8f3a251090bb14ead__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1416,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "fc0701e8f3a251090bb14ead",
+      "view_id": "fc0701e8f3a251090bb14ead__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3daf57158daef7d598616b38",
+      "view_id": "3daf57158daef7d598616b38__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1394,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "3daf57158daef7d598616b38",
+      "view_id": "3daf57158daef7d598616b38__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1386,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "713bc20c73338c51cd9f91da",
+      "view_id": "713bc20c73338c51cd9f91da__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1421,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "713bc20c73338c51cd9f91da",
+      "view_id": "713bc20c73338c51cd9f91da__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1415,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "6907562bccdbf715db018a13",
+      "view_id": "6907562bccdbf715db018a13__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1387,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "6907562bccdbf715db018a13",
+      "view_id": "6907562bccdbf715db018a13__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1386,
+      "metrics_retained": 56,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "696b6ca4c2d057fcf67fc899",
+      "view_id": "696b6ca4c2d057fcf67fc899__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1434,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "696b6ca4c2d057fcf67fc899",
+      "view_id": "696b6ca4c2d057fcf67fc899__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1428,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "8e904a43f2986e996bdbffbe",
+      "view_id": "8e904a43f2986e996bdbffbe__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1165,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "8e904a43f2986e996bdbffbe",
+      "view_id": "8e904a43f2986e996bdbffbe__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1160,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a802765698d3e965d8775d9d",
+      "view_id": "a802765698d3e965d8775d9d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1167,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a802765698d3e965d8775d9d",
+      "view_id": "a802765698d3e965d8775d9d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1170,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "e907a8050f83593bb0d5e8f7",
+      "view_id": "e907a8050f83593bb0d5e8f7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1429,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "e907a8050f83593bb0d5e8f7",
+      "view_id": "e907a8050f83593bb0d5e8f7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1422,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "6f1365a589564793eedd5271",
+      "view_id": "6f1365a589564793eedd5271__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1416,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "6f1365a589564793eedd5271",
+      "view_id": "6f1365a589564793eedd5271__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1402,
+      "metrics_retained": 58,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "39e972166970bbbce4d3ae66",
+      "view_id": "39e972166970bbbce4d3ae66__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1397,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "39e972166970bbbce4d3ae66",
+      "view_id": "39e972166970bbbce4d3ae66__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1397,
+      "metrics_retained": 57,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "b352ccc9ecac53f4d79c1861",
+      "view_id": "b352ccc9ecac53f4d79c1861__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1437,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "b352ccc9ecac53f4d79c1861",
+      "view_id": "b352ccc9ecac53f4d79c1861__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1422,
+      "metrics_retained": 59,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cbc247593db62bbaff1e94c7",
+      "view_id": "cbc247593db62bbaff1e94c7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1185,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "cbc247593db62bbaff1e94c7",
+      "view_id": "cbc247593db62bbaff1e94c7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1181,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "64af67464eab2734e054fd73",
+      "view_id": "64af67464eab2734e054fd73__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1162,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "64af67464eab2734e054fd73",
+      "view_id": "64af67464eab2734e054fd73__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1162,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a5a8aaad73b0dc500441ac0b",
+      "view_id": "a5a8aaad73b0dc500441ac0b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1157,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "a5a8aaad73b0dc500441ac0b",
+      "view_id": "a5a8aaad73b0dc500441ac0b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1162,
+      "metrics_retained": 49,
+      "cohort": "RE1-OB"
+    },
+    {
+      "parent_run": "9ab31bb621d3e0d8f2897404",
+      "view_id": "9ab31bb621d3e0d8f2897404__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1628,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "9ab31bb621d3e0d8f2897404",
+      "view_id": "9ab31bb621d3e0d8f2897404__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1627,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "0a6f2329dca752051eced5b8",
+      "view_id": "0a6f2329dca752051eced5b8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1650,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "0a6f2329dca752051eced5b8",
+      "view_id": "0a6f2329dca752051eced5b8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1654,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "f8c60f1c81675f0c04f88051",
+      "view_id": "f8c60f1c81675f0c04f88051__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1684,
+      "metrics_retained": 76,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "f8c60f1c81675f0c04f88051",
+      "view_id": "f8c60f1c81675f0c04f88051__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1676,
+      "metrics_retained": 76,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "4f3d5a725f5be826f6bb5fec",
+      "view_id": "4f3d5a725f5be826f6bb5fec__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1685,
+      "metrics_retained": 76,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "4f3d5a725f5be826f6bb5fec",
+      "view_id": "4f3d5a725f5be826f6bb5fec__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1682,
+      "metrics_retained": 76,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "2c88bcc3ecf60b86f27ae2c9",
+      "view_id": "2c88bcc3ecf60b86f27ae2c9__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1649,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "2c88bcc3ecf60b86f27ae2c9",
+      "view_id": "2c88bcc3ecf60b86f27ae2c9__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1633,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "70ee6c3740ce01315d36c2a7",
+      "view_id": "70ee6c3740ce01315d36c2a7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1655,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "70ee6c3740ce01315d36c2a7",
+      "view_id": "70ee6c3740ce01315d36c2a7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1657,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "2d7a8a71d1965a501be03ce6",
+      "view_id": "2d7a8a71d1965a501be03ce6__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1589,
+      "metrics_retained": 70,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "2d7a8a71d1965a501be03ce6",
+      "view_id": "2d7a8a71d1965a501be03ce6__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1592,
+      "metrics_retained": 70,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "054e489835012f8438da7eae",
+      "view_id": "054e489835012f8438da7eae__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1635,
+      "metrics_retained": 73,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "054e489835012f8438da7eae",
+      "view_id": "054e489835012f8438da7eae__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1638,
+      "metrics_retained": 73,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "16193a4d504a8a970a5dca9b",
+      "view_id": "16193a4d504a8a970a5dca9b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1622,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "16193a4d504a8a970a5dca9b",
+      "view_id": "16193a4d504a8a970a5dca9b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1623,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "f0fa3f97aaf3f59a53c593c1",
+      "view_id": "f0fa3f97aaf3f59a53c593c1__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1618,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "f0fa3f97aaf3f59a53c593c1",
+      "view_id": "f0fa3f97aaf3f59a53c593c1__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1617,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "1561133f8c7873d8c0a57968",
+      "view_id": "1561133f8c7873d8c0a57968__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1606,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "1561133f8c7873d8c0a57968",
+      "view_id": "1561133f8c7873d8c0a57968__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1600,
+      "metrics_retained": 72,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "0eb0108d0cd4648716bd9d6f",
+      "view_id": "0eb0108d0cd4648716bd9d6f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1645,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "0eb0108d0cd4648716bd9d6f",
+      "view_id": "0eb0108d0cd4648716bd9d6f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1646,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "b9de3bf585ba61b4e1aa2c26",
+      "view_id": "b9de3bf585ba61b4e1aa2c26__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1662,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "b9de3bf585ba61b4e1aa2c26",
+      "view_id": "b9de3bf585ba61b4e1aa2c26__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1668,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "8ad019797e1898d727bdd311",
+      "view_id": "8ad019797e1898d727bdd311__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1666,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "8ad019797e1898d727bdd311",
+      "view_id": "8ad019797e1898d727bdd311__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1652,
+      "metrics_retained": 74,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "9cb313f397e19d48782c835a",
+      "view_id": "9cb313f397e19d48782c835a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1597,
+      "metrics_retained": 70,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "9cb313f397e19d48782c835a",
+      "view_id": "9cb313f397e19d48782c835a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1601,
+      "metrics_retained": 70,
+      "cohort": "RE2-OB"
+    },
+    {
+      "parent_run": "22eeb8727f7c631b00fcaceb",
+      "view_id": "22eeb8727f7c631b00fcaceb__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1439,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "22eeb8727f7c631b00fcaceb",
+      "view_id": "22eeb8727f7c631b00fcaceb__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1441,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9fcc9788e706ef6219da61c3",
+      "view_id": "9fcc9788e706ef6219da61c3__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1450,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9fcc9788e706ef6219da61c3",
+      "view_id": "9fcc9788e706ef6219da61c3__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1449,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "5f6d8f696564101ceed0a071",
+      "view_id": "5f6d8f696564101ceed0a071__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1447,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "5f6d8f696564101ceed0a071",
+      "view_id": "5f6d8f696564101ceed0a071__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1435,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d6fd426b73f909dd3fafbb2e",
+      "view_id": "d6fd426b73f909dd3fafbb2e__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d6fd426b73f909dd3fafbb2e",
+      "view_id": "d6fd426b73f909dd3fafbb2e__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7e671a0975fe9f3ebd2f9c5d",
+      "view_id": "7e671a0975fe9f3ebd2f9c5d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1430,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7e671a0975fe9f3ebd2f9c5d",
+      "view_id": "7e671a0975fe9f3ebd2f9c5d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1429,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "481466ab0209e9ab62cd2f40",
+      "view_id": "481466ab0209e9ab62cd2f40__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1415,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "481466ab0209e9ab62cd2f40",
+      "view_id": "481466ab0209e9ab62cd2f40__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1410,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0cc013bd863f69eafc69e4db",
+      "view_id": "0cc013bd863f69eafc69e4db__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1419,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0cc013bd863f69eafc69e4db",
+      "view_id": "0cc013bd863f69eafc69e4db__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1411,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "e4248dae99ca23e7e1277d6d",
+      "view_id": "e4248dae99ca23e7e1277d6d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "e4248dae99ca23e7e1277d6d",
+      "view_id": "e4248dae99ca23e7e1277d6d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4ae2ff5e1188c105df619abf",
+      "view_id": "4ae2ff5e1188c105df619abf__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4ae2ff5e1188c105df619abf",
+      "view_id": "4ae2ff5e1188c105df619abf__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "dd2d08da92ad45aa52b2ffa7",
+      "view_id": "dd2d08da92ad45aa52b2ffa7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1441,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "dd2d08da92ad45aa52b2ffa7",
+      "view_id": "dd2d08da92ad45aa52b2ffa7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1441,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "f88d7548f13042a64d121b49",
+      "view_id": "f88d7548f13042a64d121b49__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1458,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "f88d7548f13042a64d121b49",
+      "view_id": "f88d7548f13042a64d121b49__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1457,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0976e20a0dddf9a8e7cd612d",
+      "view_id": "0976e20a0dddf9a8e7cd612d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0976e20a0dddf9a8e7cd612d",
+      "view_id": "0976e20a0dddf9a8e7cd612d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9191c2bc66a65b09cd7a74da",
+      "view_id": "9191c2bc66a65b09cd7a74da__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9191c2bc66a65b09cd7a74da",
+      "view_id": "9191c2bc66a65b09cd7a74da__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1432,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "85f6ca06dbae43edbee7fecc",
+      "view_id": "85f6ca06dbae43edbee7fecc__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "85f6ca06dbae43edbee7fecc",
+      "view_id": "85f6ca06dbae43edbee7fecc__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "95abf8ed22a09541ac9de284",
+      "view_id": "95abf8ed22a09541ac9de284__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1439,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "95abf8ed22a09541ac9de284",
+      "view_id": "95abf8ed22a09541ac9de284__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1434,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0f67d1a288812bec765d598f",
+      "view_id": "0f67d1a288812bec765d598f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0f67d1a288812bec765d598f",
+      "view_id": "0f67d1a288812bec765d598f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1426,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8a97bb53b9f500cbf581cbe8",
+      "view_id": "8a97bb53b9f500cbf581cbe8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1448,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8a97bb53b9f500cbf581cbe8",
+      "view_id": "8a97bb53b9f500cbf581cbe8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "bdc54e3265bafc2fd21bc918",
+      "view_id": "bdc54e3265bafc2fd21bc918__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1424,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "bdc54e3265bafc2fd21bc918",
+      "view_id": "bdc54e3265bafc2fd21bc918__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1424,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7d33a32c132865ca19f74d1e",
+      "view_id": "7d33a32c132865ca19f74d1e__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1444,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7d33a32c132865ca19f74d1e",
+      "view_id": "7d33a32c132865ca19f74d1e__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1445,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ebdfe5827453bfee6fd3c71f",
+      "view_id": "ebdfe5827453bfee6fd3c71f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ebdfe5827453bfee6fd3c71f",
+      "view_id": "ebdfe5827453bfee6fd3c71f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1442,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8d18946bedb3daceb4d5611a",
+      "view_id": "8d18946bedb3daceb4d5611a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1425,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8d18946bedb3daceb4d5611a",
+      "view_id": "8d18946bedb3daceb4d5611a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1415,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "2740141ceeaa6611f13470ce",
+      "view_id": "2740141ceeaa6611f13470ce__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1415,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "2740141ceeaa6611f13470ce",
+      "view_id": "2740141ceeaa6611f13470ce__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1404,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4540d257d515f6b9456e35ab",
+      "view_id": "4540d257d515f6b9456e35ab__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1419,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4540d257d515f6b9456e35ab",
+      "view_id": "4540d257d515f6b9456e35ab__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1804cd18e9a65e5ece5b6f58",
+      "view_id": "1804cd18e9a65e5ece5b6f58__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1804cd18e9a65e5ece5b6f58",
+      "view_id": "1804cd18e9a65e5ece5b6f58__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1454,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6a3d3281d689c236669309d6",
+      "view_id": "6a3d3281d689c236669309d6__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1453,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6a3d3281d689c236669309d6",
+      "view_id": "6a3d3281d689c236669309d6__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1448,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4331ee15b74a31c2bc2bd41a",
+      "view_id": "4331ee15b74a31c2bc2bd41a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4331ee15b74a31c2bc2bd41a",
+      "view_id": "4331ee15b74a31c2bc2bd41a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1457,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9a35cec6a698feaa00ed312b",
+      "view_id": "9a35cec6a698feaa00ed312b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1431,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9a35cec6a698feaa00ed312b",
+      "view_id": "9a35cec6a698feaa00ed312b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1440,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "256c5ce919142c9128df5cc8",
+      "view_id": "256c5ce919142c9128df5cc8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1445,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "256c5ce919142c9128df5cc8",
+      "view_id": "256c5ce919142c9128df5cc8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1452,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a784c8ea79eb16c8d6326192",
+      "view_id": "a784c8ea79eb16c8d6326192__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a784c8ea79eb16c8d6326192",
+      "view_id": "a784c8ea79eb16c8d6326192__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1430,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "fe5de3ac56cdfa909c047364",
+      "view_id": "fe5de3ac56cdfa909c047364__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1436,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "fe5de3ac56cdfa909c047364",
+      "view_id": "fe5de3ac56cdfa909c047364__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1432,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1ae8f343909a2c1abbdb740a",
+      "view_id": "1ae8f343909a2c1abbdb740a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1ae8f343909a2c1abbdb740a",
+      "view_id": "1ae8f343909a2c1abbdb740a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1447,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7256356ffb86c4ae6f46bc2c",
+      "view_id": "7256356ffb86c4ae6f46bc2c__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1464,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7256356ffb86c4ae6f46bc2c",
+      "view_id": "7256356ffb86c4ae6f46bc2c__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "db08bd001dc297de305e5a13",
+      "view_id": "db08bd001dc297de305e5a13__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "db08bd001dc297de305e5a13",
+      "view_id": "db08bd001dc297de305e5a13__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0de55fe3adea637d81595c8c",
+      "view_id": "0de55fe3adea637d81595c8c__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1459,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0de55fe3adea637d81595c8c",
+      "view_id": "0de55fe3adea637d81595c8c__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1447,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "433315ec6255dd1746e42e15",
+      "view_id": "433315ec6255dd1746e42e15__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "433315ec6255dd1746e42e15",
+      "view_id": "433315ec6255dd1746e42e15__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "21710f465c3f3221183a6e9c",
+      "view_id": "21710f465c3f3221183a6e9c__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1446,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "21710f465c3f3221183a6e9c",
+      "view_id": "21710f465c3f3221183a6e9c__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8f45e699d11b2d3a3c627a4c",
+      "view_id": "8f45e699d11b2d3a3c627a4c__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1418,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8f45e699d11b2d3a3c627a4c",
+      "view_id": "8f45e699d11b2d3a3c627a4c__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1416,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "e32fe84a490ed95926850f5a",
+      "view_id": "e32fe84a490ed95926850f5a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1464,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "e32fe84a490ed95926850f5a",
+      "view_id": "e32fe84a490ed95926850f5a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1462,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "39cedb70fd22b80410295af2",
+      "view_id": "39cedb70fd22b80410295af2__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1457,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "39cedb70fd22b80410295af2",
+      "view_id": "39cedb70fd22b80410295af2__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1459,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6f95ffe5aabd94895c7a7f4a",
+      "view_id": "6f95ffe5aabd94895c7a7f4a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1459,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6f95ffe5aabd94895c7a7f4a",
+      "view_id": "6f95ffe5aabd94895c7a7f4a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1464,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "444588dd51068ddea6d798af",
+      "view_id": "444588dd51068ddea6d798af__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "444588dd51068ddea6d798af",
+      "view_id": "444588dd51068ddea6d798af__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1447,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "312c4d1ffe844a1073cd3392",
+      "view_id": "312c4d1ffe844a1073cd3392__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1434,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "312c4d1ffe844a1073cd3392",
+      "view_id": "312c4d1ffe844a1073cd3392__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1440,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b775bf10348599d6d15e85c7",
+      "view_id": "b775bf10348599d6d15e85c7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1444,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b775bf10348599d6d15e85c7",
+      "view_id": "b775bf10348599d6d15e85c7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1440,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6ea530ecc35d80e76014f4e3",
+      "view_id": "6ea530ecc35d80e76014f4e3__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1413,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6ea530ecc35d80e76014f4e3",
+      "view_id": "6ea530ecc35d80e76014f4e3__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1416,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "f3ecc579c50d9a6e27650d91",
+      "view_id": "f3ecc579c50d9a6e27650d91__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "f3ecc579c50d9a6e27650d91",
+      "view_id": "f3ecc579c50d9a6e27650d91__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1431,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "eb628868752fbdc887afc783",
+      "view_id": "eb628868752fbdc887afc783__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1452,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "eb628868752fbdc887afc783",
+      "view_id": "eb628868752fbdc887afc783__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1445,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a824e56bd1e0e1958cc22c45",
+      "view_id": "a824e56bd1e0e1958cc22c45__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1429,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a824e56bd1e0e1958cc22c45",
+      "view_id": "a824e56bd1e0e1958cc22c45__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1424,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "520606e2fb17e4a29cecc9b2",
+      "view_id": "520606e2fb17e4a29cecc9b2__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "520606e2fb17e4a29cecc9b2",
+      "view_id": "520606e2fb17e4a29cecc9b2__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1422,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b830ddf61a5a36015a62c9d1",
+      "view_id": "b830ddf61a5a36015a62c9d1__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1437,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b830ddf61a5a36015a62c9d1",
+      "view_id": "b830ddf61a5a36015a62c9d1__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "75f4fae8fd46fcf83c261bdb",
+      "view_id": "75f4fae8fd46fcf83c261bdb__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1436,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "75f4fae8fd46fcf83c261bdb",
+      "view_id": "75f4fae8fd46fcf83c261bdb__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0484cb76295ff31953274f21",
+      "view_id": "0484cb76295ff31953274f21__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1430,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0484cb76295ff31953274f21",
+      "view_id": "0484cb76295ff31953274f21__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1424,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d42bcd0bf8967c3bb250d2cf",
+      "view_id": "d42bcd0bf8967c3bb250d2cf__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1419,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d42bcd0bf8967c3bb250d2cf",
+      "view_id": "d42bcd0bf8967c3bb250d2cf__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1418,
+      "metrics_retained": 57,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9437065abf0cd2b98a78924d",
+      "view_id": "9437065abf0cd2b98a78924d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1466,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "9437065abf0cd2b98a78924d",
+      "view_id": "9437065abf0cd2b98a78924d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1463,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ca2eb98fabec558e08d19646",
+      "view_id": "ca2eb98fabec558e08d19646__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1473,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ca2eb98fabec558e08d19646",
+      "view_id": "ca2eb98fabec558e08d19646__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1465,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ec3c54b355fe31b29f3747a8",
+      "view_id": "ec3c54b355fe31b29f3747a8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1436,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ec3c54b355fe31b29f3747a8",
+      "view_id": "ec3c54b355fe31b29f3747a8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1441,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6f7db898caca47ea10966fb8",
+      "view_id": "6f7db898caca47ea10966fb8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1425,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6f7db898caca47ea10966fb8",
+      "view_id": "6f7db898caca47ea10966fb8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1428,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "502457b5c722f04f4309fcdc",
+      "view_id": "502457b5c722f04f4309fcdc__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1448,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "502457b5c722f04f4309fcdc",
+      "view_id": "502457b5c722f04f4309fcdc__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "06d5a4963a2284a923ec8fc1",
+      "view_id": "06d5a4963a2284a923ec8fc1__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1448,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "06d5a4963a2284a923ec8fc1",
+      "view_id": "06d5a4963a2284a923ec8fc1__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1435,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "053e676f22a2b6c0c2a2bca6",
+      "view_id": "053e676f22a2b6c0c2a2bca6__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1443,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "053e676f22a2b6c0c2a2bca6",
+      "view_id": "053e676f22a2b6c0c2a2bca6__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1436,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "49e4a73f4c64415fb6ae7437",
+      "view_id": "49e4a73f4c64415fb6ae7437__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1442,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "49e4a73f4c64415fb6ae7437",
+      "view_id": "49e4a73f4c64415fb6ae7437__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8b7d52d0eebc91346bc7a392",
+      "view_id": "8b7d52d0eebc91346bc7a392__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "8b7d52d0eebc91346bc7a392",
+      "view_id": "8b7d52d0eebc91346bc7a392__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1435,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d253d3fc85b13976d86776b7",
+      "view_id": "d253d3fc85b13976d86776b7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1445,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d253d3fc85b13976d86776b7",
+      "view_id": "d253d3fc85b13976d86776b7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1438,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a78011b56ce028ccad350807",
+      "view_id": "a78011b56ce028ccad350807__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1452,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "a78011b56ce028ccad350807",
+      "view_id": "a78011b56ce028ccad350807__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1450,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ce5b63047d784972b0e60371",
+      "view_id": "ce5b63047d784972b0e60371__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "ce5b63047d784972b0e60371",
+      "view_id": "ce5b63047d784972b0e60371__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1641bb262b9aaccc0a46526c",
+      "view_id": "1641bb262b9aaccc0a46526c__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1432,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "1641bb262b9aaccc0a46526c",
+      "view_id": "1641bb262b9aaccc0a46526c__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1433,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b843c5aa80aec2fceaef789b",
+      "view_id": "b843c5aa80aec2fceaef789b__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1428,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "b843c5aa80aec2fceaef789b",
+      "view_id": "b843c5aa80aec2fceaef789b__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1426,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "3b5796d4ddc1852323ad9af2",
+      "view_id": "3b5796d4ddc1852323ad9af2__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1463,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "3b5796d4ddc1852323ad9af2",
+      "view_id": "3b5796d4ddc1852323ad9af2__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1456,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "38d0c513976090f4824c4944",
+      "view_id": "38d0c513976090f4824c4944__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1461,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "38d0c513976090f4824c4944",
+      "view_id": "38d0c513976090f4824c4944__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1453,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6b4672426ecc8f5493c13f9a",
+      "view_id": "6b4672426ecc8f5493c13f9a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1462,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6b4672426ecc8f5493c13f9a",
+      "view_id": "6b4672426ecc8f5493c13f9a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1450,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7191621e1f005ee91f87fd89",
+      "view_id": "7191621e1f005ee91f87fd89__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1427,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "7191621e1f005ee91f87fd89",
+      "view_id": "7191621e1f005ee91f87fd89__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1423,
+      "metrics_retained": 58,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0aaa10081ee22dc8bdd56613",
+      "view_id": "0aaa10081ee22dc8bdd56613__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1457,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0aaa10081ee22dc8bdd56613",
+      "view_id": "0aaa10081ee22dc8bdd56613__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1451,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4d4db035bcc802da2850d3c4",
+      "view_id": "4d4db035bcc802da2850d3c4__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1470,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "4d4db035bcc802da2850d3c4",
+      "view_id": "4d4db035bcc802da2850d3c4__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1467,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6014bc12832bffbc01d82ea7",
+      "view_id": "6014bc12832bffbc01d82ea7__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1434,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "6014bc12832bffbc01d82ea7",
+      "view_id": "6014bc12832bffbc01d82ea7__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1420,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "3a7465e6a27308fa1ca61190",
+      "view_id": "3a7465e6a27308fa1ca61190__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1434,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "3a7465e6a27308fa1ca61190",
+      "view_id": "3a7465e6a27308fa1ca61190__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1435,
+      "metrics_retained": 59,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d9feebb0d2e2c48c60b3b764",
+      "view_id": "d9feebb0d2e2c48c60b3b764__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1442,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "d9feebb0d2e2c48c60b3b764",
+      "view_id": "d9feebb0d2e2c48c60b3b764__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1445,
+      "metrics_retained": 60,
+      "cohort": "RE1-SS"
+    },
+    {
+      "parent_run": "0ec1fd560716ff076c72a706",
+      "view_id": "0ec1fd560716ff076c72a706__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1736,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "0ec1fd560716ff076c72a706",
+      "view_id": "0ec1fd560716ff076c72a706__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1731,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "29c4a3778a6071b1a61342c6",
+      "view_id": "29c4a3778a6071b1a61342c6__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1745,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "29c4a3778a6071b1a61342c6",
+      "view_id": "29c4a3778a6071b1a61342c6__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1739,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "cce449fae641f00a789ec169",
+      "view_id": "cce449fae641f00a789ec169__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1759,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "cce449fae641f00a789ec169",
+      "view_id": "cce449fae641f00a789ec169__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1758,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "f8f7e7d35c9ac4a4ce238fef",
+      "view_id": "f8f7e7d35c9ac4a4ce238fef__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1748,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "f8f7e7d35c9ac4a4ce238fef",
+      "view_id": "f8f7e7d35c9ac4a4ce238fef__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1738,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2c04cecc44ce6410eb0e209a",
+      "view_id": "2c04cecc44ce6410eb0e209a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1749,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2c04cecc44ce6410eb0e209a",
+      "view_id": "2c04cecc44ce6410eb0e209a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1749,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "f12b1443307a57694356be3a",
+      "view_id": "f12b1443307a57694356be3a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1732,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "f12b1443307a57694356be3a",
+      "view_id": "f12b1443307a57694356be3a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1741,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "b630b221be84c52b0a4db3b6",
+      "view_id": "b630b221be84c52b0a4db3b6__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1817,
+      "metrics_retained": 80,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "b630b221be84c52b0a4db3b6",
+      "view_id": "b630b221be84c52b0a4db3b6__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1796,
+      "metrics_retained": 80,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "fd6c62eb30906322da5d24d2",
+      "view_id": "fd6c62eb30906322da5d24d2__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1736,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "fd6c62eb30906322da5d24d2",
+      "view_id": "fd6c62eb30906322da5d24d2__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1726,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "22753315242e76c8a27046fc",
+      "view_id": "22753315242e76c8a27046fc__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1771,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "22753315242e76c8a27046fc",
+      "view_id": "22753315242e76c8a27046fc__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1765,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "a023e473997d8781c90c6fac",
+      "view_id": "a023e473997d8781c90c6fac__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1760,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "a023e473997d8781c90c6fac",
+      "view_id": "a023e473997d8781c90c6fac__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1752,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2a4346330b65263e6b6008b8",
+      "view_id": "2a4346330b65263e6b6008b8__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1770,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2a4346330b65263e6b6008b8",
+      "view_id": "2a4346330b65263e6b6008b8__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1761,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "bddbd926c8715efdee0406c0",
+      "view_id": "bddbd926c8715efdee0406c0__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1709,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "bddbd926c8715efdee0406c0",
+      "view_id": "bddbd926c8715efdee0406c0__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1708,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "cc1657b0fabc9cbec57422f4",
+      "view_id": "cc1657b0fabc9cbec57422f4__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1791,
+      "metrics_retained": 78,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "cc1657b0fabc9cbec57422f4",
+      "view_id": "cc1657b0fabc9cbec57422f4__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1779,
+      "metrics_retained": 78,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "e2badd80e0bea7311b95e819",
+      "view_id": "e2badd80e0bea7311b95e819__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1765,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "e2badd80e0bea7311b95e819",
+      "view_id": "e2badd80e0bea7311b95e819__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1758,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "493339e338e4be04df0aad72",
+      "view_id": "493339e338e4be04df0aad72__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1797,
+      "metrics_retained": 79,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "493339e338e4be04df0aad72",
+      "view_id": "493339e338e4be04df0aad72__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1796,
+      "metrics_retained": 79,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "847abeb18daf570f76c2e10d",
+      "view_id": "847abeb18daf570f76c2e10d__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1746,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "847abeb18daf570f76c2e10d",
+      "view_id": "847abeb18daf570f76c2e10d__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1744,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "89ce37ea30e112ffd9220b4a",
+      "view_id": "89ce37ea30e112ffd9220b4a__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1817,
+      "metrics_retained": 81,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "89ce37ea30e112ffd9220b4a",
+      "view_id": "89ce37ea30e112ffd9220b4a__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1828,
+      "metrics_retained": 81,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "af7879268e82a17ebd9878d0",
+      "view_id": "af7879268e82a17ebd9878d0__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1737,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "af7879268e82a17ebd9878d0",
+      "view_id": "af7879268e82a17ebd9878d0__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1746,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "ca61012a9214bd3744b38656",
+      "view_id": "ca61012a9214bd3744b38656__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1765,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "ca61012a9214bd3744b38656",
+      "view_id": "ca61012a9214bd3744b38656__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1742,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "a1e6d125fc5b5855369d37d2",
+      "view_id": "a1e6d125fc5b5855369d37d2__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1741,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "a1e6d125fc5b5855369d37d2",
+      "view_id": "a1e6d125fc5b5855369d37d2__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1735,
+      "metrics_retained": 77,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "c105aaa3f08dac08ba1eb4da",
+      "view_id": "c105aaa3f08dac08ba1eb4da__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1768,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "c105aaa3f08dac08ba1eb4da",
+      "view_id": "c105aaa3f08dac08ba1eb4da__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1773,
+      "metrics_retained": 76,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "585cec562cf346350a162d2f",
+      "view_id": "585cec562cf346350a162d2f__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1736,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "585cec562cf346350a162d2f",
+      "view_id": "585cec562cf346350a162d2f__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1727,
+      "metrics_retained": 75,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2e10f74aa073a9c93f3fdc87",
+      "view_id": "2e10f74aa073a9c93f3fdc87__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1725,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "2e10f74aa073a9c93f3fdc87",
+      "view_id": "2e10f74aa073a9c93f3fdc87__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1730,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "917c28ec9f12f4cea77c56af",
+      "view_id": "917c28ec9f12f4cea77c56af__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1802,
+      "metrics_retained": 79,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "917c28ec9f12f4cea77c56af",
+      "view_id": "917c28ec9f12f4cea77c56af__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1810,
+      "metrics_retained": 79,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "5dd1a7bd1947b9f178ec9148",
+      "view_id": "5dd1a7bd1947b9f178ec9148__lag15",
+      "kind": "lag15",
+      "usable": true,
+      "tokens": 1701,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    },
+    {
+      "parent_run": "5dd1a7bd1947b9f178ec9148",
+      "view_id": "5dd1a7bd1947b9f178ec9148__gap15_30",
+      "kind": "gap15_30",
+      "usable": true,
+      "tokens": 1715,
+      "metrics_retained": 74,
+      "cohort": "RE2-SS"
+    }
+  ],
+  "raw_train_files": [
+    {
+      "run_id": "ae7a55546bd239158a1c0f87",
+      "path": "data\\round4\\re1ob_adservice_delay_3\\metrics.parquet",
+      "sha256": "e4e3ed01541519948b7d573519c029a8ecd93df65a8d59d36cd756411fc6a915"
+    },
+    {
+      "run_id": "44b2ee08820479f9f251c02f",
+      "path": "data\\round4\\re1ob_adservice_delay_4\\metrics.parquet",
+      "sha256": "d5bc6e2d75b0b1207808079a2eae21f6549f791d66cc3cd8e7fba7b2e6f87d62"
+    },
+    {
+      "run_id": "dc72fd144dc07825b95e9f8f",
+      "path": "data\\round4\\re1ob_adservice_disk_1\\metrics.parquet",
+      "sha256": "bc8d8a4885f9f93b1d62dbba603aadedb7f6f7491c81be894a400ad5f493aa08"
+    },
+    {
+      "run_id": "d0e4cdd03f963268b0b837e4",
+      "path": "data\\round4\\re1ob_adservice_disk_2\\metrics.parquet",
+      "sha256": "46008cc31424c8be776ab96d1dbb246ac0108706b9f8d44b5bbaef8a7f12d9f3"
+    },
+    {
+      "run_id": "4b9bcfee80f9d6dd0a45ba4e",
+      "path": "data\\round4\\re1ob_adservice_disk_5\\metrics.parquet",
+      "sha256": "499033c0c7085faceb3f8231a89a7884702fa4e1bc4905d736f76eaeec3cd346"
+    },
+    {
+      "run_id": "a5b9b34d974ceb23210c41e4",
+      "path": "data\\round4\\re1ob_adservice_loss_2\\metrics.parquet",
+      "sha256": "c188a0b7ba892564bb2727bb8c97f1d67ef8053707c6696a277c52f2058197ad"
+    },
+    {
+      "run_id": "317d870b6bfdb9bc4fd3e2fa",
+      "path": "data\\round4\\re1ob_adservice_loss_3\\metrics.parquet",
+      "sha256": "64f4e2d71d1843f9d9a1a746403745b45f6c7d84830d7fb85179708a41147af2"
+    },
+    {
+      "run_id": "bbbfd5c80988068515990283",
+      "path": "data\\round4\\re1ob_adservice_loss_5\\metrics.parquet",
+      "sha256": "136a40cb8dad8f22a701ce3ed8aaa0f0528cb2a2acdaa452c59feb1e894b9170"
+    },
+    {
+      "run_id": "0f21a2ab0af4e53a4f5773e4",
+      "path": "data\\round4\\re1ob_adservice_mem_1\\metrics.parquet",
+      "sha256": "b04456039f127327a014ab4c4a68f137da1d7fb788818dd2a3e2ac2b5835d6e3"
+    },
+    {
+      "run_id": "7b597dce8e17e7578f1d572b",
+      "path": "data\\round4\\re1ob_cartservice_cpu_1\\metrics.parquet",
+      "sha256": "0f4df7e0eca4c9db7fcbdf2dab29065e14c3ed770c6a70d4a70b8784eb0c0199"
+    },
+    {
+      "run_id": "52461e0c6bed588e5d3558e8",
+      "path": "data\\round4\\re1ob_cartservice_cpu_2\\metrics.parquet",
+      "sha256": "796a22185159f8cb8b34279f77cd293546ed71a081825a0724976dc2aa7af8f9"
+    },
+    {
+      "run_id": "704205d07bf129586fc039df",
+      "path": "data\\round4\\re1ob_cartservice_cpu_5\\metrics.parquet",
+      "sha256": "48e1c8e4bb4f0fb99a2b2198649d59b32f508d555e6d830725611f17300b116f"
+    },
+    {
+      "run_id": "82cdb6657e41396f4e6d7532",
+      "path": "data\\round4\\re1ob_cartservice_delay_3\\metrics.parquet",
+      "sha256": "3b77132f8644f961db3abb4ef1cb48e7c749b0aec5a66e79ab70dc82bf074011"
+    },
+    {
+      "run_id": "73c9f93dd8e1e00153f844fa",
+      "path": "data\\round4\\re1ob_cartservice_delay_4\\metrics.parquet",
+      "sha256": "4a8d6cd0ce3082411ff40820daf4db90d87a58f42840278afea132ce2b48a909"
+    },
+    {
+      "run_id": "bfd14b9d5c95fe2941976f07",
+      "path": "data\\round4\\re1ob_cartservice_delay_5\\metrics.parquet",
+      "sha256": "4fe511016dca569961255782e2f0f958cde5c62a84d7d373ed9785400cf19174"
+    },
+    {
+      "run_id": "054a3237ad43dc034b43f328",
+      "path": "data\\round4\\re1ob_cartservice_disk_5\\metrics.parquet",
+      "sha256": "90fb46db02599b9ef8b5cb2cde686c24cc4b95b59db127f81b68b31343bfa548"
+    },
+    {
+      "run_id": "ac186cd4f7d3d915a519a8dd",
+      "path": "data\\round4\\re1ob_cartservice_loss_3\\metrics.parquet",
+      "sha256": "532523470c984978dd446bb302aaecf87c4e372ebff4f946c018efbfeed6c20c"
+    },
+    {
+      "run_id": "9cb104e6dfecdb5c1e324b91",
+      "path": "data\\round4\\re1ob_cartservice_loss_5\\metrics.parquet",
+      "sha256": "26f24940da755b40cd9ef623b04d5bd37476f765a39be1ac6ce7125a97379534"
+    },
+    {
+      "run_id": "5b264db6fc27feb0e1c32027",
+      "path": "data\\round4\\re1ob_cartservice_mem_2\\metrics.parquet",
+      "sha256": "2d66b27ca40e6c32c1b8debdde04ab58283ef43b173ae5c304180f1de6e14e92"
+    },
+    {
+      "run_id": "888735b551ad1c03171876a7",
+      "path": "data\\round4\\re1ob_cartservice_mem_5\\metrics.parquet",
+      "sha256": "a74214aee3bce46e1e3621a2cbaf6a8ba90f1e89936d4e26cc12b25e8c4d8e9b"
+    },
+    {
+      "run_id": "c6d2864520ee3d766412a162",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_1\\metrics.parquet",
+      "sha256": "4590756f037b2ca254b8beb42247883c99712e83fd736d075ace7369bee1f692"
+    },
+    {
+      "run_id": "9edddbbf48a94d96d896e929",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_3\\metrics.parquet",
+      "sha256": "ae46f67b57db52816c11dbc32e67672ecf4aac3c73361122e1cd00af379f9639"
+    },
+    {
+      "run_id": "ab5967d895935ed7e41a1b72",
+      "path": "data\\round4\\re1ob_checkoutservice_cpu_4\\metrics.parquet",
+      "sha256": "db2e52b3b5c623521274ee9e7c251f72090cafd9250dbac735f1f18f6efcf962"
+    },
+    {
+      "run_id": "90e2d3f7583aa10000ff52e8",
+      "path": "data\\round4\\re1ob_checkoutservice_delay_4\\metrics.parquet",
+      "sha256": "bcd00df894d98f821ef7a7af8ffce0dc5503eba66e00d823fe4cceab4af2e826"
+    },
+    {
+      "run_id": "cd41a7743aad542bc9248791",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_4\\metrics.parquet",
+      "sha256": "9a022cda5f27877e889e77dd8dcb96fd497bddc764b082324e6ff03570e4c0d1"
+    },
+    {
+      "run_id": "d8448a5bc5754b32d1502bdf",
+      "path": "data\\round4\\re1ob_checkoutservice_disk_5\\metrics.parquet",
+      "sha256": "167885c1a7b4b3b5c9b349f398be61cb7e4c747ca18085318909122a6b1616e5"
+    },
+    {
+      "run_id": "cf85df46f1fa9667bf0b8727",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_1\\metrics.parquet",
+      "sha256": "0e3b5611a589a6d321852a6f5f7bb7e55f5318a9b52f203d1d26948f90590559"
+    },
+    {
+      "run_id": "9b91e2cea498a63f467530a5",
+      "path": "data\\round4\\re1ob_checkoutservice_loss_5\\metrics.parquet",
+      "sha256": "e9698994042bb54ed6eed0d83edddd96411203be8e61bc13b61f7eee8eb3be05"
+    },
+    {
+      "run_id": "adc5a196741fb7e650f144b5",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_1\\metrics.parquet",
+      "sha256": "76ba03d717dc63c2c5233eadccc9bae5f41e54eadd137329ea26865f8ded2dee"
+    },
+    {
+      "run_id": "d358fe8d043b84d6bf650ef9",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_3\\metrics.parquet",
+      "sha256": "3ee96fae21cda1f6439574daac7743e2e5ceb249d214a3cf824db69a4698494e"
+    },
+    {
+      "run_id": "3c98e50e1f9c1a5872c6923b",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_4\\metrics.parquet",
+      "sha256": "0ad054d95ff908d52daf36f23239e3b4b9d10e147f6cf464633865400d295159"
+    },
+    {
+      "run_id": "095c72f94f03034c83400f6a",
+      "path": "data\\round4\\re1ob_checkoutservice_mem_5\\metrics.parquet",
+      "sha256": "c2e5f859fc5907bcee6c9f6db23bf91fd029b6900373a778a77671976e227219"
+    },
+    {
+      "run_id": "750b31e440a14921840f1ddb",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_1\\metrics.parquet",
+      "sha256": "8e9005e50adbf3509d39ddac02b9c09d6f2f167c67ba9fd1d2d4f74dc08e1f19"
+    },
+    {
+      "run_id": "5014289367470c829f351d53",
+      "path": "data\\round4\\re1ob_currencyservice_cpu_2\\metrics.parquet",
+      "sha256": "175f0af6df109004ab25f19ab45246372beff7ef7be1dacb38e98282a099e319"
+    },
+    {
+      "run_id": "3798247404bbcd5190dfe271",
+      "path": "data\\round4\\re1ob_currencyservice_delay_1\\metrics.parquet",
+      "sha256": "54ef9d93e5572122254bd8e6aa402e0abdf7ad0193d41b834d98e33d554b6721"
+    },
+    {
+      "run_id": "fc0701e8f3a251090bb14ead",
+      "path": "data\\round4\\re1ob_currencyservice_delay_4\\metrics.parquet",
+      "sha256": "7e910560b619e8aa087c4c0ec8a94ceb51206c3a3d6ed4c76e2ca9a70a49b1f6"
+    },
+    {
+      "run_id": "3daf57158daef7d598616b38",
+      "path": "data\\round4\\re1ob_currencyservice_disk_1\\metrics.parquet",
+      "sha256": "0e83cb2f5e440695660fd5107fe7e96174fa098d834faa8cc3c4ae17aba37af3"
+    },
+    {
+      "run_id": "713bc20c73338c51cd9f91da",
+      "path": "data\\round4\\re1ob_currencyservice_disk_2\\metrics.parquet",
+      "sha256": "b1b170ef48acefe0c6e8938391043fc1dfcd74364d9d3fb59a6d8f43d70c252b"
+    },
+    {
+      "run_id": "6907562bccdbf715db018a13",
+      "path": "data\\round4\\re1ob_currencyservice_disk_5\\metrics.parquet",
+      "sha256": "02190301c0c4204c987fe2d0caa6155118520901dedee165555fe72f844ebd99"
+    },
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "path": "data\\round4\\re1ob_currencyservice_loss_1\\metrics.parquet",
+      "sha256": "53475c09707471cf8f977f0dd7affb81322de115d7a087f197d8b7f63a87e585"
+    },
+    {
+      "run_id": "696b6ca4c2d057fcf67fc899",
+      "path": "data\\round4\\re1ob_currencyservice_loss_3\\metrics.parquet",
+      "sha256": "4aa63d42cb3158df67e70b7d1e1d7dcec7fd3b20cf5c13123a8b439a82dcbeaa"
+    },
+    {
+      "run_id": "8e904a43f2986e996bdbffbe",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_2\\metrics.parquet",
+      "sha256": "920ddec1219d9bf714d9e11f6f91b21c20086badfba1ff4a419abe2deff5ed90"
+    },
+    {
+      "run_id": "a802765698d3e965d8775d9d",
+      "path": "data\\round4\\re1ob_productcatalogservice_cpu_5\\metrics.parquet",
+      "sha256": "8a3d170d74790b39c6852303404efc94e1fa9a8ca544d1ffc2881998c0e978c2"
+    },
+    {
+      "run_id": "e907a8050f83593bb0d5e8f7",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_2\\metrics.parquet",
+      "sha256": "780cd0022945aefdb5950df6e0ff004f80e432deb59105f33bd33ccab9f24046"
+    },
+    {
+      "run_id": "6f1365a589564793eedd5271",
+      "path": "data\\round4\\re1ob_productcatalogservice_delay_3\\metrics.parquet",
+      "sha256": "d9d9246da6db675cfacb03c95ba4d0a8d3bdda2c6ce992b52574a98ecbc0819a"
+    },
+    {
+      "run_id": "39e972166970bbbce4d3ae66",
+      "path": "data\\round4\\re1ob_productcatalogservice_disk_2\\metrics.parquet",
+      "sha256": "4f84a20d1c8da861f00b42ffd96227b6009d9a185f3a8a6187f69efed1421933"
+    },
+    {
+      "run_id": "b352ccc9ecac53f4d79c1861",
+      "path": "data\\round4\\re1ob_productcatalogservice_loss_3\\metrics.parquet",
+      "sha256": "55d763b3a3488f1fc701855228942b0a757e47e63ec9d8abf5da893772b04577"
+    },
+    {
+      "run_id": "cbc247593db62bbaff1e94c7",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_2\\metrics.parquet",
+      "sha256": "3c1d480c2eed493d2089de99e1845390a79be1d0b086e9cc35057ebca8739415"
+    },
+    {
+      "run_id": "64af67464eab2734e054fd73",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_3\\metrics.parquet",
+      "sha256": "53e1d8c99c1bd3c880081449b4f38cbd5b069919f2c061dbdf5b8568fec6a92a"
+    },
+    {
+      "run_id": "a5a8aaad73b0dc500441ac0b",
+      "path": "data\\round4\\re1ob_productcatalogservice_mem_4\\metrics.parquet",
+      "sha256": "ed26ae33f22e086147966237a7c678a93a9d76a4aba84b214fe99bcd5d92f710"
+    },
+    {
+      "run_id": "9ab31bb621d3e0d8f2897404",
+      "path": "data\\round4\\re2ob_checkoutservice_cpu_1\\metrics.parquet",
+      "sha256": "f46b3d354b234e37c424f54a005329b61aac83d15dcdd46b5642e55f390ab25a"
+    },
+    {
+      "run_id": "0a6f2329dca752051eced5b8",
+      "path": "data\\round4\\re2ob_checkoutservice_loss_1\\metrics.parquet",
+      "sha256": "e9b26768fc98a5dfa694527a71e131450848e6c736f73c162ee17f9bf14a337b"
+    },
+    {
+      "run_id": "f8c60f1c81675f0c04f88051",
+      "path": "data\\round4\\re2ob_currencyservice_loss_2\\metrics.parquet",
+      "sha256": "a11e3af15c8c574809cb0bc40f5613ebc6865e658f64f217e2e8f763015e8664"
+    },
+    {
+      "run_id": "4f3d5a725f5be826f6bb5fec",
+      "path": "data\\round4\\re2ob_currencyservice_mem_3\\metrics.parquet",
+      "sha256": "326f12119594afa643db66c9a1251935a07b9560cf40651fbc49d5ac450a4e82"
+    },
+    {
+      "run_id": "2c88bcc3ecf60b86f27ae2c9",
+      "path": "data\\round4\\re2ob_emailservice_delay_1\\metrics.parquet",
+      "sha256": "888dae20bf94fe78534fe3e2bb821b898ab66f53e2c87101d21466c0fb88aea1"
+    },
+    {
+      "run_id": "70ee6c3740ce01315d36c2a7",
+      "path": "data\\round4\\re2ob_emailservice_disk_2\\metrics.parquet",
+      "sha256": "6bbf8a1452e7ed6cd3ef464ac0ae56861970267f1839a45968eb6bdc22b3c8ae"
+    },
+    {
+      "run_id": "2d7a8a71d1965a501be03ce6",
+      "path": "data\\round4\\re2ob_productcatalogservice_cpu_3\\metrics.parquet",
+      "sha256": "8e4e586944eeb863c6e3d9440403eae4680c61efa6c0694849915236e91c5df1"
+    },
+    {
+      "run_id": "054e489835012f8438da7eae",
+      "path": "data\\round4\\re2ob_productcatalogservice_delay_3\\metrics.parquet",
+      "sha256": "3b5921d96ab975ca0ce6eca4eb7b7d576a86c9c794afa33ec946ef99848807b9"
+    },
+    {
+      "run_id": "16193a4d504a8a970a5dca9b",
+      "path": "data\\round4\\re2ob_productcatalogservice_disk_3\\metrics.parquet",
+      "sha256": "a5213638c132451d072e8a90cdd53846bb80ebbff9b40c5a6a17bbe8fcc59cd8"
+    },
+    {
+      "run_id": "f0fa3f97aaf3f59a53c593c1",
+      "path": "data\\round4\\re2ob_productcatalogservice_loss_1\\metrics.parquet",
+      "sha256": "53a3f66825f8e01efd8ca78931c5cc9e3d2e7c900845c885aa25d8b33c37bce4"
+    },
+    {
+      "run_id": "1561133f8c7873d8c0a57968",
+      "path": "data\\round4\\re2ob_productcatalogservice_mem_1\\metrics.parquet",
+      "sha256": "ac6b3d751f45963eca95d66f771123cd10b862eabd4783d4138e467c72c1f267"
+    },
+    {
+      "run_id": "0eb0108d0cd4648716bd9d6f",
+      "path": "data\\round4\\re2ob_recommendationservice_cpu_2\\metrics.parquet",
+      "sha256": "7164e16e330f7afe979836e01ed7abf7d9c9c256caede854ac11500893b31df9"
+    },
+    {
+      "run_id": "b9de3bf585ba61b4e1aa2c26",
+      "path": "data\\round4\\re2ob_recommendationservice_delay_2\\metrics.parquet",
+      "sha256": "f4203867be1a50f8647fe2fd7e362d0b4068066b12c62524063c62d6abc6058d"
+    },
+    {
+      "run_id": "8ad019797e1898d727bdd311",
+      "path": "data\\round4\\re2ob_recommendationservice_disk_2\\metrics.parquet",
+      "sha256": "73bd5326950593f6b02153ef7b286018a91d2853747a5f78f7d6a912b7edb196"
+    },
+    {
+      "run_id": "9cb313f397e19d48782c835a",
+      "path": "data\\round4\\re2ob_recommendationservice_mem_1\\metrics.parquet",
+      "sha256": "2d95b75fe4e5c726c74ba53199bcb8377fb0228fa2ed8067838c2a38b4463781"
+    },
+    {
+      "run_id": "22eeb8727f7c631b00fcaceb",
+      "path": "data\\round4\\re1ss_carts_cpu_2\\metrics.parquet",
+      "sha256": "4d515069459c0bfd799e8b79e5f109aa6ded6cabf91f9c7d3200f4ba90097580"
+    },
+    {
+      "run_id": "9fcc9788e706ef6219da61c3",
+      "path": "data\\round4\\re1ss_carts_cpu_4\\metrics.parquet",
+      "sha256": "8c3071aa76c485aa573231c112b5b7eef8e241dc72e827612b0d4ee21ee36d06"
+    },
+    {
+      "run_id": "5f6d8f696564101ceed0a071",
+      "path": "data\\round4\\re1ss_carts_cpu_5\\metrics.parquet",
+      "sha256": "9f00c57e1b0196675d14a9294f31e86da639f69cdf177ad3d4ba437b236a4ff3"
+    },
+    {
+      "run_id": "d6fd426b73f909dd3fafbb2e",
+      "path": "data\\round4\\re1ss_carts_delay_2\\metrics.parquet",
+      "sha256": "5bc4c19a385f8bbe00b30b4aa70c1ed5e3408ead100025fe822d0dc5a517b498"
+    },
+    {
+      "run_id": "7e671a0975fe9f3ebd2f9c5d",
+      "path": "data\\round4\\re1ss_carts_delay_3\\metrics.parquet",
+      "sha256": "bcd59322b90842d5aa1ebda393b065c35bbe4bf56ee880385cb0bf2053f8375d"
+    },
+    {
+      "run_id": "481466ab0209e9ab62cd2f40",
+      "path": "data\\round4\\re1ss_carts_delay_5\\metrics.parquet",
+      "sha256": "4532a237a17e5c3bd1b4964fe1d1d490364e463423aa2a3d14646e6032738bf3"
+    },
+    {
+      "run_id": "0cc013bd863f69eafc69e4db",
+      "path": "data\\round4\\re1ss_carts_disk_2\\metrics.parquet",
+      "sha256": "7ea97d179d8e253adb261f72d14b4fdb877d1902fb6de75373ca74402d331d6b"
+    },
+    {
+      "run_id": "e4248dae99ca23e7e1277d6d",
+      "path": "data\\round4\\re1ss_carts_disk_3\\metrics.parquet",
+      "sha256": "6c3749ef7519aabdc7585d8c7d3d5fc2fc888394eed515e7163b9701bb41f62d"
+    },
+    {
+      "run_id": "4ae2ff5e1188c105df619abf",
+      "path": "data\\round4\\re1ss_carts_disk_4\\metrics.parquet",
+      "sha256": "766d1ab7340185a6f2b3bcee3fb1bed545e42f78bba8d181a8d380e99e48eff5"
+    },
+    {
+      "run_id": "dd2d08da92ad45aa52b2ffa7",
+      "path": "data\\round4\\re1ss_carts_loss_2\\metrics.parquet",
+      "sha256": "c92cce3686db798c4ba59967d032b8f9b835bd6920867d39cf9bcd0bc3969796"
+    },
+    {
+      "run_id": "f88d7548f13042a64d121b49",
+      "path": "data\\round4\\re1ss_carts_loss_4\\metrics.parquet",
+      "sha256": "ea684a0717db8a2c74779f70b41cba20278bd7b690f0f1d7d3d8d96b90bd8e72"
+    },
+    {
+      "run_id": "0976e20a0dddf9a8e7cd612d",
+      "path": "data\\round4\\re1ss_carts_loss_5\\metrics.parquet",
+      "sha256": "446bc70e3eace223cf9d01af66021e8b546718b56ff21b2d5e4d0d3976ceb678"
+    },
+    {
+      "run_id": "9191c2bc66a65b09cd7a74da",
+      "path": "data\\round4\\re1ss_carts_mem_1\\metrics.parquet",
+      "sha256": "a6b367ebf4089faef391e6955ae6be729643107cb143879942f7511d40a3b99b"
+    },
+    {
+      "run_id": "85f6ca06dbae43edbee7fecc",
+      "path": "data\\round4\\re1ss_carts_mem_3\\metrics.parquet",
+      "sha256": "99f05477f14486d3834010b18b9766496c55e4f3283f8d929ec6985e44e7d243"
+    },
+    {
+      "run_id": "95abf8ed22a09541ac9de284",
+      "path": "data\\round4\\re1ss_carts_mem_5\\metrics.parquet",
+      "sha256": "64981002f38d3571c0bcc93e4b79d2d14aecad2fdcb27996d684894a0b091979"
+    },
+    {
+      "run_id": "0f67d1a288812bec765d598f",
+      "path": "data\\round4\\re1ss_catalogue_cpu_1\\metrics.parquet",
+      "sha256": "8d88da4904e3305331182020c59a3591e6fad233f340b0cc09fdf79d1777afc0"
+    },
+    {
+      "run_id": "8a97bb53b9f500cbf581cbe8",
+      "path": "data\\round4\\re1ss_catalogue_cpu_4\\metrics.parquet",
+      "sha256": "aa2caa538bb5995f84908fd26ae082c2ec90d650c5d3bf9742073847f3f01cf9"
+    },
+    {
+      "run_id": "bdc54e3265bafc2fd21bc918",
+      "path": "data\\round4\\re1ss_catalogue_cpu_5\\metrics.parquet",
+      "sha256": "a1b19c6f2bed5554948f9e1c7c8a5a3f87d83b81a4766a9a76c912f220216b2e"
+    },
+    {
+      "run_id": "7d33a32c132865ca19f74d1e",
+      "path": "data\\round4\\re1ss_catalogue_delay_2\\metrics.parquet",
+      "sha256": "5e7d6c72c65b64d6bd2e7247e0ab6aad1c83cbfa66091359ece33d9458e8f8a5"
+    },
+    {
+      "run_id": "ebdfe5827453bfee6fd3c71f",
+      "path": "data\\round4\\re1ss_catalogue_delay_3\\metrics.parquet",
+      "sha256": "0adfbd8b1dc5beb05457bad92dde293147fa1aee61525a7874758252bd69e753"
+    },
+    {
+      "run_id": "8d18946bedb3daceb4d5611a",
+      "path": "data\\round4\\re1ss_catalogue_delay_5\\metrics.parquet",
+      "sha256": "5ac319a45e3f23d9b3c386860db05c0d0ac13557640bf7b8f316681454327352"
+    },
+    {
+      "run_id": "2740141ceeaa6611f13470ce",
+      "path": "data\\round4\\re1ss_catalogue_disk_2\\metrics.parquet",
+      "sha256": "83704f478fb2a7a89132aed1b9da49c1a6e20c9674e13b0332d0df98442ad669"
+    },
+    {
+      "run_id": "4540d257d515f6b9456e35ab",
+      "path": "data\\round4\\re1ss_catalogue_disk_3\\metrics.parquet",
+      "sha256": "8e129a17eab3c3418e6dddf0014568b575b092267ab17098bd55ab4ef5b4bf6d"
+    },
+    {
+      "run_id": "1804cd18e9a65e5ece5b6f58",
+      "path": "data\\round4\\re1ss_catalogue_disk_5\\metrics.parquet",
+      "sha256": "6bead67075a5e3fe2e3352f5502dad6b54b5419f6791ada39d92cadfbbb52147"
+    },
+    {
+      "run_id": "6a3d3281d689c236669309d6",
+      "path": "data\\round4\\re1ss_catalogue_loss_1\\metrics.parquet",
+      "sha256": "79309c213024dbe5d6225b31822b28a114c1e3534a0970ba49a9f2ab1c199619"
+    },
+    {
+      "run_id": "4331ee15b74a31c2bc2bd41a",
+      "path": "data\\round4\\re1ss_catalogue_loss_3\\metrics.parquet",
+      "sha256": "9ddbd5fcbaeca09ede0dcd43a4504f77ae2f386124608f992994f3f71c7a2277"
+    },
+    {
+      "run_id": "9a35cec6a698feaa00ed312b",
+      "path": "data\\round4\\re1ss_catalogue_loss_4\\metrics.parquet",
+      "sha256": "9fd16100d96003dccb6806a7a297608b3571c849d2e655ecf604a92e6dd34693"
+    },
+    {
+      "run_id": "256c5ce919142c9128df5cc8",
+      "path": "data\\round4\\re1ss_catalogue_mem_1\\metrics.parquet",
+      "sha256": "da1bc7e5111b140521081aead8a6817851c76ce4a60005beefca3f077b9ae819"
+    },
+    {
+      "run_id": "a784c8ea79eb16c8d6326192",
+      "path": "data\\round4\\re1ss_catalogue_mem_4\\metrics.parquet",
+      "sha256": "b45638c9b0ab5fae306e27626a5a35b822fa25f144eab2931d86bf128b85c56c"
+    },
+    {
+      "run_id": "fe5de3ac56cdfa909c047364",
+      "path": "data\\round4\\re1ss_catalogue_mem_5\\metrics.parquet",
+      "sha256": "23bc41d0636be5001e9c12d4a55f687c2cf8e7b01f013469794def4695929cd0"
+    },
+    {
+      "run_id": "1ae8f343909a2c1abbdb740a",
+      "path": "data\\round4\\re1ss_orders_cpu_1\\metrics.parquet",
+      "sha256": "17d920fcc65555eec9b5dac9939768b8492d5818fecb359bbc31fcbd13fe0cf2"
+    },
+    {
+      "run_id": "7256356ffb86c4ae6f46bc2c",
+      "path": "data\\round4\\re1ss_orders_cpu_4\\metrics.parquet",
+      "sha256": "1ea298aed590c57e560c02ec7c09b91976195783929434e907c6f0b534f28ccb"
+    },
+    {
+      "run_id": "db08bd001dc297de305e5a13",
+      "path": "data\\round4\\re1ss_orders_cpu_5\\metrics.parquet",
+      "sha256": "2967e34ce7d9aa352391be9586bf527c430f5026ac83c3c31d13d2078b4b7c38"
+    },
+    {
+      "run_id": "0de55fe3adea637d81595c8c",
+      "path": "data\\round4\\re1ss_orders_delay_2\\metrics.parquet",
+      "sha256": "3b3e0e2304a74c3dd2533c4395c7623c7e2e6c5962bbec4aebd07156dd1fdd7f"
+    },
+    {
+      "run_id": "433315ec6255dd1746e42e15",
+      "path": "data\\round4\\re1ss_orders_delay_3\\metrics.parquet",
+      "sha256": "266807afcba8189481a1db80796f5b0229869cbb3cd16c20b8797ec6f754a26e"
+    },
+    {
+      "run_id": "21710f465c3f3221183a6e9c",
+      "path": "data\\round4\\re1ss_orders_delay_4\\metrics.parquet",
+      "sha256": "529f4e4c455a84cca43bee0b3ac22414f33609526760d2edd8809a029400adca"
+    },
+    {
+      "run_id": "8f45e699d11b2d3a3c627a4c",
+      "path": "data\\round4\\re1ss_orders_disk_1\\metrics.parquet",
+      "sha256": "c8ab87520beb168529f52e7c556ce181eb9a0997739912532ef73e6416ef79e1"
+    },
+    {
+      "run_id": "e32fe84a490ed95926850f5a",
+      "path": "data\\round4\\re1ss_orders_disk_2\\metrics.parquet",
+      "sha256": "ff2b68b268cf1cd439b0661578fbfb1a79658ae6ef8a6c39be0ac16161c0999c"
+    },
+    {
+      "run_id": "39cedb70fd22b80410295af2",
+      "path": "data\\round4\\re1ss_orders_disk_5\\metrics.parquet",
+      "sha256": "8dd88fd4e178e119e8c3e6645c019c4b1414307485ebc261d983e498fac7cabc"
+    },
+    {
+      "run_id": "6f95ffe5aabd94895c7a7f4a",
+      "path": "data\\round4\\re1ss_orders_loss_2\\metrics.parquet",
+      "sha256": "a6a3a3d330c0b4bbe7e53f7baf1fdf73682959a11b30c784e6ffa0a686ea7c43"
+    },
+    {
+      "run_id": "444588dd51068ddea6d798af",
+      "path": "data\\round4\\re1ss_orders_loss_4\\metrics.parquet",
+      "sha256": "50d512c21b4d242999aa6321d33b93f3836a2ad481b5da818a0a4144504a0f42"
+    },
+    {
+      "run_id": "312c4d1ffe844a1073cd3392",
+      "path": "data\\round4\\re1ss_orders_loss_5\\metrics.parquet",
+      "sha256": "62eaccf18d32921cd1b990b63eb0b6ecacb3bed1773f1fb71dac2a80770ed1c4"
+    },
+    {
+      "run_id": "b775bf10348599d6d15e85c7",
+      "path": "data\\round4\\re1ss_orders_mem_1\\metrics.parquet",
+      "sha256": "5ad026f3990a2375497bd36e31aa15b8ad0d31671f89b37c782f72cf98d34695"
+    },
+    {
+      "run_id": "6ea530ecc35d80e76014f4e3",
+      "path": "data\\round4\\re1ss_orders_mem_3\\metrics.parquet",
+      "sha256": "2a7c096d24fa0f9ccb4cd8ccb85e7871953fb3354a71f6513fe74a0c1bbf0681"
+    },
+    {
+      "run_id": "f3ecc579c50d9a6e27650d91",
+      "path": "data\\round4\\re1ss_orders_mem_4\\metrics.parquet",
+      "sha256": "e5dc06247a2bec1316997d8b590d0faf297ee955d918de9933c45cb19ff59726"
+    },
+    {
+      "run_id": "eb628868752fbdc887afc783",
+      "path": "data\\round4\\re1ss_payment_cpu_1\\metrics.parquet",
+      "sha256": "0e331003cace45d2737764434acff10789079f8842c0a8b966c2deceab2bf492"
+    },
+    {
+      "run_id": "a824e56bd1e0e1958cc22c45",
+      "path": "data\\round4\\re1ss_payment_cpu_2\\metrics.parquet",
+      "sha256": "6822ee30eb0f206f54f2a7e6c674ca9a916a6aba2343fe23aacaff64d4189402"
+    },
+    {
+      "run_id": "520606e2fb17e4a29cecc9b2",
+      "path": "data\\round4\\re1ss_payment_cpu_3\\metrics.parquet",
+      "sha256": "131b9212d0aaa329c22548b0245e37ab58cd63e69504dcc5d92c41d89133ac6f"
+    },
+    {
+      "run_id": "b830ddf61a5a36015a62c9d1",
+      "path": "data\\round4\\re1ss_payment_delay_2\\metrics.parquet",
+      "sha256": "8d43e2bd7ec74507f9939fe8ed794c2601a8a0c8b7b4344985ade718e0a411cf"
+    },
+    {
+      "run_id": "75f4fae8fd46fcf83c261bdb",
+      "path": "data\\round4\\re1ss_payment_delay_4\\metrics.parquet",
+      "sha256": "e2b8984b1527315add26c225f2d865d2a0687c463748227b0c06e5cd541bcdd9"
+    },
+    {
+      "run_id": "0484cb76295ff31953274f21",
+      "path": "data\\round4\\re1ss_payment_delay_5\\metrics.parquet",
+      "sha256": "5f9d6d47f60716c5b60e83b3e8b9605c7464f6e6c2a7996db7a1b16e24145d7d"
+    },
+    {
+      "run_id": "d42bcd0bf8967c3bb250d2cf",
+      "path": "data\\round4\\re1ss_payment_disk_1\\metrics.parquet",
+      "sha256": "b9c401abf2e520cc71dcdbc9304b560879e59436d8ec18974346c924de2d602e"
+    },
+    {
+      "run_id": "9437065abf0cd2b98a78924d",
+      "path": "data\\round4\\re1ss_payment_disk_2\\metrics.parquet",
+      "sha256": "c487de1113476bebc3b76cdb6c051b7d85819012131b5b0bac14c4e721d33f1e"
+    },
+    {
+      "run_id": "ca2eb98fabec558e08d19646",
+      "path": "data\\round4\\re1ss_payment_disk_4\\metrics.parquet",
+      "sha256": "75ab44d683c97f297264b82bf0e95267d98c88239a5a41019b4bd243e7b26a5f"
+    },
+    {
+      "run_id": "ec3c54b355fe31b29f3747a8",
+      "path": "data\\round4\\re1ss_payment_loss_2\\metrics.parquet",
+      "sha256": "659ff273c591ff3ce6176d328bb899925a1e94cc58c1518f4fc9572020b0a24e"
+    },
+    {
+      "run_id": "6f7db898caca47ea10966fb8",
+      "path": "data\\round4\\re1ss_payment_loss_4\\metrics.parquet",
+      "sha256": "0b653ba0a02c44c3ffd85ba174f920ade046012ef463f13b5bcf49b55a5a5a2b"
+    },
+    {
+      "run_id": "502457b5c722f04f4309fcdc",
+      "path": "data\\round4\\re1ss_payment_loss_5\\metrics.parquet",
+      "sha256": "544ab56c0dc14439a13fc81d43bbd106085cf68725b0f41e1c4ed81eddd41dae"
+    },
+    {
+      "run_id": "06d5a4963a2284a923ec8fc1",
+      "path": "data\\round4\\re1ss_payment_mem_1\\metrics.parquet",
+      "sha256": "cfcf50e8f30f58c8101dee598be91a02cb34189bd27da12c050bbda70c3f62ea"
+    },
+    {
+      "run_id": "053e676f22a2b6c0c2a2bca6",
+      "path": "data\\round4\\re1ss_payment_mem_2\\metrics.parquet",
+      "sha256": "12ff650e0b9863a8cd0e4d08345e7854534a2ffbb79dacde45b604eda433c26d"
+    },
+    {
+      "run_id": "49e4a73f4c64415fb6ae7437",
+      "path": "data\\round4\\re1ss_payment_mem_5\\metrics.parquet",
+      "sha256": "6cd48c50a35213558ddbbc52f53d52cd5f1805f8b94d3fd98addcf24fc3ce9f8"
+    },
+    {
+      "run_id": "8b7d52d0eebc91346bc7a392",
+      "path": "data\\round4\\re1ss_user_cpu_1\\metrics.parquet",
+      "sha256": "ec5c8cbf13e94d2b520170af7a0780569b24270b426396aa6f5d40ec6a0229d7"
+    },
+    {
+      "run_id": "d253d3fc85b13976d86776b7",
+      "path": "data\\round4\\re1ss_user_cpu_4\\metrics.parquet",
+      "sha256": "4f21aaa0756982a250bdf5a86b389d4245992e1b179fbe7cba49c6f6793976be"
+    },
+    {
+      "run_id": "a78011b56ce028ccad350807",
+      "path": "data\\round4\\re1ss_user_cpu_5\\metrics.parquet",
+      "sha256": "49becb682be39dc97bac5d3751b047995a9ef7dbf9195942371a234c9b3c42fe"
+    },
+    {
+      "run_id": "ce5b63047d784972b0e60371",
+      "path": "data\\round4\\re1ss_user_delay_1\\metrics.parquet",
+      "sha256": "821733934074719a5b4fcbab41ad4319d57f290d2d4401d261466f835e64551f"
+    },
+    {
+      "run_id": "1641bb262b9aaccc0a46526c",
+      "path": "data\\round4\\re1ss_user_delay_4\\metrics.parquet",
+      "sha256": "876170b061c6d21971e30137a78b2f84c8d9cf7863ff83e0024b9cebdc7194bf"
+    },
+    {
+      "run_id": "b843c5aa80aec2fceaef789b",
+      "path": "data\\round4\\re1ss_user_delay_5\\metrics.parquet",
+      "sha256": "bd9083c2d78f4a55b306ec70ddea5ef213a678b439de2fdc58cbb219276a1818"
+    },
+    {
+      "run_id": "3b5796d4ddc1852323ad9af2",
+      "path": "data\\round4\\re1ss_user_disk_1\\metrics.parquet",
+      "sha256": "94e9088a9848cbd9121fd9001f800a92aff1859110781cce46cb18bdcf277012"
+    },
+    {
+      "run_id": "38d0c513976090f4824c4944",
+      "path": "data\\round4\\re1ss_user_disk_2\\metrics.parquet",
+      "sha256": "ecf70c39b52e79b6ed5292f4ef7b247563e4d436b88d4e903499df2b6f0f479e"
+    },
+    {
+      "run_id": "6b4672426ecc8f5493c13f9a",
+      "path": "data\\round4\\re1ss_user_disk_4\\metrics.parquet",
+      "sha256": "dcd809b1203c20adccaf033854bd6cbacb8ff82a1b7dac38e6bd437374dc68e9"
+    },
+    {
+      "run_id": "7191621e1f005ee91f87fd89",
+      "path": "data\\round4\\re1ss_user_loss_2\\metrics.parquet",
+      "sha256": "0358fc8790d2052c40d59e09b60715798e1db94fac6a33db8f40948db85c2434"
+    },
+    {
+      "run_id": "0aaa10081ee22dc8bdd56613",
+      "path": "data\\round4\\re1ss_user_loss_4\\metrics.parquet",
+      "sha256": "235522ed235fec486dc2f9cd80ecfa2e90848a7835fc0e6a45fa94a14a233f18"
+    },
+    {
+      "run_id": "4d4db035bcc802da2850d3c4",
+      "path": "data\\round4\\re1ss_user_loss_5\\metrics.parquet",
+      "sha256": "dba96ea0f1c7177e2e136ab6327daf04b762eb394d62b906d97fd555b67427b5"
+    },
+    {
+      "run_id": "6014bc12832bffbc01d82ea7",
+      "path": "data\\round4\\re1ss_user_mem_3\\metrics.parquet",
+      "sha256": "14bcb31d6c40093f038c5c4586383eb61a653b8dfaee0fdb79672ffead2aaf06"
+    },
+    {
+      "run_id": "3a7465e6a27308fa1ca61190",
+      "path": "data\\round4\\re1ss_user_mem_4\\metrics.parquet",
+      "sha256": "da057a82b8ce5c73437c9e07f21277e516cd0b3276fb592f5a9a462961ed497a"
+    },
+    {
+      "run_id": "d9feebb0d2e2c48c60b3b764",
+      "path": "data\\round4\\re1ss_user_mem_5\\metrics.parquet",
+      "sha256": "557fd2dbf7c305416de4c60250ae186ba56df5370f2a98779c2c5a9643600e53"
+    },
+    {
+      "run_id": "0ec1fd560716ff076c72a706",
+      "path": "data\\round4\\re2ss_carts_cpu_1\\metrics.parquet",
+      "sha256": "86600d6cb1d76a764602fcc1a5b9fb62e213fe33f01e5366f7cb4682470c9d8e"
+    },
+    {
+      "run_id": "29c4a3778a6071b1a61342c6",
+      "path": "data\\round4\\re2ss_carts_delay_3\\metrics.parquet",
+      "sha256": "1818445052dbb850160e3abc8bb5f13f68cf9ecf8138cca37406550dfde5e2b2"
+    },
+    {
+      "run_id": "cce449fae641f00a789ec169",
+      "path": "data\\round4\\re2ss_carts_disk_1\\metrics.parquet",
+      "sha256": "2f98e3cbf7213ea0b0d5b6ca89df4b87b1408503b17e5cd62c4321af68bb8679"
+    },
+    {
+      "run_id": "f8f7e7d35c9ac4a4ce238fef",
+      "path": "data\\round4\\re2ss_carts_loss_3\\metrics.parquet",
+      "sha256": "1432013b8788c7f4430a4386bf0474580af2123943acc5a3e32afcea7e83e38c"
+    },
+    {
+      "run_id": "2c04cecc44ce6410eb0e209a",
+      "path": "data\\round4\\re2ss_carts_mem_1\\metrics.parquet",
+      "sha256": "a396c62384a6b2d9f6ce18e1856e0b96117b435d678ddcef4879dd6268e4a524"
+    },
+    {
+      "run_id": "f12b1443307a57694356be3a",
+      "path": "data\\round4\\re2ss_catalogue_cpu_1\\metrics.parquet",
+      "sha256": "7ffa0441bb55d710f1d18fd27486eb8f1b8202931b49c14a23de656fe6d6f45c"
+    },
+    {
+      "run_id": "b630b221be84c52b0a4db3b6",
+      "path": "data\\round4\\re2ss_catalogue_delay_1\\metrics.parquet",
+      "sha256": "7ee964c5aef51816a519d3dc4a4b707d89a58ee21d1d88d649a608096852a66d"
+    },
+    {
+      "run_id": "fd6c62eb30906322da5d24d2",
+      "path": "data\\round4\\re2ss_catalogue_disk_3\\metrics.parquet",
+      "sha256": "40ce4ce6534ed7cb062cba2cccfdf1b925a976694c61bdaf5a0dcc9d949cec38"
+    },
+    {
+      "run_id": "22753315242e76c8a27046fc",
+      "path": "data\\round4\\re2ss_catalogue_loss_3\\metrics.parquet",
+      "sha256": "e99ef22d087b8044f678a1ea1c3107d24b85f950738d3f8a095faf1898791d69"
+    },
+    {
+      "run_id": "a023e473997d8781c90c6fac",
+      "path": "data\\round4\\re2ss_catalogue_mem_1\\metrics.parquet",
+      "sha256": "13d067f4d128ac64a949744dc4f6363bf517651f91d7333d46132fc9f1ac7d5f"
+    },
+    {
+      "run_id": "2a4346330b65263e6b6008b8",
+      "path": "data\\round4\\re2ss_orders_cpu_2\\metrics.parquet",
+      "sha256": "e994f36632845a3f4e277c92e22ff895dd2575656192d94807c1408b7d68e65a"
+    },
+    {
+      "run_id": "bddbd926c8715efdee0406c0",
+      "path": "data\\round4\\re2ss_orders_delay_2\\metrics.parquet",
+      "sha256": "15decea2a3b185311a64e73957fa9581bec019e5ee3e1cd7c02ecedcaa9fa73a"
+    },
+    {
+      "run_id": "cc1657b0fabc9cbec57422f4",
+      "path": "data\\round4\\re2ss_orders_disk_3\\metrics.parquet",
+      "sha256": "122d81fab7c73d863c9d1e84eb60c7c96d40ae3c4c8f96d9d01cdeed23706274"
+    },
+    {
+      "run_id": "e2badd80e0bea7311b95e819",
+      "path": "data\\round4\\re2ss_orders_loss_3\\metrics.parquet",
+      "sha256": "bf7beefb45a4ddab130d260987bff0e75034e56a33c94930360e69f920cbf1e8"
+    },
+    {
+      "run_id": "493339e338e4be04df0aad72",
+      "path": "data\\round4\\re2ss_orders_mem_1\\metrics.parquet",
+      "sha256": "a659f2eaa202d5262e7f503864790019e192717b3e287458a2a273a21019faaf"
+    },
+    {
+      "run_id": "847abeb18daf570f76c2e10d",
+      "path": "data\\round4\\re2ss_payment_cpu_2\\metrics.parquet",
+      "sha256": "bf71efdef0418328922bee3d796321a24ef61928fd8a6bd21ff8b2eeb132646e"
+    },
+    {
+      "run_id": "89ce37ea30e112ffd9220b4a",
+      "path": "data\\round4\\re2ss_payment_delay_1\\metrics.parquet",
+      "sha256": "2d5fc2e2775df334161147578d7e3064d689f86c81625d31ae3510eabb141979"
+    },
+    {
+      "run_id": "af7879268e82a17ebd9878d0",
+      "path": "data\\round4\\re2ss_payment_disk_3\\metrics.parquet",
+      "sha256": "cd6d4e303a07ee428c9444bc1ebbaf5f310cf6419fa1705a1ddd993aeb579ba9"
+    },
+    {
+      "run_id": "ca61012a9214bd3744b38656",
+      "path": "data\\round4\\re2ss_payment_loss_2\\metrics.parquet",
+      "sha256": "8a6f0243d11a286f4085778dd81457118e5986a5c765b2ef9d99be7eefe828f9"
+    },
+    {
+      "run_id": "a1e6d125fc5b5855369d37d2",
+      "path": "data\\round4\\re2ss_payment_mem_1\\metrics.parquet",
+      "sha256": "a0df03e26373d8c2c5a464625838c7fe64ee38187ae46f0f00e1163e6a62ccee"
+    },
+    {
+      "run_id": "c105aaa3f08dac08ba1eb4da",
+      "path": "data\\round4\\re2ss_user_cpu_3\\metrics.parquet",
+      "sha256": "f295e917faff65e754fdf89c4c1d806506dcd9b74607a96b123b6c4f8fd08f64"
+    },
+    {
+      "run_id": "585cec562cf346350a162d2f",
+      "path": "data\\round4\\re2ss_user_delay_2\\metrics.parquet",
+      "sha256": "86f7ccf530f373ed1a2526fbd539ec9a933f73a3ee5d1eca9f684254885e2a2c"
+    },
+    {
+      "run_id": "2e10f74aa073a9c93f3fdc87",
+      "path": "data\\round4\\re2ss_user_disk_3\\metrics.parquet",
+      "sha256": "8d767fad9f20f3777a942f43d7d8964592bf8b633227fd3e499e9b5b621537fc"
+    },
+    {
+      "run_id": "917c28ec9f12f4cea77c56af",
+      "path": "data\\round4\\re2ss_user_loss_1\\metrics.parquet",
+      "sha256": "529070cd91ec1436f37ecaf14568623f3b76fb269212be66505b2aeca3e1d5ee"
+    },
+    {
+      "run_id": "5dd1a7bd1947b9f178ec9148",
+      "path": "data\\round4\\re2ss_user_mem_3\\metrics.parquet",
+      "sha256": "80cce14280705307f891165e1082f60d1a0f4e8075ef59ee9101344e83d04d5b"
+    }
+  ],
+  "view_sha256": "051e5ffc234a6decff327aea9b755b72a5484e0798de40d0091551b4fe636e7b",
+  "case_groups_unchanged": true,
+  "original_split_counts": {
+    "train": 165,
+    "model_validation": 40,
+    "calibration": 40,
+    "gate_selection": 85,
+    "regression_re1_ob": 15,
+    "regression_re2_ob": 25,
+    "regression_ss": 30
+  },
+  "original_files": {
+    "manifest.json": "eb8a7e49dc5676aa50925b2e1ee38b372deb7c63f8f495142515980882c4969a",
+    "splits.json": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+    "examples.json": "d1830c26f1583413178e064a1a7d021531d445b8098ac14e2b70018cb1d41422"
+  },
+  "views_by_cohort": {
+    "RE1-OB": 98,
+    "RE2-OB": 30,
+    "RE1-SS": 150,
+    "RE2-SS": 50
+  },
+  "holdout_views_created": 0,
+  "selection_or_calibration_inputs_changed": false,
+  "note": "Missing telemetry views from existing TRAIN runs, not new independent evidence. Labels and parent/run groups preserved. The excluded run remains in the original split and in parent-model history."
+}

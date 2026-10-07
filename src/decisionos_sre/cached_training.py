@@ -8,6 +8,7 @@ from .common import read,save,file_hash,seed_all,environment,MODEL_NAME,MODEL_RE
 from .data import load_split
 from .representation import numeric_dimension
 from .fault_regularization import configure_cached_heads
+from .training_views import load_training_views,eligible_parent_indices,choose_view_indices
 from .serializer import Serializer,collate
 from .model import build_model,labels,supervised_loss
 from .training import predict,prediction_summary,selection_key,initialize_from_artifact,config_binding,code_state,training_order
@@ -33,6 +34,8 @@ def train_cached(config):
     if (out/'checkpoint.pt').exists():raise FileExistsError('Refusing to overwrite checkpoint')
     out.mkdir(parents=True,exist_ok=True)
     trainset=load_split(config['data_dir'],'train');valset=load_split(config['data_dir'],'model_validation')
+    views,view_meta=load_training_views(config,trainset)
+    cache_train=trainset+views;val_start=len(cache_train)
     tok=AutoTokenizer.from_pretrained(config['backbone_dir'],local_files_only=True)
     names=config.get('numeric_metrics',[]) if config.get('numeric_fusion') else []
     ser=Serializer(tok,config['max_length'],config.get('serializer_version',SERIALIZER),names,config.get('numeric_feature_version','mean-v1'),config.get('trace_features',False))
@@ -42,7 +45,7 @@ def train_cached(config):
     model.to(device).eval();start=time.perf_counter()
     cache=[];templates=[];root_targets=[];fault_targets=[]
     with torch.no_grad():
-        for ex in trainset+valset:
+        for ex in cache_train+valset:
             enc=ser(ex.input);batch=collate([enc],tok.pad_token_id,device)
             inc,cand=model.encode_representations(batch['input_ids'],batch['attention_mask'],batch['spans'],batch['candidate_mask'])
             cache.append({'incident':inc.detach(),'candidate':cand.detach(),'candidate_mask':batch['candidate_mask'],
@@ -56,18 +59,26 @@ def train_cached(config):
                 'serialization':enc.report,'evidence_usable':enc.report.get('modality_evidence_usable',enc.report.get('numeric_evidence_usable',enc.report['usable_metrics_retained']>0))})
     precompute_calls=model.encoder_calls
     with torch.no_grad():
-        root_reference=[model.score_representations(**x)[0].detach().clone() for x in cache[len(trainset):]]
+        root_reference=[model.score_representations(**x)[0].detach().clone() for x in cache[val_start:]]
+    parent_index={e.opaque_incident_id:i for i,e in enumerate(trainset)}
+    view_indices={i:[] for i in range(len(trainset))}
+    for i,ex in enumerate(views,start=len(trainset)):
+        if templates[i]['evidence_usable']:view_indices[parent_index[ex.parent_incident_id]].append(i)
+    eligible=eligible_parent_indices(templates,len(trainset),config.get('require_train_usable_evidence',False))
+    view_rng=random.Random(config['seed']+971)
     heads=[p for p in model.parameters() if p.requires_grad]
     optimizer=torch.optim.AdamW(heads,lr=config['head_learning_rate'],weight_decay=config['weight_decay'])
     rng=random.Random(config['seed']);history=[];best=None;best_heads=None;best_rows=None;stale=0;steps=0
     sampling_log=[]
     for epoch in range(config['epochs']):
         model.train();model.backbone.eval()
-        order=training_order(trainset,rng,config);losses=[]
-        used=[]
+        order=[eligible[i] for i in training_order([trainset[i] for i in eligible],rng,config)];losses=[]
+        used=[];used_views=[]
         for offset in range(0,len(order),config['batch_size']):
             indices=order[offset:offset+config['batch_size']]
             used.extend(indices)
+            indices=choose_view_indices(indices,view_indices,config.get('training_view_probability',0.),view_rng)
+            used_views.extend(cache_train[i].opaque_incident_id for i in indices)
             batch=feature_batch([cache[i] for i in indices])
             optimizer.zero_grad(set_to_none=True)
             roots,faults=model.score_representations(**batch)
@@ -75,10 +86,10 @@ def train_cached(config):
             if not torch.isfinite(loss):raise RuntimeError('nonfinite loss')
             loss.backward();torch.nn.utils.clip_grad_norm_(heads,1.);optimizer.step();steps+=1;losses.append(float(loss.detach()))
             if steps>=config['max_steps']:break
-        sampling_log.append({'epoch':epoch+1,'run_ids':[trainset[i].original_run_id for i in used]})
+        sampling_log.append({'epoch':epoch+1,'run_ids':[trainset[i].original_run_id for i in used],'view_ids':used_views})
         rows=[];model.eval()
         with torch.no_grad():
-            for i in range(len(trainset),len(cache)):
+            for i in range(val_start,len(cache)):
                 roots,faults=model.score_representations(**cache[i]);row=copy.deepcopy(templates[i])
                 row.update(root_logits=roots[0].float().cpu().tolist(),fault_logits=faults[0].float().cpu().tolist());rows.append(row)
         summary=prediction_summary(rows);rank=selection_key(summary,config)
@@ -98,7 +109,7 @@ def train_cached(config):
     model.eval()
     for handle in dropout_handles:handle.remove()
     with torch.no_grad():
-        root_change=max(float((model.score_representations(**x)[0]-old).abs().max()) for x,old in zip(cache[len(trainset):],root_reference))
+        root_change=max(float((model.score_representations(**x)[0]-old).abs().max()) for x,old in zip(cache[val_start:],root_reference))
     if config.get('head_training_policy')=='fault_heads' and root_change!=0.:
         raise ValueError('Frozen root branch changed during fault-only training')
     # Verify that inference through the full model agrees with the training cache.
@@ -115,10 +126,11 @@ def train_cached(config):
         'binding':config_binding(config,file_hash(out/'checkpoint.pt'),split['split_hash'],file_hash(out/'tokenizer/tokenizer.json')),
         'supported_applications':sorted({e.input.application for e in trainset}),
         'prepared_data_sha256':file_hash(Path(config['data_dir'])/'examples.json'),'code_state':source,
+        'training_views':view_meta,'eligible_train_run_ids':[trainset[i].original_run_id for i in eligible],'excluded_unusable_train_run_ids':[e.original_run_id for i,e in enumerate(trainset) if i not in eligible],
         'train_run_ids':[e.original_run_id for e in trainset],'validation_run_ids':[e.original_run_id for e in valset],
         'ontology':FAULTS,'cache':{'precompute_encoder_calls':precompute_calls,'expected':len(cache),'validation_full_logit_max_diff':maxdiff,
-        'dtype':'float32','augmentation':'none; fixed canonical input','train_and_validation_separate':True}}
+        'dtype':'float32','augmentation':'fixed audited TRAIN views' if views else 'none; fixed canonical input','train_and_validation_separate':True}}
     save(out/'metadata.json',metadata);save(out/'resolved_config.json',config);save(out/'split_manifest.json',split)
-    save(out/'augmentations.json',[])
-    save(out/'training_draws.json',{'strategy':config.get('sampling_strategy','shuffle'),'independent_train_cases':len(trainset),'draws':sampling_log,'note':'Repeated TRAIN draws are not independent new cases'})
+    save(out/'augmentations.json',[{'view_id':ex.opaque_incident_id,**ex.augmentation_metadata} for ex in views])
+    save(out/'training_draws.json',{'strategy':config.get('sampling_strategy','shuffle'),'independent_train_cases':len(eligible),'allowed_train_cases':len(trainset),'training_view_probability':config.get('training_view_probability',0.),'draws':sampling_log,'note':'Repeated TRAIN draws are not independent new cases'})
     return metadata
