@@ -77,3 +77,8 @@
 ## MIT许可确认
 
 用户在发布方案后选择MIT，采用现有LICENSE文本，继续准备TSU333/DecisionOS-SRE公开发布。仓库上传使用官方GitHub CLI登录及Dulwich Git推送，保留原提交历史，不上传数据、权重或环境。登录由用户在GitHub完成，不通过聊天接收密码或令牌。
+
+
+## GitHub发布完成
+
+已通过用户授权的GitHub CLI认证，在TSU333/DecisionOS-SRE创建公开仓库，以Dulwich非强制推送master到远程main，保留24个初始历史提交。首次远程764个blob全部与本地一致，训练前cf48a95提交可访问；远程不含数据、权重、环境或认证材料。后续文档提交仅记录发布结果。

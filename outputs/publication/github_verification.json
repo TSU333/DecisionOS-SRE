@@ -1,0 +1,20 @@
+{
+  "repository_url": "https://github.com/TSU333/DecisionOS-SRE",
+  "visibility": "public",
+  "default_branch": "main",
+  "license": "MIT",
+  "verified_initial_publication_commit": "4866510a714395a1859a5c2a38b6d6735435ee63",
+  "verified_blob_count": 764,
+  "all_local_and_remote_blob_shas_equal": true,
+  "pretraining_commit_accessible": true,
+  "initial_history_commits": 24,
+  "excluded_from_repository": [
+    "data",
+    "artifacts",
+    "work",
+    ".venv"
+  ],
+  "authentication": "GitHub CLI authorized by user; token not stored in repository",
+  "tests": "92 passed and 5 data-dependent checks skipped in source-only copy; historical full local suite 97 passed",
+  "note": "This audit records the initial successful push; documentation of this result is committed afterward."
+}

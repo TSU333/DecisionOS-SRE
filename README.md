@@ -44,7 +44,14 @@ flowchart LR
 
 ## 从源码检查项目
 
-源码包不含原始遥测、模型权重或虚拟环境。以下命令只安装依赖并运行测试，不下载预训练模型或开始训练。原验证环境为Windows / Python 3.13；项目声明Python >=3.11，其他平台仍需验证。在仓库根目录运行：
+源码包不含原始遥测、模型权重或虚拟环境。以下命令只安装依赖并运行测试，不下载预训练模型或开始训练。原验证环境为Windows / Python 3.13；项目声明Python >=3.11，其他平台仍需验证。可通过Git克隆或GitHub的Download ZIP取得源码。需要历史提交核验时应完整克隆：
+
+```powershell
+git clone https://github.com/TSU333/DecisionOS-SRE.git
+cd DecisionOS-SRE
+```
+
+在仓库根目录运行：
 
 ```powershell
 python -m venv .venv

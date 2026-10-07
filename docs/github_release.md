@@ -1,6 +1,6 @@
 # GitHub发布与复现说明
 
-状态：用户已选择MIT许可，按已提出的`TSU333/DecisionOS-SRE`公开仓库方案继续发布。当前尚未上传，等待GitHub CLI登录授权。拟发布描述为`Auditable microservice diagnosis: ModernBERT, grouped evaluation, and FastAPI.`。
+状态：已发布到公开仓库 [TSU333/DecisionOS-SRE](https://github.com/TSU333/DecisionOS-SRE)，采用MIT许可。默认分支为`main`，已保留原Git历史。首次推送的全部764个文件Git blob SHA与本地一致，训练前封存提交可从远程访问；核验记录见`outputs/publication/github_verification.json`。
 
 ## 包含范围
 
