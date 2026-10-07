@@ -1,0 +1,28 @@
+{
+  "source_path": "src\\decisionos_sre\\training.py",
+  "before_sha256": "c5f30721a15b7ff74988738af898bc7d91e7996af70d2af9f0f20cb181c689ca",
+  "after_sha256": "56fe840ff6b709bfe1f426baade0afb68ad2cc9d6b1609895b961e6ccb21e2ff",
+  "reason": "Equal discrete accuracy (0.9 vs 0.8999999999999999) must tie before NLL. Only new selection key rounding changed; forward/loss/features unchanged. Corrected before calibration/gate/regression.",
+  "checkpoint_audit": [
+    {
+      "artifact": "artifacts\\round5\\mean_control\\frozen",
+      "unchanged": true,
+      "best_epoch": 67
+    },
+    {
+      "artifact": "artifacts\\round5\\temporal_seed42\\frozen",
+      "unchanged": true,
+      "best_epoch": 127
+    },
+    {
+      "artifact": "artifacts\\round5\\temporal_seed43\\frozen",
+      "unchanged": true,
+      "best_epoch": 147
+    },
+    {
+      "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
+      "unchanged": true,
+      "best_epoch": 124
+    }
+  ]
+}

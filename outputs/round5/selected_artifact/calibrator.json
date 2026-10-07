@@ -1,0 +1,74 @@
+{
+  "binding": {
+    "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+    "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+    "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "fit_run_ids": [
+    "1acf973eeb55223dd1401bcb",
+    "285a01db656bb23fbc506e81",
+    "2c11d2bd3b8dd0106a410acd",
+    "2dd1f5e8158c0639dce9c690",
+    "340b38e18c78d735f3eaa79f",
+    "383d01dff1a7c11c357a8b7d",
+    "3bae0f8e18b4275a25ef1c13",
+    "40667899a724b4ef3b8e2e0a",
+    "5d79d91c5419bb27ddab8be2",
+    "5fa77e02707286538d2c02d4",
+    "621e32d6eaef77f65256d94d",
+    "6ebe12cfee90cb9811edf56a",
+    "71c012bd825041b62a9f3f4f",
+    "74ccfcb0e3a0cfe2d9f0bf2b",
+    "83e5854748d14cd269313c11",
+    "8462c8793839ce57cd54cdb4",
+    "862ffe41b95016e9f8a64dc0",
+    "997d073d1980404816611789",
+    "b00ae6ce029b5c9f7b3ad3d0",
+    "be3a9fba9f56bce0df20b095",
+    "c218b6d37345bca2bd28b89b",
+    "c264dcd5d425d190bad6859c",
+    "c4a0b355e9f41a7292554ccc",
+    "c4ae44446f6917ebad40cf6b",
+    "c62dd39def5831aef76a6f95",
+    "cbf9a571afab324819a511c5",
+    "cd53d41710affaee66337a56",
+    "d2eb8b65188068d01dd78619",
+    "d9a93e0cb995a28449af4135",
+    "d9f52ec3d989314c4531bfb6",
+    "db25fa8c137b9fc1db544ac0",
+    "dec4b345102add4b948a6e1a",
+    "e53d3ed33e4c2cc632a2c669",
+    "e868d5254597f5ce9c695770",
+    "efcd3c025d7e17a87fe83913",
+    "f196499c0110ff93f3c89717",
+    "f22985c64df56615009ae116",
+    "fcc19dae1108f092045645cf",
+    "fe5c9414a9e591d067260a48",
+    "ff7fd7371b2b687e1775bccb"
+  ],
+  "root": {
+    "temperature": 5.359746544159325,
+    "status": "fitted",
+    "n": 40,
+    "nll_before": 1.3264214348635486,
+    "nll_after": 0.3576729714996899,
+    "log_temperature_bounds": [
+      -3,
+      3
+    ]
+  },
+  "fault": {
+    "temperature": 2.2701499751398733,
+    "status": "fitted",
+    "n": 40,
+    "nll_before": 0.6969588063683552,
+    "nll_after": 0.4781107545077724,
+    "log_temperature_bounds": [
+      -3,
+      3
+    ]
+  },
+  "id": "1c8abf81112e0bd66e114f11afb3f553de9043657e7ff8dfc8ca819500848b06"
+}

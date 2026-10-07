@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "model_manifest_files_checked": 33,
+  "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "independent_quality_confirmation": false,
+  "dependency_check": "No broken requirements found",
+  "standalone_carriage_returns": false
+}

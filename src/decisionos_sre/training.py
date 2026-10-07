@@ -275,7 +275,7 @@ def selection_key(summary,config):
             n=sum(g['n'] for g in groups)
             value=sum(g['n']*g['joint_accuracy'] for g in groups)/n if n else 0.
             failures+=int(value+1e-12<floor)
-        return (failures,-summary['cohort_macro_joint'],-summary['joint_accuracy'],summary['sum_nll'])
+        return (failures,-round(summary['cohort_macro_joint'],12),-round(summary['joint_accuracy'],12),summary['sum_nll'])
     if criterion=="cohort_guarded_joint":
         groups=[summary["cohorts"][c] for c in config["preserve_validation_cohorts"]]
         n=sum(c["n"] for c in groups)

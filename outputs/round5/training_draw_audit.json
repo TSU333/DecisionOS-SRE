@@ -1,0 +1,54 @@
+[
+  {
+    "artifact": "artifacts\\round5\\mean_control\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 20955,
+    "cohort_draws": {
+      "RE1-OB": 5226,
+      "RE1-SS": 5305,
+      "RE2-OB": 5172,
+      "RE2-SS": 5252
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 11055
+  },
+  {
+    "artifact": "artifacts\\round5\\temporal_seed42\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 30009,
+    "cohort_draws": {
+      "RE1-SS": 7503,
+      "RE1-OB": 7497,
+      "RE2-OB": 7512,
+      "RE2-SS": 7497
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 20955
+  },
+  {
+    "artifact": "artifacts\\round5\\temporal_seed43\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 30009,
+    "cohort_draws": {
+      "RE1-OB": 7447,
+      "RE1-SS": 7527,
+      "RE2-OB": 7447,
+      "RE2-SS": 7588
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 24255
+  },
+  {
+    "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 30009,
+    "cohort_draws": {
+      "RE2-OB": 7327,
+      "RE1-SS": 7621,
+      "RE2-SS": 7536,
+      "RE1-OB": 7525
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 20460
+  }
+]

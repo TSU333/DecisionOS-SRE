@@ -1,22 +1,22 @@
 # DecisionOS-SRE
 
-研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不会执行运维操作。
+研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第四轮结果见 `docs/round4_results.md`，机器报告 `outputs/round4/results.json`，验收 `outputs/round4/status.json`。选中模型 `artifacts/round4/balanced_seed43/frozen`，统一入口 `outputs/latest_model.json`。原权重和各轮结果保留。
+最新第五轮结果见 `docs/round5_results.md`，机器报告 `outputs/round5/results.json`，验收 `outputs/round5/status.json`。选中模型 `artifacts/round5/temporal_seed44/frozen`，统一入口 `outputs/latest_model.json`。旧模型和各轮结果均保留，execution_scope 仍为 mvp。
 
-数据增至 400 条，本轮完成 3 组训练、4816 次更新。新 Sock Shop 30 条留出案例：根因 96.7%、故障分类 90%、联合 86.7%，达到该样本上暂定的 90% / 90% / 85% 指标。模型训练包含 Sock Shop，不能称为未知应用泛化。
+本轮补充因果时间特征，完成 4 组真实训练、7397 次更新。数据仍为原有 400 个案例，没有新的独立测试集。Sock Shop 历史回归（30条）：根因 96.7%、故障 96.7%、联合 93.3%，联合从 86.7% 上升。Online Boutique RE2 历史回归（25条）仍为 96% / 80% / 76%，没有提高，仍未达到全部工作目标；不能宣称新的泛化确认。
 
-原 Online Boutique RE2 的 25 条历史回归：根因 88% → 96%、故障 72% → 80%、联合 64% → 76%，仍未完全达标；缺新的独立 OB 留出，不能用新 SS 分数替代其泛化证明。85 条门控样本最好的合格规模区间仍错 2/36=5.56%，高于 5%，因此仍全部 REVIEW。28 项测试、真实 HTTP 和 CPU 重载通过，重载 logits 最大差 0；本轮 CPU 端到端 P95 858.8 ms。
+门控集经验阈值接受 36 条、错 1 条（2.78%），满足原 5% / 至少30条约束；但 OB RE2 历史回归接受7条、错1条（14.3%）。因此自动接受风险仍未得到独立验证，冻结策略属于实验诊断产物。缺少时间证据、未知应用等仍 REVIEW。35 项测试、真实 HTTP 和 CPU 重载通过，重载 logits 最大差 0；CPU 端到端 P95 853.3 ms。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE
 $env:PYTHONPATH='src'
-./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round4/balanced_seed43/frozen --port 8000
+./work/.venv/Scripts/python.exe -m decisionos_sre serve --artifact artifacts/round5/temporal_seed44/frozen --port 8000
 ```
 
-复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round4_balanced_seed43.json -Mode frozen`。需要保留固定数据和第三轮初始化权重；脚本自动创建新的输出目录，执行训练、校准、门控、测试复现、CPU benchmark 与真实 HTTP 检查。重跑已打开的测试只能称为复现。
+复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round5_temporal_seed44.json -Mode frozen`。需要保留 data/round5、固定主干和第四轮父模型；脚本创建新的输出目录并执行训练、校准、门控、历史回归、CPU benchmark 与真实 HTTP。重跑已有案例是复现，不是新的未见确认。
 
-本轮数据重叠审计、分割、训练预算和选择规则见 `docs/round4_protocol.md`。execution_scope 保持 mvp。MVP 工程验收、新数据样本质量、原应用目标和自动接受能力分别报告。历史记录见各轮 results 文档，初始安装说明保留如下。
+协议与选择理由见 `docs/round5_protocol.md`。指标字段新增可选 `temporal` 对象，包含 q10_z / q90_z / std_ratio / trend_z / late_shift_z；使用 `decisionos_sre.temporal.temporal_summary` 从决策时刻之前的同一时间窗口提取，计算边界和尺度见实现。旧版模型继续兼容旧格式。
 
 ## 本地环境
 本次工作目录为 D:\CODEX\DecisionOS-SRE。原 E 盘工作目录读操作可用，但写操作实际返回 WinError 433；用户已授权使用 D 盘指定目录。保留此事实以免误认为所有命令仍在原目录执行。

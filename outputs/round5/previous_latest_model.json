@@ -1,26 +1,26 @@
 {
-  "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
-  "absolute_artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round5\\temporal_seed44\\frozen",
+  "artifact": "artifacts\\round4\\balanced_seed43\\frozen",
+  "absolute_artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round4\\balanced_seed43\\frozen",
   "binding": {
-    "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
-    "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
-    "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+    "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
+    "split_hash": "6aa9a337ad0a61ed3d5edf214a18dbb1e6e0340f817917da6f95529a60a4663f",
+    "pipeline_hash": "07f0efd0d1d6b4caf60c9240aeaaa770b7d0145c7677b9eff333d77e81970d7b",
     "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
     "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
   },
-  "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "checkpoint_sha256": "0b49ae1d44f7c5b5e9181fb51dadb396774dfeaa350dcfe272d14ed171fca7fa",
   "config": {
     "execution_scope": "mvp",
-    "seed": 44,
-    "data_dir": "data/round5",
+    "seed": 43,
+    "data_dir": "data/round4",
     "backbone_dir": "artifacts/backbone",
-    "artifact_root": "artifacts/round5/temporal_seed44",
+    "artifact_root": "artifacts/round4/balanced_seed43",
     "max_length": 2048,
     "epochs": 240,
     "batch_size": 16,
     "gradient_accumulation": 1,
     "learning_rate_sft": 2e-05,
-    "learning_rate_frozen": 0.0003,
+    "learning_rate_frozen": 0.001,
     "weight_decay": 0.01,
     "loss_weights": [
       1,
@@ -42,7 +42,7 @@
     "execute_remediation": false,
     "external_llm_enabled": false,
     "backbone_learning_rate": 2e-05,
-    "head_learning_rate": 0.0003,
+    "head_learning_rate": 0.001,
     "schedule": "constant",
     "warmup_fraction": 0,
     "augmentation": {
@@ -65,8 +65,8 @@
       "socket",
       "workload"
     ],
-    "initialization_artifact": "artifacts/round4/balanced_seed43/frozen",
-    "selection_metric": "cohort_guarded_retention",
+    "initialization_artifact": "artifacts/round3/weighted_0.1/frozen",
+    "selection_metric": "cohort_guarded_joint",
     "cache_frozen_features": true,
     "text_logit_weight": 0.1,
     "root_conditioned_fault": true,
@@ -75,20 +75,13 @@
       "RE1-OB",
       "RE2-OB"
     ],
-    "preserve_joint_floor": 0.85,
-    "retention_floors": {
-      "Online Boutique": 0.95,
-      "Sock Shop": 0.9
-    },
-    "numeric_feature_version": "temporal-v1",
-    "evaluation_split": "regression_ss",
-    "numeric_feature_upgrade": "zero_pad_temporal_v1"
+    "preserve_joint_floor": 0.85
   },
-  "selected_by": "frozen validation: retain OB>=95%, SS>=90%, equal cohort/overall accuracy then lower NLL; no regression selection",
-  "report": "D:\\CODEX\\DecisionOS-SRE\\docs\\round5_results.md",
-  "routing": "selected",
-  "quality_target_status": "regression_only_no_fresh_confirmation",
-  "original_ob_fresh_target_status": "not_reconfirmed_no_new_independent_cases",
-  "test_role": "all historical test sets are regression only",
-  "previous_pointer": "outputs\\round5\\previous_latest_model.json"
+  "selected_by": "frozen four-cohort validation joint score with old OB retention floor; no test selection",
+  "report": "D:\\CODEX\\DecisionOS-SRE\\docs\\round4_results.md",
+  "routing": "REVIEW: no feasible threshold",
+  "quality_target_status": "partially_met_new_sock_shop_only",
+  "original_ob_fresh_target_status": "not_reconfirmed_no_new_independent_OB_cases",
+  "test_role": "30 new Sock Shop heldouts now opened; historical OB sets are regression only",
+  "previous_pointer": "outputs\\round4\\previous_latest_model.json"
 }

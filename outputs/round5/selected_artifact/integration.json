@@ -1,0 +1,202 @@
+{
+  "status": "experiment_completed",
+  "reload_max_abs_logit_diff": 0.0,
+  "http": {
+    "health": 200,
+    "ready": 200,
+    "decide": 200,
+    "decision": {
+      "root_cause": {
+        "selected": "carts",
+        "probabilities": {
+          "carts": 0.9445559955050141,
+          "front-end": 0.01910284734730193,
+          "catalogue": 0.015994075437786012,
+          "orders": 0.0021554008328569015,
+          "carts-db": 0.0032785642649661682,
+          "user-db": 0.001651390472327972,
+          "orders-db": 0.00045356711733407913,
+          "shipping": 0.00036817868590243856,
+          "user": 0.00536617794415166,
+          "payment": 0.001464534739112042,
+          "rabbitmq": 0.001085119760324101,
+          "queue-master": 0.000335653355904873,
+          "session-db": 0.0012791506232948124,
+          "rabbitmq-exporter": 0.0006373080433579703,
+          "catalogue-db": 0.0022720358703650283
+        },
+        "confidence": 0.9445559955050141,
+        "calibration_status": "fitted"
+      },
+      "fault_type": {
+        "selected": "cpu_stress",
+        "probabilities": {
+          "cpu_stress": 0.6560241644555173,
+          "memory_stress": 0.006148110425741418,
+          "disk_io_stress": 0.2534210305353792,
+          "network_delay": 0.011943387062639704,
+          "network_packet_loss": 0.07246330752072241
+        },
+        "confidence": 0.6560241644555173,
+        "calibration_status": "fitted"
+      },
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.6560241644555173,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      },
+      "versions": {
+        "model": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+        "serializer": "metrics-canonical-v2",
+        "ontology": "e465bdcb3f6073a4e39311081b7e125f850e341ca339d1e1fae986d8a07806ae",
+        "calibration": "1c8abf81112e0bd66e114f11afb3f553de9043657e7ff8dfc8ca819500848b06",
+        "policy": "81958f7bde857bee58295e49e3b707597dd983a4a3d17f4ad53a59b18178f66b"
+      },
+      "evidence_status": {
+        "serializer_version": "metrics-canonical-v2",
+        "tokens": 1313,
+        "candidate_count": 15,
+        "usable_metrics_retained": 59,
+        "metrics_total": 59,
+        "metrics_retained": 59,
+        "retained_fraction": 1.0,
+        "retained_metric_keys": [
+          "carts/latency-90",
+          "carts/latency-50",
+          "carts/cpu",
+          "front-end/latency-50",
+          "carts/mem",
+          "front-end/latency-90",
+          "catalogue/mem",
+          "orders/latency-50",
+          "orders/latency-90",
+          "carts-db/mem",
+          "user-db/mem",
+          "carts-db/cpu",
+          "orders-db/mem",
+          "shipping/latency-50",
+          "shipping/latency-90",
+          "catalogue/latency-90",
+          "user/latency-50",
+          "catalogue/latency-50",
+          "user/latency-90",
+          "user/mem",
+          "payment/mem",
+          "payment/latency-50",
+          "front-end/cpu",
+          "orders/cpu",
+          "orders-db/cpu",
+          "rabbitmq/cpu",
+          "queue-master/cpu",
+          "front-end/mem",
+          "shipping/cpu",
+          "session-db/cpu",
+          "queue-master/latency-90",
+          "orders/mem",
+          "shipping/mem",
+          "user-db/cpu",
+          "queue-master/latency-50",
+          "queue-master/mem",
+          "payment/latency-90",
+          "rabbitmq-exporter/cpu",
+          "orders/workload",
+          "payment/workload",
+          "queue-master/workload",
+          "catalogue/cpu",
+          "front-end/workload",
+          "rabbitmq/mem",
+          "shipping/workload",
+          "catalogue-db/cpu",
+          "session-db/mem",
+          "payment/cpu",
+          "user/workload",
+          "carts/workload",
+          "catalogue/workload",
+          "user/cpu",
+          "carts/error",
+          "front-end/error",
+          "orders/error",
+          "shipping/error",
+          "queue-master/error",
+          "rabbitmq-exporter/mem",
+          "catalogue-db/mem"
+        ],
+        "truncated": false,
+        "missing_modalities": [
+          "logs",
+          "traces",
+          "topology",
+          "deployment_context"
+        ],
+        "token_budgets": {
+          "max": 2048,
+          "candidate_reservation": true,
+          "logs": 0,
+          "traces": 0
+        },
+        "absolute_timestamps_serialized": false,
+        "service_names_serialized": false,
+        "candidate_order": "observable metric signature",
+        "numeric_metrics": [
+          "cpu",
+          "diskio",
+          "error",
+          "latency",
+          "latency-50",
+          "latency-90",
+          "load",
+          "mem",
+          "socket",
+          "workload"
+        ],
+        "numeric_evidence_scope": "retained metrics only",
+        "descriptions_serialized": false,
+        "numeric_feature_version": "temporal-v1",
+        "temporal_metrics_retained": 59,
+        "numeric_evidence_usable": true
+      },
+      "timings_ms": {
+        "serialization_tokenization": 56.76250159740448,
+        "model": 894.3622969090939,
+        "end_to_end": 957.7342011034489
+      },
+      "execute_remediation": false
+    },
+    "missing_temporal": {
+      "destination": "REVIEW",
+      "routing_score": 0.42792061079419585,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD",
+        "NO_TEMPORAL_EVIDENCE"
+      ]
+    },
+    "reject_gold": 422,
+    "single_candidate": {
+      "destination": "REVIEW",
+      "routing_score": 0.6654334212301499,
+      "reason_codes": [
+        "SINGLE_CANDIDATE",
+        "BELOW_THRESHOLD"
+      ]
+    },
+    "candidate_overflow": {
+      "destination": "REVIEW",
+      "routing_score": null,
+      "reason_codes": [
+        "CANDIDATES_EXCEED_TOKEN_BUDGET"
+      ]
+    },
+    "unvalidated_application": {
+      "destination": "REVIEW",
+      "routing_score": 0.6593725152013337,
+      "reason_codes": [
+        "BELOW_THRESHOLD",
+        "UNVALIDATED_APPLICATION"
+      ]
+    },
+    "empty_candidates": 422
+  }
+}

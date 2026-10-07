@@ -1,0 +1,11 @@
+{
+  "binding": {
+    "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+    "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+    "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "calibrator_sha256": "117527b3d91a058ca96a0a3f7ae09b92af12a6965b80720513b9cf5b15ba7f79",
+  "policy_sha256": "6df2b29696a2047e0d5c168983724287fbfa7c2184917dd5cb568acedcfd1384"
+}

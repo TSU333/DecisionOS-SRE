@@ -1,0 +1,394 @@
+{
+  "device": "cpu",
+  "cpu": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+  "logical_cpus": 32,
+  "threads": 8,
+  "batch_size": 1,
+  "warmup_per_incident": 3,
+  "repetitions_per_incident": 12,
+  "cold_model_load_ms": 1643.817000091076,
+  "core": {
+    "p50_ms": 792.79875010252,
+    "p95_ms": 857.3858765885234,
+    "throughput_per_second": 1.2466742714700954
+  },
+  "end_to_end": {
+    "p50_ms": 808.9768998324871,
+    "p95_ms": 853.3038515597582,
+    "throughput_per_second": 1.230775584241771
+  },
+  "peak_process_ram_bytes": 2102984704,
+  "peak_ram_scope": "Windows process lifetime peak working set",
+  "checkpoint_bytes": 597601641,
+  "measurements": [
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 0,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 797.6437993347645,
+      "end_to_end_ms": 823.1802992522717,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 1,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 780.177902430296,
+      "end_to_end_ms": 766.3185000419617,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 2,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 772.5644968450069,
+      "end_to_end_ms": 785.4408994317055,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 3,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 770.0157985091209,
+      "end_to_end_ms": 868.987001478672,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 4,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 801.7082028090954,
+      "end_to_end_ms": 837.8344997763634,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 5,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 786.608699709177,
+      "end_to_end_ms": 784.8589010536671,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 6,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 780.2965976297855,
+      "end_to_end_ms": 775.0889025628567,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 7,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 794.1027991473675,
+      "end_to_end_ms": 805.4739981889725,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 8,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 826.4728002250195,
+      "end_to_end_ms": 835.8653001487255,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 9,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 816.8868012726307,
+      "end_to_end_ms": 763.425599783659,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 10,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 788.139097392559,
+      "end_to_end_ms": 809.4642013311386,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "d8c04b6d0fb9cb0acac46bbf",
+      "iteration": 11,
+      "tokens": 1313,
+      "candidates": 15,
+      "core_ms": 818.317998200655,
+      "end_to_end_ms": 799.2225997149944,
+      "rss_bytes": 1760899072
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 0,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 863.0702011287212,
+      "end_to_end_ms": 857.8000999987125,
+      "rss_bytes": 1760923648
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 1,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 837.3804986476898,
+      "end_to_end_ms": 799.9784983694553,
+      "rss_bytes": 1760944128
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 2,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 780.7663008570671,
+      "end_to_end_ms": 839.4916988909245,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 3,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 818.3139003813267,
+      "end_to_end_ms": 807.5297027826309,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 4,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 811.2738020718098,
+      "end_to_end_ms": 797.9749031364918,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 5,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 773.5417000949383,
+      "end_to_end_ms": 823.4030976891518,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 6,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 786.8930995464325,
+      "end_to_end_ms": 789.8650988936424,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 7,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 831.0035988688469,
+      "end_to_end_ms": 796.490702778101,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 8,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 791.4947010576725,
+      "end_to_end_ms": 851.8051020801067,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 9,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 808.8806979358196,
+      "end_to_end_ms": 814.1438029706478,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 10,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 775.2798981964588,
+      "end_to_end_ms": 824.8475976288319,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "0ffbbef975bd3d9591a7d9ad",
+      "iteration": 11,
+      "tokens": 1310,
+      "candidates": 15,
+      "core_ms": 867.809496819973,
+      "end_to_end_ms": 818.7853991985321,
+      "rss_bytes": 1760960512
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 0,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 785.5507992208004,
+      "end_to_end_ms": 799.1055995225906,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 1,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 759.6742995083332,
+      "end_to_end_ms": 839.3137007951736,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 2,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 855.4911017417908,
+      "end_to_end_ms": 848.4012000262737,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 3,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 842.3398025333881,
+      "end_to_end_ms": 822.2320973873138,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 4,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 807.4211999773979,
+      "end_to_end_ms": 786.708801984787,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 5,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 778.2209999859333,
+      "end_to_end_ms": 787.9530973732471,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 6,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 785.8894988894463,
+      "end_to_end_ms": 789.5146012306213,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 7,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 847.5243002176285,
+      "end_to_end_ms": 826.5484012663364,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 8,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 767.6324993371964,
+      "end_to_end_ms": 808.4895983338356,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 9,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 785.2028012275696,
+      "end_to_end_ms": 804.1178993880749,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 10,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 778.9699025452137,
+      "end_to_end_ms": 834.0095989406109,
+      "rss_bytes": 1760980992
+    },
+    {
+      "incident_id": "d70fdf1d616b080e8fd4bcf8",
+      "iteration": 11,
+      "tokens": 1314,
+      "candidates": 15,
+      "core_ms": 804.2691014707088,
+      "end_to_end_ms": 826.178003102541,
+      "rss_bytes": 1760980992
+    }
+  ],
+  "scaling_probes": [
+    {
+      "synthetic_performance_probe": true,
+      "max_tokens": 512,
+      "tokens": 505,
+      "candidate_count": 2,
+      "core_ms": [
+        275.07229894399643,
+        255.91890141367912,
+        235.60390248894691
+      ]
+    },
+    {
+      "synthetic_performance_probe": true,
+      "max_tokens": 1024,
+      "tokens": 1021,
+      "candidate_count": 7,
+      "core_ms": [
+        583.1637978553772,
+        568.2219006121159,
+        579.5078985393047
+      ]
+    },
+    {
+      "synthetic_performance_probe": true,
+      "max_tokens": 2048,
+      "tokens": 1313,
+      "candidate_count": 15,
+      "core_ms": [
+        778.7139974534512,
+        797.2992993891239,
+        810.3306032717228
+      ]
+    }
+  ],
+  "environment": {
+    "torch": "2.7.1+cu128",
+    "transformers": "4.51.3",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "pyarrow": "20.0.0",
+    "pydantic": "2.11.5",
+    "fastapi": "0.115.12",
+    "scipy": "1.15.3"
+  }
+}

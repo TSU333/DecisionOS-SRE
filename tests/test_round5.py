@@ -82,3 +82,12 @@ def test_round5_never_promotes_old_test_to_train():
     old=read('data/round4/splits.json');new=read('data/round5/splits.json')
     assert len(new['assignments'])==400 and 'test' not in new['counts']
     for oid,split in old['assignments'].items():assert new['assignments'][oid]==('regression_ss' if split=='test' else split)
+
+
+def test_equal_discrete_cohort_accuracy_uses_nll_not_float_noise():
+    cfg={'selection_metric':'cohort_guarded_retention','retention_floors':{'Online Boutique':.95,'Sock Shop':.9}}
+    a={'cohort_macro_joint':.8999999999999999,'joint_accuracy':.925,'sum_nll':.26,'cohorts':{'RE1-OB':{'n':15,'joint_accuracy':1.},'RE2-OB':{'n':5,'joint_accuracy':.8},'RE1-SS':{'n':10,'joint_accuracy':1.},'RE2-SS':{'n':10,'joint_accuracy':.8}}}
+    b=copy.deepcopy(a);b.update(cohort_macro_joint=.9,sum_nll=.31)
+    assert selection_key(a,cfg)<selection_key(b,cfg)
+    a['cohorts']['RE1-SS']['joint_accuracy']=.7
+    assert selection_key(b,cfg)<selection_key(a,cfg)

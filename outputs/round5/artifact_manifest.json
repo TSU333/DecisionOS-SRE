@@ -1,0 +1,73 @@
+{
+  "artifact": "D:\\CODEX\\DecisionOS-SRE\\artifacts\\round5\\temporal_seed44\\frozen",
+  "binding": {
+    "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+    "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+    "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+    "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+  },
+  "files": {
+    "api-server.log": "74300fe28338c2fcd1210231759ddc6e1055347e0616940296da1f29d91b0c70",
+    "augmentations.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "backbone_config\\config.json": "446caae8da868d00584d1825c1a88b094b7423b5ffb206689c7297c30bf3f67e",
+    "benchmark.json": "95f94c76b5072e32e1d88c7bcdc7b29adaf42e55a762cf48bc711624a69e3486",
+    "best_heads.pt": "b869a2b0a25007019d6843be8d8af7cbb4e38dc4f1d4bb2133a68283dee7d3b7",
+    "calibration_logits.json": "50a7ceaa7bee37964dddd9319b5866d19fdde691c8d6e3d2a4d6cd095740de1a",
+    "calibrator.json": "117527b3d91a058ca96a0a3f7ae09b92af12a6965b80720513b9cf5b15ba7f79",
+    "checkpoint.pt": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+    "consistent_service_rename\\diagnostics.png": "73394ab06ec6d1b60d79bebb82376437772e0ba14b7a84f83db7c1862362fea2",
+    "consistent_service_rename\\metrics.json": "b5ff9f71415689b23cf4310e4d28bfc77a10c654abfab6da806e8c7bb12ca59d",
+    "consistent_service_rename\\predictions.json": "8309d2a373d21ed21edcd9bcf232567c146fae9bbdec9b9c8f2710ec430f6b9d",
+    "gate_predictions.json": "b22d2abe42cb6ab2f6002fff1a5e857320fd02a9b34749fdffcededfe24e96f4",
+    "integration.json": "dbca063590f1d6a24452efff50c3c38ec3a8eac38c00e300abf2e80dad957a5c",
+    "mask_all_metrics\\diagnostics.png": "67dac5f4c764a9b21d86e26ecf806e8d83ab144db9ef2aeac6fdb2a729981dd8",
+    "mask_all_metrics\\metrics.json": "fe268a96bd2a63415e5a2e30162f4e4d2f736d3e3e5f5faaf13df2501b7d7789",
+    "mask_all_metrics\\predictions.json": "7a23fd7e37d912ffa51aae9050a38379191e0b33aabd8851e706f3e3489f63d4",
+    "metadata.json": "cae26244d9a3bba003c6d24b44f9cebbb7e0a408c6d59eff8f7478c8e727ed09",
+    "policy.json": "6df2b29696a2047e0d5c168983724287fbfa7c2184917dd5cb568acedcfd1384",
+    "regression_ss\\diagnostics.png": "73394ab06ec6d1b60d79bebb82376437772e0ba14b7a84f83db7c1862362fea2",
+    "regression_ss\\metrics.json": "b5ff9f71415689b23cf4310e4d28bfc77a10c654abfab6da806e8c7bb12ca59d",
+    "regression_ss\\predictions.json": "490754d996d251e8498ccf25e6cceebd3ddbbc9895e5f50eaebb0f39b20365cf",
+    "reload_reference.json": "26b687bad6a04557c47c10b6ac492abb2597bcd5616d5fa2f84efd9299951baf",
+    "resolved_config.json": "82d17c4fd292a51f5c6de899ce43099c69d694a93f72040e4a30b7c53510d421",
+    "reverse_candidates\\diagnostics.png": "73394ab06ec6d1b60d79bebb82376437772e0ba14b7a84f83db7c1862362fea2",
+    "reverse_candidates\\metrics.json": "b5ff9f71415689b23cf4310e4d28bfc77a10c654abfab6da806e8c7bb12ca59d",
+    "reverse_candidates\\predictions.json": "415ad9fad7cdb57b3869c452a390afc4feb86d986fae1b7dad51489c15425b3a",
+    "selected_validation_logits.json": "2b5eecbd63020252dd85ad639090c3dd0d8803f31d283ef2429c2cb7e9fca0eb",
+    "split_manifest.json": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+    "test_freeze.json": "ec4903c5a9b80bda219c48236e24625219c72d38c48da3fe0a06efa805ff6215",
+    "tokenizer\\special_tokens_map.json": "e386620cb5e9f6570fe98481fde86167b4236cdebdcc42308652574122561619",
+    "tokenizer\\tokenizer.json": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+    "tokenizer\\tokenizer_config.json": "973134a8b0937f6a3a3567a5cc5cbd05a95974af1f8d2173c43dd09cf2f0e4bb",
+    "training_draws.json": "c63a53499aebe02c30f515e4af79c440a1c64dc4c7d371f2638b5ec254cd043a"
+  },
+  "source_precision_fix": {
+    "source_path": "src\\decisionos_sre\\training.py",
+    "before_sha256": "c5f30721a15b7ff74988738af898bc7d91e7996af70d2af9f0f20cb181c689ca",
+    "after_sha256": "56fe840ff6b709bfe1f426baade0afb68ad2cc9d6b1609895b961e6ccb21e2ff",
+    "reason": "Equal discrete accuracy (0.9 vs 0.8999999999999999) must tie before NLL. Only new selection key rounding changed; forward/loss/features unchanged. Corrected before calibration/gate/regression.",
+    "checkpoint_audit": [
+      {
+        "artifact": "artifacts\\round5\\mean_control\\frozen",
+        "unchanged": true,
+        "best_epoch": 67
+      },
+      {
+        "artifact": "artifacts\\round5\\temporal_seed42\\frozen",
+        "unchanged": true,
+        "best_epoch": 127
+      },
+      {
+        "artifact": "artifacts\\round5\\temporal_seed43\\frozen",
+        "unchanged": true,
+        "best_epoch": 147
+      },
+      {
+        "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
+        "unchanged": true,
+        "best_epoch": 124
+      }
+    ]
+  }
+}
