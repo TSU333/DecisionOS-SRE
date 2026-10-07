@@ -2,13 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第十一轮结果见 `docs/round11_results.md`，机器结果 `outputs/round11/results.json`，验收 `outputs/round11/status.json`。本轮候选未通过历史回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。execution_scope 保持 mvp，全部历史模型与失败证据保留。
+最新第十二轮结果见 `docs/round12_results.md`，机器结果 `outputs/round12/results.json`，验收 `outputs/round12/status.json`。本轮候选未通过历史回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。execution_scope 保持 mvp，历史模型与失败证据保留。
 
-这次执行真实的共享编码器末层微调：比较文本故障头对照、最后2层、最后4层，冻结原有数值分支。3组共533次正式优化器更新，另有3步TRAIN资源探测并丢弃临时权重。两层和四层分别实际训练约1003万/2006万个参数；控制组只训练3845个参数。输入、推理架构和一次共享编码规则保持不变，仍使用164个有效TRAIN案例，无新独立数据或增强视图。
+本轮实现并审计因果动态摘要，比较旧特征对照、新特征故障头、dropout与联合头四组真实GPU训练，共3608次优化器更新，主干全部冻结。有效TRAIN仍为164个原案例，没有新增独立数据。旧文本和数值前缀在400例上保持一致，新增权重从零迁移；新特征方案没有超过匹配的旧特征对照，不能据此宣称特征扩展有效。
 
-选中tail2，验证联合准确率仍为92.5%，sum NLL从0.259229小幅降至0.257282；历史回归OB RE2联合从76.0%降到72.0%，Sock Shop维持93.3%。因此不替换默认模型，不据概率损失的小幅改善宣称模型更强。协议和理由见 `docs/round11_protocol.md`。
+验证选中legacy_control，联合准确率从92.5%升至95.0%，sum NLL从0.259229降至0.252290；但历史RE2-OB联合76%→72%，Sock Shop 93.3%→90%，RE1-OB保持86.7%。因此不替换默认模型，具体协议见 `docs/round12_protocol.md`。
 
-84项测试、真实HTTP和CPU重载通过；候选CPU端到端P95为939.3ms。所有实际训练源码与训练前提交 `62db696136a80c4e571cdf3fe2f25eb0e7a1b4c5` 的哈希一致，数值分支及其它冻结张量逐项核对。原MVP工程流程完成，但质量与自动接受风险仍缺新的独立确认；系统不执行运维动作。
+91项测试、依赖检查、真实HTTP、CPU重载、数据和训练权重审计通过；候选CPU端到端P95为871.0ms。24个实际训练源文件与训练前提交 `2efebde78dd7819d87eebb5bb4feafc95e742f94` 哈希一致。原MVP工程流程完成，未知案例质量和自动接受风险仍缺新的独立确认；系统不执行运维操作。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE
@@ -19,6 +19,8 @@ $env:PYTHONPATH='src'
 复现选中方案：`./scripts/reproduce_retraining.ps1 -Config configs/round5_temporal_seed44.json -Mode frozen`。需要保留 data/round5、固定主干和第四轮父模型；脚本创建新的输出目录并执行训练、校准、门控、历史回归、CPU benchmark 与真实 HTTP。重跑已有案例是复现，不是新的未见确认。
 
 协议与选择理由见 `docs/round5_protocol.md`。指标字段新增可选 `temporal` 对象，包含 q10_z / q90_z / std_ratio / trend_z / late_shift_z；使用 `decisionos_sre.temporal.temporal_summary` 从决策时刻之前的同一时间窗口提取，计算边界和尺度见实现。旧版模型继续兼容旧格式。
+
+第十二轮新增可选 `metric.dynamics`，通过 `decisionos_sre.dynamics.dynamics_summary` 从同一决策前窗口生成，六项数值和存在标识仅供 `numeric_feature_version=temporal-dynamics-v1` 的实验模型读取。新版本缺少动态证据会REVIEW；现任第五轮及本轮legacy_control继续忽略这个新字段。复现新候选用 `./scripts/reproduce_retraining.ps1 -Config configs/round12_legacy_control.json -Mode frozen`，依赖本地data/round12及第五轮父模型。
 
 ## 本地环境
 本次工作目录为 D:\CODEX\DecisionOS-SRE。原 E 盘工作目录读操作可用，但写操作实际返回 WinError 433；用户已授权使用 D 盘指定目录。保留此事实以免误认为所有命令仍在原目录执行。

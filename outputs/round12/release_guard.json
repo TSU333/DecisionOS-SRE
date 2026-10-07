@@ -1,0 +1,61 @@
+{
+  "validation_eligible": true,
+  "cohorts": {
+    "regression_re1_ob": {
+      "root": {
+        "old": 0.8666666666666667,
+        "new": 0.8666666666666667,
+        "non_regressed": true
+      },
+      "fault": {
+        "old": 1.0,
+        "new": 1.0,
+        "non_regressed": true
+      },
+      "joint": {
+        "old": 0.8666666666666667,
+        "new": 0.8666666666666667,
+        "non_regressed": true
+      }
+    },
+    "regression_re2_ob": {
+      "root": {
+        "old": 0.96,
+        "new": 0.96,
+        "non_regressed": true
+      },
+      "fault": {
+        "old": 0.8,
+        "new": 0.76,
+        "non_regressed": false
+      },
+      "joint": {
+        "old": 0.76,
+        "new": 0.72,
+        "non_regressed": false
+      }
+    },
+    "regression_ss": {
+      "root": {
+        "old": 0.9666666666666667,
+        "new": 0.9666666666666667,
+        "non_regressed": true
+      },
+      "fault": {
+        "old": 0.9666666666666667,
+        "new": 0.9333333333333333,
+        "non_regressed": false
+      },
+      "joint": {
+        "old": 0.9333333333333333,
+        "new": 0.9,
+        "non_regressed": false
+      }
+    }
+  },
+  "all_non_regressed": false,
+  "promote": false,
+  "regressions_executed": true,
+  "independent_confirmation": false,
+  "rule": "Predeclared validation and historical regression guard; no runner-up search"
+}

@@ -1,0 +1,175 @@
+{
+  "candidates": [
+    {
+      "artifact": "artifacts\\round12\\legacy_control\\frozen",
+      "steps": 902,
+      "best_steps": 22,
+      "head_training_policy": "fault_heads",
+      "numeric_feature_version": "temporal-v1",
+      "trainable_parameters": 66831,
+      "frozen_tensors_verified": 142,
+      "changed_parameters": [
+        "fault_head.weight",
+        "fault_head.bias",
+        "numeric_fault.0.weight",
+        "numeric_fault.0.bias",
+        "numeric_fault.2.weight",
+        "numeric_fault.2.bias",
+        "numeric_local_fault.0.weight",
+        "numeric_local_fault.0.bias",
+        "numeric_local_fault.2.weight",
+        "numeric_local_fault.2.bias"
+      ],
+      "changed_backbone_parameters": [],
+      "new_input_columns": [],
+      "cached_full_delta": 0.0,
+      "root_logits_delta": 0.0,
+      "source_hashes_and_git_snapshot_verified": true,
+      "checkpoint_and_selected_trainable_weights_verified": true
+    },
+    {
+      "artifact": "artifacts\\round12\\dynamics_fault\\frozen",
+      "steps": 902,
+      "best_steps": 22,
+      "head_training_policy": "fault_heads",
+      "numeric_feature_version": "temporal-dynamics-v1",
+      "trainable_parameters": 102671,
+      "frozen_tensors_verified": 142,
+      "changed_parameters": [
+        "fault_head.weight",
+        "fault_head.bias",
+        "numeric_fault.0.weight",
+        "numeric_fault.0.bias",
+        "numeric_fault.2.weight",
+        "numeric_fault.2.bias",
+        "numeric_local_fault.0.weight",
+        "numeric_local_fault.0.bias",
+        "numeric_local_fault.2.weight",
+        "numeric_local_fault.2.bias"
+      ],
+      "changed_backbone_parameters": [],
+      "new_input_columns": [
+        {
+          "name": "numeric_root.0.weight",
+          "nonzero_weights": 0
+        },
+        {
+          "name": "numeric_fault.0.weight",
+          "nonzero_weights": 21760
+        },
+        {
+          "name": "numeric_local_fault.0.weight",
+          "nonzero_weights": 8960
+        }
+      ],
+      "cached_full_delta": 0.0,
+      "root_logits_delta": 0.0,
+      "source_hashes_and_git_snapshot_verified": true,
+      "checkpoint_and_selected_trainable_weights_verified": true
+    },
+    {
+      "artifact": "artifacts\\round12\\dynamics_drop15\\frozen",
+      "steps": 902,
+      "best_steps": 22,
+      "head_training_policy": "fault_heads",
+      "numeric_feature_version": "temporal-dynamics-v1",
+      "trainable_parameters": 102671,
+      "frozen_tensors_verified": 142,
+      "changed_parameters": [
+        "fault_head.weight",
+        "fault_head.bias",
+        "numeric_fault.0.weight",
+        "numeric_fault.0.bias",
+        "numeric_fault.2.weight",
+        "numeric_fault.2.bias",
+        "numeric_local_fault.0.weight",
+        "numeric_local_fault.0.bias",
+        "numeric_local_fault.2.weight",
+        "numeric_local_fault.2.bias"
+      ],
+      "changed_backbone_parameters": [],
+      "new_input_columns": [
+        {
+          "name": "numeric_root.0.weight",
+          "nonzero_weights": 0
+        },
+        {
+          "name": "numeric_fault.0.weight",
+          "nonzero_weights": 21742
+        },
+        {
+          "name": "numeric_local_fault.0.weight",
+          "nonzero_weights": 8960
+        }
+      ],
+      "cached_full_delta": 0.0,
+      "root_logits_delta": 0.0,
+      "source_hashes_and_git_snapshot_verified": true,
+      "checkpoint_and_selected_trainable_weights_verified": true
+    },
+    {
+      "artifact": "artifacts\\round12\\dynamics_joint\\frozen",
+      "steps": 902,
+      "best_steps": 22,
+      "head_training_policy": "all_heads",
+      "numeric_feature_version": "temporal-dynamics-v1",
+      "trainable_parameters": 410129,
+      "frozen_tensors_verified": 134,
+      "changed_parameters": [
+        "scorer.0.weight",
+        "scorer.0.bias",
+        "scorer.2.weight",
+        "scorer.2.bias",
+        "fault_head.weight",
+        "fault_head.bias",
+        "numeric_root.0.weight",
+        "numeric_root.0.bias",
+        "numeric_root.2.weight",
+        "numeric_root.2.bias",
+        "numeric_fault.0.weight",
+        "numeric_fault.0.bias",
+        "numeric_fault.2.weight",
+        "numeric_fault.2.bias",
+        "numeric_local_fault.0.weight",
+        "numeric_local_fault.0.bias",
+        "numeric_local_fault.2.weight",
+        "numeric_local_fault.2.bias"
+      ],
+      "changed_backbone_parameters": [],
+      "new_input_columns": [
+        {
+          "name": "numeric_root.0.weight",
+          "nonzero_weights": 4480
+        },
+        {
+          "name": "numeric_fault.0.weight",
+          "nonzero_weights": 21760
+        },
+        {
+          "name": "numeric_local_fault.0.weight",
+          "nonzero_weights": 8960
+        }
+      ],
+      "cached_full_delta": 0.0,
+      "root_logits_delta": 0.5242576599121094,
+      "source_hashes_and_git_snapshot_verified": true,
+      "checkpoint_and_selected_trainable_weights_verified": true
+    }
+  ],
+  "original_inputs_unchanged": true,
+  "training_source_revision": "2efebde78dd7819d87eebb5bb4feafc95e742f94",
+  "all_training_source_files_match_pretraining_commit": true,
+  "new_independent_cases": 0,
+  "new_backbone_sft": false,
+  "legacy_cpu_reload_max_abs_difference": 0.0,
+  "migration_full_cpu_max_abs_difference": 1.430511474609375e-06,
+  "migration_probe_train_run_ids": [
+    "ae7a55546bd239158a1c0f87",
+    "44b2ee08820479f9f251c02f",
+    "dc72fd144dc07825b95e9f8f",
+    "d0e4cdd03f963268b0b837e4",
+    "4b9bcfee80f9d6dd0a45ba4e",
+    "a5b9b34d974ceb23210c41e4"
+  ],
+  "raw_files_reverified": 400
+}

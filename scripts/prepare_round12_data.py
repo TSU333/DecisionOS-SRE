@@ -1,7 +1,7 @@
 """Derive fixed causal dynamics without modifying labels, partitions or legacy inputs."""
 from pathlib import Path
 from collections import Counter,defaultdict
-import copy,shutil
+import copy,shutil,argparse
 import pandas as pd
 from transformers import AutoTokenizer
 from decisionos_sre.common import read,save,file_hash,digest
@@ -9,9 +9,14 @@ from decisionos_sre.schema import TrainingExample
 from decisionos_sre.dynamics import dynamics_summary,VERSION,FIELDS
 from decisionos_sre.serializer import Serializer
 
-out=Path('outputs/round12');root=Path('data/round12');oldroot=Path('data/round5')
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--data-output',default='data/round12')
+parser.add_argument('--audit-output',default='outputs/round12')
+parser.add_argument('--parent',default='artifacts/round5/temporal_seed44/frozen')
+args=parser.parse_args()
+out=Path(args.audit_output);root=Path(args.data_output);oldroot=Path('data/round5')
 if (root/'examples.json').exists() or (out/'feature_spec.json').exists():raise FileExistsError('Feature preparation already sealed')
-parent=read('outputs/latest_model.json')['artifact'];meta=read(Path(parent)/'metadata.json');cfg=meta['config']
+parent=args.parent;meta=read(Path(parent)/'metadata.json');cfg=meta['config']
 assert file_hash(Path(parent)/'checkpoint.pt')=='461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423'
 original=read(oldroot/'examples.json');examples=copy.deepcopy(original);byid={e['opaque_incident_id']:e for e in examples};manifest=read(oldroot/'manifest.json');split=read(oldroot/'splits.json')
 assert len({e['original_run_id'] for e in examples})==400

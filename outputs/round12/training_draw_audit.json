@@ -1,0 +1,58 @@
+[
+  {
+    "artifact": "artifacts\\round12\\legacy_control\\frozen",
+    "total_draws": 13448,
+    "unique_train_cases": 164,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-OB": 3376,
+      "RE2-OB": 3331,
+      "RE2-SS": 3364,
+      "RE1-SS": 3377
+    },
+    "new_independent_cases": 0
+  },
+  {
+    "artifact": "artifacts\\round12\\dynamics_fault\\frozen",
+    "total_draws": 13448,
+    "unique_train_cases": 164,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-OB": 3376,
+      "RE2-OB": 3331,
+      "RE2-SS": 3364,
+      "RE1-SS": 3377
+    },
+    "new_independent_cases": 0
+  },
+  {
+    "artifact": "artifacts\\round12\\dynamics_drop15\\frozen",
+    "total_draws": 13448,
+    "unique_train_cases": 164,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-OB": 3376,
+      "RE2-OB": 3331,
+      "RE2-SS": 3364,
+      "RE1-SS": 3377
+    },
+    "new_independent_cases": 0
+  },
+  {
+    "artifact": "artifacts\\round12\\dynamics_joint\\frozen",
+    "total_draws": 13448,
+    "unique_train_cases": 164,
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "cohort_draws": {
+      "RE1-OB": 3376,
+      "RE2-OB": 3331,
+      "RE2-SS": 3364,
+      "RE1-SS": 3377
+    },
+    "new_independent_cases": 0
+  }
+]

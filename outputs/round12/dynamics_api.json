@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "artifact": "artifacts\\round12\\dynamics_fault\\frozen",
+  "checkpoint_sha256": "25b5b5d5047eb5b7d9f55c3dca7c1f08ea52e2c94259eb9fc80b233c19df4b3a",
+  "split": "model_validation",
+  "run_id": "7b17f011d5e858439a3dce7c",
+  "used_for_selection": false,
+  "calibration_or_policy_fit": false,
+  "cached_gpu_vs_http_cpu_probability_max_abs_difference": 5.2790771754018806e-11,
+  "checks": {
+    "normal": {
+      "destination": "REVIEW",
+      "routing_score": 0.9999851551429554,
+      "reason_codes": [
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY"
+      ]
+    },
+    "missing_dynamics": {
+      "destination": "REVIEW",
+      "routing_score": 0.9999856679781808,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY",
+        "NO_DYNAMICS_EVIDENCE"
+      ]
+    },
+    "missing_temporal": {
+      "destination": "REVIEW",
+      "routing_score": 0.999978793905542,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "MISSING_CALIBRATOR",
+        "MISSING_POLICY",
+        "NO_TEMPORAL_EVIDENCE"
+      ]
+    },
+    "future_timestamp": 422,
+    "reject_gold": 422
+  }
+}
