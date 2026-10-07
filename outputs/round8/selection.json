@@ -1,0 +1,502 @@
+{
+  "status": "frozen_before_round8_regression",
+  "timestamp_utc": "2026-10-07T09:19:19.999762+00:00",
+  "protocol_sha256": "18b117bcd3687d536565d97052d93f2cb7ddf093ca5f102117dcfc2e03962c39",
+  "selected": {
+    "artifact": "artifacts\\round8\\fault_drop30\\frozen",
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 0.0001591995182838941
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.95,
+        "nll": 0.2491909898901299,
+        "macro_f1": 0.9498039215686275,
+        "prediction_counts": {
+          "cpu_stress": 9,
+          "memory_stress": 8,
+          "disk_io_stress": 7,
+          "network_delay": 7,
+          "network_packet_loss": 9
+        }
+      },
+      "joint_accuracy": 0.95,
+      "sum_nll": 0.24935018940841377,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 0.9
+        }
+      },
+      "cohort_macro_joint": 0.9249999999999999
+    },
+    "rank": [
+      0,
+      -0.925,
+      -0.95,
+      0.24935018940841377
+    ],
+    "binding": {
+      "checkpoint_sha256": "13e262484ed850dcc824737057eb4d5d73e767e6c4c48c443f25fd4d88f39302",
+      "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+      "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "config_sha256": "b34e60ddc50395100c7f7ebe1f5af259f94f2304b88838a6db3a47f5baf19132",
+    "steps": 1067,
+    "best_epoch": 37,
+    "best_steps": 407,
+    "seconds": 50.33876359835267
+  },
+  "candidates": [
+    {
+      "artifact": "artifacts\\round8\\fault_ce\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.271238564354351,
+          "macro_f1": 0.9241083099906631,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 10,
+            "disk_io_stress": 6,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.2713977638726349,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8999999999999999
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.2713977638726349
+      ],
+      "binding": {
+        "checkpoint_sha256": "fd8ea740f5f18354c940be7e5798a7842c2842840415378cdb77e2ab695b3631",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "79aaf820b5a6e4b8b66ce88e2d16cde235a2ed415779ec09f301cdac0b4871ea",
+      "steps": 682,
+      "best_epoch": 2,
+      "best_steps": 22,
+      "seconds": 40.58837269991636
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_ce_ls\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.95,
+          "nll": 0.25596874707391004,
+          "macro_f1": 0.9498039215686275,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.95,
+        "sum_nll": 0.25612794659219396,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9249999999999999
+      },
+      "rank": [
+        0,
+        -0.925,
+        -0.95,
+        0.25612794659219396
+      ],
+      "binding": {
+        "checkpoint_sha256": "f06602543cc9541dc2ce762bccc5fac7eaf9a7873707d7d13fb14f1de4c947ec",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "ecb0a78d150dc966cbc48335624c21c2ac4556973ba06dd4d4d39a4d0874c1ed",
+      "steps": 682,
+      "best_epoch": 2,
+      "best_steps": 22,
+      "seconds": 43.14699759706855
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop15\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.95,
+          "nll": 0.25761669371044327,
+          "macro_f1": 0.9498039215686275,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.95,
+        "sum_nll": 0.2577758932287272,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9249999999999999
+      },
+      "rank": [
+        0,
+        -0.925,
+        -0.95,
+        0.2577758932287272
+      ],
+      "binding": {
+        "checkpoint_sha256": "ce2d66cdb568b8b28363081bdb335bc73d9f2c053f4a10cc5c53662637e469e1",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "e654f1a0dda03969e8994958cf6c329d6db2e1fd8cff27f540cbe8b60ac201a8",
+      "steps": 1001,
+      "best_epoch": 31,
+      "best_steps": 341,
+      "seconds": 48.44785960018635
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop15_ls\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.95,
+          "nll": 0.2500120438835664,
+          "macro_f1": 0.9498039215686275,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.95,
+        "sum_nll": 0.2501712434018503,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9249999999999999
+      },
+      "rank": [
+        0,
+        -0.925,
+        -0.95,
+        0.2501712434018503
+      ],
+      "binding": {
+        "checkpoint_sha256": "959406b7d466bf711d5e829ae2ad9193229378fd84b1582b4e54ff1fccb7b640",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "3b7434b423a84f0bb5622b265b6ac809cfa8e578fef2b98b674befdf8ec84fa7",
+      "steps": 682,
+      "best_epoch": 2,
+      "best_steps": 22,
+      "seconds": 45.755141101777554
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop30\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.95,
+          "nll": 0.2491909898901299,
+          "macro_f1": 0.9498039215686275,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.95,
+        "sum_nll": 0.24935018940841377,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9249999999999999
+      },
+      "rank": [
+        0,
+        -0.925,
+        -0.95,
+        0.24935018940841377
+      ],
+      "binding": {
+        "checkpoint_sha256": "13e262484ed850dcc824737057eb4d5d73e767e6c4c48c443f25fd4d88f39302",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "b34e60ddc50395100c7f7ebe1f5af259f94f2304b88838a6db3a47f5baf19132",
+      "steps": 1067,
+      "best_epoch": 37,
+      "best_steps": 407,
+      "seconds": 50.33876359835267
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop30_ls\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001591995182838941
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.95,
+          "nll": 0.26078433383627997,
+          "macro_f1": 0.9498039215686275,
+          "prediction_counts": {
+            "cpu_stress": 9,
+            "memory_stress": 8,
+            "disk_io_stress": 7,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.95,
+        "sum_nll": 0.2609435333545639,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.9
+          }
+        },
+        "cohort_macro_joint": 0.9249999999999999
+      },
+      "rank": [
+        0,
+        -0.925,
+        -0.95,
+        0.2609435333545639
+      ],
+      "binding": {
+        "checkpoint_sha256": "b390d649b95df01f6bc595c78d0b252673505d1c62164f55721124bdfda0fb57",
+        "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "9dc159ec7857d5a503af226fdfd2d164a1045dbedb4a39c9352fcb40306ac62a",
+      "steps": 693,
+      "best_epoch": 3,
+      "best_steps": 33,
+      "seconds": 47.54012760147452
+    }
+  ],
+  "incumbent": {
+    "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
+    "rank": [
+      0,
+      -0.9,
+      -0.925,
+      0.2592285034613516
+    ],
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 0.0001591995182838941
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.925,
+        "nll": 0.2590693039430677,
+        "macro_f1": 0.9228011204481794,
+        "prediction_counts": {
+          "cpu_stress": 9,
+          "memory_stress": 9,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 9
+        }
+      },
+      "joint_accuracy": 0.925,
+      "sum_nll": 0.2592285034613516,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8999999999999999
+    },
+    "binding": {
+      "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+      "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+      "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    }
+  },
+  "promote_by_validation": true,
+  "no_fresh_test": true,
+  "no_further_tuning": true,
+  "note": "Selected challenger evaluated even if incumbent retained; promotion decided from validation before regression/calibration/gate."
+}

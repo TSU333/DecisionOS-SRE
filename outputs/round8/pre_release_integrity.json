@@ -1,0 +1,6 @@
+{
+  "active_model_unchanged_during_evaluation": true,
+  "active_model": "artifacts\\round5\\temporal_seed44\\frozen",
+  "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "dependency_check": "No broken requirements found."
+}

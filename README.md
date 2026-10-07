@@ -2,13 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第六轮结果见 `docs/round6_results.md`，机器报告 `outputs/round6/results.json`，验收 `outputs/round6/status.json`。本轮候选未优于第五轮，默认模型仍为 `artifacts/round5/temporal_seed44/frozen`，统一入口 `outputs/latest_model.json`。所有旧模型保留，execution_scope 仍为 mvp。
+最新第八轮结果见 `docs/round8_results.md`，机器报告 `outputs/round8/results.json`，验收 `outputs/round8/status.json`。新候选触发回归保护，默认仍保留第五轮模型，统一入口为 `outputs/latest_model.json`。全部历史模型保留，execution_scope 仍为 mvp。
 
-本轮为75个已有RE2-OB案例补充调用链证据，完成4组真实诊断头续训、5005次更新，以及8组轻量基线拟合。四个神经候选验证联合准确率均为92.5%，但NLL比现任更差；轻量基线均为87.5%。按训练前冻结的选择规则拒绝晋升。数据仍为原有400个案例，没有新独立测试，也没有进行新的主干SFT。
+本轮固定共享主干和根因分支，只训练66,831个故障头参数，比较6组Dropout/标签平滑方案，实际完成 4807 次更新。候选验证联合准确率从92.5%提高到95.0%，但历史回归必须同时满足预设的不退步保护。数据仍为原400个案例，没有新独立测试；未进行新的主干SFT。
 
-当前默认模型的历史回归结果保持：Sock Shop（30条）根因96.7%、故障96.7%、联合93.3%；Online Boutique RE2（25条）96% / 80% / 76%。工程MVP已完成，但诊断质量尚未达到全部工作目标。第五轮gate集接受36条、错1条（2.78%），OB RE2历史回归接受7条、错1条（14.3%），自动接受风险没有得到新的独立确认；系统不执行运维动作。
+本轮选中候选的历史回归联合准确率：Online Boutique RE2为72.0%，Sock Shop为90.0%。第五轮对应为76%和93.3%；本轮发布决定详见报告，不能把验证集上的提高直接称为泛化增强。原始MVP工程流程已完成，整体质量和自动接受风险仍缺独立确认。
 
-第六轮41项测试及调用链实验候选的真实HTTP、CPU重载通过。调用链候选OB RE2联合准确率为72%，低于现任76%，没有用于默认服务。其含调用链输入CPU P95为1583.2 ms；第五轮853.3 ms来自不同SS输入，不能据此作直接速度比较。完整负结果、数据来源审计及后续缺口均已记录。
+50项测试及候选的真实HTTP、CPU重载通过，所有冻结权重与父模型精确相同。候选CPU端到端P95为849.1ms，输入为与第五轮相同的3个SS案例。系统只输出诊断与REVIEW/ACCEPT_DIAGNOSIS，不执行运维动作。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE

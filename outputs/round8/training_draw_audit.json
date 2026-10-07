@@ -1,0 +1,80 @@
+[
+  {
+    "artifact": "artifacts\\round8\\fault_ce\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 10230,
+    "cohort_draws": {
+      "RE2-OB": 2573,
+      "RE1-OB": 2533,
+      "RE1-SS": 2575,
+      "RE2-SS": 2549
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 330
+  },
+  {
+    "artifact": "artifacts\\round8\\fault_ce_ls\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 10230,
+    "cohort_draws": {
+      "RE2-OB": 2573,
+      "RE1-OB": 2533,
+      "RE1-SS": 2575,
+      "RE2-SS": 2549
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 330
+  },
+  {
+    "artifact": "artifacts\\round8\\fault_drop15\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 15015,
+    "cohort_draws": {
+      "RE2-OB": 3799,
+      "RE1-OB": 3714,
+      "RE1-SS": 3749,
+      "RE2-SS": 3753
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 5115
+  },
+  {
+    "artifact": "artifacts\\round8\\fault_drop15_ls\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 10230,
+    "cohort_draws": {
+      "RE2-OB": 2573,
+      "RE1-OB": 2533,
+      "RE1-SS": 2575,
+      "RE2-SS": 2549
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 330
+  },
+  {
+    "artifact": "artifacts\\round8\\fault_drop30\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 16005,
+    "cohort_draws": {
+      "RE2-OB": 4046,
+      "RE1-OB": 3975,
+      "RE1-SS": 3993,
+      "RE2-SS": 3991
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 6105
+  },
+  {
+    "artifact": "artifacts\\round8\\fault_drop30_ls\\frozen",
+    "unique_train_cases": 165,
+    "total_draws": 10395,
+    "cohort_draws": {
+      "RE2-OB": 2623,
+      "RE1-OB": 2576,
+      "RE1-SS": 2608,
+      "RE2-SS": 2588
+    },
+    "outside_train": 0,
+    "checkpoint_draws": 495
+  }
+]

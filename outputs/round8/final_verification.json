@@ -1,0 +1,11 @@
+{
+  "active_pointer_and_checkpoint_unchanged": true,
+  "active_checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "candidate_artifact_files_verified": 33,
+  "training_source_hashes_verified": true,
+  "same_benchmark_cases_as_round5": true,
+  "tests_passed": 50,
+  "http_verified": true,
+  "dependency_check": "No broken requirements found.",
+  "new_independent_test": false
+}

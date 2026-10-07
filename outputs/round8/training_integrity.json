@@ -1,0 +1,67 @@
+{
+  "candidates": [
+    {
+      "artifact": "artifacts\\round8\\fault_ce\\frozen",
+      "steps": 682,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_ce_ls\\frozen",
+      "steps": 682,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop15\\frozen",
+      "steps": 1001,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop15_ls\\frozen",
+      "steps": 682,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop30\\frozen",
+      "steps": 1067,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    },
+    {
+      "artifact": "artifacts\\round8\\fault_drop30_ls\\frozen",
+      "steps": 693,
+      "trainable_parameters": 66831,
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "dropout_hooks_removed": true
+    }
+  ],
+  "total_actual_updates": 4807,
+  "all_passed": true,
+  "independent_validation": false
+}
