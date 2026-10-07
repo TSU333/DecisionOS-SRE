@@ -2,11 +2,13 @@
 
 研究型结构化诊断 MVP。共享 ModernBERT encoder 输出动态候选根因与五类故障；独立校准与 policy 决定 ACCEPT_DIAGNOSIS / REVIEW。不执行运维操作。
 
-最新第五轮结果见 `docs/round5_results.md`，机器报告 `outputs/round5/results.json`，验收 `outputs/round5/status.json`。选中模型 `artifacts/round5/temporal_seed44/frozen`，统一入口 `outputs/latest_model.json`。旧模型和各轮结果均保留，execution_scope 仍为 mvp。
+最新第六轮结果见 `docs/round6_results.md`，机器报告 `outputs/round6/results.json`，验收 `outputs/round6/status.json`。本轮候选未优于第五轮，默认模型仍为 `artifacts/round5/temporal_seed44/frozen`，统一入口 `outputs/latest_model.json`。所有旧模型保留，execution_scope 仍为 mvp。
 
-本轮补充因果时间特征，完成 4 组真实训练、7397 次更新。数据仍为原有 400 个案例，没有新的独立测试集。Sock Shop 历史回归（30条）：根因 96.7%、故障 96.7%、联合 93.3%，联合从 86.7% 上升。Online Boutique RE2 历史回归（25条）仍为 96% / 80% / 76%，没有提高，仍未达到全部工作目标；不能宣称新的泛化确认。
+本轮为75个已有RE2-OB案例补充调用链证据，完成4组真实诊断头续训、5005次更新，以及8组轻量基线拟合。四个神经候选验证联合准确率均为92.5%，但NLL比现任更差；轻量基线均为87.5%。按训练前冻结的选择规则拒绝晋升。数据仍为原有400个案例，没有新独立测试，也没有进行新的主干SFT。
 
-门控集经验阈值接受 36 条、错 1 条（2.78%），满足原 5% / 至少30条约束；但 OB RE2 历史回归接受7条、错1条（14.3%）。因此自动接受风险仍未得到独立验证，冻结策略属于实验诊断产物。缺少时间证据、未知应用等仍 REVIEW。35 项测试、真实 HTTP 和 CPU 重载通过，重载 logits 最大差 0；CPU 端到端 P95 853.3 ms。
+当前默认模型的历史回归结果保持：Sock Shop（30条）根因96.7%、故障96.7%、联合93.3%；Online Boutique RE2（25条）96% / 80% / 76%。工程MVP已完成，但诊断质量尚未达到全部工作目标。第五轮gate集接受36条、错1条（2.78%），OB RE2历史回归接受7条、错1条（14.3%），自动接受风险没有得到新的独立确认；系统不执行运维动作。
+
+第六轮41项测试及调用链实验候选的真实HTTP、CPU重载通过。调用链候选OB RE2联合准确率为72%，低于现任76%，没有用于默认服务。其含调用链输入CPU P95为1583.2 ms；第五轮853.3 ms来自不同SS输入，不能据此作直接速度比较。完整负结果、数据来源审计及后续缺口均已记录。
 
 ```powershell
 Set-Location D:/CODEX/DecisionOS-SRE
@@ -56,7 +58,7 @@ $python = '.\work\.venv\Scripts\python.exe'
 已有 checkpoint 不会被 train 静默覆盖。重新实验应复制配置、换新的 artifact_root，并把 `--config 路径` 放在子命令之前。测试集一旦打开，禁止用其结果选模型或修改阈值；代码缺陷修正须记录后重新标记评测历史。
 
 ## API
-只监听 127.0.0.1。GET /health 判断进程存活，GET /ready 检查模型加载。POST /v1/decide 仅接受 IncidentInput；训练标签、路径等额外字段为 422。缺 checkpoint 为 503，不回退随机模型。候选超预算返回 REVIEW 和明确原因，两个任务不伪造概率。当前 API 只支持 metrics summary；logs、traces 等模态保持 null。
+只监听 127.0.0.1。GET /health 判断进程存活，GET /ready 检查模型加载。POST /v1/decide 仅接受 IncidentInput；训练标签、路径等额外字段为 422。缺 checkpoint 为 503，不回退随机模型。候选超预算返回 REVIEW 和明确原因，两个任务不伪造概率。API 支持指标摘要及可选 `evidence.traces` 服务摘要；调用链特征仅由显式启用的第六轮实验模型使用，默认第五轮模型仍只使用指标。logs 尚未接入。调用链原始数据需通过 `decisionos_sre.traces.summarize_traces` 按决策时间汇总；不能直接传入原始 span。
 
 准备数据后可从 examples.json 取出某条 `input` 保存为请求；不发送整个 TrainingExample。每个 metric 包含服务、原始指标名、基线均值、观测均值、变化 z 值、缺失比例和观测截止时点。汇总公式和时间边界必须与 adapter 一致。
 

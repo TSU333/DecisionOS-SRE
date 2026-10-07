@@ -1,0 +1,8 @@
+{
+  "scope": "MVP lightweight classifier baseline diagnosis before integrating any new head",
+  "data": "data/round6, TRAIN165 / validation40 only",
+  "root_features": "fifth-round numeric root head only, no gold root input; root-weighted numerical evidence plus global min/max/mean. Existing text root path is not included in this diagnostic.",
+  "models": "ExtraTreesClassifier 256 trees, max_features .5, seed42; max_depth 8 or None, min_samples_leaf 1 or 2; metrics-only or metrics+traces =8 candidates",
+  "selection": "same validation cohort retention + joint + NLL; report diagnostic only, no gate/calibration/regression opened",
+  "no_new_cases": true
+}

@@ -1,0 +1,8 @@
+{
+  "diagnostic_only": true,
+  "experiments": 8,
+  "validation_joint_accuracy": 0.875,
+  "promoted": false,
+  "reason": "Below incumbent validation; no calibration, gate or regression evaluation",
+  "report": "docs/round6_results.md"
+}

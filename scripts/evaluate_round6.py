@@ -7,10 +7,13 @@ from decisionos_sre.pipeline import calibrate,policy,evaluate,benchmark,finish_r
 from decisionos_sre.training import load_checkpoint,predict,prediction_summary
 from decisionos_sre.data import load_split
 
-out=Path('outputs/round6');selection=read(out/'selection.json');folder=Path(selection['selected']['artifact'])
+out=Path('outputs/round6');selection=read(out/'selection.json')
+trace_candidate=min([c for c in selection['candidates'] if read(Path(c['artifact'])/'metadata.json')['config'].get('trace_features')],key=lambda c:c['rank'])
+folder=Path(trace_candidate['artifact'])
+save(out/'evaluation_selection.json',{'artifact':str(folder),'candidate':trace_candidate,'role':'best trace branch by frozen validation; engineering evaluation only; all round6 candidates rejected for promotion'})
 assert file_hash(out/'protocol.json')==selection['protocol_sha256']
 meta=read(folder/'metadata.json');cfg=meta['config']
-assert file_hash(folder/'checkpoint.pt')==selection['selected']['binding']['checkpoint_sha256']
+assert file_hash(folder/'checkpoint.pt')==trace_candidate['binding']['checkpoint_sha256']
 assert all(file_hash(p)==sha for p,sha in meta['code_state']['source_hashes'].items())
 print('CALIBRATION CPU START',flush=True);cal=calibrate(folder,'cpu');print('CALIBRATION DONE',[(h,cal[h]['temperature']) for h in ['root','fault']],flush=True)
 print('GATE CPU START',flush=True);pol=policy(folder,'cpu');print('GATE DONE',pol['status'],pol['selection'],flush=True)
@@ -51,7 +54,8 @@ if cfg.get('trace_features'):
         m=write_evaluation(finish_rows(rr,cal,pol,meta['binding']),out/(variant+'_ob'))
         print(variant+'_ob',m['root']['acc_at_1'],m['fault']['accuracy'],m['joint_accuracy'],flush=True)
 del model,tok,ser;gc.collect()
-print('BENCHMARK CPU START',flush=True);bench=benchmark(folder,cfg);print('BENCHMARK DONE P95',bench['end_to_end']['p95_ms'],flush=True)
+benchmark_cfg={**cfg,'evaluation_split':'regression_re2_ob'};save(out/'benchmark_config.json',benchmark_cfg)
+print('BENCHMARK CPU START (trace-containing OB cases)',flush=True);bench=benchmark(folder,benchmark_cfg);print('BENCHMARK DONE P95',bench['end_to_end']['p95_ms'],flush=True)
 subprocess.run([sys.executable,'scripts/verify_integration.py',str(folder)],check=True)
 audits=[]
 train=load_split(cfg['data_dir'],'train');byid={e.original_run_id:e.source_metadata['dataset_suite'] for e in train}

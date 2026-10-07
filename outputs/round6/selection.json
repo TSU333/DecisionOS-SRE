@@ -1,0 +1,378 @@
+{
+  "status": "frozen_before_round6_regression",
+  "timestamp_utc": "2026-10-07T08:36:51.230589+00:00",
+  "protocol_sha256": "580405879fd8204d05e4564dad9682ecd843e2335c83e103da7898ce796a461f",
+  "selected": {
+    "artifact": "artifacts\\round6\\metrics_control\\frozen",
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 8.724994729125715e-05
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.925,
+        "nll": 0.2627903064606262,
+        "macro_f1": 0.9241083099906631,
+        "prediction_counts": {
+          "cpu_stress": 8,
+          "memory_stress": 10,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 9
+        }
+      },
+      "joint_accuracy": 0.925,
+      "sum_nll": 0.26287755640791743,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8999999999999999
+    },
+    "rank": [
+      0,
+      -0.9,
+      -0.925,
+      0.26287755640791743
+    ],
+    "binding": {
+      "checkpoint_sha256": "e2cacb7fd3031b806a15887480fcfe33ea42412c102e2fe466deb59dfc914158",
+      "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+      "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "config_sha256": "0efa6cbd35a7f45e96aeed4e6e14cb6bb4f5a611f9414f06bf9dcd6e2871cb32",
+    "steps": 1056,
+    "best_epoch": 26,
+    "best_steps": 286,
+    "seconds": 46.09904420003295
+  },
+  "candidates": [
+    {
+      "artifact": "artifacts\\round6\\metrics_control\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 8.724994729125715e-05
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.2627903064606262,
+          "macro_f1": 0.9241083099906631,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 10,
+            "disk_io_stress": 6,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.26287755640791743,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8999999999999999
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.26287755640791743
+      ],
+      "binding": {
+        "checkpoint_sha256": "e2cacb7fd3031b806a15887480fcfe33ea42412c102e2fe466deb59dfc914158",
+        "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+        "pipeline_hash": "1dec0e85806f448479597c0f20f382d04737db857dccc7678ee9400cb3632897",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "0efa6cbd35a7f45e96aeed4e6e14cb6bb4f5a611f9414f06bf9dcd6e2871cb32",
+      "steps": 1056,
+      "best_epoch": 26,
+      "best_steps": 286,
+      "seconds": 46.09904420003295
+    },
+    {
+      "artifact": "artifacts\\round6\\trace_seed42\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001797625384064644
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.3133150723945014,
+          "macro_f1": 0.9241083099906631,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 10,
+            "disk_io_stress": 6,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.31349483493290786,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8999999999999999
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.31349483493290786
+      ],
+      "binding": {
+        "checkpoint_sha256": "2558136b92b3eabc7fd69b3edeef6afacc503deda6674b9fdd3c4f379f476e1f",
+        "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+        "pipeline_hash": "fa6a05414a12010f46d1b60d81b8c5833564a654ca74c4fba4eb880512ec6bf6",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "9442fec95f40b3e10db4ec655b3e766f863b7fdf709f9f9ef7146d6f14602953",
+      "steps": 1606,
+      "best_epoch": 76,
+      "best_steps": 836,
+      "seconds": 57.19394529983401
+    },
+    {
+      "artifact": "artifacts\\round6\\trace_seed43\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.00017141784647374411
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.30852599234392714,
+          "macro_f1": 0.9241083099906631,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 10,
+            "disk_io_stress": 6,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.30869741019040087,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8999999999999999
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.30869741019040087
+      ],
+      "binding": {
+        "checkpoint_sha256": "21142288651881f5c2e8f48721bc2776f90f0e13dbae68212bd0e2f1ed1747f5",
+        "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+        "pipeline_hash": "fa6a05414a12010f46d1b60d81b8c5833564a654ca74c4fba4eb880512ec6bf6",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "90b5671e13794205118470500658e58279587829dc60219f73f7235dafa492c7",
+      "steps": 1177,
+      "best_epoch": 37,
+      "best_steps": 407,
+      "seconds": 53.9538938999176
+    },
+    {
+      "artifact": "artifacts\\round6\\trace_seed44\\frozen",
+      "validation": {
+        "root": {
+          "n": 40,
+          "accuracy": 1.0,
+          "nll": 0.0001652646378844891
+        },
+        "fault": {
+          "n": 40,
+          "accuracy": 0.925,
+          "nll": 0.3043241901029953,
+          "macro_f1": 0.9241083099906631,
+          "prediction_counts": {
+            "cpu_stress": 8,
+            "memory_stress": 10,
+            "disk_io_stress": 6,
+            "network_delay": 7,
+            "network_packet_loss": 9
+          }
+        },
+        "joint_accuracy": 0.925,
+        "sum_nll": 0.30448945474087974,
+        "cohorts": {
+          "RE1-OB": {
+            "n": 15,
+            "joint_accuracy": 1.0
+          },
+          "RE1-SS": {
+            "n": 10,
+            "joint_accuracy": 1.0
+          },
+          "RE2-OB": {
+            "n": 5,
+            "joint_accuracy": 0.8
+          },
+          "RE2-SS": {
+            "n": 10,
+            "joint_accuracy": 0.8
+          }
+        },
+        "cohort_macro_joint": 0.8999999999999999
+      },
+      "rank": [
+        0,
+        -0.9,
+        -0.925,
+        0.30448945474087974
+      ],
+      "binding": {
+        "checkpoint_sha256": "05062b636ea823ef10da0a8adeb9d883f00f07e6d10090525beceef458191b82",
+        "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+        "pipeline_hash": "fa6a05414a12010f46d1b60d81b8c5833564a654ca74c4fba4eb880512ec6bf6",
+        "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+        "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+      },
+      "config_sha256": "f8dde3b279b5877e2f988da5558eec032e9cdeca2c7fcabd3318cf5fbf004133",
+      "steps": 1166,
+      "best_epoch": 36,
+      "best_steps": 396,
+      "seconds": 55.014607802033424
+    }
+  ],
+  "incumbent": {
+    "artifact": "artifacts\\round5\\temporal_seed44\\frozen",
+    "rank": [
+      0,
+      -0.9,
+      -0.925,
+      0.2592285034613516
+    ],
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 0.0001591995182838941
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.925,
+        "nll": 0.2590693039430677,
+        "macro_f1": 0.9228011204481794,
+        "prediction_counts": {
+          "cpu_stress": 9,
+          "memory_stress": 9,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 9
+        }
+      },
+      "joint_accuracy": 0.925,
+      "sum_nll": 0.2592285034613516,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8999999999999999
+    },
+    "binding": {
+      "checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+      "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+      "pipeline_hash": "cb2b7651e54b21f5b315e0250eb80d7abb00ee8ef8f954d289b360b7f5f0a047",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    }
+  },
+  "promote_by_validation": false,
+  "no_fresh_test": true,
+  "no_further_tuning": true,
+  "note": "Selected challenger evaluated even if incumbent retained; promotion decided from validation before regression/calibration/gate."
+}

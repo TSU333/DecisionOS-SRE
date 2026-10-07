@@ -1,0 +1,66 @@
+{
+  "artifact": "artifacts\\round6\\trace_seed44\\frozen",
+  "candidate": {
+    "artifact": "artifacts\\round6\\trace_seed44\\frozen",
+    "validation": {
+      "root": {
+        "n": 40,
+        "accuracy": 1.0,
+        "nll": 0.0001652646378844891
+      },
+      "fault": {
+        "n": 40,
+        "accuracy": 0.925,
+        "nll": 0.3043241901029953,
+        "macro_f1": 0.9241083099906631,
+        "prediction_counts": {
+          "cpu_stress": 8,
+          "memory_stress": 10,
+          "disk_io_stress": 6,
+          "network_delay": 7,
+          "network_packet_loss": 9
+        }
+      },
+      "joint_accuracy": 0.925,
+      "sum_nll": 0.30448945474087974,
+      "cohorts": {
+        "RE1-OB": {
+          "n": 15,
+          "joint_accuracy": 1.0
+        },
+        "RE1-SS": {
+          "n": 10,
+          "joint_accuracy": 1.0
+        },
+        "RE2-OB": {
+          "n": 5,
+          "joint_accuracy": 0.8
+        },
+        "RE2-SS": {
+          "n": 10,
+          "joint_accuracy": 0.8
+        }
+      },
+      "cohort_macro_joint": 0.8999999999999999
+    },
+    "rank": [
+      0,
+      -0.9,
+      -0.925,
+      0.30448945474087974
+    ],
+    "binding": {
+      "checkpoint_sha256": "05062b636ea823ef10da0a8adeb9d883f00f07e6d10090525beceef458191b82",
+      "split_hash": "4350961a4130838e505d619da756d0fad26ddb128d58a430441ea0358b1e0f26",
+      "pipeline_hash": "fa6a05414a12010f46d1b60d81b8c5833564a654ca74c4fba4eb880512ec6bf6",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "config_sha256": "f8dde3b279b5877e2f988da5558eec032e9cdeca2c7fcabd3318cf5fbf004133",
+    "steps": 1166,
+    "best_epoch": 36,
+    "best_steps": 396,
+    "seconds": 55.014607802033424
+  },
+  "role": "best trace branch by frozen validation; engineering evaluation only; all round6 candidates rejected for promotion"
+}

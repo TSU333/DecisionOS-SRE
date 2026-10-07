@@ -1,0 +1,219 @@
+{
+  "status": "experiment_completed",
+  "reload_max_abs_logit_diff": 0.0,
+  "http": {
+    "health": 200,
+    "ready": 200,
+    "decide": 200,
+    "decision": {
+      "root_cause": {
+        "selected": "carts",
+        "probabilities": {
+          "carts": 0.9638225770727964,
+          "front-end": 0.009864510566287543,
+          "catalogue": 0.014120468467382305,
+          "orders": 0.0008011217785826511,
+          "carts-db": 0.0022519219089812406,
+          "user-db": 0.0007988716742640907,
+          "orders-db": 0.00023722835149731685,
+          "shipping": 0.00017604472117103826,
+          "user": 0.004227898690855072,
+          "payment": 0.0009236987031081273,
+          "rabbitmq": 0.0005712801585707326,
+          "queue-master": 0.00014213147610593786,
+          "session-db": 0.0005390577107968168,
+          "rabbitmq-exporter": 0.00029845897295478085,
+          "catalogue-db": 0.0012247297466455717
+        },
+        "confidence": 0.9638225770727964,
+        "calibration_status": "fitted"
+      },
+      "fault_type": {
+        "selected": "cpu_stress",
+        "probabilities": {
+          "cpu_stress": 0.6112596482319473,
+          "memory_stress": 0.006804995106770461,
+          "disk_io_stress": 0.2863243377158828,
+          "network_delay": 0.015568855126021604,
+          "network_packet_loss": 0.08004216381937793
+        },
+        "confidence": 0.6112596482319473,
+        "calibration_status": "fitted"
+      },
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.6112596482319473,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      },
+      "versions": {
+        "model": "05062b636ea823ef10da0a8adeb9d883f00f07e6d10090525beceef458191b82",
+        "serializer": "metrics-canonical-v2",
+        "ontology": "e465bdcb3f6073a4e39311081b7e125f850e341ca339d1e1fae986d8a07806ae",
+        "calibration": "6f63f1f28480c7bec1b26f001d61bd812b44395342e1cc09ffeddc1195fb2a3e",
+        "policy": "b882e5513c7191079fc81d4787f5768ac15fb12f051ea4e4469fe1e407ddc792"
+      },
+      "evidence_status": {
+        "serializer_version": "metrics-canonical-v2",
+        "tokens": 1313,
+        "candidate_count": 15,
+        "usable_metrics_retained": 59,
+        "metrics_total": 59,
+        "metrics_retained": 59,
+        "retained_fraction": 1.0,
+        "retained_metric_keys": [
+          "carts/latency-90",
+          "carts/latency-50",
+          "carts/cpu",
+          "front-end/latency-50",
+          "carts/mem",
+          "front-end/latency-90",
+          "catalogue/mem",
+          "orders/latency-50",
+          "orders/latency-90",
+          "carts-db/mem",
+          "user-db/mem",
+          "carts-db/cpu",
+          "orders-db/mem",
+          "shipping/latency-50",
+          "shipping/latency-90",
+          "catalogue/latency-90",
+          "user/latency-50",
+          "catalogue/latency-50",
+          "user/latency-90",
+          "user/mem",
+          "payment/mem",
+          "payment/latency-50",
+          "front-end/cpu",
+          "orders/cpu",
+          "orders-db/cpu",
+          "rabbitmq/cpu",
+          "queue-master/cpu",
+          "front-end/mem",
+          "shipping/cpu",
+          "session-db/cpu",
+          "queue-master/latency-90",
+          "orders/mem",
+          "shipping/mem",
+          "user-db/cpu",
+          "queue-master/latency-50",
+          "queue-master/mem",
+          "payment/latency-90",
+          "rabbitmq-exporter/cpu",
+          "orders/workload",
+          "payment/workload",
+          "queue-master/workload",
+          "catalogue/cpu",
+          "front-end/workload",
+          "rabbitmq/mem",
+          "shipping/workload",
+          "catalogue-db/cpu",
+          "session-db/mem",
+          "payment/cpu",
+          "user/workload",
+          "carts/workload",
+          "catalogue/workload",
+          "user/cpu",
+          "carts/error",
+          "front-end/error",
+          "orders/error",
+          "shipping/error",
+          "queue-master/error",
+          "rabbitmq-exporter/mem",
+          "catalogue-db/mem"
+        ],
+        "truncated": false,
+        "missing_modalities": [
+          "logs",
+          "traces",
+          "topology",
+          "deployment_context"
+        ],
+        "token_budgets": {
+          "max": 2048,
+          "candidate_reservation": true,
+          "logs": 0,
+          "traces": "remaining budget after metrics; complete summaries only"
+        },
+        "absolute_timestamps_serialized": false,
+        "service_names_serialized": false,
+        "candidate_order": "observable metric signature",
+        "numeric_metrics": [
+          "cpu",
+          "diskio",
+          "error",
+          "latency",
+          "latency-50",
+          "latency-90",
+          "load",
+          "mem",
+          "socket",
+          "workload"
+        ],
+        "numeric_evidence_scope": "retained metrics only",
+        "descriptions_serialized": false,
+        "numeric_feature_version": "temporal-v1",
+        "temporal_metrics_retained": 59,
+        "numeric_evidence_usable": true,
+        "trace_summaries_total": 0,
+        "trace_summaries_retained": 0,
+        "trace_services_retained": [],
+        "trace_feature_version": "service-trace-v1",
+        "modality_evidence_usable": true
+      },
+      "timings_ms": {
+        "serialization_tokenization": 12.097101658582687,
+        "model": 976.3402007520199,
+        "end_to_end": 993.5126006603241
+      },
+      "execute_remediation": false
+    },
+    "missing_temporal": {
+      "destination": "REVIEW",
+      "routing_score": 0.46034578643407653,
+      "reason_codes": [
+        "NO_USABLE_EVIDENCE",
+        "BELOW_THRESHOLD",
+        "NO_TEMPORAL_EVIDENCE"
+      ]
+    },
+    "trace_decide": {
+      "status": 200,
+      "trace_summaries_retained": 6,
+      "routing": {
+        "destination": "ACCEPT_DIAGNOSIS",
+        "routing_score": 0.940576741063349,
+        "reason_codes": [
+          "THRESHOLD_PASSED"
+        ]
+      }
+    },
+    "future_trace": 422,
+    "reject_gold": 422,
+    "single_candidate": {
+      "destination": "REVIEW",
+      "routing_score": 0.6202774559095133,
+      "reason_codes": [
+        "SINGLE_CANDIDATE",
+        "BELOW_THRESHOLD"
+      ]
+    },
+    "candidate_overflow": {
+      "destination": "REVIEW",
+      "routing_score": null,
+      "reason_codes": [
+        "CANDIDATES_EXCEED_TOKEN_BUDGET"
+      ]
+    },
+    "unvalidated_application": {
+      "destination": "REVIEW",
+      "routing_score": 0.6147254609314867,
+      "reason_codes": [
+        "BELOW_THRESHOLD",
+        "UNVALIDATED_APPLICATION"
+      ]
+    },
+    "empty_candidates": 422
+  }
+}

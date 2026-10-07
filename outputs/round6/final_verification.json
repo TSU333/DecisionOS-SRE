@@ -1,0 +1,22 @@
+{
+  "active_model_unchanged": true,
+  "experimental_artifact_files_verified": 33,
+  "training_source_hashes_verified": true,
+  "tests_passed": 41,
+  "http_checks": [
+    "health",
+    "ready",
+    "decide",
+    "decision",
+    "missing_temporal",
+    "trace_decide",
+    "future_trace",
+    "reject_gold",
+    "single_candidate",
+    "candidate_overflow",
+    "unvalidated_application",
+    "empty_candidates"
+  ],
+  "dependency_check": "No broken requirements found.",
+  "independent_confirmation": "not_run"
+}
