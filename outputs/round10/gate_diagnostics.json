@@ -1,0 +1,168 @@
+{
+  "summary": {
+    "root": {
+      "n": 85,
+      "accuracy": 0.9411764705882353,
+      "nll": 0.44362130250851933
+    },
+    "fault": {
+      "n": 85,
+      "accuracy": 0.8705882352941177,
+      "nll": 0.5988371487007038,
+      "macro_f1": 0.8699277605779153,
+      "prediction_counts": {
+        "cpu_stress": 17,
+        "memory_stress": 17,
+        "disk_io_stress": 17,
+        "network_delay": 21,
+        "network_packet_loss": 13
+      }
+    },
+    "joint_accuracy": 0.8117647058823529,
+    "sum_nll": 1.0424584512092232,
+    "cohorts": {
+      "RE1-OB": {
+        "n": 30,
+        "joint_accuracy": 0.9666666666666667
+      },
+      "RE1-SS": {
+        "n": 15,
+        "joint_accuracy": 0.9333333333333333
+      },
+      "RE2-OB": {
+        "n": 25,
+        "joint_accuracy": 0.64
+      },
+      "RE2-SS": {
+        "n": 15,
+        "joint_accuracy": 0.6666666666666666
+      }
+    },
+    "cohort_macro_joint": 0.8016666666666666
+  },
+  "best_observed_risk_with_at_least_30": {
+    "threshold": 0.9072921459733929,
+    "n": 35,
+    "errors": 0,
+    "risk": 0.0
+  },
+  "constraint": {
+    "risk": 0.05,
+    "n": 30
+  },
+  "policy": {
+    "binding": {
+      "checkpoint_sha256": "8b265e5f975783400089612cb9f04ec354fd855f271d3e144589b58094b4473c",
+      "split_hash": "7067334f3de6006195df4aa0d91cd72413aaa551712558e91f1d6d16c8435dd6",
+      "pipeline_hash": "9dbeaf59ce100c649238718d9899032fc983f816e4250886592d7785e258b02f",
+      "tokenizer_sha256": "6c8aaa9a542084f2457eab775d4eeb51f92a70c0fd9de28d5edb0ddec3c08d30",
+      "model_revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8"
+    },
+    "calibrator_id": "ffaba71cf016dcb0e572ad2cfaff88f6fcd2ae907568133c536d550a739af2f7",
+    "threshold": 0.8852766614821203,
+    "status": "selected",
+    "selection": {
+      "threshold": 0.8852766614821203,
+      "n": 40,
+      "errors": 2,
+      "risk": 0.05,
+      "wilson_95": [
+        0.013820667386148344,
+        0.16503877369140962
+      ]
+    },
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30,
+    "fit_run_ids": [
+      "04794061ffc3a4be04359733",
+      "0a6a87a5eb6245947b65400a",
+      "0bede9ee50d30983f526b09e",
+      "0eb39a19b0184370cb6cce2b",
+      "199b6da3d2d45ff1db467417",
+      "1bd8df50b9c37441bbcf6c13",
+      "1c70ba7e5947bcc6fc984531",
+      "1d2ae04edd168604f5b54d70",
+      "1e22d53ed7f26d3176a19c0a",
+      "2985fe600a7d0eb89cd57b0c",
+      "2aa2a29c64c510b135d99021",
+      "311016e3b6a96bb88f9e444f",
+      "34a5fc24ee7a702e021b8e7d",
+      "35df5ca7535b543b97e8d551",
+      "37bdfeb08a21a03dfeeb24ab",
+      "394b273941208e7ec35ce19a",
+      "39ea50da29d99b7ebb8fced3",
+      "44f4dacd9be40391fda5407b",
+      "48cb2b26d8eaf0c61555034e",
+      "4ce07f0e823ce9cc532283ca",
+      "4ef636dbea013586152ef795",
+      "5410966c5a82406ccdafd74f",
+      "552e3d6387f099690460ad95",
+      "5907a888e41810a59c6c56fa",
+      "5c3c768b5ec37f4ef81ea192",
+      "5d16ca1fb13294e3197a6482",
+      "5e9e51602d294dabc8575abc",
+      "5f40eb76c44aaf786a5aabe8",
+      "641561b193799b1a506c83a8",
+      "6964ef02b6108a5f1eef252d",
+      "6d10e109856ee5251d5d231f",
+      "6d52ba233f1eae620f7dd40f",
+      "6e019d2b5ef661fad5fc2522",
+      "74692e033da8462ad910c85a",
+      "74e2a260f2013101199b3f80",
+      "783ce9e34223447187b3619c",
+      "7b5dd20595266d6cd4bf490b",
+      "8000fa55d1c1ac841e8f6b2d",
+      "81aa915a707edadcae52c7ae",
+      "83497c625cc3222bc8a8a2b6",
+      "8820db229b57b86ffa1b9a5a",
+      "8cd77d967050f2250df08824",
+      "8f5e25c7853f01dac914f5d1",
+      "962a2f1ec62f8b62b24b27cf",
+      "97dba8bbae26d676a5f7b600",
+      "9877487869f2836a221a4fc9",
+      "99045ea8e64b3d7a6dec4a5a",
+      "996705074316baa041b54133",
+      "9982feb4578e4f43b1aabebb",
+      "9d45f321aeda4d266eee8bd6",
+      "9dd37341cd35615e690c58ba",
+      "a1fbb7e8ac2e738646648e16",
+      "a287f0741ae95c96e3cfa3b0",
+      "a8445703f47594c89d2c8834",
+      "af063e5188c6b2fd0b0530e1",
+      "afd12b38882329aa71028f17",
+      "b0195c897181cadddfbfcbf3",
+      "b39b6119a08d7b7c23e385d8",
+      "b8816a5993f6e17b0b0f247a",
+      "b90067e0d40bd0639f79b32b",
+      "b935a0f794749d2f63505fc3",
+      "bad32e97ffd5117780170961",
+      "bedce39822f1c91c60948802",
+      "c12c7f6d92a32e1453508ebd",
+      "c1a04d1ba7de8dbc2c58292e",
+      "c804332a86f2b75587d636b4",
+      "d30d1c6f76b4afca53d8f569",
+      "d4593da6bda5bdf2d4b04d54",
+      "d491eb0edbec6d8022166fb4",
+      "d58c667bbfad5562a03362d8",
+      "dcd0d07889b7c475cfd29f96",
+      "e00a3678a1a1a5c714f5c8f4",
+      "e15dcfd0d3769d59bcabad04",
+      "e1f7e6a831358708f745c734",
+      "e2eeb171fbb7c286d627e338",
+      "e753d2a4d93efc42214d6ea6",
+      "ed457761395f49c6a3e146df",
+      "efd454dfde62e0ef1f2ded12",
+      "f225f4d50531fc76f99172c6",
+      "f5164f95dcd79676050bc2f9",
+      "f6d0f453c7fde9ce2fa77f9d",
+      "fa27e0d1876a557015bc4348",
+      "fb28719ba9ad1e2b1241a9eb",
+      "fc850df56c3937cc5b7e0b2e",
+      "ffdc51b0aa4071303a8330c2"
+    ],
+    "search": "all observed routing scores; maximum feasible empirical coverage",
+    "guarantee": "none; post-selection interval descriptive only",
+    "id": "fc3df9b85baca4289ba8fbde077a7a926e043f3f4db9153a3cd3fdcd489c9e6e"
+  },
+  "note": "Reused gate set, selected empirical risk only; not an independent safety confirmation."
+}

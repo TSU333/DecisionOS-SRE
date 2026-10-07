@@ -1,0 +1,34 @@
+{
+  "frozen_tensors_verified": 152,
+  "frozen_weights_exactly_equal": true,
+  "changed_head_tensors": [
+    "application_fault_heads.0.fault_head.weight",
+    "application_fault_heads.0.fault_head.bias",
+    "application_fault_heads.0.numeric_fault.0.weight",
+    "application_fault_heads.0.numeric_fault.0.bias",
+    "application_fault_heads.0.numeric_fault.2.weight",
+    "application_fault_heads.0.numeric_fault.2.bias",
+    "application_fault_heads.0.numeric_local_fault.0.weight",
+    "application_fault_heads.0.numeric_local_fault.0.bias",
+    "application_fault_heads.0.numeric_local_fault.2.weight",
+    "application_fault_heads.0.numeric_local_fault.2.bias",
+    "application_fault_heads.1.fault_head.weight",
+    "application_fault_heads.1.fault_head.bias",
+    "application_fault_heads.1.numeric_fault.0.weight",
+    "application_fault_heads.1.numeric_fault.0.bias",
+    "application_fault_heads.1.numeric_fault.2.weight",
+    "application_fault_heads.1.numeric_fault.2.bias",
+    "application_fault_heads.1.numeric_local_fault.0.weight",
+    "application_fault_heads.1.numeric_local_fault.0.bias",
+    "application_fault_heads.1.numeric_local_fault.2.weight",
+    "application_fault_heads.1.numeric_local_fault.2.bias"
+  ],
+  "root_branch_frozen": true,
+  "shared_fallback_frozen": true,
+  "root_validation_max_abs_logit_change": 0.0,
+  "application_fault_names": [
+    "Online Boutique",
+    "Sock Shop"
+  ],
+  "no_architecture_change": false
+}

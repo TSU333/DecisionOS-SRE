@@ -1,0 +1,82 @@
+{
+  "candidates": [
+    {
+      "artifact": "artifacts\\round10\\shared_control\\frozen",
+      "steps": 891,
+      "trainable_parameters": 66831,
+      "parameter_count": 149384081,
+      "head_training_policy": "fault_heads",
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "cached_inputs": 205,
+      "eligible_cases": 164,
+      "frozen_tensors_verified": 142,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "selected_head_state_verified": true,
+      "application_fault_names": []
+    },
+    {
+      "artifact": "artifacts\\round10\\app_lr100\\frozen",
+      "steps": 1540,
+      "trainable_parameters": 133662,
+      "parameter_count": 149517743,
+      "head_training_policy": "application_fault_heads",
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "cached_inputs": 205,
+      "eligible_cases": 164,
+      "frozen_tensors_verified": 152,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "selected_head_state_verified": true,
+      "application_fault_names": [
+        "Online Boutique",
+        "Sock Shop"
+      ]
+    },
+    {
+      "artifact": "artifacts\\round10\\app_lr30\\frozen",
+      "steps": 891,
+      "trainable_parameters": 133662,
+      "parameter_count": 149517743,
+      "head_training_policy": "application_fault_heads",
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "cached_inputs": 205,
+      "eligible_cases": 164,
+      "frozen_tensors_verified": 152,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "selected_head_state_verified": true,
+      "application_fault_names": [
+        "Online Boutique",
+        "Sock Shop"
+      ]
+    },
+    {
+      "artifact": "artifacts\\round10\\app_drop15\\frozen",
+      "steps": 1947,
+      "trainable_parameters": 133662,
+      "parameter_count": 149517743,
+      "head_training_policy": "application_fault_heads",
+      "root_logits_delta": 0.0,
+      "cached_full_delta": 0.0,
+      "cached_inputs": 205,
+      "eligible_cases": 164,
+      "frozen_tensors_verified": 152,
+      "checksum_verified": true,
+      "source_hashes_verified": true,
+      "selected_head_state_verified": true,
+      "application_fault_names": [
+        "Online Boutique",
+        "Sock Shop"
+      ]
+    }
+  ],
+  "original_inputs_unchanged": true,
+  "legacy_cpu_reload_max_abs_difference": 0.0,
+  "source_revision": "01e9bcd24c6f6b2d71696000f325270d70a1e13b",
+  "new_independent_cases": 0,
+  "new_backbone_sft": false
+}

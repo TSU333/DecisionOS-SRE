@@ -1,0 +1,74 @@
+[
+  {
+    "artifact": "artifacts\\round10\\shared_control\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 13284,
+    "cohort_draws": {
+      "RE2-OB": 3274,
+      "RE1-SS": 3400,
+      "RE1-OB": 3281,
+      "RE2-SS": 3329
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "original": 13284
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 164
+  },
+  {
+    "artifact": "artifacts\\round10\\app_lr100\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 22960,
+    "cohort_draws": {
+      "RE2-OB": 5715,
+      "RE1-SS": 5830,
+      "RE1-OB": 5679,
+      "RE2-SS": 5736
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "original": 22960
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 9840
+  },
+  {
+    "artifact": "artifacts\\round10\\app_lr30\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 13284,
+    "cohort_draws": {
+      "RE2-OB": 3274,
+      "RE1-SS": 3400,
+      "RE1-OB": 3281,
+      "RE2-SS": 3329
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "original": 13284
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 164
+  },
+  {
+    "artifact": "artifacts\\round10\\app_drop15\\frozen",
+    "unique_train_cases": 164,
+    "total_draws": 29028,
+    "cohort_draws": {
+      "RE2-OB": 7237,
+      "RE1-SS": 7320,
+      "RE1-OB": 7156,
+      "RE2-SS": 7315
+    },
+    "outside_train": 0,
+    "excluded_unusable_draws": 0,
+    "views_by_kind": {
+      "original": 29028
+    },
+    "new_independent_cases": 0,
+    "checkpoint_draws": 15908
+  }
+]

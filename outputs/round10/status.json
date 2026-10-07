@@ -1,0 +1,46 @@
+{
+  "execution_scope": "mvp",
+  "experiment": "completed",
+  "engineering_checks": "passed",
+  "tests": {
+    "passed": 69,
+    "failed": 0
+  },
+  "active_model_updated": false,
+  "validation_improved": true,
+  "regression_release_guard": false,
+  "all_regression_working_targets_met": false,
+  "independent_generalization_target_status": "not_reconfirmed_no_new_independent_cases",
+  "automatic_acceptance_validated": false,
+  "production_safety_confirmed": false,
+  "gate_empirical_constraint_met": true,
+  "new_cases": 0,
+  "shared_backbone_calls_per_incident": 1,
+  "execute_remediation": false,
+  "historical_mvp_checks": {
+    "public_data_adapter_and_manifest": "passed",
+    "evidence_gold_and_paths_isolated": "passed",
+    "run_group_split_and_parent_lineage": "passed",
+    "candidate_mask_span_id_alignment": "passed",
+    "one_shared_encoder_call_per_incident": "passed",
+    "missing_label_loss_and_finiteness": "passed",
+    "baseline_frozen_sft_real_execution": "passed",
+    "real_training_and_fresh_holdout_evaluation": "passed",
+    "checkpoint_reload_reproduction": "passed",
+    "separate_temperature_calibration_and_binding": "passed",
+    "separate_gate_selection_and_zero_coverage_fallback": "passed",
+    "hand_computable_metrics_edge_cases": "passed",
+    "cpu_measurement_http_api_machine_results_reproduction": "passed",
+    "implementation_experiment_and_not_run_distinguished": "passed"
+  },
+  "current_fresh_holdout": "not_run; only historical regression",
+  "not_run": [
+    "new backbone SFT",
+    "fresh independent confirmation",
+    "production incidents",
+    "KD",
+    "external LLM",
+    "quantization",
+    "ONNX"
+  ]
+}

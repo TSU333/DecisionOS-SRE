@@ -1,0 +1,188 @@
+{
+  "regression_re1_ob": [
+    {
+      "run_id": "95323f829eb2cdc0a7a9c694",
+      "cohort": "RE1-OB",
+      "root_gold": "productcatalogservice",
+      "root_pred": "checkoutservice",
+      "fault_gold": "network_packet_loss",
+      "fault_pred": "network_packet_loss",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.5012336947081641,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "e4782bdfc154e740505466ef",
+      "cohort": "RE1-OB",
+      "root_gold": "productcatalogservice",
+      "root_pred": "recommendationservice",
+      "fault_gold": "network_packet_loss",
+      "fault_pred": "network_packet_loss",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.8746558906438565,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    }
+  ],
+  "regression_re2_ob": [
+    {
+      "run_id": "5edcafb57f99d79d2ee7d28d",
+      "cohort": "RE2-OB",
+      "root_gold": "checkoutservice",
+      "root_pred": "emailservice",
+      "fault_gold": "network_delay",
+      "fault_pred": "network_delay",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.5186056632484553,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "5e32212427a2c11858169a1d",
+      "cohort": "RE2-OB",
+      "root_gold": "checkoutservice",
+      "root_pred": "checkoutservice",
+      "fault_gold": "network_packet_loss",
+      "fault_pred": "network_delay",
+      "routing": {
+        "destination": "ACCEPT_DIAGNOSIS",
+        "routing_score": 0.95221274827246,
+        "reason_codes": [
+          "THRESHOLD_PASSED"
+        ]
+      }
+    },
+    {
+      "run_id": "1e09481338c69541448d5d0b",
+      "cohort": "RE2-OB",
+      "root_gold": "currencyservice",
+      "root_pred": "currencyservice",
+      "fault_gold": "network_delay",
+      "fault_pred": "network_packet_loss",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.5123248844131988,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "36c5f09960143aaf4d2ea4d7",
+      "cohort": "RE2-OB",
+      "root_gold": "currencyservice",
+      "root_pred": "currencyservice",
+      "fault_gold": "disk_io_stress",
+      "fault_pred": "memory_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.7452671974634466,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "4a02e503ec61ac851da05f55",
+      "cohort": "RE2-OB",
+      "root_gold": "currencyservice",
+      "root_pred": "currencyservice",
+      "fault_gold": "memory_stress",
+      "fault_pred": "disk_io_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.5332249893610213,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "c89e1cd0cb846af202640a40",
+      "cohort": "RE2-OB",
+      "root_gold": "emailservice",
+      "root_pred": "emailservice",
+      "fault_gold": "network_packet_loss",
+      "fault_pred": "cpu_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.4572550861111716,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "119ae31af074a86d82098bed",
+      "cohort": "RE2-OB",
+      "root_gold": "productcatalogservice",
+      "root_pred": "productcatalogservice",
+      "fault_gold": "disk_io_stress",
+      "fault_pred": "memory_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.6897877295662085,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    }
+  ],
+  "regression_ss": [
+    {
+      "run_id": "5a229245ed1166f68a3a16b6",
+      "cohort": "RE2-SS",
+      "root_gold": "carts",
+      "root_pred": "carts",
+      "fault_gold": "disk_io_stress",
+      "fault_pred": "memory_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.4025104562749495,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "509b6b3697a2bfa9aefa62f1",
+      "cohort": "RE2-SS",
+      "root_gold": "orders",
+      "root_pred": "payment",
+      "fault_gold": "network_delay",
+      "fault_pred": "network_delay",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.6228125040709123,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    },
+    {
+      "run_id": "33e01584da099a39e96a08c6",
+      "cohort": "RE2-SS",
+      "root_gold": "orders",
+      "root_pred": "orders",
+      "fault_gold": "memory_stress",
+      "fault_pred": "cpu_stress",
+      "routing": {
+        "destination": "REVIEW",
+        "routing_score": 0.3998089011949823,
+        "reason_codes": [
+          "BELOW_THRESHOLD"
+        ]
+      }
+    }
+  ]
+}
