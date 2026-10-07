@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-10-07T14:30:57.399839+00:00",
+  "execution_scope": "mvp",
+  "config": "configs/round13_cv.json",
+  "config_sha256": "3f5a84b50f10a56e820ceadf2aeee169e28c8dfb52660a23d678515625f99d6c",
+  "seeds": [
+    50,
+    51,
+    52
+  ],
+  "variants": [
+    "temporal",
+    "dynamics"
+  ],
+  "outer_folds": 3,
+  "runs": 18,
+  "backbone": {
+    "revision": "8949b909ec900327062f0ebf497f51aef5e6f0c8",
+    "files": {
+      "config.json": "1609d59e627c33eaed524b4f01e546d42e84190a079a5a5ded84b212c41c324f",
+      "model.safetensors": "340ac08b74eef0d7bdec2d7981a6a3d4249bf0e6aab60634b72ad02c2b8023a9",
+      "README.md": "40539466fa1117be4693b8f1fdfdac81fac3c5db472ff57bc05d013d48eafa82",
+      "special_tokens_map.json": "ea97ecdbcc73713039d8d64dbb05e3689495c96657fbd9a18f5bed381be81049",
+      "tokenizer.json": "9fd55248d51d33976b324fc11592e28071da7d41e0e9401dfb7082e30574b7b1",
+      "tokenizer_config.json": "3cd2017ff46d0a527e5d39cae39272eccfa1f19bb9f89b05d166aab2e38354e2"
+    }
+  },
+  "data_audit_sha256": "eca49d1c540a26f6d0ae5aa72b5fb14267c0413d6ac93842310672bc9ffa492d",
+  "folds_sha256": "b6fe1aa7b43b92ea98920efb2e7e9444f3670bf5a9944e2310c09042b949bbb8",
+  "maximum_updates_per_run": 1000,
+  "maximum_total_updates": 18000,
+  "inner_selection": "cohort macro joint, joint, sum NLL; inner stop only; patience25",
+  "outer_evaluation": "exactly once per trained checkpoint after inner best restore, no outer-based epoch selection",
+  "variant_comparison": "mean and sample SD of 3 seed-level OOF metrics, paired folds and consistent failures; no independent significance claim",
+  "warm_start": "none; original public pretrained encoder only, fresh heads; zero-pad new dynamics columns for paired initialization",
+  "normalization": "fixed per-incident causal summaries; no cross-run fitted preprocessing",
+  "promotion": "This round is a TRAIN-only development audit. No production promotion from CV. Existing default, global validation, calibration, gate and historical regressions remain unchanged and unopened for new model evaluation.",
+  "source_sampling": "new external source audit and readiness only; no external target-based model tuning",
+  "new_independent_cv_cases": 0
+}
