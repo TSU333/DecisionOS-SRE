@@ -68,9 +68,18 @@ try:
   import copy
   missing=copy.deepcopy(body)
   for metric in missing['evidence']['metrics']:metric.pop('temporal',None)
+  missing['evidence']['traces']=None;missing['modality_availability']['traces']=False
   code,no_time=request('/v1/decide',missing)
   assert code==200 and no_time['routing']['destination']=='REVIEW' and 'NO_TEMPORAL_EVIDENCE' in no_time['routing']['reason_codes']
   checks['missing_temporal']=no_time['routing']
+ if meta['config'].get('trace_features'):
+  traced=next(e for e in load_split(meta['config']['data_dir'],'regression_re2_ob') if e.input.modality_availability.traces)
+  code,trace_result=request('/v1/decide',traced.input.model_dump())
+  assert code==200 and trace_result['evidence_status']['trace_summaries_retained']>0
+  assert trace_result['execute_remediation'] is False
+  checks['trace_decide']={'status':code,'trace_summaries_retained':trace_result['evidence_status']['trace_summaries_retained'],'routing':trace_result['routing']}
+  bad=traced.input.model_dump();bad['evidence']['traces'][0]['observed_until']=bad['decision_time']+1
+  checks['future_trace']=request('/v1/decide',bad)[0];assert checks['future_trace']==422
  invalid=dict(body,targets={"root_cause":"secret"})
  checks["reject_gold"]=request("/v1/decide",invalid)[0];assert checks["reject_gold"]==422
  singleton=dict(body,candidates=body["candidates"][:1])

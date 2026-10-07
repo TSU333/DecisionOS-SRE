@@ -1,0 +1,4048 @@
+{
+  "cases": 400,
+  "new_cases": 0,
+  "trace_cases": 75,
+  "missing_trace_cases": 325,
+  "counts": {
+    "train": 165,
+    "model_validation": 40,
+    "calibration": 40,
+    "gate_selection": 85,
+    "regression_re1_ob": 15,
+    "regression_re2_ob": 25,
+    "regression_ss": 30
+  },
+  "legacy_input_equivalence": 205,
+  "train_validation_retention": [
+    {
+      "id": "7b17f011d5e858439a3dce7c",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1057,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "dc2c47bc653c42019122e026",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1296,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ae7a55546bd239158a1c0f87",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1312,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "44b2ee08820479f9f251c02f",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1307,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b8ed69ed6d8af385e112b117",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1304,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "dc72fd144dc07825b95e9f8f",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1288,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d0e4cdd03f963268b0b837e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1276,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1e42937d14ae06533a9dc011",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1286,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4b9bcfee80f9d6dd0a45ba4e",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1281,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a5b9b34d974ceb23210c41e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1335,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "317d870b6bfdb9bc4fd3e2fa",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1331,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "bbbfd5c80988068515990283",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1316,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0f21a2ab0af4e53a4f5773e4",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1070,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7b597dce8e17e7578f1d572b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1067,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "52461e0c6bed588e5d3558e8",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1071,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "704205d07bf129586fc039df",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1061,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "db1da670631ff8674a667193",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1288,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "82cdb6657e41396f4e6d7532",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1300,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "73c9f93dd8e1e00153f844fa",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1288,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "bfd14b9d5c95fe2941976f07",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1302,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "054a3237ad43dc034b43f328",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1300,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9c52537556ba84c8736f430b",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1320,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ac186cd4f7d3d915a519a8dd",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1296,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9cb104e6dfecdb5c1e324b91",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1311,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5b264db6fc27feb0e1c32027",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1067,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "888735b551ad1c03171876a7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1057,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "c6d2864520ee3d766412a162",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1062,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9edddbbf48a94d96d896e929",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1059,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ab5967d895935ed7e41a1b72",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1080,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "90e2d3f7583aa10000ff52e8",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1297,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "cd41a7743aad542bc9248791",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1299,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d8448a5bc5754b32d1502bdf",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1296,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "cf85df46f1fa9667bf0b8727",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1327,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9b91e2cea498a63f467530a5",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1317,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "adc5a196741fb7e650f144b5",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1075,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "c9a4b1a068a4e0053e08adad",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1069,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d358fe8d043b84d6bf650ef9",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1064,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3c98e50e1f9c1a5872c6923b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1067,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "095c72f94f03034c83400f6a",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1071,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "750b31e440a14921840f1ddb",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1051,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5014289367470c829f351d53",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1067,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "44c3349657d7d186ed5fffba",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1074,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3798247404bbcd5190dfe271",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1295,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "fc0701e8f3a251090bb14ead",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1299,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3daf57158daef7d598616b38",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1272,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "713bc20c73338c51cd9f91da",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1303,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "837a7d33e27e295b322e8ec5",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1306,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6907562bccdbf715db018a13",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1269,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "21a11a8fa96a215914feab22",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 854,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "751ead6e979a349b71ffcc5f",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1298,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "696b6ca4c2d057fcf67fc899",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1311,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "fbb8036409fe47798d1d1c1c",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1305,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d9b0c8241840f916331fed0f",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1060,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7d3387e69ad8093361c728bc",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1066,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8e904a43f2986e996bdbffbe",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1069,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a71272acd2fe0997acb7c8b7",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1077,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a802765698d3e965d8775d9d",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1078,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "e907a8050f83593bb0d5e8f7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1306,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6f1365a589564793eedd5271",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1288,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "39e972166970bbbce4d3ae66",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1286,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6f79c6a4f64bceb5504945d9",
+      "split": "model_validation",
+      "cohort": "RE1-OB",
+      "tokens": 1283,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b352ccc9ecac53f4d79c1861",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1313,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "cbc247593db62bbaff1e94c7",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1075,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "64af67464eab2734e054fd73",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1064,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a5a8aaad73b0dc500441ac0b",
+      "split": "train",
+      "cohort": "RE1-OB",
+      "tokens": 1063,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9ab31bb621d3e0d8f2897404",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2016,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9a525222a48b89519effc22b",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "tokens": 2018,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0a6f2329dca752051eced5b8",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2043,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5cfb4ad3e095988a686a326b",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "tokens": 1964,
+      "trace_total": 7,
+      "trace_retained": 5,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f8c60f1c81675f0c04f88051",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2043,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4f3d5a725f5be826f6bb5fec",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1969,
+      "trace_total": 7,
+      "trace_retained": 5,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "09bc6ac33020a4b1581db2a1",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "tokens": 2005,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2c88bcc3ecf60b86f27ae2c9",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2023,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "70ee6c3740ce01315d36c2a7",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2038,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5b40fee898627996dc7b4f6e",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "tokens": 1999,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b1fb4178a1269f250be24fb6",
+      "split": "model_validation",
+      "cohort": "RE2-OB",
+      "tokens": 2011,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2d7a8a71d1965a501be03ce6",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1969,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "054e489835012f8438da7eae",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2016,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "16193a4d504a8a970a5dca9b",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1992,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f0fa3f97aaf3f59a53c593c1",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1993,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1561133f8c7873d8c0a57968",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1960,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0eb0108d0cd4648716bd9d6f",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2026,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b9de3bf585ba61b4e1aa2c26",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2029,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8ad019797e1898d727bdd311",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 2026,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9cb313f397e19d48782c835a",
+      "split": "train",
+      "cohort": "RE2-OB",
+      "tokens": 1969,
+      "trace_total": 7,
+      "trace_retained": 6,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "22eeb8727f7c631b00fcaceb",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1318,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9fcc9788e706ef6219da61c3",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1333,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5f6d8f696564101ceed0a071",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1318,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d6fd426b73f909dd3fafbb2e",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1317,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7e671a0975fe9f3ebd2f9c5d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1311,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "481466ab0209e9ab62cd2f40",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1296,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0cc013bd863f69eafc69e4db",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1308,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "e4248dae99ca23e7e1277d6d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1310,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4ae2ff5e1188c105df619abf",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1307,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4325c98e93ccfa553bcecb1e",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "dd2d08da92ad45aa52b2ffa7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f88d7548f13042a64d121b49",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1336,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0976e20a0dddf9a8e7cd612d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1330,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9191c2bc66a65b09cd7a74da",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1318,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "85f6ca06dbae43edbee7fecc",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1305,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "95abf8ed22a09541ac9de284",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1318,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0f67d1a288812bec765d598f",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1309,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8a97bb53b9f500cbf581cbe8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1326,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "bdc54e3265bafc2fd21bc918",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1310,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7d33a32c132865ca19f74d1e",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1328,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ebdfe5827453bfee6fd3c71f",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1326,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3498e07d2bc3952bdaf366d0",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1325,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8d18946bedb3daceb4d5611a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1306,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2740141ceeaa6611f13470ce",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1288,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4540d257d515f6b9456e35ab",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1317,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1804cd18e9a65e5ece5b6f58",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1332,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6a3d3281d689c236669309d6",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1340,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4331ee15b74a31c2bc2bd41a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1340,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9a35cec6a698feaa00ed312b",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1323,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "256c5ce919142c9128df5cc8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1333,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a784c8ea79eb16c8d6326192",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1315,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "fe5de3ac56cdfa909c047364",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1309,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1ae8f343909a2c1abbdb740a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1336,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0fa68eca0ae629bd465e8285",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1307,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7256356ffb86c4ae6f46bc2c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1335,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "db08bd001dc297de305e5a13",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1324,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0de55fe3adea637d81595c8c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1328,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "433315ec6255dd1746e42e15",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1310,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "21710f465c3f3221183a6e9c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1328,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8f45e699d11b2d3a3c627a4c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1306,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "e32fe84a490ed95926850f5a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1349,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "39cedb70fd22b80410295af2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1339,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6f95ffe5aabd94895c7a7f4a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1338,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a2e047d6447d73016c06b050",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1325,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "444588dd51068ddea6d798af",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1332,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "312c4d1ffe844a1073cd3392",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b775bf10348599d6d15e85c7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1324,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "93e23bba33e402fc04af51fa",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1323,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6ea530ecc35d80e76014f4e3",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1301,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f3ecc579c50d9a6e27650d91",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1319,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "eb628868752fbdc887afc783",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1328,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a824e56bd1e0e1958cc22c45",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1307,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "520606e2fb17e4a29cecc9b2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1304,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2e798afa02e34ddadad09a0b",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1303,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "c89f041f5db53920dfd6a075",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1324,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b830ddf61a5a36015a62c9d1",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "75f4fae8fd46fcf83c261bdb",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1314,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0484cb76295ff31953274f21",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1305,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d42bcd0bf8967c3bb250d2cf",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1301,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "9437065abf0cd2b98a78924d",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1349,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ca2eb98fabec558e08d19646",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1356,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "09a2a5a9caa649559cf0a73a",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1336,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ec3c54b355fe31b29f3747a8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1322,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6f7db898caca47ea10966fb8",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1315,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "502457b5c722f04f4309fcdc",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1331,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "06d5a4963a2284a923ec8fc1",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1319,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "053e676f22a2b6c0c2a2bca6",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "340d6a4449154f021778117b",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1328,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "49e4a73f4c64415fb6ae7437",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1315,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "8b7d52d0eebc91346bc7a392",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1319,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d253d3fc85b13976d86776b7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1331,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a78011b56ce028ccad350807",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1321,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ce5b63047d784972b0e60371",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1315,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1641bb262b9aaccc0a46526c",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1311,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b843c5aa80aec2fceaef789b",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1305,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3b5796d4ddc1852323ad9af2",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1333,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "38d0c513976090f4824c4944",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1344,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6875f923883259e75ed7ea9c",
+      "split": "model_validation",
+      "cohort": "RE1-SS",
+      "tokens": 1340,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6b4672426ecc8f5493c13f9a",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1335,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "7191621e1f005ee91f87fd89",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1301,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0aaa10081ee22dc8bdd56613",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1345,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "4d4db035bcc802da2850d3c4",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1343,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "6014bc12832bffbc01d82ea7",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1308,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "3a7465e6a27308fa1ca61190",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1312,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d9feebb0d2e2c48c60b3b764",
+      "split": "train",
+      "cohort": "RE1-SS",
+      "tokens": 1324,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "0ec1fd560716ff076c72a706",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1574,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "d86709911776e1dc30536d58",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1629,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ab1524814c5471db1b65ca61",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1586,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "29c4a3778a6071b1a61342c6",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1584,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "cce449fae641f00a789ec169",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1606,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "512d86d809d22738fedfd759",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1580,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f8f7e7d35c9ac4a4ce238fef",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1594,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2c04cecc44ce6410eb0e209a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1602,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2c59c7378dc05991247e71c9",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1562,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f12b1443307a57694356be3a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1579,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "b630b221be84c52b0a4db3b6",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1654,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "1632d6c1276806617aab50a8",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1594,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "74277310a1de718d61bfb138",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1641,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "fd6c62eb30906322da5d24d2",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1584,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "f1cc2a2484365469bae1cfd0",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1622,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "22753315242e76c8a27046fc",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1612,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a023e473997d8781c90c6fac",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1603,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2a4346330b65263e6b6008b8",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1614,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "dc5bb2261d2f72a547a157c0",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1626,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "bddbd926c8715efdee0406c0",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1567,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "cc1657b0fabc9cbec57422f4",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1627,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "e2badd80e0bea7311b95e819",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1615,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "493339e338e4be04df0aad72",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1645,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "847abeb18daf570f76c2e10d",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1596,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "89ce37ea30e112ffd9220b4a",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1659,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "af7879268e82a17ebd9878d0",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1592,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "ca61012a9214bd3744b38656",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1605,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "fd307a526b828e67053b1afa",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1608,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "a1e6d125fc5b5855369d37d2",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1586,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "c105aaa3f08dac08ba1eb4da",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1619,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "585cec562cf346350a162d2f",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1584,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "2e10f74aa073a9c93f3fdc87",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1592,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "917c28ec9f12f4cea77c56af",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1649,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "553ed47c6af06d3fbefe3846",
+      "split": "model_validation",
+      "cohort": "RE2-SS",
+      "tokens": 1573,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    },
+    {
+      "id": "5dd1a7bd1947b9f178ec9148",
+      "split": "train",
+      "cohort": "RE2-SS",
+      "tokens": 1552,
+      "trace_total": 0,
+      "trace_retained": 0,
+      "metrics_retained_fraction": 1.0
+    }
+  ],
+  "trace_files": [
+    {
+      "id": "9ab31bb621d3e0d8f2897404",
+      "case": "re2ob_checkoutservice_cpu_1",
+      "split": "train",
+      "sha256": "56ca8f6dbeb76fab2d33faeca54bce8f40e9c5491ebd76404ebb2dfd83409367",
+      "bytes": 10146857,
+      "summary_count": 7,
+      "raw_spans": 391997,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98927,
+      "baseline_spans": 82279,
+      "observed_spans": 16648,
+      "max_observed_end": 1705354625.97415,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e2eeb171fbb7c286d627e338",
+      "case": "re2ob_checkoutservice_cpu_2",
+      "split": "gate_selection",
+      "sha256": "f833e959286b706b60307fc3beca2980f26a0dda62782362dbcb34e7f696b3d1",
+      "bytes": 5426555,
+      "summary_count": 7,
+      "raw_spans": 199960,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 78805,
+      "baseline_spans": 67959,
+      "observed_spans": 10846,
+      "max_observed_end": 1708475399.562076,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b9b1841de08e5a310d7a19f8",
+      "case": "re2ob_checkoutservice_cpu_3",
+      "split": "regression_re2_ob",
+      "sha256": "95545a9293d2603db3739474739c6e0dde3de2a8c6e29361393b3a5346137005",
+      "bytes": 10221848,
+      "summary_count": 7,
+      "raw_spans": 408211,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100894,
+      "baseline_spans": 84450,
+      "observed_spans": 16442,
+      "max_observed_end": 1705623598.726127,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "fa27e0d1876a557015bc4348",
+      "case": "re2ob_checkoutservice_delay_1",
+      "split": "gate_selection",
+      "sha256": "a86818c7ab72aa360c3d81aafd9c4dc6a4da0ef75204cbf3a0c70d07a1fd44da",
+      "bytes": 10233639,
+      "summary_count": 7,
+      "raw_spans": 405229,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102840,
+      "baseline_spans": 85798,
+      "observed_spans": 17042,
+      "max_observed_end": 1705666570.999758,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5edcafb57f99d79d2ee7d28d",
+      "case": "re2ob_checkoutservice_delay_2",
+      "split": "regression_re2_ob",
+      "sha256": "7280e269cfc28daa5bc6e44b184ec430996295dd203f55fc2d8fabfff289c02c",
+      "bytes": 10149026,
+      "summary_count": 7,
+      "raw_spans": 402454,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99967,
+      "baseline_spans": 84199,
+      "observed_spans": 15764,
+      "max_observed_end": 1705668980.999962,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "cd53d41710affaee66337a56",
+      "case": "re2ob_checkoutservice_delay_3",
+      "split": "calibration",
+      "sha256": "6e12fbdf92a66fab23bfe24342c3829038d847e751b8b5fd6dc224ef5d62c5e4",
+      "bytes": 10221446,
+      "summary_count": 7,
+      "raw_spans": 404907,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101577,
+      "baseline_spans": 84877,
+      "observed_spans": 16700,
+      "max_observed_end": 1705671401.998858,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "9a525222a48b89519effc22b",
+      "case": "re2ob_checkoutservice_disk_1",
+      "split": "model_validation",
+      "sha256": "473bc25fb7eb659bb6492336a942aeca9416f234c87a1b09585ac7eccd2ca05c",
+      "bytes": 10107184,
+      "summary_count": 7,
+      "raw_spans": 391053,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 97300,
+      "baseline_spans": 81297,
+      "observed_spans": 16001,
+      "max_observed_end": 1705373969.998834,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "8000fa55d1c1ac841e8f6b2d",
+      "case": "re2ob_checkoutservice_disk_2",
+      "split": "gate_selection",
+      "sha256": "ffccbbc9a5f21d879efcae4c71147fce4974ba82ee37a1f03c79740083d446dd",
+      "bytes": 10232511,
+      "summary_count": 7,
+      "raw_spans": 407608,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103096,
+      "baseline_spans": 85533,
+      "observed_spans": 17563,
+      "max_observed_end": 1705765587.978838,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "24387285acf41cf89445b591",
+      "case": "re2ob_checkoutservice_disk_3",
+      "split": "regression_re2_ob",
+      "sha256": "324303a04481f80c7f9259e30e5d1a97b9e1a2e4b82b573235de4ce3526497e4",
+      "bytes": 10269672,
+      "summary_count": 7,
+      "raw_spans": 410342,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103535,
+      "baseline_spans": 85934,
+      "observed_spans": 17595,
+      "max_observed_end": 1705767884.998843,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "0a6f2329dca752051eced5b8",
+      "case": "re2ob_checkoutservice_loss_1",
+      "split": "train",
+      "sha256": "4ac9a4ca2bc346ca9713131b2a6f38967437014bfe6070807d3b31364fdb80be",
+      "bytes": 9984733,
+      "summary_count": 7,
+      "raw_spans": 385793,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99838,
+      "baseline_spans": 83255,
+      "observed_spans": 16577,
+      "max_observed_end": 1705376325.999488,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5e32212427a2c11858169a1d",
+      "case": "re2ob_checkoutservice_loss_2",
+      "split": "regression_re2_ob",
+      "sha256": "aff63f170543593cc282d1aff27d3825aa6e98e830e649f04f35200b1672f9bf",
+      "bytes": 10225405,
+      "summary_count": 7,
+      "raw_spans": 406092,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101865,
+      "baseline_spans": 84695,
+      "observed_spans": 17168,
+      "max_observed_end": 1705673821.997108,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b39b6119a08d7b7c23e385d8",
+      "case": "re2ob_checkoutservice_loss_3",
+      "split": "gate_selection",
+      "sha256": "fb202a1b992eb5fe116da572081bd9616312d2ff5e250ccf359a5c63c71abed6",
+      "bytes": 10145276,
+      "summary_count": 7,
+      "raw_spans": 402659,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103077,
+      "baseline_spans": 86240,
+      "observed_spans": 16835,
+      "max_observed_end": 1708489200.902662,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "6ebe12cfee90cb9811edf56a",
+      "case": "re2ob_checkoutservice_mem_1",
+      "split": "calibration",
+      "sha256": "05b3971a30ddd08f70fc08f39380a551ec2d03672c9df9657ca728d3f9e745aa",
+      "bytes": 10277460,
+      "summary_count": 7,
+      "raw_spans": 405917,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 104549,
+      "baseline_spans": 86443,
+      "observed_spans": 18102,
+      "max_observed_end": 1705462129.945048,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c2471bfe4cabeb3b9e376c4c",
+      "case": "re2ob_checkoutservice_mem_2",
+      "split": "regression_re2_ob",
+      "sha256": "e126fdd6b5d0bb5d8cb83aa0658234bdf047eabcc3c045ff0fc99078f2b1f408",
+      "bytes": 8358689,
+      "summary_count": 7,
+      "raw_spans": 327148,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101393,
+      "baseline_spans": 84982,
+      "observed_spans": 16411,
+      "max_observed_end": 1705626136.998325,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c1a04d1ba7de8dbc2c58292e",
+      "case": "re2ob_checkoutservice_mem_3",
+      "split": "gate_selection",
+      "sha256": "1ad86af098b852a0af308afaf2665fb27caf1f6b83a60a9c4f655a57d134d6f7",
+      "bytes": 10229549,
+      "summary_count": 7,
+      "raw_spans": 408171,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101444,
+      "baseline_spans": 84707,
+      "observed_spans": 16735,
+      "max_observed_end": 1705627915.917201,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "20ab37ccb42291037032aaf1",
+      "case": "re2ob_currencyservice_cpu_1",
+      "split": "regression_re2_ob",
+      "sha256": "04d1512a44ece85f370caeaa09d24e441adc7f67bbebc0de689faea0d5563a63",
+      "bytes": 10214448,
+      "summary_count": 7,
+      "raw_spans": 401542,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102565,
+      "baseline_spans": 85860,
+      "observed_spans": 16705,
+      "max_observed_end": 1705682876.997554,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e868d5254597f5ce9c695770",
+      "case": "re2ob_currencyservice_cpu_2",
+      "split": "calibration",
+      "sha256": "0f0954b806eefe4c74540afd3eb25ce22ed4463d73df6c99bdbcc6248be0450b",
+      "bytes": 10204412,
+      "summary_count": 7,
+      "raw_spans": 401017,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100348,
+      "baseline_spans": 83528,
+      "observed_spans": 16818,
+      "max_observed_end": 1705685275.999666,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c12c7f6d92a32e1453508ebd",
+      "case": "re2ob_currencyservice_cpu_3",
+      "split": "gate_selection",
+      "sha256": "5a4687157fe8c7be951feb018dcbf4cae159eb32155f8362682d808b10ba2126",
+      "bytes": 10279081,
+      "summary_count": 7,
+      "raw_spans": 403800,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102951,
+      "baseline_spans": 86193,
+      "observed_spans": 16750,
+      "max_observed_end": 1705687677.999013,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5cfb4ad3e095988a686a326b",
+      "case": "re2ob_currencyservice_delay_1",
+      "split": "model_validation",
+      "sha256": "9e6b77c4512536fa9d83cb6ff2c037e31af6db28e752891ba35f822d888f23af",
+      "bytes": 9806239,
+      "summary_count": 7,
+      "raw_spans": 383583,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100358,
+      "baseline_spans": 85352,
+      "observed_spans": 15006,
+      "max_observed_end": 1705702071.977223,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5d16ca1fb13294e3197a6482",
+      "case": "re2ob_currencyservice_delay_2",
+      "split": "gate_selection",
+      "sha256": "6b0a0f7ada98756df9c0b076667ea5f9e977230ff1d4a20fc09cae1808b73b29",
+      "bytes": 9781593,
+      "summary_count": 7,
+      "raw_spans": 385915,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102481,
+      "baseline_spans": 87862,
+      "observed_spans": 14615,
+      "max_observed_end": 1705704402.964104,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "1e09481338c69541448d5d0b",
+      "case": "re2ob_currencyservice_delay_3",
+      "split": "regression_re2_ob",
+      "sha256": "034dc91bcfdf69973af19dc9ce57886c7b75ad12c6fba7db872d9a837d968ed4",
+      "bytes": 9616612,
+      "summary_count": 7,
+      "raw_spans": 379232,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99897,
+      "baseline_spans": 85346,
+      "observed_spans": 14548,
+      "max_observed_end": 1705706663.988043,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "36c5f09960143aaf4d2ea4d7",
+      "case": "re2ob_currencyservice_disk_1",
+      "split": "regression_re2_ob",
+      "sha256": "c919dbc323bbd2dec5873c76856e9d5942b7339751308c8e679a9144ec3c7b5b",
+      "bytes": 9495309,
+      "summary_count": 7,
+      "raw_spans": 361288,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 95718,
+      "baseline_spans": 82200,
+      "observed_spans": 13513,
+      "max_observed_end": 1705386728.968088,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "6964ef02b6108a5f1eef252d",
+      "case": "re2ob_currencyservice_disk_2",
+      "split": "gate_selection",
+      "sha256": "b34905517fb7063b573b20a6a2226881609190678577a025bfb8b15d59426153",
+      "bytes": 10125921,
+      "summary_count": 7,
+      "raw_spans": 396097,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99115,
+      "baseline_spans": 82908,
+      "observed_spans": 16206,
+      "max_observed_end": 1705692493.999756,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c218b6d37345bca2bd28b89b",
+      "case": "re2ob_currencyservice_disk_3",
+      "split": "calibration",
+      "sha256": "8a27b8895199d6093bf6fa75b039f309f5d697cd63299e29381e621fa974cd0e",
+      "bytes": 10302803,
+      "summary_count": 7,
+      "raw_spans": 403324,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99245,
+      "baseline_spans": 82896,
+      "observed_spans": 16345,
+      "max_observed_end": 1705694892.999729,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "9d82c8b8d583c89e35470808",
+      "case": "re2ob_currencyservice_loss_1",
+      "split": "regression_re2_ob",
+      "sha256": "ebba409588650edab31d79d02819af64edbf3e17e5359f320893fc30f9b8fea7",
+      "bytes": 7734168,
+      "summary_count": 7,
+      "raw_spans": 286200,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 90214,
+      "baseline_spans": 82310,
+      "observed_spans": 7904,
+      "max_observed_end": 1705389000.968072,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "f8c60f1c81675f0c04f88051",
+      "case": "re2ob_currencyservice_loss_2",
+      "split": "train",
+      "sha256": "aea30bd6de802aa7d2d52951881917b73a650ecf8f29b943a3ad7ae1c8ebea1d",
+      "bytes": 9371708,
+      "summary_count": 7,
+      "raw_spans": 365309,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99740,
+      "baseline_spans": 85891,
+      "observed_spans": 13845,
+      "max_observed_end": 1705708930.978175,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "8cd77d967050f2250df08824",
+      "case": "re2ob_currencyservice_loss_3",
+      "split": "gate_selection",
+      "sha256": "6fc519b2286f0e5e445eedf6e634735f309087ec7a6bfe0c65ee6661d71b1765",
+      "bytes": 9181276,
+      "summary_count": 7,
+      "raw_spans": 354303,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98117,
+      "baseline_spans": 84352,
+      "observed_spans": 13761,
+      "max_observed_end": 1705711217.980161,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5f40eb76c44aaf786a5aabe8",
+      "case": "re2ob_currencyservice_mem_1",
+      "split": "gate_selection",
+      "sha256": "fbe435f1ac87ad1822a90e1635a0bfad6f7e5a3ea30715cf61f6cd53ad397b7d",
+      "bytes": 9787628,
+      "summary_count": 7,
+      "raw_spans": 379084,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101142,
+      "baseline_spans": 85968,
+      "observed_spans": 15170,
+      "max_observed_end": 1705464578.999762,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "4a02e503ec61ac851da05f55",
+      "case": "re2ob_currencyservice_mem_2",
+      "split": "regression_re2_ob",
+      "sha256": "bcea2effb074eef8883be4558525b6be0149c3b7667e0142b628c0e5ff9a8550",
+      "bytes": 9927642,
+      "summary_count": 7,
+      "raw_spans": 387124,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98069,
+      "baseline_spans": 82746,
+      "observed_spans": 15321,
+      "max_observed_end": 1705749948.986445,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "4f3d5a725f5be826f6bb5fec",
+      "case": "re2ob_currencyservice_mem_3",
+      "split": "train",
+      "sha256": "0d34319461cc7dbc775870291882a88bdc7520a50c16e3eb3ea2a4e7e2786e31",
+      "bytes": 9907309,
+      "summary_count": 7,
+      "raw_spans": 385054,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100805,
+      "baseline_spans": 85605,
+      "observed_spans": 15200,
+      "max_observed_end": 1705690116.948753,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5ddde828f40eca37a8fcb216",
+      "case": "re2ob_emailservice_cpu_1",
+      "split": "regression_re2_ob",
+      "sha256": "c98764ff45836b7514480c515a4e0bfe685fb0ce15de8484eae012451b5aea6e",
+      "bytes": 10155267,
+      "summary_count": 7,
+      "raw_spans": 392420,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98606,
+      "baseline_spans": 82428,
+      "observed_spans": 16175,
+      "max_observed_end": 1705350224.980911,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "d491eb0edbec6d8022166fb4",
+      "case": "re2ob_emailservice_cpu_2",
+      "split": "gate_selection",
+      "sha256": "1075d795eea30f170a19ddaa1f5c97b0712ca6f697938db90cff4975192135be",
+      "bytes": 10259513,
+      "summary_count": 7,
+      "raw_spans": 410139,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102145,
+      "baseline_spans": 84543,
+      "observed_spans": 17602,
+      "max_observed_end": 1705593057.944904,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "09bc6ac33020a4b1581db2a1",
+      "case": "re2ob_emailservice_cpu_3",
+      "split": "model_validation",
+      "sha256": "139312b20b169e31a605c918a76a13da149c08dcd4d0aee0259dcb5e5c9c832b",
+      "bytes": 10310120,
+      "summary_count": 7,
+      "raw_spans": 412741,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103647,
+      "baseline_spans": 86128,
+      "observed_spans": 17515,
+      "max_observed_end": 1705595528.999114,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "2c88bcc3ecf60b86f27ae2c9",
+      "case": "re2ob_emailservice_delay_1",
+      "split": "train",
+      "sha256": "569e86b874736c9815ea4be07726a4abe4a76990c93c1b992e356b686fed1a9d",
+      "bytes": 10184723,
+      "summary_count": 7,
+      "raw_spans": 406121,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102432,
+      "baseline_spans": 84950,
+      "observed_spans": 17477,
+      "max_observed_end": 1705733405.598977,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "f72f83445af4315cacabd01e",
+      "case": "re2ob_emailservice_delay_2",
+      "split": "regression_re2_ob",
+      "sha256": "480da7546046056e2be34e24dce910276c6d884a09a5499681a2fb0fb1be7123",
+      "bytes": 10201711,
+      "summary_count": 7,
+      "raw_spans": 406019,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100229,
+      "baseline_spans": 83933,
+      "observed_spans": 16294,
+      "max_observed_end": 1705735761.999971,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "f225f4d50531fc76f99172c6",
+      "case": "re2ob_emailservice_delay_3",
+      "split": "gate_selection",
+      "sha256": "f790c4d626f015d74bea92f6b4c0f5cd8de1807fdd5b4afff735cd69b56e18a9",
+      "bytes": 10212194,
+      "summary_count": 7,
+      "raw_spans": 407306,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99806,
+      "baseline_spans": 82706,
+      "observed_spans": 17100,
+      "max_observed_end": 1705738118.999165,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e3d5bb422657cf4bede301cf",
+      "case": "re2ob_emailservice_disk_1",
+      "split": "regression_re2_ob",
+      "sha256": "b25ca9bf883885a83d36c548fb5d528d6e608b56ce0080e84ad083cd66fddff8",
+      "bytes": 10017655,
+      "summary_count": 7,
+      "raw_spans": 387034,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 96375,
+      "baseline_spans": 80854,
+      "observed_spans": 15515,
+      "max_observed_end": 1705370154.976035,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "70ee6c3740ce01315d36c2a7",
+      "case": "re2ob_emailservice_disk_2",
+      "split": "train",
+      "sha256": "8dd29ba9fbbdfa02a2101da34579744847331e7fbef420ec97190954ebbfbc61",
+      "bytes": 10245957,
+      "summary_count": 7,
+      "raw_spans": 409530,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100709,
+      "baseline_spans": 84495,
+      "observed_spans": 16214,
+      "max_observed_end": 1705603023.992148,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "a8445703f47594c89d2c8834",
+      "case": "re2ob_emailservice_disk_3",
+      "split": "gate_selection",
+      "sha256": "20ce19d519d2562ac323d8b70917755b5235af494e58fcb4da43a52af8079195",
+      "bytes": 9385568,
+      "summary_count": 7,
+      "raw_spans": 369748,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101402,
+      "baseline_spans": 84386,
+      "observed_spans": 17016,
+      "max_observed_end": 1705719353.968695,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "5b40fee898627996dc7b4f6e",
+      "case": "re2ob_emailservice_loss_1",
+      "split": "model_validation",
+      "sha256": "aa788bd6bca85d8f753070ed19499ce0ffe1ab34d8bc758c3701a032a8ee5847",
+      "bytes": 10008258,
+      "summary_count": 7,
+      "raw_spans": 386467,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 95746,
+      "baseline_spans": 79813,
+      "observed_spans": 15933,
+      "max_observed_end": 1705351691.984742,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "d4593da6bda5bdf2d4b04d54",
+      "case": "re2ob_emailservice_loss_2",
+      "split": "gate_selection",
+      "sha256": "a17e365b325b783d8ed152870244048df9a9642851b2a2846b4c7e3f477d6e06",
+      "bytes": 10289391,
+      "summary_count": 7,
+      "raw_spans": 410063,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102800,
+      "baseline_spans": 85601,
+      "observed_spans": 17193,
+      "max_observed_end": 1705740473.998671,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c89e1cd0cb846af202640a40",
+      "case": "re2ob_emailservice_loss_3",
+      "split": "regression_re2_ob",
+      "sha256": "5fc30712546987c648a6e9d80a24f845ca506a130a0a37cb24ee0b6c18ecc4cc",
+      "bytes": 10117978,
+      "summary_count": 7,
+      "raw_spans": 402931,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100138,
+      "baseline_spans": 84528,
+      "observed_spans": 15610,
+      "max_observed_end": 1705742832.999381,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "9dd37341cd35615e690c58ba",
+      "case": "re2ob_emailservice_mem_1",
+      "split": "gate_selection",
+      "sha256": "353671ca7f53ed0fb63901a6ebbf3cbb49497dbcb2c789a7b4e9ddac6d1e3a1d",
+      "bytes": 10222020,
+      "summary_count": 7,
+      "raw_spans": 404657,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102149,
+      "baseline_spans": 85145,
+      "observed_spans": 17000,
+      "max_observed_end": 1705475564.974135,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "2f58e82aece32c8ba7dc4432",
+      "case": "re2ob_emailservice_mem_2",
+      "split": "regression_re2_ob",
+      "sha256": "6827c3b13b4f61b04bce5db338fcd9bd70792330183eb8992e2074d00d747e80",
+      "bytes": 10180081,
+      "summary_count": 7,
+      "raw_spans": 406048,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101127,
+      "baseline_spans": 84392,
+      "observed_spans": 16735,
+      "max_observed_end": 1705598044.999121,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b1fb4178a1269f250be24fb6",
+      "case": "re2ob_emailservice_mem_3",
+      "split": "model_validation",
+      "sha256": "7ab7a1ed4d48e0db720d2dd7a30a617497c44270b5de2a58172d2844e9a1ff62",
+      "bytes": 9948904,
+      "summary_count": 7,
+      "raw_spans": 395523,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99720,
+      "baseline_spans": 83198,
+      "observed_spans": 16518,
+      "max_observed_end": 1705600561.998673,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "199b6da3d2d45ff1db467417",
+      "case": "re2ob_productcatalogservice_cpu_1",
+      "split": "gate_selection",
+      "sha256": "fcc49515cf5f50a84000a1dfddf0d75ab5ca06e9712a7f4775bfd2c364283135",
+      "bytes": 10244076,
+      "summary_count": 7,
+      "raw_spans": 393266,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98797,
+      "baseline_spans": 82759,
+      "observed_spans": 16030,
+      "max_observed_end": 1705340601.999089,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "fbf324cd8cd7947c5e62b399",
+      "case": "re2ob_productcatalogservice_cpu_2",
+      "split": "regression_re2_ob",
+      "sha256": "9c599bc635232ea9139bfb69beed83d7aac28b55da31037e69d55a9d492ced33",
+      "bytes": 10197838,
+      "summary_count": 7,
+      "raw_spans": 400287,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100351,
+      "baseline_spans": 83640,
+      "observed_spans": 16711,
+      "max_observed_end": 1705486907.999179,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "2d7a8a71d1965a501be03ce6",
+      "case": "re2ob_productcatalogservice_cpu_3",
+      "split": "train",
+      "sha256": "d362139d07f50395b17f87efaea74ce5a86be7fe829523bbbc13330d02658e9a",
+      "bytes": 10316938,
+      "summary_count": 7,
+      "raw_spans": 404922,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101151,
+      "baseline_spans": 84867,
+      "observed_spans": 16284,
+      "max_observed_end": 1705489281.94041,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e15dcfd0d3769d59bcabad04",
+      "case": "re2ob_productcatalogservice_delay_1",
+      "split": "gate_selection",
+      "sha256": "5669ed603a30e6727cc2279b774844c545fd6410a9dc9ac5f869f9ae67f15036",
+      "bytes": 9445147,
+      "summary_count": 7,
+      "raw_spans": 365023,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99313,
+      "baseline_spans": 86031,
+      "observed_spans": 13280,
+      "max_observed_end": 1705394637.968581,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "beb6f24a17ed130af9f2874d",
+      "case": "re2ob_productcatalogservice_delay_2",
+      "split": "regression_re2_ob",
+      "sha256": "00472fae707b0dfe2f5d7094077b7435e7529b639fa256c814db02b5023dcd80",
+      "bytes": 9369325,
+      "summary_count": 7,
+      "raw_spans": 364200,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98042,
+      "baseline_spans": 85107,
+      "observed_spans": 12933,
+      "max_observed_end": 1705514555.996643,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "054e489835012f8438da7eae",
+      "case": "re2ob_productcatalogservice_delay_3",
+      "split": "train",
+      "sha256": "155fc5eed519c9688059b322eb02067b8ffa53e5fbf9c883c5c48727d90476b2",
+      "bytes": 9402175,
+      "summary_count": 7,
+      "raw_spans": 365484,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 97372,
+      "baseline_spans": 84256,
+      "observed_spans": 13116,
+      "max_observed_end": 1705516888.99135,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b935a0f794749d2f63505fc3",
+      "case": "re2ob_productcatalogservice_disk_1",
+      "split": "gate_selection",
+      "sha256": "5ae6042b40e421c75979eb5f887bf40a608a7c92ad87e27c990718f630782874",
+      "bytes": 10021204,
+      "summary_count": 7,
+      "raw_spans": 383516,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 96322,
+      "baseline_spans": 80630,
+      "observed_spans": 15683,
+      "max_observed_end": 1705360758.995284,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "119ae31af074a86d82098bed",
+      "case": "re2ob_productcatalogservice_disk_2",
+      "split": "regression_re2_ob",
+      "sha256": "c6e9ada74541372dfefa2bc0280652dbd1d7c8a58ffc96f2469ef429ed2e322e",
+      "bytes": 10298558,
+      "summary_count": 7,
+      "raw_spans": 402669,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103659,
+      "baseline_spans": 87281,
+      "observed_spans": 16378,
+      "max_observed_end": 1705496170.999664,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "16193a4d504a8a970a5dca9b",
+      "case": "re2ob_productcatalogservice_disk_3",
+      "split": "train",
+      "sha256": "084697753a7e67f82b211cf3dbaca46bfc536e05caec95f9575923ec47b12deb",
+      "bytes": 10250793,
+      "summary_count": 7,
+      "raw_spans": 399976,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 102141,
+      "baseline_spans": 85299,
+      "observed_spans": 16842,
+      "max_observed_end": 1708473031.95548,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "f0fa3f97aaf3f59a53c593c1",
+      "case": "re2ob_productcatalogservice_loss_1",
+      "split": "train",
+      "sha256": "4f71566bc777b122a4abdab69d12abdbdd57d6493eb3a2957692ed00a3b57b4a",
+      "bytes": 6972318,
+      "summary_count": 7,
+      "raw_spans": 254889,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 87232,
+      "baseline_spans": 80279,
+      "observed_spans": 6943,
+      "max_observed_end": 1705342889.997912,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "bedce39822f1c91c60948802",
+      "case": "re2ob_productcatalogservice_loss_2",
+      "split": "gate_selection",
+      "sha256": "44375776fdf06f919dad345a4e39d6d4761c460c36dcfd72a17c6095609cf0bc",
+      "bytes": 6912555,
+      "summary_count": 7,
+      "raw_spans": 260357,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 88097,
+      "baseline_spans": 84902,
+      "observed_spans": 3195,
+      "max_observed_end": 1705519173.373304,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "717663bf496f698ebfe3c3b7",
+      "case": "re2ob_productcatalogservice_loss_3",
+      "split": "regression_re2_ob",
+      "sha256": "e1de849f40d546d0e1feff502650e35cc5f631ac4a9cff5a0d2928670471a255",
+      "bytes": 8745905,
+      "summary_count": 7,
+      "raw_spans": 333739,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 96834,
+      "baseline_spans": 86820,
+      "observed_spans": 10014,
+      "max_observed_end": 1705717156.973417,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "1561133f8c7873d8c0a57968",
+      "case": "re2ob_productcatalogservice_mem_1",
+      "split": "train",
+      "sha256": "0295a4c78cdb39db6559530d5660cb4ebe1cba340bc03be004b25ffe7be436c5",
+      "bytes": 8512907,
+      "summary_count": 7,
+      "raw_spans": 317085,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 91000,
+      "baseline_spans": 80527,
+      "observed_spans": 10471,
+      "max_observed_end": 1705357675.112616,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b17767fc1316ed5cfe2fb885",
+      "case": "re2ob_productcatalogservice_mem_2",
+      "split": "regression_re2_ob",
+      "sha256": "c3255d786af4fd8ae5f9fd0727b45e0a5762caa7c262a42ca8b12474b6eacb6c",
+      "bytes": 8434233,
+      "summary_count": 7,
+      "raw_spans": 320661,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 55225,
+      "baseline_spans": 52376,
+      "observed_spans": 2849,
+      "max_observed_end": 1705491710.177626,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b0195c897181cadddfbfcbf3",
+      "case": "re2ob_productcatalogservice_mem_3",
+      "split": "gate_selection",
+      "sha256": "16ffca268bca49e53649475516afddbf816bdb65afcf7eb92fa0b6a9576f6a85",
+      "bytes": 7295482,
+      "summary_count": 7,
+      "raw_spans": 276103,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98249,
+      "baseline_spans": 84915,
+      "observed_spans": 13328,
+      "max_observed_end": 1705493967.979171,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "83497c625cc3222bc8a8a2b6",
+      "case": "re2ob_recommendationservice_cpu_1",
+      "split": "gate_selection",
+      "sha256": "59a3f6b063779d3088d8eea40bbfcf24c79cbde1fe6a6bb3af326ad0bff793b0",
+      "bytes": 10171322,
+      "summary_count": 7,
+      "raw_spans": 391057,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 97943,
+      "baseline_spans": 81834,
+      "observed_spans": 16101,
+      "max_observed_end": 1705345824.920549,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "0eb0108d0cd4648716bd9d6f",
+      "case": "re2ob_recommendationservice_cpu_2",
+      "split": "train",
+      "sha256": "7a463118ae51402404605e64b12ebb838c8b3069b281f0f6f950a708b0481840",
+      "bytes": 10227542,
+      "summary_count": 7,
+      "raw_spans": 406293,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100742,
+      "baseline_spans": 84282,
+      "observed_spans": 16458,
+      "max_observed_end": 1705525891.991605,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "600fe120a642ee3205886d12",
+      "case": "re2ob_recommendationservice_cpu_3",
+      "split": "regression_re2_ob",
+      "sha256": "30bd86600aa79311e7f8af1146e600789c5a017c190413e126a19305b2937ff8",
+      "bytes": 10314393,
+      "summary_count": 7,
+      "raw_spans": 410295,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 104197,
+      "baseline_spans": 87680,
+      "observed_spans": 16515,
+      "max_observed_end": 1705528316.783343,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "532310c5ef1a2f9a4f7708bb",
+      "case": "re2ob_recommendationservice_delay_1",
+      "split": "regression_re2_ob",
+      "sha256": "146cbe4ce4a6f73c0375ebd8a413cd44b9623198a797adf1d7f9d223e5ffd533",
+      "bytes": 10026518,
+      "summary_count": 7,
+      "raw_spans": 393688,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100055,
+      "baseline_spans": 83504,
+      "observed_spans": 16547,
+      "max_observed_end": 1705400436.979158,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b9de3bf585ba61b4e1aa2c26",
+      "case": "re2ob_recommendationservice_delay_2",
+      "split": "train",
+      "sha256": "ec4cb51696692e95e9684b0f10ca260e1bc8731444d2f02b5bc653d8ed99e454",
+      "bytes": 10028054,
+      "summary_count": 7,
+      "raw_spans": 396200,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99946,
+      "baseline_spans": 84182,
+      "observed_spans": 15764,
+      "max_observed_end": 1705545374.955574,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "552e3d6387f099690460ad95",
+      "case": "re2ob_recommendationservice_delay_3",
+      "split": "gate_selection",
+      "sha256": "5ec96e920b3a501c48c713e82129fd8fad50489c422e84161b2793bc876dba02",
+      "bytes": 10076281,
+      "summary_count": 7,
+      "raw_spans": 396781,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 99722,
+      "baseline_spans": 83237,
+      "observed_spans": 16477,
+      "max_observed_end": 1705547821.97571,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "bb95fcd81e7ed274b5bd621d",
+      "case": "re2ob_recommendationservice_disk_1",
+      "split": "regression_re2_ob",
+      "sha256": "67772f4dab6993826d873c5b2cab5201c3653f9da23e8c02ab98f8dd17d57ff5",
+      "bytes": 10128918,
+      "summary_count": 7,
+      "raw_spans": 391177,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 98516,
+      "baseline_spans": 82109,
+      "observed_spans": 16399,
+      "max_observed_end": 1705366581.97887,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "8ad019797e1898d727bdd311",
+      "case": "re2ob_recommendationservice_disk_2",
+      "split": "train",
+      "sha256": "b99334ba20d45f3242c16485ab759b16cf98de63b4716b86d0560a12a642befe",
+      "bytes": 10189065,
+      "summary_count": 7,
+      "raw_spans": 404057,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103110,
+      "baseline_spans": 86723,
+      "observed_spans": 16387,
+      "max_observed_end": 1705535520.986388,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "b90067e0d40bd0639f79b32b",
+      "case": "re2ob_recommendationservice_disk_3",
+      "split": "gate_selection",
+      "sha256": "f99bb92e636ac3848f005131363fea70b60d6676f610624a846adca36086b077",
+      "bytes": 10335467,
+      "summary_count": 7,
+      "raw_spans": 409575,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101718,
+      "baseline_spans": 85016,
+      "observed_spans": 16702,
+      "max_observed_end": 1705537993.936076,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e00a3678a1a1a5c714f5c8f4",
+      "case": "re2ob_recommendationservice_loss_1",
+      "split": "gate_selection",
+      "sha256": "28363eb92bc7407f763bcd7d25c61f6d0208497358a9ee93da7bd88393a23188",
+      "bytes": 8063232,
+      "summary_count": 7,
+      "raw_spans": 299508,
+      "duplicate_span_ids_removed": 48,
+      "within_window_completed": 92867,
+      "baseline_spans": 80728,
+      "observed_spans": 12129,
+      "max_observed_end": 1705347290.999109,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "c264dcd5d425d190bad6859c",
+      "case": "re2ob_recommendationservice_loss_2",
+      "split": "calibration",
+      "sha256": "58d458017be446c66c42d38ada9607c86a2976b0ad5df922298d9577c3629265",
+      "bytes": 9464484,
+      "summary_count": 7,
+      "raw_spans": 370911,
+      "duplicate_span_ids_removed": 99,
+      "within_window_completed": 99390,
+      "baseline_spans": 83569,
+      "observed_spans": 15821,
+      "max_observed_end": 1705583518.993831,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "a83caa602745ace294bda03d",
+      "case": "re2ob_recommendationservice_loss_3",
+      "split": "regression_re2_ob",
+      "sha256": "528c3e9a1e7f092bf5efc6af83f96a9e32e8b4872febd93cb5e3605b06eeaf55",
+      "bytes": 9285122,
+      "summary_count": 7,
+      "raw_spans": 363896,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 95525,
+      "baseline_spans": 83049,
+      "observed_spans": 12472,
+      "max_observed_end": 1705757391.625842,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "9cb313f397e19d48782c835a",
+      "case": "re2ob_recommendationservice_mem_1",
+      "split": "train",
+      "sha256": "3c948e36b46d0a69f569ea091ad8d5485a2669e7c7a67f52077ea7a93e0cd709",
+      "bytes": 10184551,
+      "summary_count": 7,
+      "raw_spans": 398876,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 100703,
+      "baseline_spans": 84683,
+      "observed_spans": 16018,
+      "max_observed_end": 1705458291.999767,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "e7077f3da7cfd32cc7f93b1a",
+      "case": "re2ob_recommendationservice_mem_2",
+      "split": "regression_re2_ob",
+      "sha256": "456d57a83409212be167beb1363457a5ac08b4d58bdc264dda9f1e3e15e21e89",
+      "bytes": 10015625,
+      "summary_count": 7,
+      "raw_spans": 395021,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 101867,
+      "baseline_spans": 85271,
+      "observed_spans": 16594,
+      "max_observed_end": 1705530751.999003,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    },
+    {
+      "id": "9d45f321aeda4d266eee8bd6",
+      "case": "re2ob_recommendationservice_mem_3",
+      "split": "gate_selection",
+      "sha256": "0806c1efd6181e10f1c203c41c25e917f4cdd2bb8b8a0b37c0becff051f87e10",
+      "bytes": 10001815,
+      "summary_count": 7,
+      "raw_spans": 394497,
+      "duplicate_span_ids_removed": 0,
+      "within_window_completed": 103008,
+      "baseline_spans": 87679,
+      "observed_spans": 15323,
+      "max_observed_end": 1705533132.92106,
+      "source_services": [
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontendservice",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "aliases": {
+        "frontendservice": "frontend"
+      },
+      "unknown_status_not_success": true,
+      "raw_time_unit": "microseconds",
+      "output_latency_unit": "milliseconds"
+    }
+  ],
+  "total_trace_bytes": 728637182,
+  "candidate_coverage": 1.0,
+  "split_assignments_unchanged": true,
+  "integrity": {
+    "manifest.json": "32ef78576271935467191f68d0fa268e74480077832c3689dca4e7d2d1604ee7",
+    "splits.json": "53e870793112ed3a48cb082e8c1b9b8211617656dd0b86ab1138eafd4a0b4cec",
+    "examples.json": "b5a589a4be277409bfc7b5c22a7421af1fd736709727b9fb5399a4be7536c062"
+  }
+}

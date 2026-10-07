@@ -15,6 +15,7 @@ def canonical_encode(serializer,incident):
     byservice=defaultdict(list)
     for m in incident.evidence.metrics:byservice[m.service].append(m)
     services=set(byservice)|{c.candidate_id for c in incident.candidates}
+    if serializer.trace_features:services|={t.service for t in incident.evidence.traces or []}
     def signature(service):
         ms=byservice[service]
         content=sorted([canonical({k:v for k,v in m.model_dump().items() if k not in ('service','observed_until','temporal')}) for m in ms])
@@ -42,11 +43,22 @@ def canonical_encode(serializer,incident):
         tok=enc(line)
         if len(ids)+len(tok)+1<=serializer.max_length:
             ids+=tok;retained.append(m)
+    retained_traces=[]
+    if serializer.trace_features:
+        from .traces import trace_priority,trace_line
+        for t in sorted(incident.evidence.traces or [],key=lambda t:(trace_priority(t),services.index(t.service))):
+            token=enc(trace_line(t,aliases[t.service]))
+            if len(ids)+len(token)+1<=serializer.max_length:
+                ids+=token;retained_traces.append(t)
     ids.append(serializer.tokenizer.sep_token_id)
     nums=glob=None
     if serializer.numeric_metrics:
         nums,glob=numeric_features(retained,[c.candidate_id for c in order],serializer.numeric_metrics,serializer.numeric_feature_version)
-    report={'serializer_version':serializer.version,'tokens':len(ids),'candidate_count':len(order),
+    if serializer.trace_features:
+        from .traces import trace_features
+        tn,tg=trace_features(retained_traces,[c.candidate_id for c in order])
+        nums=[a+b for a,b in zip(nums,tn)];glob=glob+tg
+    report={'serializer_version' :serializer.version,'tokens':len(ids),'candidate_count':len(order),
             'usable_metrics_retained':sum(m.observed_samples>0 and m.observed_mean is not None for m in retained),
             'metrics_total':len(metrics),'metrics_retained':len(retained),
             'retained_fraction':len(retained)/len(metrics) if metrics else None,
@@ -59,12 +71,19 @@ def canonical_encode(serializer,incident):
     report['numeric_feature_version']=serializer.numeric_feature_version
     report['temporal_metrics_retained']=sum(m.temporal is not None for m in retained)
     report['numeric_evidence_usable']=report['usable_metrics_retained']>0 and (serializer.numeric_feature_version!='temporal-v1' or report['temporal_metrics_retained']>0)
+    report['trace_summaries_total']=len(incident.evidence.traces or [])
+    report['trace_summaries_retained']=len(retained_traces)
+    report['trace_services_retained']=[t.service for t in retained_traces]
+    report['trace_feature_version']='service-trace-v1' if serializer.trace_features else None
+    report['token_budgets']['traces']='remaining budget after metrics; complete summaries only' if serializer.trace_features else 0
+    report['modality_evidence_usable']=report['numeric_evidence_usable'] or any(t.all_spans.observed_count>0 for t in retained_traces)
     return Encoded(ids,[c.candidate_id for c in order],spans,report,nums,glob)
 
 def numeric_dimension(config):
     version=config.get('numeric_feature_version','mean-v1')
+    if config.get('trace_features') and config.get('trace_feature_version','service-trace-v1')!='service-trace-v1':raise ValueError('unknown trace feature version')
     if version not in ('mean-v1','temporal-v1'):raise ValueError('unknown numeric feature version')
-    return len(config.get('numeric_metrics',[]))*(12 if version=='temporal-v1' else 6) if config.get('numeric_fusion') else 0
+    return (len(config.get('numeric_metrics',[]))*(12 if version=='temporal-v1' else 6)+(24 if config.get('trace_features') else 0)) if config.get('numeric_fusion') else 0
 
 
 def numeric_features(metrics,ids,names,version='mean-v1'):

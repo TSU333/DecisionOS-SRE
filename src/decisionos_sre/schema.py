@@ -29,17 +29,36 @@ class Metric(Strict):
     observed_until: float
     temporal: TemporalSummary | None = None
 
+class SpanSummary(Strict):
+    baseline_count: int = Field(ge=0)
+    observed_count: int = Field(ge=0)
+    baseline_mean_ms: float | None = Field(default=None, ge=0)
+    observed_mean_ms: float | None = Field(default=None, ge=0)
+    baseline_p95_ms: float | None = Field(default=None, ge=0)
+    observed_p95_ms: float | None = Field(default=None, ge=0)
+    baseline_error_ratio: float | None = Field(default=None, ge=0, le=1)
+    observed_error_ratio: float | None = Field(default=None, ge=0, le=1)
+    observed_deadline_ratio: float | None = Field(default=None, ge=0, le=1)
+    observed_unavailable_ratio: float | None = Field(default=None, ge=0, le=1)
+    observed_known_status_fraction: float = Field(ge=0, le=1)
+
+class ServiceTraceSummary(Strict):
+    service: str = Field(min_length=1)
+    all_spans: SpanSummary
+    server_spans: SpanSummary
+    observed_until: float
+
 class Evidence(Strict):
     metrics: list[Metric] = Field(default_factory=list, max_length=5000)
     logs: None = None
-    traces: None = None
+    traces: list[ServiceTraceSummary] | None = Field(default=None, max_length=1000)
     topology: None = None
     deployment_context: None = None
 
 class Availability(Strict):
     metrics: bool
     logs: Literal[False] = False
-    traces: Literal[False] = False
+    traces: bool = False
     topology: Literal[False] = False
     deployment_context: Literal[False] = False
 
@@ -59,6 +78,12 @@ class IncidentInput(Strict):
             raise ValueError("evidence after decision_time")
         if self.modality_availability.metrics != bool(self.evidence.metrics):
             raise ValueError("metrics availability disagrees with evidence")
+        if any(t.observed_until > self.decision_time for t in self.evidence.traces or []):
+            raise ValueError("trace evidence after decision_time")
+        if self.modality_availability.traces != bool(self.evidence.traces):
+            raise ValueError("trace availability disagrees with evidence")
+        if len({t.service for t in self.evidence.traces or []}) != len(self.evidence.traces or []):
+            raise ValueError("duplicate trace service summary")
         return self
 
 class Provenance(Strict):

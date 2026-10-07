@@ -73,22 +73,25 @@ def evaluate(folder,device="cpu",ablations=True):
     rows=predict(model,tok,ser,examples,device,evaluation_split)
     metrics=write_evaluation(finish_rows(rows,cal,pol,meta["binding"]),Path(folder)/evaluation_split)
     if ablations:
-        for variant in ["mask_all_metrics","reverse_candidates","consistent_service_rename"]:
+        for variant in (["mask_all_evidence","reverse_candidates","consistent_service_rename"] if meta["config"].get("trace_features") else ["mask_all_metrics","reverse_candidates","consistent_service_rename"]):
             altered=copy.deepcopy(examples)
             for ex in altered:
-                if variant=="mask_all_metrics":
+                if variant in ("mask_all_metrics","mask_all_evidence"):
                     ex.input.evidence.metrics=[]
+                    ex.input.evidence.traces=None
                     ex.input.modality_availability.metrics=False
+                    ex.input.modality_availability.traces=False
                 elif variant=="reverse_candidates":
                     ex.input.candidates.reverse()
                 else:
-                    names=sorted({c.candidate_id for c in ex.input.candidates}|{m.service for m in ex.input.evidence.metrics})
+                    names=sorted({c.candidate_id for c in ex.input.candidates}|{m.service for m in ex.input.evidence.metrics}|{t.service for t in ex.input.evidence.traces or []})
                     mapping={name:f"component_{i:02d}" for i,name in enumerate(names)}
                     for c in ex.input.candidates:
                         c.candidate_id=mapping[c.candidate_id]
                         c.display_name=mapping.get(c.display_name,c.display_name)
                     for m in ex.input.evidence.metrics:
                         m.service=mapping[m.service]
+                    for t in ex.input.evidence.traces or []:t.service=mapping[t.service]
                     ex.targets.root_cause.value=mapping.get(ex.targets.root_cause.value,ex.targets.root_cause.value)
             vr=predict(model,tok,ser,altered,device,evaluation_split)
             write_evaluation(finish_rows(vr,cal,pol,meta["binding"]),Path(folder)/variant)
@@ -126,7 +129,7 @@ def benchmark(folder,config):
     ex=samples[0]
     for token_limit,count in [(512,2),(1024,7),(2048,len(ex.input.candidates))]:
         inc=ex.input.model_copy(deep=True); inc.candidates=inc.candidates[:count]
-        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics,engine.serializer.numeric_feature_version); enc=ser(inc)
+        ser=Serializer(engine.tokenizer,token_limit,engine.serializer.version,engine.serializer.numeric_metrics,engine.serializer.numeric_feature_version,engine.serializer.trace_features); enc=ser(inc)
         batch=collate([enc],engine.tokenizer.pad_token_id)
         with torch.inference_mode():
             engine.model(**batch)

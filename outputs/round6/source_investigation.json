@@ -1,0 +1,20 @@
+{
+  "aiops2025": {
+    "official_repository": "https://www.aiops.cn/gitlab/aiops-live-benchmark/agenticopseval",
+    "license": "CC BY-NC 4.0",
+    "labels_audited": 400,
+    "compatible_single_service_cpu_memory_cases": 42,
+    "not_used_for_training": true,
+    "reason": "Does not supply a comparable single-service five-fault confirmation set: network labels are edges, disk fill/io errors are not disk stress. Preserve ontology; external domain evaluation is outside this round MVP."
+  },
+  "github_mirror": {
+    "repository": "YixiangTang/AIOps2025",
+    "revision": "3ba362c67fd043a6d045c9ccbbed1fd22bbcd571",
+    "reason": "No raw archives in inspected tree; official source found separately"
+  },
+  "ops_lite": {
+    "source": "https://huggingface.co/datasets/anon-ops/ops-lite",
+    "not_used": true,
+    "reason": "Different systems and multi-fault taxonomy; no same-application confirmation"
+  }
+}

@@ -1,0 +1,1906 @@
+{
+  "eligible": [
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "emailservice",
+      "instance": "emailservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-05T16:10:02Z",
+      "end_time": "2025-06-05T16:31:02Z",
+      "uuid": "345fbe93-80",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "currencyservice",
+      "instance": "currencyservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-06T00:10:14Z",
+      "end_time": "2025-06-06T00:29:14Z",
+      "uuid": "233e0282-88",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "emailservice",
+      "instance": "emailservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-06T03:03:01Z",
+      "end_time": "2025-06-06T03:17:01Z",
+      "uuid": "26c9ab68-91",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "shippingservice",
+      "instance": [
+        "shippingservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-06T05:03:05Z",
+      "end_time": "2025-06-06T05:28:05Z",
+      "uuid": "31392fda-93",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "shippingservice",
+      "instance": [
+        "shippingservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-06T08:03:11Z",
+      "end_time": "2025-06-06T08:20:11Z",
+      "uuid": "4ab999b7-96",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "productcatalogservice",
+      "instance": [
+        "productcatalogservice-2"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-06T15:03:29Z",
+      "end_time": "2025-06-06T15:28:29Z",
+      "uuid": "ae4abdbe-103",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "Connection",
+            "refused"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "Error",
+            "while",
+            "dialing"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "unavailable"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "emailservice",
+      "instance": "emailservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-07T11:10:41Z",
+      "end_time": "2025-06-07T11:32:41Z",
+      "uuid": "66cfe1dd-121",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "recommendationservice",
+      "instance": "recommendationservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-07T15:11:05Z",
+      "end_time": "2025-06-07T15:33:05Z",
+      "uuid": "0fccdcad-125",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "paymentservice",
+      "instance": "paymentservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-07T16:10:02Z",
+      "end_time": "2025-06-07T16:32:02Z",
+      "uuid": "de4a919c-126",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "could",
+            "not",
+            "load"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "productcatalogservice",
+      "instance": [
+        "productcatalogservice-2"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-08T08:10:29Z",
+      "end_time": "2025-06-08T08:35:29Z",
+      "uuid": "ba74cb57-142",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "recommendationservice",
+      "instance": "recommendationservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-08T12:10:52Z",
+      "end_time": "2025-06-08T12:20:52Z",
+      "uuid": "ad13b37a-146",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "paymentservice",
+      "instance": [
+        "paymentservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-08T14:10:55Z",
+      "end_time": "2025-06-08T14:29:55Z",
+      "uuid": "50f000ee-148",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "could",
+            "not",
+            "load"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "cartservice",
+      "instance": [
+        "cartservice-1"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-08T21:10:21Z",
+      "end_time": "2025-06-08T21:33:21Z",
+      "uuid": "54002a5c-155",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "productcatalogservice",
+      "instance": [
+        "productcatalogservice-2"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-09T02:10:29Z",
+      "end_time": "2025-06-09T02:22:29Z",
+      "uuid": "0efb9550-160",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "shippingservice",
+      "instance": "shippingservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-09T12:10:48Z",
+      "end_time": "2025-06-09T12:22:48Z",
+      "uuid": "046aefa7-170",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "recommendationservice",
+      "instance": "recommendationservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-09T13:11:07Z",
+      "end_time": "2025-06-09T13:36:07Z",
+      "uuid": "e0a261ce-171",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "adservice",
+      "instance": "adservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-10T22:10:17Z",
+      "end_time": "2025-06-10T22:23:17Z",
+      "uuid": "e25d2429-203",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "checkoutservice",
+      "instance": [
+        "checkoutservice-1"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-11T08:10:41Z",
+      "end_time": "2025-06-11T08:24:41Z",
+      "uuid": "5d97906f-213",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "adservice",
+      "instance": [
+        "adservice-2"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-12T00:10:16Z",
+      "end_time": "2025-06-12T00:31:16Z",
+      "uuid": "df11e2f0-229",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "adservice",
+      "instance": "adservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-12T15:03:05Z",
+      "end_time": "2025-06-12T15:25:05Z",
+      "uuid": "f643fe98-243",
+      "key_observations": [],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "emailservice",
+      "instance": "emailservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-12T19:10:07Z",
+      "end_time": "2025-06-12T19:28:07Z",
+      "uuid": "741b801a-247",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "recommendationservice",
+      "instance": "recommendationservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T08:10:54Z",
+      "end_time": "2025-06-13T08:24:54Z",
+      "uuid": "c730da7b-260",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "recommendationservice",
+      "instance": "recommendationservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T11:11:00Z",
+      "end_time": "2025-06-13T11:34:00Z",
+      "uuid": "757fa56f-263",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "shippingservice",
+      "instance": [
+        "shippingservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T13:11:19Z",
+      "end_time": "2025-06-13T13:29:19Z",
+      "uuid": "b06b79b6-265",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "currencyservice",
+      "instance": [
+        "currencyservice-2"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T18:10:08Z",
+      "end_time": "2025-06-13T18:20:08Z",
+      "uuid": "c6e9faa0-270",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "could",
+            "not",
+            "load"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "shippingservice",
+      "instance": [
+        "shippingservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T20:10:13Z",
+      "end_time": "2025-06-13T20:33:13Z",
+      "uuid": "4b8e459c-272",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "checkoutservice",
+      "instance": [
+        "checkoutservice-0"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-13T23:10:17Z",
+      "end_time": "2025-06-13T23:22:17Z",
+      "uuid": "7e54232b-275",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "paymentservice",
+      "instance": [
+        "paymentservice-1"
+      ],
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-14T01:10:20Z",
+      "end_time": "2025-06-14T01:22:20Z",
+      "uuid": "4e221a94-277",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "could",
+            "not",
+            "load"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "currencyservice",
+      "instance": "currencyservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-14T07:10:32Z",
+      "end_time": "2025-06-14T07:21:32Z",
+      "uuid": "84f4b04a-283",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "Connection",
+            "refused"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "could",
+            "not",
+            "load"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "Error",
+            "while",
+            "dialing"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "unavailable"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "shippingservice",
+      "instance": "shippingservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-16T20:10:10Z",
+      "end_time": "2025-06-16T20:34:10Z",
+      "uuid": "a482d876-315",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "productcatalogservice",
+      "instance": "productcatalogservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-17T01:10:16Z",
+      "end_time": "2025-06-17T01:23:16Z",
+      "uuid": "fc3737af-320",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "adservice",
+      "instance": "adservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-17T08:10:39Z",
+      "end_time": "2025-06-17T08:22:39Z",
+      "uuid": "4fd42adb-327",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "deadlineexceeded"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "rpc",
+            "error"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "transport",
+            "Error",
+            "while",
+            "dialing"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "unavailable"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "paymentservice",
+      "instance": "paymentservice-2",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-17T20:10:05Z",
+      "end_time": "2025-06-17T20:24:05Z",
+      "uuid": "0b81a605-339",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "checkoutservice"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "productcatalogservice",
+      "instance": "productcatalogservice-0",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-19T12:10:27Z",
+      "end_time": "2025-06-19T12:33:27Z",
+      "uuid": "d124f9b7-379",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "checkoutservice",
+            "frontend",
+            "recommendationservice"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "emailservice",
+      "instance": "emailservice-2",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-20T21:10:08Z",
+      "end_time": "2025-06-20T21:24:08Z",
+      "uuid": "be622d9e-412",
+      "key_observations": [
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "cartservice",
+      "instance": "cartservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-21T11:10:22Z",
+      "end_time": "2025-06-21T11:22:22Z",
+      "uuid": "88f808ff-426",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "frontend"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "paymentservice",
+      "instance": "paymentservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-23T17:10:02Z",
+      "end_time": "2025-06-23T17:27:02Z",
+      "uuid": "6add78b2-480",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "checkoutservice"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "pod",
+      "service": "adservice",
+      "instance": "adservice-1",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-23T20:10:06Z",
+      "end_time": "2025-06-23T20:21:06Z",
+      "uuid": "dac96ecf-483",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "currencyservice",
+      "instance": "currencyservice-1",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-23T23:10:09Z",
+      "end_time": "2025-06-23T23:26:09Z",
+      "uuid": "192019ef-486",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "pod",
+      "service": "currencyservice",
+      "instance": "currencyservice-1",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-27T04:10:22Z",
+      "end_time": "2025-06-27T04:28:22Z",
+      "uuid": "6637fe70-563",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "checkoutservice",
+            "frontend"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "cpu stress",
+      "instance_type": "service",
+      "service": "currencyservice",
+      "instance": "currencyservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-27T16:10:01Z",
+      "end_time": "2025-06-27T16:35:01Z",
+      "uuid": "33492fcd-575",
+      "key_observations": [
+        {
+          "type": "trace",
+          "subtype": [
+            "latency_anomalies"
+          ],
+          "keyword": [
+            "checkoutservice",
+            "frontend"
+          ]
+        },
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "rrt",
+            "rrt_max"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_cpu_usage"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_cpu_usage"
+      ],
+      "fault_description": [
+        "high CPU utilization",
+        "CPU saturation",
+        "CPU overload",
+        "CPU usage spike",
+        "cpu stress"
+      ]
+    },
+    {
+      "fault_category": "stress test",
+      "fault_type": "memory stress",
+      "instance_type": "service",
+      "service": "checkoutservice",
+      "instance": "checkoutservice",
+      "source": "",
+      "destination": "",
+      "start_time": "2025-06-27T18:10:04Z",
+      "end_time": "2025-06-27T18:34:04Z",
+      "uuid": "7d23b182-577",
+      "key_observations": [
+        {
+          "type": "log",
+          "keyword": [
+            "http.resp.status",
+            "302"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_processes"
+          ]
+        },
+        {
+          "type": "metric",
+          "keyword": [
+            "pod_memory_working_set_bytes"
+          ]
+        }
+      ],
+      "key_metrics": [
+        "pod_memory_working_set_bytes"
+      ],
+      "fault_description": [
+        "high memory usage",
+        "memory saturation",
+        "memory exhaustion",
+        "memory leak",
+        "memory stress"
+      ]
+    }
+  ],
+  "counts": {
+    "2025-06-06": {
+      "cpu_stress": 4,
+      "memory_stress": 2
+    },
+    "2025-06-07": {
+      "cpu_stress": 2
+    },
+    "2025-06-08": {
+      "memory_stress": 4
+    },
+    "2025-06-09": {
+      "memory_stress": 2,
+      "cpu_stress": 2
+    },
+    "2025-06-11": {
+      "cpu_stress": 1,
+      "memory_stress": 1
+    },
+    "2025-06-12": {
+      "cpu_stress": 1,
+      "memory_stress": 1
+    },
+    "2025-06-13": {
+      "memory_stress": 1,
+      "cpu_stress": 3
+    },
+    "2025-06-14": {
+      "memory_stress": 4,
+      "cpu_stress": 1
+    },
+    "2025-06-17": {
+      "cpu_stress": 1,
+      "memory_stress": 2
+    },
+    "2025-06-18": {
+      "cpu_stress": 1
+    },
+    "2025-06-19": {
+      "cpu_stress": 1
+    },
+    "2025-06-21": {
+      "memory_stress": 1,
+      "cpu_stress": 1
+    },
+    "2025-06-24": {
+      "cpu_stress": 2,
+      "memory_stress": 1
+    },
+    "2025-06-27": {
+      "cpu_stress": 1
+    },
+    "2025-06-28": {
+      "cpu_stress": 1,
+      "memory_stress": 1
+    }
+  }
+}

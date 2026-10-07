@@ -15,12 +15,14 @@ class Encoded:
     incident_numeric: list | None = None
 
 class Serializer:
-    def __init__(self, tokenizer, max_length=2048, version=SERIALIZER, numeric_metrics=(), numeric_feature_version="mean-v1"):
+    def __init__(self, tokenizer, max_length=2048, version=SERIALIZER, numeric_metrics=(), numeric_feature_version="mean-v1", trace_features=False):
         self.tokenizer=tokenizer
         self.max_length=max_length
         self.version=version
         self.numeric_metrics=list(numeric_metrics)
         self.numeric_feature_version=numeric_feature_version
+        self.trace_features=trace_features
+        if trace_features and not numeric_metrics:raise ValueError("trace fusion requires numeric metrics")
         if numeric_feature_version not in ("mean-v1","temporal-v1"):raise ValueError("unknown numeric feature version")
         if numeric_feature_version=="temporal-v1" and not self.numeric_metrics:raise ValueError("temporal features require numeric metrics")
         if version not in (SERIALIZER,"metrics-canonical-v2"): raise ValueError("unsupported serializer version")

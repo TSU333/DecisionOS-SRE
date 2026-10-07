@@ -14,7 +14,7 @@ from .model import build_model, labels, supervised_loss
 
 def config_binding(config,checkpoint_hash,split_hash,tokenizer_hash):
     pipeline={"serializer":config.get("serializer_version",SERIALIZER),"max_length":config["max_length"],"ontology":FAULTS}
-    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight","numeric_feature_version"):
+    for key in ("pooling","numeric_fusion","numeric_metrics","root_conditioned_fault","text_logit_weight","numeric_feature_version","trace_features","trace_feature_version"):
         if key in config: pipeline[key]=config[key]
     return {"checkpoint_sha256":checkpoint_hash,"split_hash":split_hash,
             "pipeline_hash":digest(pipeline),
@@ -42,7 +42,7 @@ def predict(model,tokenizer,serializer,examples,device,split):
               "fault_logits":faults[0].float().cpu().tolist(),
               "root_target":encoded.candidate_ids.index(rid) if rid in encoded.candidate_ids else (-1 if rid is not None else None),
               "fault_target":FAULTS.index(fid) if fid in FAULTS else None,
-              "gold":ex.targets.model_dump(),"evidence_usable":encoded.report.get("numeric_evidence_usable",encoded.report["usable_metrics_retained"]>0),
+              "gold":ex.targets.model_dump(),"evidence_usable":encoded.report.get("modality_evidence_usable",encoded.report.get("numeric_evidence_usable",encoded.report["usable_metrics_retained"]>0)),
               "serialization":encoded.report,"model_ms":elapsed*1000})
     return rows
 
@@ -64,7 +64,7 @@ def train(config,mode):
     if (out/"checkpoint.pt").exists():
         raise FileExistsError("Checkpoint exists. Choose a fresh artifact_root; never silently overwrite a evaluated model.")
     tokenizer=AutoTokenizer.from_pretrained(config["backbone_dir"],local_files_only=True)
-    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [],config.get("numeric_feature_version","mean-v1"))
+    serializer=Serializer(tokenizer,config["max_length"],config.get("serializer_version",SERIALIZER),config.get("numeric_metrics",[]) if config.get("numeric_fusion",False) else [],config.get("numeric_feature_version","mean-v1"),config.get("trace_features",False))
     model=build_model(config["backbone_dir"],head_size=config["head_size"],pooling=config.get("pooling","cls"),numeric_dim=numeric_dimension(config),root_conditioned_fault=config.get("root_conditioned_fault",False),text_logit_weight=config.get("text_logit_weight",1.)).to(device)
     if mode=="frozen":
         for p in model.backbone.parameters():
@@ -192,7 +192,7 @@ def load_checkpoint(artifact_dir,device="cpu"):
     model.load_state_dict(torch.load(folder/"checkpoint.pt",map_location="cpu",weights_only=True),strict=True)
     model.to(device).eval()
     tok=AutoTokenizer.from_pretrained(folder/"tokenizer",local_files_only=True)
-    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else [],cfg.get("numeric_feature_version","mean-v1")),metadata
+    return model,tok,Serializer(tok,cfg["max_length"],cfg.get("serializer_version",SERIALIZER),cfg.get("numeric_metrics",[]) if cfg.get("numeric_fusion",False) else [],cfg.get("numeric_feature_version","mean-v1"),cfg.get("trace_features",False)),metadata
 
 def baseline(data_dir):
     from collections import Counter
@@ -312,6 +312,16 @@ def initialize_from_artifact(model,config,trainset,valset):
             if target.shape[0]!=old.shape[0] or target.shape[1]!=2*old.shape[1]:raise ValueError('Invalid temporal expansion shape')
             expanded=torch.zeros_like(target);expanded[:,:old.shape[1]]=old
             state[name]=expanded;migrated.append(name)
+    old_trace=meta['config'].get('trace_features',False);new_trace=config.get('trace_features',False)
+    if old_trace!=new_trace:
+        if old_trace or not new_trace or old_version!=new_version or config.get('trace_feature_upgrade')!='zero_pad_trace_v1':
+            raise ValueError('Unsupported trace feature migration')
+        expected=model.state_dict()
+        for name in ['numeric_root.0.weight','numeric_fault.0.weight','numeric_local_fault.0.weight']:
+            if name not in state:continue
+            old=state[name];target=expected[name];extra=72 if name=='numeric_fault.0.weight' else 24
+            if target.shape[0]!=old.shape[0] or target.shape[1]!=old.shape[1]+extra:raise ValueError('Invalid trace expansion shape')
+            expanded=torch.zeros_like(target);expanded[:,:old.shape[1]]=old;state[name]=expanded;migrated.append(name)
     missing,unexpected=model.load_state_dict(state,strict=False)
     if unexpected or any(not n.startswith(("numeric_root.","numeric_fault.","numeric_local_fault.")) for n in missing):
         raise ValueError("Unexpected parent architecture mismatch")

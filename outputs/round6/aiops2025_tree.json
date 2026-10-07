@@ -1,0 +1,497 @@
+{
+  "repository": "YixiangTang/AIOps2025",
+  "revision": "3ba362c67fd043a6d045c9ccbbed1fd22bbcd571",
+  "license": null,
+  "size_kb": 188,
+  "tree": {
+    "sha": "3ba362c67fd043a6d045c9ccbbed1fd22bbcd571",
+    "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/3ba362c67fd043a6d045c9ccbbed1fd22bbcd571",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "54c0bfa42fdb0ed057425ea74848323fde32f3da",
+        "size": 89,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/54c0bfa42fdb0ed057425ea74848323fde32f3da"
+      },
+      {
+        "path": "aiopschallenge2025-submission",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6e62ec0ec3ef5d4ff03790da75390a3e355e2bfc",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/6e62ec0ec3ef5d4ff03790da75390a3e355e2bfc"
+      },
+      {
+        "path": "aiopschallenge2025-submission/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6453e2455e8f60908d3638c1bc711d2bf108b3b0",
+        "size": 6738,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/6453e2455e8f60908d3638c1bc711d2bf108b3b0"
+      },
+      {
+        "path": "aiopschallenge2025-submission/result_24.1_1.jsonl",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7801465581b2351f23dfb5669071cecfd1cb5dbd",
+        "size": 275936,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/7801465581b2351f23dfb5669071cecfd1cb5dbd"
+      },
+      {
+        "path": "aiopschallenge2025-submission/result_25.06_2.jsonl",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8bc8730e3ec57d0b16981a9b84b4a8481d3223bf",
+        "size": 348203,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/8bc8730e3ec57d0b16981a9b84b4a8481d3223bf"
+      },
+      {
+        "path": "aiopschallenge2025-submission/submit.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9be1507cf1c1bd731177f25e7aa9e364de61d333",
+        "size": 5531,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/9be1507cf1c1bd731177f25e7aa9e364de61d333"
+      },
+      {
+        "path": "dataset",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fc60f2ea8d619935da844aa996e65d2596fbe405",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/fc60f2ea8d619935da844aa996e65d2596fbe405"
+      },
+      {
+        "path": "dataset/.gitattributes",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f087b429e2f81a9f37b28a8308e2210f84df6c9b",
+        "size": 45,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/f087b429e2f81a9f37b28a8308e2210f84df6c9b"
+      },
+      {
+        "path": "dataset/.gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d6aacef76dfa95b9dfcbdf48677557d3c2276bf7",
+        "size": 44,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/d6aacef76dfa95b9dfcbdf48677557d3c2276bf7"
+      },
+      {
+        "path": "dataset/README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f60b228d87d64a1b7fe773a5d03a3cf06dcbb792",
+        "size": 1397,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/f60b228d87d64a1b7fe773a5d03a3cf06dcbb792"
+      },
+      {
+        "path": "dataset/checksums.md5",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85f0f7560b5971be24f502b6d8655370d64810da",
+        "size": 468,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/85f0f7560b5971be24f502b6d8655370d64810da"
+      },
+      {
+        "path": "dataset/groundtruth.jsonl",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd0a1a361564cbe3683223686915ca3c3dccf8f1",
+        "size": 335053,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/fd0a1a361564cbe3683223686915ca3c3dccf8f1"
+      },
+      {
+        "path": "dataset/input.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8316852bf5ca162dd19ed8aa7050c47a724b45f",
+        "size": 74146,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/c8316852bf5ca162dd19ed8aa7050c47a724b45f"
+      },
+      {
+        "path": "dataset/path.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aa8a62c1d54ca57bfa88210573af012269b2b3fb",
+        "size": 7206,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/aa8a62c1d54ca57bfa88210573af012269b2b3fb"
+      },
+      {
+        "path": "dataset/process_apm_metric.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b1dc15057f0faeca2fc8d402e3a073a6b6267f85",
+        "size": 3247,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/b1dc15057f0faeca2fc8d402e3a073a6b6267f85"
+      },
+      {
+        "path": "dataset/process_infra_metric.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "77900da554838f069cd76a6035a17b37c35dcfdb",
+        "size": 12815,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/77900da554838f069cd76a6035a17b37c35dcfdb"
+      },
+      {
+        "path": "dataset/process_log.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "69185e5ecf1df79b0dfa7fe8efc9922cd83f7860",
+        "size": 1786,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/69185e5ecf1df79b0dfa7fe8efc9922cd83f7860"
+      },
+      {
+        "path": "dataset/process_trace.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3771e61f08ba727038d425866e905ab099a024ec",
+        "size": 5534,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/3771e61f08ba727038d425866e905ab099a024ec"
+      },
+      {
+        "path": "dataset/read.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7a90508c37047e0f3d77418747787329ca4b0b34",
+        "size": 3098,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/7a90508c37047e0f3d77418747787329ca4b0b34"
+      },
+      {
+        "path": "dataset/time.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "02f6afeefb531d95576777f3ed316a2275d90a86",
+        "size": 1021,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/02f6afeefb531d95576777f3ed316a2275d90a86"
+      },
+      {
+        "path": "difficult_question.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "94ea6aa732904ec19ab3dc07a476d97949fd2926",
+        "size": 3293,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/94ea6aa732904ec19ab3dc07a476d97949fd2926"
+      },
+      {
+        "path": "evaluation.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3d3aa86a17c7de35c050d5e9d641c2088dd0ae31",
+        "size": 2089,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/3d3aa86a17c7de35c050d5e9d641c2088dd0ae31"
+      },
+      {
+        "path": "json2jsonl.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "675f606b8580f7e5adccae8d15165d5833ac6d03",
+        "size": 807,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/675f606b8580f7e5adccae8d15165d5833ac6d03"
+      },
+      {
+        "path": "node.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "043f673359a13ed58a94dd35c9ab395a91e64755",
+        "size": 1711,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/043f673359a13ed58a94dd35c9ab395a91e64755"
+      },
+      {
+        "path": "output_02.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1baa1e327b1c9c5f7167b1f4333db2c2cc3f0047",
+        "size": 45403,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/1baa1e327b1c9c5f7167b1f4333db2c2cc3f0047"
+      },
+      {
+        "path": "processed_data",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cec7ef219256ac8530efcdb97aaa94de8125ded8",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/cec7ef219256ac8530efcdb97aaa94de8125ded8"
+      },
+      {
+        "path": "processed_data/fault_time.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d627219976dc1ae34df1f024f301bca26bd10d8b",
+        "size": 16820,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/d627219976dc1ae34df1f024f301bca26bd10d8b"
+      },
+      {
+        "path": "requirements.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd2fe3aad4a5502dadce20f8bc630aa95b036373",
+        "size": 192,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/fd2fe3aad4a5502dadce20f8bc630aa95b036373"
+      },
+      {
+        "path": "result.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9ec0e39ef513f5e4dab2595e4d7c4f9d15d9276",
+        "size": 183,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/c9ec0e39ef513f5e4dab2595e4d7c4f9d15d9276"
+      },
+      {
+        "path": "src",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a58d23b6cdc20824ed28a04a3d9f519bbb727c9b",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/a58d23b6cdc20824ed28a04a3d9f519bbb727c9b"
+      },
+      {
+        "path": "src/agent",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8fe6a9b43bea8713032540d45bc872da8a6d0a98",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/8fe6a9b43bea8713032540d45bc872da8a6d0a98"
+      },
+      {
+        "path": "src/agent/__pycache__",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "efcdf3555f7fc9fbb6c5b2babec000fab5764386",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/efcdf3555f7fc9fbb6c5b2babec000fab5764386"
+      },
+      {
+        "path": "src/agent/__pycache__/agents.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "146f5202a587403ca5c9076b5b3c2f5367b8dda2",
+        "size": 2575,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/146f5202a587403ca5c9076b5b3c2f5367b8dda2"
+      },
+      {
+        "path": "src/agent/__pycache__/data_tools.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "64865faaa67b50d03a8adea8f337932c9065da4b",
+        "size": 23904,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/64865faaa67b50d03a8adea8f337932c9065da4b"
+      },
+      {
+        "path": "src/agent/__pycache__/time_tools.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a51184439a36ae85673b7b4d1696aad331dbb31",
+        "size": 1047,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/2a51184439a36ae85673b7b4d1696aad331dbb31"
+      },
+      {
+        "path": "src/agent/agents.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9927793a3bcdfe48aacd1fdc93410e961daac348",
+        "size": 3133,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/9927793a3bcdfe48aacd1fdc93410e961daac348"
+      },
+      {
+        "path": "src/agent/data_tools.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e59023117c6e87d8a30bb79420256bdc22374f39",
+        "size": 38932,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/e59023117c6e87d8a30bb79420256bdc22374f39"
+      },
+      {
+        "path": "src/agent/time_tools.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aef0e03f95e1b7ffdbc2b56a1d83a1a5dc8b11ff",
+        "size": 803,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/aef0e03f95e1b7ffdbc2b56a1d83a1a5dc8b11ff"
+      },
+      {
+        "path": "src/config",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "20fa639e98989ecc60a600ca70f54fa316afcdc1",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/20fa639e98989ecc60a600ca70f54fa316afcdc1"
+      },
+      {
+        "path": "src/config/__pycache__",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ef3eddda9dd256403fcc94e871628d50d6710b2f",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/ef3eddda9dd256403fcc94e871628d50d6710b2f"
+      },
+      {
+        "path": "src/config/__pycache__/agent_prompt.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "944be34e05247b2b6eb6326cfefc42f577846507",
+        "size": 6363,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/944be34e05247b2b6eb6326cfefc42f577846507"
+      },
+      {
+        "path": "src/config/__pycache__/components_info.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2d6ad9e1d4c4baefd599187654416535a7bccee",
+        "size": 1047,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/f2d6ad9e1d4c4baefd599187654416535a7bccee"
+      },
+      {
+        "path": "src/config/__pycache__/llm_config.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ed77c4af78d50b7bc87c88d8d5389e5bae778f4",
+        "size": 934,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/1ed77c4af78d50b7bc87c88d8d5389e5bae778f4"
+      },
+      {
+        "path": "src/config/__pycache__/metric_description.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "db3924d10ac25695b37927796614065acfcbca0c",
+        "size": 2185,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/db3924d10ac25695b37927796614065acfcbca0c"
+      },
+      {
+        "path": "src/config/__pycache__/system_info.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9538aea35bdba2e24d63b3e8f5cc01f941532d7",
+        "size": 2304,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/a9538aea35bdba2e24d63b3e8f5cc01f941532d7"
+      },
+      {
+        "path": "src/config/__pycache__/system_prompt.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ffba97e05cbfc34313e67753578852598139c46",
+        "size": 4680,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/0ffba97e05cbfc34313e67753578852598139c46"
+      },
+      {
+        "path": "src/config/agent_prompt.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8352f432baf1d920282ba32f42f5fe3c56b36d5",
+        "size": 6419,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/e8352f432baf1d920282ba32f42f5fe3c56b36d5"
+      },
+      {
+        "path": "src/config/components_info.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4e7158eaccaf27f19dd867267f316242ae4966b3",
+        "size": 1127,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/4e7158eaccaf27f19dd867267f316242ae4966b3"
+      },
+      {
+        "path": "src/config/llm_config.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b5138825a6a3560c9ea6b014b3c4028f0a7f03c",
+        "size": 1404,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/6b5138825a6a3560c9ea6b014b3c4028f0a7f03c"
+      },
+      {
+        "path": "src/config/metric_description.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a57e7bb61f01f0a73369acefe9a926726f74cb8",
+        "size": 2013,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/1a57e7bb61f01f0a73369acefe9a926726f74cb8"
+      },
+      {
+        "path": "src/config/metric_info.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16a21ffcbb932def92733da45b6e258f8d358bca",
+        "size": 1169,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/16a21ffcbb932def92733da45b6e258f8d358bca"
+      },
+      {
+        "path": "src/config/metric_prompt.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad36ed9d04aab05cfdaf2619c133306038c3f667",
+        "size": 2307,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/ad36ed9d04aab05cfdaf2619c133306038c3f667"
+      },
+      {
+        "path": "src/config/system_prompt.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "696c3a8f684b62c7cdc2e046ac9165fd74baa85c",
+        "size": 4536,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/696c3a8f684b62c7cdc2e046ac9165fd74baa85c"
+      },
+      {
+        "path": "src/graph",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6ded5c6b7c25cd30450df17a922b7f70c9dbe76a",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/6ded5c6b7c25cd30450df17a922b7f70c9dbe76a"
+      },
+      {
+        "path": "src/graph/__pycache__",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "8ff90ad5a7d197e91844572f0fb22ebb7d0fe603",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/8ff90ad5a7d197e91844572f0fb22ebb7d0fe603"
+      },
+      {
+        "path": "src/graph/__pycache__/graph.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "954adc14401461266267a4217b2c09cd6eb454e8",
+        "size": 695,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/954adc14401461266267a4217b2c09cd6eb454e8"
+      },
+      {
+        "path": "src/graph/graph.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "755b0a9188d85cb9b8b013f4a13f6d41b286b324",
+        "size": 674,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/755b0a9188d85cb9b8b013f4a13f6d41b286b324"
+      },
+      {
+        "path": "src/main.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "898ae4013dad63a35bbdeed2d752a85c2fd7a0f6",
+        "size": 1291,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/898ae4013dad63a35bbdeed2d752a85c2fd7a0f6"
+      },
+      {
+        "path": "src/state",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "97ac73ca15bfde0a79044a90d81ba6951035db17",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/97ac73ca15bfde0a79044a90d81ba6951035db17"
+      },
+      {
+        "path": "src/state/__pycache__",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e5a8fe22a82e98a382d84f4861829adbcffa6160",
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/trees/e5a8fe22a82e98a382d84f4861829adbcffa6160"
+      },
+      {
+        "path": "src/state/__pycache__/state.cpython-310.pyc",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4e52ea73b67498d2f37b3f00e1e67329a77d916f",
+        "size": 573,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/4e52ea73b67498d2f37b3f00e1e67329a77d916f"
+      },
+      {
+        "path": "src/state/state.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "497a3ca63d709c34efa916335fe2e658be968101",
+        "size": 245,
+        "url": "https://api.github.com/repos/YixiangTang/AIOps2025/git/blobs/497a3ca63d709c34efa916335fe2e658be968101"
+      }
+    ],
+    "truncated": false
+  }
+}

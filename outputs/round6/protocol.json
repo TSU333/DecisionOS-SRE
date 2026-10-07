@@ -1,0 +1,63 @@
+{
+  "execution_scope": "mvp",
+  "parent": "artifacts/round5/temporal_seed44/frozen",
+  "data_dir": "data/round6",
+  "cases": 400,
+  "new_cases": 0,
+  "new_evidence": "RCAEval fixed revision RE2-OB traces for existing 75 cases; other 325 cases retain absent traces",
+  "windows": "baseline started >=onset-300 and finished <onset; observation started >=onset and finished <=onset+60; no ongoing spans",
+  "trace_summary": "All completed spans and local RPC server spans separately per observable service. Rates, latency mean/p95 in ms, known/nonzero/status4/status14 ratios. Unknown status excluded from error denominator. No trace IDs, operation names, paths or labels serialized. frontendservice alias maps to frontend only when frontend is an observable candidate.",
+  "feature_version": "service-trace-v1",
+  "budget": "append compact trace summaries within remaining 2048 token budget, anomaly-ranked without gold; only retained summaries feed numeric heads",
+  "initialization": "preserve existing 120 numeric channels and prepend no features; append24 trace channels, zero-pad old numeric input weights. One frozen shared backbone call.",
+  "trials": [
+    {
+      "name": "metrics_control",
+      "seed": 44,
+      "trace_features": false
+    },
+    {
+      "name": "trace_seed42",
+      "seed": 42,
+      "trace_features": true
+    },
+    {
+      "name": "trace_seed43",
+      "seed": 43,
+      "trace_features": true
+    },
+    {
+      "name": "trace_seed44",
+      "seed": 44,
+      "trace_features": true
+    }
+  ],
+  "max_steps": 2500,
+  "epochs": 260,
+  "patience": 70,
+  "lr": 0.0003,
+  "selection_config": {
+    "selection_metric": "cohort_guarded_retention",
+    "retention_floors": {
+      "Online Boutique": 0.95,
+      "Sock Shop": 0.9
+    }
+  },
+  "selection": "Compare same40validation; incumbent included; retain app floors then maximize cohort macro joint, overall joint, minimize NLL. No cal/gate/regression tuning; freeze before those are opened.",
+  "quality_targets": {
+    "root": 0.9,
+    "fault": 0.9,
+    "joint": 0.85
+  },
+  "target_origin": "working assumptions from prior rounds, not explicit user numeric requirement",
+  "gate": {
+    "risk": 0.05,
+    "min_runs": 30
+  },
+  "limitations": [
+    "historical regression only; no fresh confirmation",
+    "reused calibration and gate",
+    "oracle onset",
+    "trace completion timestamps approximate visibility; ingestion delay unavailable"
+  ]
+}
