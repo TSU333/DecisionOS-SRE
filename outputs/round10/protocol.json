@@ -1,0 +1,134 @@
+{
+  "created_utc": "2026-10-07T12:49:01.075836+00:00",
+  "execution_scope": "mvp",
+  "parent": "artifacts\\round5\\temporal_seed44\\frozen",
+  "parent_checkpoint_sha256": "461b93c00f348cc8759060b08f577ea5a7cce25672b0f7de0768d033b16b6423",
+  "trials": [
+    {
+      "name": "shared_control",
+      "config": "configs/round10_shared_control.json",
+      "config_sha256": "aa729dfac84af470a8836865e395a8bd846cf64f79b9042f4f325738eb407c6c",
+      "head_training_policy": "fault_heads",
+      "head_learning_rate": 0.0001,
+      "dropout": 0.0
+    },
+    {
+      "name": "app_lr100",
+      "config": "configs/round10_app_lr100.json",
+      "config_sha256": "da68aa015b409d47e8ec8c268634cda1882142eb4d729a31214250dd7e16caf5",
+      "head_training_policy": "application_fault_heads",
+      "head_learning_rate": 0.0001,
+      "dropout": 0.0
+    },
+    {
+      "name": "app_lr30",
+      "config": "configs/round10_app_lr30.json",
+      "config_sha256": "b267d7f6005e7482db427f5a32a1f1a482ba54d20bba1da282dbf62b9d28f79c",
+      "head_training_policy": "application_fault_heads",
+      "head_learning_rate": 3e-05,
+      "dropout": 0.0
+    },
+    {
+      "name": "app_drop15",
+      "config": "configs/round10_app_drop15.json",
+      "config_sha256": "36b9efe0d4004eb0d26d208dc9f7e05a9e5b6e7e209bf6018e5df311f6b7a38f",
+      "head_training_policy": "application_fault_heads",
+      "head_learning_rate": 0.0001,
+      "dropout": 0.15
+    }
+  ],
+  "selection_config": {
+    "execution_scope": "mvp",
+    "seed": 44,
+    "data_dir": "data/round5",
+    "backbone_dir": "artifacts/backbone",
+    "artifact_root": "artifacts/round5/temporal_seed44",
+    "max_length": 2048,
+    "epochs": 240,
+    "batch_size": 16,
+    "gradient_accumulation": 1,
+    "learning_rate_sft": 2e-05,
+    "learning_rate_frozen": 0.0003,
+    "weight_decay": 0.01,
+    "loss_weights": [
+      1,
+      1
+    ],
+    "head_size": 128,
+    "train_device": "cuda",
+    "inference_device": "cpu",
+    "cpu_threads": 8,
+    "gradient_checkpointing": true,
+    "early_stopping_patience": 60,
+    "max_steps": 2000,
+    "calibration_min_samples": 10,
+    "target_joint_risk": 0.05,
+    "min_accepted_runs": 30,
+    "ece_bins": 10,
+    "benchmark_warmup": 3,
+    "benchmark_repeats": 12,
+    "execute_remediation": false,
+    "external_llm_enabled": false,
+    "backbone_learning_rate": 2e-05,
+    "head_learning_rate": 0.0003,
+    "schedule": "constant",
+    "warmup_fraction": 0,
+    "augmentation": {
+      "candidate_shuffle": false,
+      "metric_dropout": 0.0,
+      "evidence_dropout": 0.0
+    },
+    "serializer_version": "metrics-canonical-v2",
+    "pooling": "mean",
+    "numeric_fusion": true,
+    "numeric_metrics": [
+      "cpu",
+      "diskio",
+      "error",
+      "latency",
+      "latency-50",
+      "latency-90",
+      "load",
+      "mem",
+      "socket",
+      "workload"
+    ],
+    "initialization_artifact": "artifacts/round4/balanced_seed43/frozen",
+    "selection_metric": "cohort_guarded_retention",
+    "cache_frozen_features": true,
+    "text_logit_weight": 0.1,
+    "root_conditioned_fault": true,
+    "sampling_strategy": "cohort_balanced",
+    "preserve_validation_cohorts": [
+      "RE1-OB",
+      "RE2-OB"
+    ],
+    "preserve_joint_floor": 0.85,
+    "retention_floors": {
+      "Online Boutique": 0.95,
+      "Sock Shop": 0.9
+    },
+    "numeric_feature_version": "temporal-v1",
+    "evaluation_split": "regression_ss",
+    "numeric_feature_upgrade": "zero_pad_temporal_v1"
+  },
+  "training_budget_max_updates": 8800,
+  "data_audit_sha256": "630ab2be24f23365094dfa0b6d07b58f78107d020c9ec9a7e024e8e8e5408657",
+  "targets": {
+    "root_accuracy": 0.9,
+    "fault_accuracy": 0.9,
+    "joint_accuracy": 0.85
+  },
+  "target_origin": "prior working assumption, not explicit user numeric requirements",
+  "selection": "Retain OB validation joint >=95%, SS >=90%; then cohort joint macro, overall joint, sum NLL; compare incumbent. Only original 40 validation cases.",
+  "release_guard": "Evaluate only the frozen validation winner. Promote only if validation improves and each historical cohort root/fault/joint does not regress. Failure keeps incumbent; no runner-up or post-regression tuning.",
+  "original_cases": 400,
+  "new_independent_cases": 0,
+  "eligible_train_cases": 164,
+  "training_views": 0,
+  "known_onset": true,
+  "no_new_backbone_sft": true,
+  "hypothesis": "Shared fault parameters may interfere between observed applications. Initialize public-application experts as exact parent copies; train only expert parameters. Unknown application uses unchanged shared fallback and REVIEW.",
+  "routing_apps_derived_from": "TRAIN input.application",
+  "predeclared_trials_complete_before_evaluation": true
+}

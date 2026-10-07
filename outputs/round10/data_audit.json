@@ -1,0 +1,1363 @@
+{
+  "version": "application-experts-v1",
+  "original_cases": 400,
+  "new_independent_cases": 0,
+  "allowed_train_cases": 165,
+  "eligible_train_cases": 164,
+  "excluded_unusable_train": [
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "cohort": "RE1-OB",
+      "reason": "no retained usable temporal evidence"
+    }
+  ],
+  "training_view_count": 0,
+  "original_split_counts": {
+    "train": 165,
+    "model_validation": 40,
+    "calibration": 40,
+    "gate_selection": 85,
+    "regression_re1_ob": 15,
+    "regression_re2_ob": 25,
+    "regression_ss": 30
+  },
+  "original_files": {
+    "manifest.json": "eb8a7e49dc5676aa50925b2e1ee38b372deb7c63f8f495142515980882c4969a",
+    "splits.json": "c0f45c9566b5f840039752fc16b73eaf94687da1ae7ce2c65dd5b819bb405eda",
+    "examples.json": "d1830c26f1583413178e064a1a7d021531d445b8098ac14e2b70018cb1d41422"
+  },
+  "train_applications": [
+    "Online Boutique",
+    "Sock Shop"
+  ],
+  "train_application_counts": {
+    "Online Boutique": 64,
+    "Sock Shop": 100
+  },
+  "train_records": [
+    {
+      "run_id": "ae7a55546bd239158a1c0f87",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "44b2ee08820479f9f251c02f",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "dc72fd144dc07825b95e9f8f",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "d0e4cdd03f963268b0b837e4",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1276
+    },
+    {
+      "run_id": "4b9bcfee80f9d6dd0a45ba4e",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1281
+    },
+    {
+      "run_id": "a5b9b34d974ceb23210c41e4",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "317d870b6bfdb9bc4fd3e2fa",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "bbbfd5c80988068515990283",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1316
+    },
+    {
+      "run_id": "0f21a2ab0af4e53a4f5773e4",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1070
+    },
+    {
+      "run_id": "7b597dce8e17e7578f1d572b",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "52461e0c6bed588e5d3558e8",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1071
+    },
+    {
+      "run_id": "704205d07bf129586fc039df",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1061
+    },
+    {
+      "run_id": "82cdb6657e41396f4e6d7532",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "73c9f93dd8e1e00153f844fa",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "bfd14b9d5c95fe2941976f07",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1302
+    },
+    {
+      "run_id": "054a3237ad43dc034b43f328",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1300
+    },
+    {
+      "run_id": "ac186cd4f7d3d915a519a8dd",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "9cb104e6dfecdb5c1e324b91",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "5b264db6fc27feb0e1c32027",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "888735b551ad1c03171876a7",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1057
+    },
+    {
+      "run_id": "c6d2864520ee3d766412a162",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1062
+    },
+    {
+      "run_id": "9edddbbf48a94d96d896e929",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1059
+    },
+    {
+      "run_id": "ab5967d895935ed7e41a1b72",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1080
+    },
+    {
+      "run_id": "90e2d3f7583aa10000ff52e8",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1297
+    },
+    {
+      "run_id": "cd41a7743aad542bc9248791",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "d8448a5bc5754b32d1502bdf",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "cf85df46f1fa9667bf0b8727",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1327
+    },
+    {
+      "run_id": "9b91e2cea498a63f467530a5",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "adc5a196741fb7e650f144b5",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1075
+    },
+    {
+      "run_id": "d358fe8d043b84d6bf650ef9",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1064
+    },
+    {
+      "run_id": "3c98e50e1f9c1a5872c6923b",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "095c72f94f03034c83400f6a",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1071
+    },
+    {
+      "run_id": "750b31e440a14921840f1ddb",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1051
+    },
+    {
+      "run_id": "5014289367470c829f351d53",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1067
+    },
+    {
+      "run_id": "3798247404bbcd5190dfe271",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1295
+    },
+    {
+      "run_id": "fc0701e8f3a251090bb14ead",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1299
+    },
+    {
+      "run_id": "3daf57158daef7d598616b38",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1272
+    },
+    {
+      "run_id": "713bc20c73338c51cd9f91da",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1303
+    },
+    {
+      "run_id": "6907562bccdbf715db018a13",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1269
+    },
+    {
+      "run_id": "21a11a8fa96a215914feab22",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": false,
+      "tokens": 854
+    },
+    {
+      "run_id": "696b6ca4c2d057fcf67fc899",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "8e904a43f2986e996bdbffbe",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1069
+    },
+    {
+      "run_id": "a802765698d3e965d8775d9d",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1078
+    },
+    {
+      "run_id": "e907a8050f83593bb0d5e8f7",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "6f1365a589564793eedd5271",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "39e972166970bbbce4d3ae66",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1286
+    },
+    {
+      "run_id": "b352ccc9ecac53f4d79c1861",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1313
+    },
+    {
+      "run_id": "cbc247593db62bbaff1e94c7",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1075
+    },
+    {
+      "run_id": "64af67464eab2734e054fd73",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1064
+    },
+    {
+      "run_id": "a5a8aaad73b0dc500441ac0b",
+      "application": "Online Boutique",
+      "cohort": "RE1-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1063
+    },
+    {
+      "run_id": "9ab31bb621d3e0d8f2897404",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1477
+    },
+    {
+      "run_id": "0a6f2329dca752051eced5b8",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1510
+    },
+    {
+      "run_id": "f8c60f1c81675f0c04f88051",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1528
+    },
+    {
+      "run_id": "4f3d5a725f5be826f6bb5fec",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1534
+    },
+    {
+      "run_id": "2c88bcc3ecf60b86f27ae2c9",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1500
+    },
+    {
+      "run_id": "70ee6c3740ce01315d36c2a7",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1507
+    },
+    {
+      "run_id": "2d7a8a71d1965a501be03ce6",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1444
+    },
+    {
+      "run_id": "054e489835012f8438da7eae",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1498
+    },
+    {
+      "run_id": "16193a4d504a8a970a5dca9b",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1479
+    },
+    {
+      "run_id": "f0fa3f97aaf3f59a53c593c1",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1473
+    },
+    {
+      "run_id": "1561133f8c7873d8c0a57968",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1454
+    },
+    {
+      "run_id": "0eb0108d0cd4648716bd9d6f",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1508
+    },
+    {
+      "run_id": "b9de3bf585ba61b4e1aa2c26",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1511
+    },
+    {
+      "run_id": "8ad019797e1898d727bdd311",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1507
+    },
+    {
+      "run_id": "9cb313f397e19d48782c835a",
+      "application": "Online Boutique",
+      "cohort": "RE2-OB",
+      "application_index": 0,
+      "usable": true,
+      "tokens": 1453
+    },
+    {
+      "run_id": "22eeb8727f7c631b00fcaceb",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "9fcc9788e706ef6219da61c3",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "5f6d8f696564101ceed0a071",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "d6fd426b73f909dd3fafbb2e",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "7e671a0975fe9f3ebd2f9c5d",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "481466ab0209e9ab62cd2f40",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1296
+    },
+    {
+      "run_id": "0cc013bd863f69eafc69e4db",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1308
+    },
+    {
+      "run_id": "e4248dae99ca23e7e1277d6d",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "4ae2ff5e1188c105df619abf",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "dd2d08da92ad45aa52b2ffa7",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "f88d7548f13042a64d121b49",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1336
+    },
+    {
+      "run_id": "0976e20a0dddf9a8e7cd612d",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1330
+    },
+    {
+      "run_id": "9191c2bc66a65b09cd7a74da",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "85f6ca06dbae43edbee7fecc",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "95abf8ed22a09541ac9de284",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1318
+    },
+    {
+      "run_id": "0f67d1a288812bec765d598f",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "8a97bb53b9f500cbf581cbe8",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1326
+    },
+    {
+      "run_id": "bdc54e3265bafc2fd21bc918",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "7d33a32c132865ca19f74d1e",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "ebdfe5827453bfee6fd3c71f",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1326
+    },
+    {
+      "run_id": "8d18946bedb3daceb4d5611a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "2740141ceeaa6611f13470ce",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1288
+    },
+    {
+      "run_id": "4540d257d515f6b9456e35ab",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1317
+    },
+    {
+      "run_id": "1804cd18e9a65e5ece5b6f58",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1332
+    },
+    {
+      "run_id": "6a3d3281d689c236669309d6",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "4331ee15b74a31c2bc2bd41a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1340
+    },
+    {
+      "run_id": "9a35cec6a698feaa00ed312b",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1323
+    },
+    {
+      "run_id": "256c5ce919142c9128df5cc8",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "a784c8ea79eb16c8d6326192",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "fe5de3ac56cdfa909c047364",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1309
+    },
+    {
+      "run_id": "1ae8f343909a2c1abbdb740a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1336
+    },
+    {
+      "run_id": "7256356ffb86c4ae6f46bc2c",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "db08bd001dc297de305e5a13",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "0de55fe3adea637d81595c8c",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "433315ec6255dd1746e42e15",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1310
+    },
+    {
+      "run_id": "21710f465c3f3221183a6e9c",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "8f45e699d11b2d3a3c627a4c",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1306
+    },
+    {
+      "run_id": "e32fe84a490ed95926850f5a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1349
+    },
+    {
+      "run_id": "39cedb70fd22b80410295af2",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1339
+    },
+    {
+      "run_id": "6f95ffe5aabd94895c7a7f4a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1338
+    },
+    {
+      "run_id": "444588dd51068ddea6d798af",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1332
+    },
+    {
+      "run_id": "312c4d1ffe844a1073cd3392",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "b775bf10348599d6d15e85c7",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "6ea530ecc35d80e76014f4e3",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "f3ecc579c50d9a6e27650d91",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "eb628868752fbdc887afc783",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1328
+    },
+    {
+      "run_id": "a824e56bd1e0e1958cc22c45",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1307
+    },
+    {
+      "run_id": "520606e2fb17e4a29cecc9b2",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1304
+    },
+    {
+      "run_id": "b830ddf61a5a36015a62c9d1",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "75f4fae8fd46fcf83c261bdb",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1314
+    },
+    {
+      "run_id": "0484cb76295ff31953274f21",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "d42bcd0bf8967c3bb250d2cf",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "9437065abf0cd2b98a78924d",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1349
+    },
+    {
+      "run_id": "ca2eb98fabec558e08d19646",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1356
+    },
+    {
+      "run_id": "ec3c54b355fe31b29f3747a8",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1322
+    },
+    {
+      "run_id": "6f7db898caca47ea10966fb8",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "502457b5c722f04f4309fcdc",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "06d5a4963a2284a923ec8fc1",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "053e676f22a2b6c0c2a2bca6",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "49e4a73f4c64415fb6ae7437",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "8b7d52d0eebc91346bc7a392",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1319
+    },
+    {
+      "run_id": "d253d3fc85b13976d86776b7",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1331
+    },
+    {
+      "run_id": "a78011b56ce028ccad350807",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1321
+    },
+    {
+      "run_id": "ce5b63047d784972b0e60371",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1315
+    },
+    {
+      "run_id": "1641bb262b9aaccc0a46526c",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1311
+    },
+    {
+      "run_id": "b843c5aa80aec2fceaef789b",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1305
+    },
+    {
+      "run_id": "3b5796d4ddc1852323ad9af2",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1333
+    },
+    {
+      "run_id": "38d0c513976090f4824c4944",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1344
+    },
+    {
+      "run_id": "6b4672426ecc8f5493c13f9a",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1335
+    },
+    {
+      "run_id": "7191621e1f005ee91f87fd89",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1301
+    },
+    {
+      "run_id": "0aaa10081ee22dc8bdd56613",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1345
+    },
+    {
+      "run_id": "4d4db035bcc802da2850d3c4",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1343
+    },
+    {
+      "run_id": "6014bc12832bffbc01d82ea7",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1308
+    },
+    {
+      "run_id": "3a7465e6a27308fa1ca61190",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1312
+    },
+    {
+      "run_id": "d9feebb0d2e2c48c60b3b764",
+      "application": "Sock Shop",
+      "cohort": "RE1-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1324
+    },
+    {
+      "run_id": "0ec1fd560716ff076c72a706",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1574
+    },
+    {
+      "run_id": "29c4a3778a6071b1a61342c6",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "cce449fae641f00a789ec169",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1606
+    },
+    {
+      "run_id": "f8f7e7d35c9ac4a4ce238fef",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1594
+    },
+    {
+      "run_id": "2c04cecc44ce6410eb0e209a",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1602
+    },
+    {
+      "run_id": "f12b1443307a57694356be3a",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1579
+    },
+    {
+      "run_id": "b630b221be84c52b0a4db3b6",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1654
+    },
+    {
+      "run_id": "fd6c62eb30906322da5d24d2",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "22753315242e76c8a27046fc",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1612
+    },
+    {
+      "run_id": "a023e473997d8781c90c6fac",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1603
+    },
+    {
+      "run_id": "2a4346330b65263e6b6008b8",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1614
+    },
+    {
+      "run_id": "bddbd926c8715efdee0406c0",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1567
+    },
+    {
+      "run_id": "cc1657b0fabc9cbec57422f4",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1627
+    },
+    {
+      "run_id": "e2badd80e0bea7311b95e819",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1615
+    },
+    {
+      "run_id": "493339e338e4be04df0aad72",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1645
+    },
+    {
+      "run_id": "847abeb18daf570f76c2e10d",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1596
+    },
+    {
+      "run_id": "89ce37ea30e112ffd9220b4a",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1659
+    },
+    {
+      "run_id": "af7879268e82a17ebd9878d0",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1592
+    },
+    {
+      "run_id": "ca61012a9214bd3744b38656",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1605
+    },
+    {
+      "run_id": "a1e6d125fc5b5855369d37d2",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1586
+    },
+    {
+      "run_id": "c105aaa3f08dac08ba1eb4da",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1619
+    },
+    {
+      "run_id": "585cec562cf346350a162d2f",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1584
+    },
+    {
+      "run_id": "2e10f74aa073a9c93f3fdc87",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1592
+    },
+    {
+      "run_id": "917c28ec9f12f4cea77c56af",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1649
+    },
+    {
+      "run_id": "5dd1a7bd1947b9f178ec9148",
+      "application": "Sock Shop",
+      "cohort": "RE2-SS",
+      "application_index": 1,
+      "usable": true,
+      "tokens": 1552
+    }
+  ],
+  "cross_split_run_overlap": 0,
+  "routing_field": "input.application only; no suite/path/run/target",
+  "known_onset": true,
+  "note": "One unusable TRAIN record remains in source and parent history. No fresh data and no augmentation this round."
+}
