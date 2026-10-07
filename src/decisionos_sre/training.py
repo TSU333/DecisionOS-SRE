@@ -47,6 +47,9 @@ def predict(model,tokenizer,serializer,examples,device,split):
     return rows
 
 def train(config,mode):
+    if "partial_backbone_layers" in config:
+        from .partial_training import train_partial
+        return train_partial(config,mode)
     if config.get("cache_frozen_features"):
         if mode!="frozen": raise ValueError("Feature caching requires frozen mode")
         from .cached_training import train_cached
